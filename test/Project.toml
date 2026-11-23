@@ -1,0 +1,6 @@
+[deps]
+HistoricalGeography = "05d2c3b8-d6ad-477d-a03a-dde65fdecd18"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[sources]
+HistoricalGeography = {path = ".."}
