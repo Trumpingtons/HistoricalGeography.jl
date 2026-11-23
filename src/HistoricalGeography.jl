@@ -11,12 +11,16 @@ cities of Chandler and Modelski as Reba, Reitsma and Seto geolocated them (3700 
 and Buringh's European urban population (700 to 2000), each written as a table of values by year, and as GeoJSON
 for a map with a year slider.
 
+Old maps come from three places: the historical maps of France that IGN serves as tiles (the map of Cassini, the
+map of the état-major, aerial photographs since 1950), the maps that Allmaps holds georeferenced, found by place,
+and famous maps of the world in the images their libraries publish.
+
 The functions take a DuckDB connection with the extension `spatial` loaded and `SET geometry_always_xy = true`
 (longitude, latitude); they write tables in it, or return the SQL that reads what they downloaded.
 """
 module HistoricalGeography
 
-using DBInterface, Downloads, Tables
+using DBInterface, Downloads, JSON, Tables
 using Base64: base64encode
 
 # The sources, as SQL of their records: name, starts, ends, geom
@@ -32,6 +36,8 @@ export hyde_file, hyde_population, grid_geojson
 export largest_cities, city_history, cell_history, total_population
 # NASA's Earthdata
 export earthdata_token
+# Old maps: IGN's maps of France, the georeferenced maps of Allmaps, famous maps of the world
+export ign_layers, ign_layer, allmaps, famous_maps, famous_map, save_geotiff
 
 const AGENT = "User-Agent" => "HistoricalGeography.jl (https://pollis.org)"
 
@@ -66,5 +72,6 @@ include("sources.jl")
 include("borders.jl")
 include("earthdata.jl")
 include("populations.jl")
+include("oldmaps.jl")
 
 end

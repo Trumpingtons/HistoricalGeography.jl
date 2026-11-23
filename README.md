@@ -1,6 +1,6 @@
 # HistoricalGeography.jl
 
-The borders of states and the populations of the past, read into DuckDB from Julia.
+The borders of states, the populations of the past and old maps, read into DuckDB from Julia.
 
 - **Cliopatria** (Seshat: Global History Databank), version 0.2.1: the polities of the world from 3400 BCE to 2024, each shape with the years it held, as realms (the polities inside no other) or as their parts.
 - **historical-basemaps** (André Ourednik): world maps at 37 chosen years from 100 to 2010, such as 1492, 1715, 1815, 1914 and 1945, each standing for its year until the next map.
@@ -17,6 +17,14 @@ The populations of the past come from three sources, each written as a table of 
 - **HYDE 3.5** (Kees Klein Goldewijk): the population of the world on a grid of 5 arc-minutes from 10,000 BCE to 2025, read from `population.nc` with ArchGDAL.jl. Utrecht University's server answers only web browsers, so the file (640 MB) is downloaded in a browser from its link, which `hyde_file` prints, and put in the folder.
 
 `city_populations` writes the cities of a source within an area and a span of years to a table, and `hyde_population` the people of HYDE 3.5 in cells of a chosen size. `cities_geojson` and `grid_geojson` write them as GeoJSON with their years, for a map with a year slider, coloured by classes of size or of people per km². `largest_cities`, `city_history`, `cell_history` and `total_population` answer questions of those tables.
+
+Old maps come in three kinds, each given as the address a web map draws it from:
+
+- **The maps of France of IGN's Géoplateforme**: the map of Cassini (1756-1815) in two copies, the map of the état-major (1820-1866), IGN's map of 1950 and its aerial photographs of 1950 to 1995, and today's Plan IGN and photographs, as tiles. `ign_layer` gives the address of a map's tiles, its zooms and the source to name.
+- **The georeferenced maps of Allmaps**: the maps that libraries, archives and museums share through IIIF and that Allmaps holds with their ground control points. `allmaps` writes those that cover a place or an area to a table, with their titles and years from their IIIF manifests, the address of their tiles warped by the Allmaps Tile Server, and the link to their georeference in the Allmaps Editor.
+- **Eight famous maps of the world**, from the Tabula Peutingeriana to the Tasman map, which have no georeference: `famous_map` gives the address of the image, from its library's IIIF image server or Wikimedia Commons, its terms, and a box around the region it shows.
+
+`save_geotiff`, with ArchGDAL.jl, saves the tiles of a map over an area as a GeoTIFF.
 
 ## Usage
 
@@ -59,11 +67,31 @@ g = hyde_population(con; folder = "data", box = (-12, 34, 45, 72), since = 1000,
 total_population(con; table = "grid")   # the people of the box at each year of HYDE
 ```
 
-In Pollis, the Historical Borders panel of the Historical Geography and Archaeology Toolbox draws the borders on a map with a year slider, and the Historical Populations panel the cities and the grid.
+```julia
+# The map of Cassini: the address of its tiles, its zooms and the source to name
+cassini = ign_layer(:cassini)
+(cassini.url, cassini.minzoom, cassini.maxzoom, cassini.attribution)
+
+# The georeferenced maps of Allmaps that cover the Louvre and at most 1,000 km², as the table maps:
+# id, title, year, library, km2, tiles, image, manifest, editor, geom
+allmaps(con; at = (2.3364, 48.8606), largest = 1000, folder = "data")
+Tables.columntable(DBInterface.execute(con, "SELECT title, year, library FROM maps ORDER BY year NULLS LAST LIMIT 10"))
+
+# The famous maps, and the image and terms of Mercator's map of 1569
+famous_maps().title
+mercator = famous_map(:mercator)
+(mercator.image, mercator.terms)
+
+# The map of Cassini around the Louvre at zoom 14, saved as a GeoTIFF
+using ArchGDAL
+save_geotiff(cassini.url, (2.30, 48.83, 2.39, 48.89); zoom = 14, path = "cassini-paris.tif")
+```
+
+In Pollis, the Historical Borders panel of the Historical Geography and Archaeology Toolbox draws the borders on a map with a year slider, the Historical Populations panel the cities and the grid, and the Old Maps panel an old map beside today's map, with a line to swipe between them.
 
 ## Sources
 
-The data belong to their authors, whose terms apply: [Cliopatria](https://github.com/Seshat-Global-History-Databank/cliopatria), [historical-basemaps](https://github.com/aourednik/historical-basemaps), [CShapes 2.0](https://icr.ethz.ch/data/cshapes/), [European urban population, 700 - 2000](https://doi.org/10.17026/dans-xzy-u62q), [Historical Urban Population: 3700 BC - AD 2000](https://doi.org/10.7927/H4ZG6QBX) and [HYDE 3.5](https://doi.org/10.24416/UU01-F45D44).
+The data belong to their authors, whose terms apply: [Cliopatria](https://github.com/Seshat-Global-History-Databank/cliopatria), [historical-basemaps](https://github.com/aourednik/historical-basemaps), [CShapes 2.0](https://icr.ethz.ch/data/cshapes/), [European urban population, 700 - 2000](https://doi.org/10.17026/dans-xzy-u62q), [Historical Urban Population: 3700 BC - AD 2000](https://doi.org/10.7927/H4ZG6QBX), [HYDE 3.5](https://doi.org/10.24416/UU01-F45D44), and the maps of IGN under the [Licence Ouverte](https://www.etalab.gouv.fr/licence-ouverte-open-licence/), whose map of Cassini is cited with the source `ign_layer` gives. The maps of Allmaps and the famous maps are under the terms of the libraries that hold them, which `famous_map` gives for each famous map.
 
 - Bennett, J. S. and 12 coauthors (2025). Cliopatria - A geospatial database of world-wide political entities from 3400BCE to 2024CE. *Scientific Data* 12(1), 247. [doi:10.1038/s41597-025-04516-9](https://doi.org/10.1038/s41597-025-04516-9)
 - Buringh, E. (2020). European urban population, 700 - 2000. DANS Data Station Social Sciences and Humanities. [doi:10.17026/dans-xzy-u62q](https://doi.org/10.17026/dans-xzy-u62q)
