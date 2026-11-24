@@ -273,7 +273,7 @@ end
 Writes the table `table` of the stages of a journey written by hand from its source, such as `:bly` (Nellie Bly's
 journey around the world, from her book of 1890), and the table `<table>_route` of the route through them.
 
-The stages have `stage` (their number, in the order of the source), `name` (the place), `part` (the voyage or leg,
+The stages have `stage` (their number, in the order of the journey), `name` (the place), `part` (the voyage or leg,
 for a journey of several), `date` (as `yyyy-mm-dd`, when the source dates it), `day` (the day of the journey, from 1),
 `year`, `until` (the last year of any stage, so that a map with a year slider keeps every stage on it from its year),
 `cite` (where in the source), `passage` (the source's words), `summary` (an English summary of a passage in another

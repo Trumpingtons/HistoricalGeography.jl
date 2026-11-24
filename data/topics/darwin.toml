@@ -1,0 +1,487 @@
+# The voyage of HMS Beagle round the world, from Devonport on 27 December 1831 to Falmouth on 2 October 1836, as
+# Charles Darwin tells it in his Journal of Researches (the second edition, of 1845, in its printing of 1860 on
+# Wikisource), each stage with its date and passage, in the order of the voyage: the Journal tells some of its
+# chapters out of that order, and Darwin's journeys by land, such as across the Andes to Mendoza, are stages too.
+# Each place has its Wikidata item, from which its coordinates come.
+
+title = "The Voyage of the Beagle"
+work = "Charles Darwin, Journal of Researches into the Natural History and Geology of the Countries Visited during the Voyage of H.M.S. Beagle round the World (1845)"
+text = "https://en.wikisource.org/wiki/Journal_of_researches_into_the_natural_history_and_geology_of_the_countries_visited_during_the_voyage_of_H.M.S._Beagle_round_the_world"
+licence = "Public domain (text)"
+
+[places.devonport]
+name = "Devonport, Plymouth"
+wikidata = "Q1245018"
+point = [-4.172777777, 50.3725]
+
+[places.praya]
+name = "Porto Praya, St. Jago (Praia, Santiago)"
+wikidata = "Q3751"
+point = [-23.509155555, 14.917719444]
+
+[places.stpaul]
+name = "St. Paul's Rocks"
+wikidata = "Q241357"
+point = [-29.345833333, 0.916944444]
+
+[places.bahia]
+name = "Bahia, or San Salvador"
+wikidata = "Q36947"
+point = [-38.492777777, -12.983055555]
+
+[places.rio]
+name = "Rio de Janeiro"
+wikidata = "Q8678"
+point = [-43.205555555, -22.911111111]
+
+[places.montevideo]
+name = "Monte Video"
+wikidata = "Q1335"
+point = [-56.191311111, -34.905916666]
+
+[places.bahiablanca]
+name = "Bahia Blanca"
+wikidata = "Q54108"
+point = [-62.26733891, -38.71824314]
+
+[places.fuego]
+name = "Good Success Bay, Tierra del Fuego"
+wikidata = "Q5716392"
+point = [-65.263333333, -54.799722222]
+
+[places.falklands]
+name = "Berkeley Sound, East Falkland Island"
+wikidata = "Q3437375"
+point = [-57.935, -51.5685]
+
+[places.rionegro]
+name = "The Rio Negro, at El Carmen (Carmen de Patagones)"
+wikidata = "Q2342211"
+point = [-62.966666666, -40.783333333]
+
+[places.buenosaires]
+name = "Buenos Ayres"
+wikidata = "Q1486"
+point = [-58.381944444, -34.599722222]
+
+[places.portdesire]
+name = "Port Desire (Puerto Deseado)"
+wikidata = "Q923541"
+point = [-65.916666666, -47.75]
+
+[places.stjulian]
+name = "Port St. Julian (Puerto San Julián)"
+wikidata = "Q955668"
+point = [-67.7297851, -49.3069531]
+
+[places.santacruz]
+name = "The Santa Cruz River"
+wikidata = "Q1478566"
+point = [-68.35, -50.13333333]
+
+[places.portfamine]
+name = "Port Famine, Strait of Magellan"
+wikidata = "Q800201"
+point = [-70.93425, -53.607416666]
+
+[places.valparaiso]
+name = "Valparaiso"
+wikidata = "Q33986"
+point = [-71.619722222, -33.046111111]
+
+[places.castro]
+name = "Castro, Chiloe"
+wikidata = "Q3744"
+point = [-73.7643, -42.4824]
+
+[places.valdivia]
+name = "Valdivia"
+wikidata = "Q160687"
+point = [-73.2459, -39.8142]
+
+[places.concepcion]
+name = "Concepcion"
+wikidata = "Q1880"
+point = [-73.050277777, -36.826944444]
+
+[places.portillo]
+name = "The Portillo Pass"
+wikidata = "Q6065943"
+point = [-69.86666667, -33.63333333]
+
+[places.mendoza]
+name = "Mendoza"
+wikidata = "Q44237"
+point = [-68.844444444, -32.889722222]
+
+[places.santiago]
+name = "Santiago"
+wikidata = "Q2887"
+point = [-70.65, -33.4375]
+
+[places.coquimbo]
+name = "Coquimbo"
+wikidata = "Q3871"
+point = [-71.338, -29.9532]
+
+[places.copiapo]
+name = "Copiapó"
+wikidata = "Q3868"
+point = [-70.3323, -27.3665]
+
+[places.iquique]
+name = "Iquique"
+wikidata = "Q14440"
+point = [-70.1524, -20.2141]
+
+[places.callao]
+name = "Callao, the seaport of Lima"
+wikidata = "Q105037"
+point = [-77.139166666, -12.052222222]
+
+[places.chatham]
+name = "Chatham Island (San Cristóbal), Galapagos"
+wikidata = "Q855652"
+point = [-89.4, -0.8]
+
+[places.james]
+name = "James Island (Santiago), Galapagos"
+wikidata = "Q408217"
+point = [-90.7, -0.25]
+
+[places.tahiti]
+name = "Tahiti, at Matavai Bay"
+wikidata = "Q803710"
+point = [-149.5, -17.5]
+
+[places.bayofislands]
+name = "The Bay of Islands, New Zealand"
+wikidata = "Q812091"
+point = [174.166666666, -35.2]
+
+[places.sydney]
+name = "Sydney"
+wikidata = "Q3130"
+point = [151.21, -33.867777777]
+
+[places.hobart]
+name = "Hobart Town, Van Diemen's Land"
+wikidata = "Q40191"
+point = [147.316666666, -42.883333333]
+
+[places.kinggeorge]
+name = "King George's Sound"
+wikidata = "Q682405"
+point = [117.88982392, -35.05248369]
+
+[places.keeling]
+name = "The Keeling or Cocos Islands"
+wikidata = "Q36004"
+point = [96.895, -12.1175]
+
+[places.mauritius]
+name = "Port Louis, Mauritius"
+wikidata = "Q3929"
+point = [57.498888888, -20.161944444]
+
+[places.cape]
+name = "The Cape of Good Hope"
+wikidata = "Q4092"
+point = [18.471944444, -34.358055555]
+
+[places.sthelena]
+name = "St. Helena"
+wikidata = "Q34497"
+point = [-5.715, -15.965]
+
+[places.ascension]
+name = "Ascension"
+wikidata = "Q46197"
+point = [-14.35, -7.95]
+
+[places.pernambuco]
+name = "Pernambuco (Recife)"
+wikidata = "Q48344"
+point = [-34.880833333, -8.053888888]
+
+[places.azores]
+name = "The Azores"
+wikidata = "Q25263"
+point = [-28.031, 38.624]
+
+[places.falmouth]
+name = "Falmouth"
+wikidata = "Q478029"
+point = [-5.066666666, 50.15]
+
+[[stages]]
+place = "devonport"
+date = 1831-12-27
+cite = "Chapter I, St. Jago—Cape de Verd Islands"
+passage = "Her Majesty's ship Beagle, a ten-gun brig, under the command of Captain Fitz Roy, R.N., sailed from Devonport on the 27th of December, 1831."
+
+[[stages]]
+place = "praya"
+date = 1832-01-16
+cite = "Chapter I, St. Jago—Cape de Verd Islands"
+passage = "On the 16th of January, 1832, we anchored at Porto Praya, in St. Jago, the chief island of the Cape de Verd archipelago."
+
+[[stages]]
+place = "stpaul"
+date = 1832-02-16
+cite = "Chapter I, St. Jago—Cape de Verd Islands"
+passage = "In crossing the Atlantic we hove-to, during the morning of February 16th, close to the island of St. Paul's."
+
+[[stages]]
+place = "bahia"
+date = 1832-02-29
+cite = "Chapter I, St. Jago—Cape de Verd Islands"
+passage = "Bahia, or San Salvador. Brazil, Feb. 29th.—The day has past delightfully. Delight itself, however, is a weak term to express the feelings of a naturalist who, for the first time, has wandered by himself in a Brazilian forest."
+
+[[stages]]
+place = "rio"
+date = 1832-04-04
+cite = "Chapter II, Rio de Janeiro"
+passage = "RIO DE JANEIRO. April 4th to July 5th, 1832.—A few days after our arrival I became acquainted with an Englishman who was going to visit his estate"
+
+[[stages]]
+place = "montevideo"
+date = 1832-07-26
+cite = "Chapter III, Maldonado"
+passage = "July 26th.—We anchored at Monte Video."
+
+[[stages]]
+place = "bahiablanca"
+date = 1832-09-07
+cite = "Chapter V, Bahia Blanca"
+passage = "When we first arrived at Bahia Blanca, September 7th, 1832, we thought nature had granted scarcely a living creature to this sandy and dry country."
+
+[[stages]]
+place = "fuego"
+date = 1832-12-17
+cite = "Chapter X, Tierra del Fuego"
+passage = "December 17th, 1832.—Having now finished with Patagonia and the Falkland Islands, I will describe our first arrival in Tierra del Fuego. / we, as well as others, may call this Good Success Bay."
+
+[[stages]]
+place = "falklands"
+date = 1833-03-01
+cite = "Chapter IX, Santa Cruz, Patagonia, and the Falkland Islands"
+passage = "On March 1st, 1833, and again on March 16th, 1834, the Beagle anchored in Berkeley Sound, in East Falkland Island."
+
+[[stages]]
+place = "rionegro"
+date = 1833-08-03
+cite = "Chapter IV, Rio Negro to Bahia Blanca"
+passage = "July 24th, 1833.—The Beagle sailed from Maldonado, and on August the 3rd she arrived off the mouth of the Rio Negro."
+
+[[stages]]
+place = "buenosaires"
+date = 1833-09-20
+cite = "Chapter VI, Bahia Blanca to Buenos Ayres"
+passage = "September 20th.—We arrived by the middle of the day at Buenos Ayres."
+
+[[stages]]
+place = "montevideo"
+date = 1833-11-28
+cite = "Chapter VIII, Banda Oriental and Patagonia"
+passage = "By the middle of the day, on the 28th, we arrived at Monte Video, having been two days and a half on the road."
+
+[[stages]]
+place = "portdesire"
+date = 1833-12-23
+cite = "Chapter VIII, Banda Oriental and Patagonia"
+passage = "December 23th.—We arrived at Port Desire, situated in lat. 47°, on the coast of Patagonia."
+
+[[stages]]
+place = "stjulian"
+date = 1834-01-09
+cite = "Chapter VIII, Banda Oriental and Patagonia"
+passage = "January 9th, 1834.—Before it was dark the Beagle anchored in the fine spacious harbour of Port St. Julian, situated about one hundred and ten miles to the south of Port Desire. / At Port St. Julian, in some red mud capping the gravel on the 90-feet plain, I found half the skeleton of the Macrauchenia Patachonica, a remarkable quadruped, full as large as a camel."
+
+[[stages]]
+place = "falklands"
+date = 1834-03-16
+cite = "Chapter IX, Santa Cruz, Patagonia, and the Falkland Islands"
+passage = "On March 1st, 1833, and again on March 16th, 1834, the Beagle anchored in Berkeley Sound, in East Falkland Island."
+
+[[stages]]
+place = "santacruz"
+date = 1834-04-13
+cite = "Chapter IX, Santa Cruz, Patagonia, and the Falkland Islands"
+passage = "April 13th, 1834.—The Beagle anchored within the mouth of the Santa Cruz."
+
+[[stages]]
+place = "portfamine"
+date = 1834-06-01
+cite = "Chapter XI, Strait of Magellan—Climate of the Southern Coasts"
+passage = "June 1st.—We anchored in the fine bay of Port Famine."
+
+[[stages]]
+place = "valparaiso"
+date = 1834-07-23
+cite = "Chapter XII, Central Chile"
+passage = "July 23rd.—The Beagle anchored late at night in the bay of Valparaiso, the chief seaport of Chile."
+
+[[stages]]
+place = "castro"
+date = 1834-11-30
+cite = "Chapter XIII, Chiloe and Chonos Islands"
+passage = "November 30th.—Early on Sunday morning we reached Castro, the ancient capital of Chiloe, but now a most forlorn and deserted place."
+
+[[stages]]
+place = "valdivia"
+date = 1835-02-20
+cite = "Chapter XIV, Chiloe and Concepcion: Great Earthquake"
+passage = "February 20th.—This day has been memorable in the annals of Valdivia, for the most severe earthquake experienced by the oldest inhabitant."
+
+[[stages]]
+place = "concepcion"
+date = 1835-03-04
+cite = "Chapter XIV, Chiloe and Concepcion: Great Earthquake"
+passage = "March 4th.—We entered the harbour of Concepcion. / The mayor-domo of the estate quickly rode down to tell me the terrible news of the great earthquake of the 20th"
+
+[[stages]]
+place = "portillo"
+date = 1835-03-22
+cite = "Chapter XV, Passage of the Cordillera"
+passage = "The pass take its name of Portillo, from a narrow cleft or doorway on the highest ridge, through which the road passes."
+
+[[stages]]
+place = "mendoza"
+date = 1835-03-27
+cite = "Chapter XV, Passage of the Cordillera"
+passage = "March 27th.—We rode on to Mendoza. The country was beautifully cultivated, and resembled Chile."
+
+[[stages]]
+place = "santiago"
+date = 1835-04-10
+cite = "Chapter XV, Passage of the Cordillera"
+passage = "On the 10th we reached Santiago, where I received a very kind and hospitable reception from Mr. Caldcleugh."
+
+[[stages]]
+place = "coquimbo"
+date = 1835-05-23
+cite = "Chapter XVI, Northern Chile and Peru"
+passage = "May 23rd.—We descended into the fertile valley of Coquimbo"
+
+[[stages]]
+place = "copiapo"
+date = 1835-06-22
+cite = "Chapter XVI, Northern Chile and Peru"
+passage = "We returned down the valley, and on the 22nd reached the town of Copiapó."
+
+[[stages]]
+place = "iquique"
+date = 1835-07-12
+cite = "Chapter XVI, Northern Chile and Peru"
+passage = "July 12th.—We anchored in the port of Iquique, in lat. 20° 12', on the coast of Peru."
+
+[[stages]]
+place = "callao"
+date = 1835-07-19
+cite = "Chapter XVI, Northern Chile and Peru"
+passage = "19th.—We anchored in the Bay of Callao, the seaport of Lima, the capital of Peru."
+
+[[stages]]
+place = "chatham"
+date = 1835-09-17
+cite = "Chapter XVII, Galapagos Archipelago"
+passage = "September 15th.—This archipelago consists of ten principal islands, of which five exceed the others in size. / In the morning (17th) we landed on Chatham Island"
+
+[[stages]]
+place = "james"
+date = 1835-10-08
+cite = "Chapter XVII, Galapagos Archipelago"
+passage = "October 8th.—We arrived at James Island: this island, as well as Charles Island, were long since thus named after our kings of the Stuart line."
+
+[[stages]]
+place = "tahiti"
+date = 1835-11-15
+cite = "Chapter XVIII, Tahiti and New Zealand"
+passage = "November 15th.—At daylight, Tahiti, an island which must for ever remain classical to the voyager in the South Sea, was in view."
+
+[[stages]]
+place = "bayofislands"
+date = 1835-12-21
+cite = "Chapter XVIII, Tahiti and New Zealand"
+passage = "December 21st.—Early in the morning we entered the Bay of Islands"
+
+[[stages]]
+place = "sydney"
+date = 1836-01-12
+cite = "Chapter XIX, Australia"
+passage = "January 12th, 1836.—Early in the morning a light air carried us towards the entrance of Port Jackson."
+
+[[stages]]
+place = "hobart"
+date = 1836-02-05
+cite = "Chapter XIX, Australia"
+passage = "On the 5th of February, after a six days' passage, of which the first part was fine, and the latter very cold and squally, we entered the mouth of Storm Bay: the weather justified this awful name."
+
+[[stages]]
+place = "kinggeorge"
+date = 1836-03-06
+cite = "Chapter XIX, Australia"
+passage = "February 11th.—The Beagle sailed from Tasmania, and, on the 6th of the ensuing month, reached King George's Sound, situated close to the S.W. corner of Australia."
+
+[[stages]]
+place = "keeling"
+date = 1836-04-01
+cite = "Chapter XX, Keeling Island—Coral Formations"
+passage = "April 1st.—We arrived in view of the Keeling or Cocos Islands, situated in the Indian Ocean, and about six hundred miles distant from the coast of Sumatra."
+
+[[stages]]
+place = "mauritius"
+date = 1836-04-29
+cite = "Chapter XXI, Mauritius to England"
+passage = "April 29th.—In the morning we passed round the northern end of Mauritius, or the Isle of France."
+
+[[stages]]
+place = "cape"
+year = 1836
+cite = "Chapter XXI, Mauritius to England"
+passage = "May 9th.—We sailed from Port Louis, and, calling at the Cape of Good Hope, on the 8th of July we arrived off St. Helena."
+note = "The Journal gives no date for the Cape of Good Hope, between Port Louis on May 9th and St. Helena on July 8th."
+
+[[stages]]
+place = "sthelena"
+date = 1836-07-08
+cite = "Chapter XXI, Mauritius to England"
+passage = "on the 8th of July we arrived off St. Helena. This island, the forbidding aspect of which has been so often described, rises abruptly like a huge black castle from the ocean."
+
+[[stages]]
+place = "ascension"
+date = 1836-07-19
+cite = "Chapter XXI, Mauritius to England"
+passage = "On the 19th of July we reached Ascension."
+
+[[stages]]
+place = "bahia"
+date = 1836-08-01
+cite = "Chapter XXI, Mauritius to England"
+passage = "On leaving Ascension we sailed for Bahia, on the coast of Brazil, in order to complete the chronometrical measurement of the world. We arrived there on August 1st"
+
+[[stages]]
+place = "pernambuco"
+date = 1836-08-12
+cite = "Chapter XXI, Mauritius to England"
+passage = "on the 12th we ran into Pernambuco,—a large city on the coast of Brazil, in latitude 8° south."
+
+[[stages]]
+place = "praya"
+date = 1836-08-31
+cite = "Chapter XXI, Mauritius to England"
+passage = "On the last day of August we anchored for the second time at Porto Praya in the Cape de Verd archipelago"
+
+[[stages]]
+place = "azores"
+year = 1836
+cite = "Chapter XXI, Mauritius to England"
+passage = "thence we proceeded to the Azores, where we staid six days."
+note = "The Journal gives no date for the Azores, between Porto Praya on the last day of August and England on October 2nd."
+
+[[stages]]
+place = "falmouth"
+date = 1836-10-02
+cite = "Chapter XXI, Mauritius to England"
+passage = "On the 2nd of October we made the shores of England; and at Falmouth I left the Beagle, having lived on board the good little vessel nearly five years."
