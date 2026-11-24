@@ -1,0 +1,488 @@
+# The travels of Freya Stark in the Levant, Persia and southern Arabia, from 1927 to 1935, as she tells them in three
+# of her books: Letters from Syria (1942), her letters home from her first journey east in 1927 and 1928, to the Druze
+# country of the Jebel Druse under the French Mandate; The Valleys of the Assassins and Other Persian Travels (1934),
+# her journeys of 1930 and 1931 to the valleys of the Assassins and the Throne of Solomon in the Elburz, of 1931 in
+# Luristan and of 1932 in Pusht-i-Kuh; and The Southern Gates of Arabia (1936), her journey of 1935 in the Hadhramaut.
+# Each journey is a part of its own, in the order she made them, and each stage is a place she names on the way, with
+# a short quotation of her words; the stages of the letters have the date of the letter that tells them, the others
+# their year, or their date where she gives it. The books are in copyright: the quotations are short, and the
+# copyright of the words is the estate's. Each place has its Wikidata item, from which its coordinates come.
+#
+# The texts: Letters from Syria (John Murray, 1942), https://archive.org/details/in.ernet.dli.2015.60665; The Valleys
+# of the Assassins (John Murray, 1934), https://archive.org/details/in.ernet.dli.2015.211087; The Southern Gates of
+# Arabia (E. P. Dutton, 1936), https://archive.org/details/southerngatesofa012570mbp.
+
+title = "The Travels of Freya Stark"
+work = "Freya Stark, Letters from Syria (1942), The Valleys of the Assassins and Other Persian Travels (1934) and The Southern Gates of Arabia: A Journey in the Hadhramaut (1936)"
+text = "https://archive.org/details/in.ernet.dli.2015.211087"
+licence = "Short quotations; copyright the estate of Freya Stark"
+
+[places.rhodes]
+name = "Rhodes"
+wikidata = "Q188731"
+point = [28.216666666, 36.433333333]
+
+[places.tripoli]
+name = "Tripoli"
+wikidata = "Q168954"
+point = [35.834444444, 34.436666666]
+
+[places.brumana]
+name = "Brumana (Brummana)"
+wikidata = "Q2424525"
+point = [35.628333333, 33.8825]
+
+[places.damascus]
+name = "Damascus"
+wikidata = "Q3766"
+point = [36.291944444, 33.513055555]
+
+[places.baalbek]
+name = "Baalbek"
+wikidata = "Q178835"
+point = [36.208611111, 34.006111111]
+
+[places.deirali]
+name = "Deir Ali"
+wikidata = "Q262214"
+point = [36.3025, 33.283611111]
+
+[places.shahba]
+name = "Shahba"
+wikidata = "Q926336"
+point = [36.62944444, 32.85388889]
+
+[places.kanawat]
+name = "Kanawat (Qanawat)"
+wikidata = "Q763167"
+point = [36.616667, 32.755556]
+
+[places.suweida]
+name = "Suweida (Suwayda)"
+wikidata = "Q311099"
+point = [36.566666666, 32.7]
+
+[places.resas]
+name = "Resas (Rasas)"
+wikidata = "Q7294722"
+point = [36.57388889, 32.64277778]
+
+[places.salhad]
+name = "Salhad (Salkhad)"
+wikidata = "Q24343"
+point = [36.71055556, 32.49138889]
+
+[places.bosra]
+name = "Bosra"
+wikidata = "Q272680"
+point = [36.483333333, 32.516666666]
+
+[places.jerusalem]
+name = "Jerusalem"
+wikidata = "Q1218"
+point = [35.234156, 31.776679]
+
+[places.hamadan]
+name = "Hamadan"
+wikidata = "Q28587"
+point = [48.516666666, 34.8]
+
+[places.qazvin]
+name = "Qazvin"
+wikidata = "Q181578"
+point = [50.0041, 36.285436666]
+
+[places.alamut]
+name = "The Rock of Alamut"
+wikidata = "Q4706020"
+point = [50.586111111, 36.444722222]
+
+[places.garmrud]
+name = "Garmrud"
+wikidata = "Q5523530"
+point = [50.72777778, 36.38111111]
+
+[places.lamiasar]
+name = "Lamiasar (Lambsar Castle)"
+wikidata = "Q6481581"
+point = [50.227222222, 36.5475]
+
+[places.throne]
+name = "The Throne of Solomon (Takht-e Suleyman)"
+wikidata = "Q619577"
+point = [50.846111111, 36.245277777]
+
+[places.kalardasht]
+name = "Kalar Dasht (Kelardasht)"
+wikidata = "Q1738431"
+point = [51.166666666, 36.516666666]
+
+[places.talaghan]
+name = "Talaghan (Taleghan)"
+wikidata = "Q609422"
+point = [50.769166666, 36.174444444]
+
+[places.nihavend]
+name = "Nihavend (Nahavand)"
+wikidata = "Q720045"
+point = [48.376944444, 34.188333333]
+
+[places.alishtar]
+name = "Alishtar (Aleshtar)"
+wikidata = "Q967701"
+point = [48.261666666, 33.863055555]
+
+[places.harsin]
+name = "Harsin"
+wikidata = "Q889116"
+point = [47.586111111, 34.272222222]
+
+[places.kermenshah]
+name = "Kermenshah (Kermanshah)"
+wikidata = "Q180078"
+point = [47.068611111, 34.316666666]
+
+[places.bedrah]
+name = "Bedrah (Badra)"
+wikidata = "Q2349675"
+point = [45.933333333, 33.115]
+
+[places.kebirkuh]
+name = "The Great Mountain (Kabir Kuh)"
+wikidata = "Q3191663"
+point = [47.75, 32.916666666]
+
+[places.husainabad]
+name = "Husainabad (Ilam)"
+wikidata = "Q499470"
+point = [46.422777777, 33.6375]
+
+[places.mandali]
+name = "Mandali"
+wikidata = "Q1382440"
+point = [45.555, 33.748055555]
+
+[places.baghdad]
+name = "Baghdad"
+wikidata = "Q1530"
+point = [44.366111111, 33.315277777]
+
+[places.aden]
+name = "Aden"
+wikidata = "Q131694"
+point = [45.033333333, 12.8]
+
+[places.makalla]
+name = "Makalla (Mukalla)"
+wikidata = "Q310772"
+point = [49.133333333, 14.533333333]
+
+[places.doan]
+name = "Masna'a in Wadi Do'an"
+wikidata = "Q12250589"
+point = [48.3408, 15.2642]
+
+[places.hajarain]
+name = "Hajarain (Al-Hajarayn)"
+wikidata = "Q3827589"
+point = [48.33333333, 15.48333333]
+
+[places.shibam]
+name = "Shibam"
+wikidata = "Q192518"
+point = [48.626666666, 15.926944444]
+
+[places.sewun]
+name = "Sewun (Seiyun)"
+wikidata = "Q2320876"
+point = [48.783333333, 15.966666666]
+
+[places.tarim]
+name = "Tarim"
+wikidata = "Q1014010"
+point = [49.0, 16.05]
+
+[[stages]]
+place = "rhodes"
+part = 1
+date = 1927-11-26
+cite = "Letters from Syria, Rhodes, 27 November 1927"
+passage = "My landing in Rhodes last night was full of emotions."
+
+[[stages]]
+place = "tripoli"
+part = 1
+date = 1927-12-09
+cite = "Letters from Syria, s.s. Diana, Tripoli, 9 December 1927"
+passage = "Tripoli looks well from the sea. / It was no good trying to get ashore as the captain refused to guarantee my coming out again"
+
+[[stages]]
+place = "brumana"
+part = 1
+date = 1927-12-14
+cite = "Letters from Syria, Brumana, 14 December 1927"
+passage = "Brumana is a glorious village, a long ridge of neat stone houses with red hillside of pines drooping straight to Beirut and the sea"
+summary = "Three winter months at Brumana, above Beirut, learning Arabic."
+
+[[stages]]
+place = "damascus"
+part = 1
+date = 1928-03-17
+cite = "Letters from Syria, Damascus, 17 March 1928"
+passage = "I am in Damascus. It is a wonderful fact — but I really am."
+
+[[stages]]
+place = "baalbek"
+part = 1
+date = 1928-05-06
+cite = "Letters from Syria, Damascus, 6 May 1928"
+passage = "We were up early this morning and managed the ruins very well, shaking off guides. / The guide-book says that three blocks in the west wall are the biggest ever used in architecture"
+
+[[stages]]
+place = "damascus"
+part = 1
+date = 1928-05-07
+cite = "Letters from Syria, Damascus, 7 May 1928"
+passage = "Only a note, for I am so tired after a chaos of a day, and we are off, or hope to be, at six to-morrow morning."
+summary = "Freya Stark and Venetia Buddicom set out on donkeys, with Najm, a Druze guide, for the Jebel Druse, closed to travellers by the French Mandate."
+
+[[stages]]
+place = "deirali"
+part = 1
+date = 1928-05-08
+cite = "Letters from Syria, Deir Ali, 8 May 1928"
+passage = "It looks as if the Adventure were here. Anyway here are we, settled for the night among the Druses, and very happy"
+
+[[stages]]
+place = "shahba"
+part = 1
+date = 1928-05-11
+cite = "Letters from Syria, Shahba, 11 May 1928, and Suleime, 13 May 1928"
+passage = "Now, however, we have a few hours before us, being virtually prisoners among the French officers who have us here on their hands in the middle of their country / I told him how awfully amusing we had found it to be taken for spies"
+
+[[stages]]
+place = "kanawat"
+part = 1
+year = 1928
+cite = "Letters from Syria, Suweida, 15 May 1928"
+passage = "We had such a flealess night in Kanawat, and were allowed to go to bed so delightfully early, and the sense of liberty with no police about was so charming, that we decided to spend another day there."
+
+[[stages]]
+place = "suweida"
+part = 1
+date = 1928-05-15
+cite = "Letters from Syria, Resas, 16 May 1928"
+passage = "Suweida added the last outrage to our feelings by producing an Armenian Protestant who talked to us about Miss Strong. / and were glad when our passports came and we could go."
+
+[[stages]]
+place = "resas"
+part = 1
+date = 1928-05-16
+cite = "Letters from Syria, Resas, 16 May 1928"
+passage = "I said we were going to see Mut’ib el Atrash in this little village, so that there should be no trouble after, especially for him; and as no one protested, here we are"
+
+[[stages]]
+place = "salhad"
+part = 1
+date = 1928-05-17
+cite = "Letters from Syria, Salhad, 18 May 1928"
+passage = "We had a long ride yesterday / all stones and not a tree."
+
+[[stages]]
+place = "bosra"
+part = 1
+date = 1928-05-18
+cite = "Letters from Syria, Bosra eski Sham, 18 May 1928"
+passage = "We have come to Bosra by car, a very flat, dull road, and we are now in the Sheikh’s house. / We have left the Druses; they are all Moslems here."
+
+[[stages]]
+place = "jerusalem"
+part = 1
+date = 1928-05-20
+cite = "Letters from Syria, Jerusalem, 20 May 1928"
+passage = "We had a wonderful drive: it is all a huge country, and the road keeps high up, looking down into steep wadis, now red with oleanders"
+
+[[stages]]
+place = "hamadan"
+part = 2
+year = 1930
+cite = "The Valleys of the Assassins, Chapter III, A Journey to the Valley of the Assassins"
+passage = "I packed my bed and saddle-bags one May morning and started from Hamadan for Qazvin in a car with a Persian and two veiled ladies and a little girl, who were returning to Resht."
+
+[[stages]]
+place = "qazvin"
+part = 2
+year = 1930
+cite = "The Valleys of the Assassins, Chapter III, A Journey to the Valley of the Assassins"
+passage = "That evening from the Grand Hotel in Qazvin I sent my letters of introduction."
+
+[[stages]]
+place = "alamut"
+part = 2
+year = 1930
+cite = "The Valleys of the Assassins, Chapter III, A Journey to the Valley of the Assassins"
+passage = "Far below, flat and arid at our feet, gleaming with interlaced streams, was the Alamut valley, and Badasht its first oasis far ahead. / the Rock of the Assassins stands out like a ship, broadside on, from a concave mountainside that guards it on the north."
+summary = "The castle of the Assassins on its rock, in the valley of Alamut."
+
+[[stages]]
+place = "garmrud"
+part = 2
+year = 1930
+cite = "The Valleys of the Assassins, Chapter III, A Journey to the Valley of the Assassins"
+passage = "We came to Garmrud in the sunset."
+
+[[stages]]
+place = "lamiasar"
+part = 3
+year = 1931
+cite = "The Valleys of the Assassins, Chapter IV, The Assassins’ Castle of Lamiasar"
+passage = "Through my glasses I could examine the ruins of Lamiasar, now clearly visible on a truncated hill to the north and at about one and a half hours’ distance."
+
+[[stages]]
+place = "throne"
+part = 3
+year = 1931
+cite = "The Valleys of the Assassins, Chapter V, The Throne of Solomon"
+passage = "After so many delays, we were to climb the ramparts of Solomon’s Throne at last."
+
+[[stages]]
+place = "kalardasht"
+part = 3
+year = 1931
+cite = "The Valleys of the Assassins, Chapter V, The Throne of Solomon"
+passage = "together opening out into the plain of Kalar Dasht into which we now emerged."
+
+[[stages]]
+place = "talaghan"
+part = 3
+year = 1931
+cite = "The Valleys of the Assassins, Chapter V, The Throne of Solomon"
+passage = "On the third day a gleam of sunlight suddenly revealed an unsuspected hillside opposite, and we started off immediately, for we were anxious now to reach the Talaghan valley, our last bit of exploring on the way home."
+
+[[stages]]
+place = "nihavend"
+part = 4
+year = 1931
+cite = "The Valleys of the Assassins, Chapter I, A Fortnight in N.W. Luristan"
+passage = "Behold then Hajji and me, climbing on very scraggy ponies up to the Varazan Pass. Behind us is the town of Nihavend and the nearer mound of Gian where French archaeologists give kind hospitality"
+
+[[stages]]
+place = "alishtar"
+part = 4
+year = 1931
+cite = "The Valleys of the Assassins, Chapter I, A Fortnight in N.W. Luristan"
+passage = "Mahmud, a shifty-eyed brother of our host, offered to take me over the pass to Alishtar."
+
+[[stages]]
+place = "harsin"
+part = 4
+year = 1931
+cite = "The Valleys of the Assassins, Chapter I, A Fortnight in N.W. Luristan"
+passage = "Our last ride took us about three and a half hours over the south-west shoulder of Chia Dozdan to Harsin."
+
+[[stages]]
+place = "kermenshah"
+part = 4
+year = 1931
+cite = "The Valleys of the Assassins, Chapter I, A Fortnight in N.W. Luristan"
+passage = "I gave Keram the fur coat which the Duliskan chief had not earned, besides what little spare cash was left me, and went down into the land of motor-cars, whence I telephoned for transport to Kermenshah."
+
+[[stages]]
+place = "bedrah"
+part = 5
+year = 1932
+cite = "The Valleys of the Assassins, Chapter II, The Hidden Treasure"
+passage = "We packed a car and crossed the desert from Kut to Bedrah on the Persian border."
+summary = "With Shah Riza, a Lur, in search of a treasure hidden in the hills of Pusht-i-Kuh."
+
+[[stages]]
+place = "kebirkuh"
+part = 5
+year = 1932
+cite = "The Valleys of the Assassins, Chapter II, The Hidden Treasure"
+passage = "We made our way for hours down the northern slopes of the Great Mountain before we reached the mills of Garau in the valley."
+
+[[stages]]
+place = "husainabad"
+part = 5
+year = 1932
+cite = "The Valleys of the Assassins, Chapter II, The Hidden Treasure"
+passage = "They meant, however, to keep me in Husainabad till instructions came from Teheran / On the fourth day of my stay, instructions at last came from Teheran."
+
+[[stages]]
+place = "mandali"
+part = 5
+year = 1932
+cite = "The Valleys of the Assassins, Chapter II, The Hidden Treasure"
+passage = "So leaving them, Shah Riza and I and the muleteer continued onwards to Mandali."
+
+[[stages]]
+place = "baghdad"
+part = 5
+year = 1932
+cite = "The Valleys of the Assassins, Chapter II, The Hidden Treasure"
+passage = "I came to Baghdad, and the matter of the treasure, overlaid by later experiences, had already faded from the foreground of my mind."
+
+[[stages]]
+place = "aden"
+part = 6
+date = 1935-01-12
+cite = "The Southern Gates of Arabia, Chapter I, The Arabian Coast"
+passage = "On the evening of January 12th I went on board. / Aden had been kind."
+
+[[stages]]
+place = "makalla"
+part = 6
+year = 1935
+cite = "The Southern Gates of Arabia, Chapter II, Landing"
+passage = "were landing me on the steps of Arabia."
+
+[[stages]]
+place = "doan"
+part = 6
+year = 1935
+cite = "The Southern Gates of Arabia, Chapters XI and XII, Life in Do'an and Khuraiba and Robat"
+passage = "And soon, walking north down the wadi, we came to the Governor's castle of Masna'a, built high and square of mud on the wadi side, and with roofs and terraces crowded to see us. / They made me glad to see the friendly bastions of Masna'a above me in the sky, and to settle down to sickness in my own harim."
+
+[[stages]]
+place = "hajarain"
+part = 6
+year = 1935
+cite = "The Southern Gates of Arabia, Chapter XIV, The Ride to Hajarain"
+passage = "Our wadi turned northward, and as the sun set behind its walls we saw the rock of Hajarain before us, far away."
+
+[[stages]]
+place = "shibam"
+part = 6
+year = 1935
+cite = "The Southern Gates of Arabia, Chapter XVII, Shibam"
+passage = "we, in our turn, bumped up the cobbled slope through the small court of the inner gateway of Shibam."
+
+[[stages]]
+place = "sewun"
+part = 6
+year = 1935
+cite = "The Southern Gates of Arabia, Chapter XVIII, Sewun"
+passage = "From their high upper terrace I looked over Sewun and its gardens, and saw how it lies in cornfields and palms, with walls that slope enclosing it from under the cliff."
+
+[[stages]]
+place = "tarim"
+part = 6
+date = 1935-02-16
+cite = "The Southern Gates of Arabia, Chapter XVIII, Sewun"
+passage = "Next morning, February 16th, Hasan and I left the Glory of Religion on a three days' visit to Tarim."
+
+[[stages]]
+place = "shibam"
+part = 6
+year = 1935
+cite = "The Southern Gates of Arabia, Chapters XXIV and XXVII, Breakdown in Shibam and Flight from the Valley"
+passage = "In spite of it and its medicinal value, I collapsed as soon as I reached Shibam. / In the sky, coming from the south-east and spanning all the valley, were four R.A.F. bomber planes, their aluminium shining in the sun, more beautiful to my eyes than any aeroplanes that I had ever seen."
+summary = "Ill with measles and on her way to Shabwa, she is flown out of the valley by the Royal Air Force."
+
+[[stages]]
+place = "aden"
+part = 6
+year = 1935
+cite = "The Southern Gates of Arabia, Chapter XXVII, Flight from the Valley"
+passage = "We refuelled at Fuwa, and here again friendly faces from Makalla climbed up to greet me where I lay. / in five and a half hours altogether, we were in Aden."

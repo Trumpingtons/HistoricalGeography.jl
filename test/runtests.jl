@@ -82,7 +82,7 @@ using HistoricalGeography, Test
 	end
 
 	@testset "The topic data written by hand" begin
-		@test HistoricalGeography.topic_names() == [:bly, :darwin, :genji, :humboldt, :nights, :odysseus, :polo, :qin, :xuanzang, :zhenghe]
+		@test HistoricalGeography.topic_names() == [:bly, :darwin, :genji, :humboldt, :nights, :odysseus, :polo, :qin, :stark, :xuanzang, :zhenghe]
 		# every event, stage and mention names a place of its file, and every place is named
 		for name in HistoricalGeography.topic_names()
 			data = HistoricalGeography.topic_data(name)
