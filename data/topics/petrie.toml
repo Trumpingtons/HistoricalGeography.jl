@@ -1,0 +1,179 @@
+# The excavations of W. M. Flinders Petrie in Egypt from 1880 to 1891, as he tells them in Ten Years' Digging in Egypt
+# (1892), whose chapters follow his seasons, each with its year: the survey of the pyramids of Gizeh, the sites of the
+# Delta for the Egypt Exploration Fund, a journey up the Nile copying inscriptions, and the pyramids, towns and
+# cemeteries of the Fayum and Medum. Each stage is a site in the order he worked it, with the year of his season and
+# his words. Each place has its Wikidata item, from which its coordinates come.
+
+title = "Ten Years' Digging in Egypt"
+work = "W. M. Flinders Petrie, Ten Years' Digging in Egypt, 1881–1891 (1892)"
+text = "https://www.gutenberg.org/ebooks/52570"
+licence = "Public domain (text)"
+
+[places.gizeh]
+name = "The Pyramids of Gizeh (Giza)"
+wikidata = "Q12508"
+point = [31.132778, 29.976111]
+
+[places.tanis]
+name = "Tanis"
+wikidata = "Q210598"
+point = [31.88, 30.976944444]
+
+[places.naukratis]
+name = "Naukratis"
+wikidata = "Q137721"
+point = [30.616667, 30.9]
+
+[places.nebesheh]
+name = "Tell Nebesheh"
+wikidata = "Q11951132"
+point = [31.9106, 30.86]
+
+[places.daphnae]
+name = "Daphnae, Tahpanhes (Tell Defenneh)"
+wikidata = "Q1810451"
+point = [32.171388888, 30.860555555]
+
+[places.minia]
+name = "Minia (Minya)"
+wikidata = "Q310117"
+point = [30.75, 28.083333333]
+
+[places.assuan]
+name = "Assuan (Aswan)"
+wikidata = "Q29888"
+point = [32.899730555, 24.088919444]
+
+[places.thebes]
+name = "Thebes"
+wikidata = "Q101583"
+point = [32.610277777, 25.720555555]
+
+[places.dahshur]
+name = "Dahshur"
+wikidata = "Q3874150"
+point = [31.2152886601, 29.7995443437]
+
+[places.arsinoe]
+name = "Arsinoe or Crocodilopolis, Medinet el Fayum"
+wikidata = "Q1996721"
+point = [30.75, 29.1166]
+
+[places.hawara]
+name = "The pyramid of Hawara"
+wikidata = "Q11818430"
+point = [30.89888889, 29.27416667]
+
+[places.gurob]
+name = "Gurob"
+wikidata = "Q1555240"
+point = [30.95, 29.2]
+
+[places.illahun]
+name = "The pyramid of Illahun (Senusret II)"
+wikidata = "Q1698602"
+point = [30.97055556, 29.23611111]
+
+[places.kahun]
+name = "Kahun, at El-Lahun"
+wikidata = "Q56924"
+point = [30.966666666, 29.228611111]
+
+[places.medum]
+name = "The pyramid of Medum (Meidum)"
+wikidata = "Q13444093"
+point = [31.15694444, 29.38833333]
+
+[[stages]]
+place = "gizeh"
+year = 1880
+cite = "Chapter I, The Pyramids of Gizeh, 1881-2"
+passage = "When, in the end of 1880, I first started for Egypt, I had long been preparing for the expedition / As an English engineer had left a tomb fitted with door and shutters I was glad to get such accommodation."
+summary = "Two years measuring the pyramids, living in a rock tomb."
+
+[[stages]]
+place = "tanis"
+year = 1884
+cite = "Chapter II, Tanis, 1884"
+passage = "A preliminary exploring trip was made to several places in the Delta, in course of which I discovered Naukratis; and as soon as the marshes had somewhat dried I went in February to Tanis."
+summary = "His first excavation for the Egypt Exploration Fund."
+
+[[stages]]
+place = "naukratis"
+year = 1885
+cite = "Chapter III, Naukratis, 1885"
+passage = "Before me lay a long low mound of town ruins, of which all the core had been dug out by the natives for earth, thus baring the very lowest level of the town all over the middle of it. / All that day ‘Naukratis’ rang in my mind, and I sprang over the mounds with that splendid exultation of a new discovery, long wished for and well found."
+note = "Petrie found the site before going to Tanis in 1884, and dug it in 1885."
+
+[[stages]]
+place = "nebesheh"
+year = 1886
+cite = "Chapter V, Nebesheh, 1886"
+passage = "The site, Tell Nebesheh, is a very out-of-the-way spot / After leaving Naukratis I went to this place, to try to clear up its history"
+
+[[stages]]
+place = "daphnae"
+year = 1886
+cite = "Chapter IV, Daphnae—Tahpanhes, 1886"
+passage = "After working at Tell Nebesheh for some time, I left it in Mr. Griffith’s hands, and told my men that I wanted to work at Defneh; immediately I had more volunteers than I could employ, and I went into the desert to the work with a party of forty,--men, boys and girls,--and formed a settlement which enlarged up to seventy."
+
+[[stages]]
+place = "minia"
+year = 1887
+cite = "Chapter VI, Up the Nile, 1887"
+passage = "We hired a small boat with a cabin at Minia, and took six weeks wandering up to Assuan, walking most of the way in and out of the line of cliffs."
+
+[[stages]]
+place = "assuan"
+year = 1887
+cite = "Chapter VI, Up the Nile, 1887"
+passage = "Assuan proved a most interesting district, teeming with early inscriptions cut on the rocks; and to copy all of these was a long affair."
+
+[[stages]]
+place = "thebes"
+year = 1887
+cite = "Chapter VI, Up the Nile, 1887"
+passage = "At Thebes my main work was in obtaining casts and photographs of all the types of foreign races on the monuments."
+
+[[stages]]
+place = "dahshur"
+year = 1887
+cite = "Chapter VI, Up the Nile, 1887"
+passage = "Having finished the Theban work, I then went to Dahshur, and there made a survey around the two large pyramids"
+
+[[stages]]
+place = "arsinoe"
+year = 1888
+cite = "Chapter VII, Hawara, 1888"
+passage = "For this purpose I needed to recruit a party from a little distance, and began my work therefore at the ancient Arsinoe or Crocodilopolis, close to Medinet el Fayum."
+
+[[stages]]
+place = "hawara"
+year = 1888
+cite = "Chapter VII, Hawara, 1888"
+passage = "Having by this time formed and organised a good body of workmen, I moved over to Hawara, with as many men as I wanted / when one day a mummy was found, with a painted portrait on a wooden panel placed over its face."
+summary = "The pyramid of Amenemhat III, and the Roman cemetery of the mummy portraits."
+
+[[stages]]
+place = "gurob"
+year = 1889
+cite = "Chapter IX, Gurob, 1889-90"
+passage = "I soon went to see it, and found that it was an early site unmixed with any later remains. / In the beginning of 1889 I worked out part of the town"
+
+[[stages]]
+place = "illahun"
+year = 1889
+cite = "Chapter VIII, Illahun, 1889-90"
+passage = "Having finished opening the pyramid of Hawara, the next attraction was that of Illahun, a few miles to the east of it, in the Nile valley, at the entrance to the Fayum."
+
+[[stages]]
+place = "kahun"
+year = 1889
+cite = "Chapter VIII, Illahun, 1889-90"
+passage = "it dawned on me that this could hardly be other than the town of the pyramid builders, originally called Ha-Usertesen-hotep, and now known as Kahun."
+
+[[stages]]
+place = "medum"
+year = 1891
+cite = "Chapter X, Medum, 1891"
+passage = "I called together a selected lot of my old workers from Illahun, and we went over and made a camp at the cemetery of Medum; there we lived over four months, and I unravelled what could be traced on the questions that await us."
