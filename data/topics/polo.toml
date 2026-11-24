@@ -1,0 +1,436 @@
+# The journeys of Marco Polo, 1271 to 1295, as his Book tells them in the translation of Henry Yule (third edition,
+# revised by Henri Cordier, 1903): the way out to the Great Kaan, two of the journeys in his service, and the voyage
+# home, each a part of its own. Each stage is a place the Book describes on the way, with its words; the Book
+# describes many more, some Marco only heard of. Each place is the one Yule's notes identify, by its Wikidata item,
+# from which its coordinates come.
+
+title = "The Travels of Marco Polo"
+work = "Marco Polo, The Book of Ser Marco Polo, translated by Henry Yule, revised by Henri Cordier (1903)"
+text = "https://archive.org/details/b29353038_0001"
+licence = "Public domain (text)"
+
+[places.acre]
+name = "Acre"
+wikidata = "Q126084"
+point = [35.083888888, 32.926111111]
+
+[places.layas]
+name = "Layas (Ayas)"
+wikidata = "Q6506320"
+point = [35.730953, 36.767952]
+
+[places.tauris]
+name = "Tauris (Tabriz)"
+wikidata = "Q80053"
+point = [46.296111111, 38.073888888]
+
+[places.yasdi]
+name = "Yasdi (Yazd)"
+wikidata = "Q182394"
+point = [54.3675, 31.897222222]
+
+[places.kerman]
+name = "Kerman"
+wikidata = "Q171714"
+point = [57.067777777, 30.291111111]
+
+[places.hormos]
+name = "Hormos (Old Hormuz)"
+wikidata = "Q115768043"
+point = [57.08, 27.146666666]
+
+[places.cobinan]
+name = "Cobinan (Kuhbanan)"
+wikidata = "Q2416601"
+point = [56.2825, 31.41027778]
+
+[places.sapurgan]
+name = "Sapurgan (Sheberghan)"
+wikidata = "Q838954"
+point = [65.752, 36.665]
+
+[places.balc]
+name = "Balc (Balkh)"
+wikidata = "Q182159"
+point = [66.898888888, 36.758055555]
+
+[places.badashan]
+name = "Badashan (Badakhshan)"
+wikidata = "Q32056"
+point = [71.830125, 37.968043]
+
+[places.pamier]
+name = "The Plain of Pamier (Pamir)"
+wikidata = "Q161750"
+point = [71.99975, 39.001944444]
+
+[places.cascar]
+name = "Cascar (Kashgar)"
+wikidata = "Q170521"
+point = [75.983333, 39.45]
+
+[places.yarcan]
+name = "Yarcan (Yarkand)"
+wikidata = "Q857618"
+point = [77.24056, 38.41667]
+
+[places.cotan]
+name = "Cotan (Khotan)"
+wikidata = "Q235389"
+point = [79.9327, 37.1012]
+
+[places.charchan]
+name = "Charchan (Cherchen)"
+wikidata = "Q3360588"
+point = [85.523883333, 38.130641666]
+
+[places.sachiu]
+name = "Sachiu (Shazhou, Dunhuang)"
+wikidata = "Q319114"
+point = [94.663888888, 40.141111111]
+
+[places.campichu]
+name = "Campichu (Ganzhou, Zhangye)"
+wikidata = "Q197402"
+point = [100.45529, 38.93545]
+
+[places.chandu]
+name = "Chandu (Shangdu, Xanadu)"
+wikidata = "Q471765"
+point = [116.185158888, 42.358021111]
+
+[places.cambaluc]
+name = "Cambaluc (Khanbaliq, Beijing)"
+wikidata = "Q101186473"
+point = [116.4, 39.933333333]
+
+[places.juju]
+name = "Juju (Zhuozhou)"
+wikidata = "Q198244"
+point = [115.99176, 39.48873]
+
+[places.taianfu]
+name = "Taianfu (Taiyuan)"
+wikidata = "Q72778"
+point = [112.54245, 37.87326]
+
+[places.kenjanfu]
+name = "Kenjanfu (Xi'an)"
+wikidata = "Q5826"
+point = [108.942222222, 34.261111111]
+
+[places.sindafu]
+name = "Sindafu (Chengdu)"
+wikidata = "Q30002"
+point = [104.063333333, 30.66]
+
+[places.yachi]
+name = "Yachi (Kunming)"
+wikidata = "Q182852"
+point = [102.706111111, 25.043333333]
+
+[places.mien]
+name = "Mien (Bagan)"
+wikidata = "Q29317"
+point = [94.86, 21.1725]
+
+[places.yanju]
+name = "Yanju (Yangzhou)"
+wikidata = "Q57906"
+point = [119.43625, 32.39117]
+
+[places.kinsay]
+name = "Kinsay (Hangzhou)"
+wikidata = "Q4970"
+point = [120.1675, 30.25]
+
+[places.fuju]
+name = "Fuju (Fuzhou)"
+wikidata = "Q68481"
+point = [119.291666666, 26.076944444]
+
+[places.zayton]
+name = "Zayton (Quanzhou)"
+wikidata = "Q68695"
+point = [118.58583, 24.91389]
+
+[places.chamba]
+name = "Chamba (Champa)"
+wikidata = "Q216786"
+point = [108.0, 14.0]
+
+[places.samara]
+name = "Samara, in Java the Less (Sumatra)"
+wikidata = "Q3284315"
+point = [97.2005618, 5.1340555]
+
+[places.seilan]
+name = "Seilan (Ceylon)"
+wikidata = "Q854"
+point = [81.0, 7.0]
+
+[places.maabar]
+name = "Maabar (the Coromandel Coast)"
+wikidata = "Q182561"
+point = [80.33, 13.37]
+
+[places.trebizond]
+name = "Trebizond (Trabzon)"
+wikidata = "Q45301"
+point = [39.7225, 41.005]
+
+[places.constantinople]
+name = "Constantinople"
+wikidata = "Q16869"
+point = [28.976018, 41.01224]
+
+[places.negropont]
+name = "Negropont (Chalcis)"
+wikidata = "Q21235810"
+point = [23.5971, 38.4624]
+
+[places.venice]
+name = "Venice"
+wikidata = "Q641"
+point = [12.331944444, 45.439722222]
+
+[[stages]]
+place = "acre"
+part = 1
+cite = "Prologue, chapter XI"
+passage = "When the Two Brothers had received the Legate’s letters, they set forth from Acre to return to the Grand Kaan, and got as far as Layas."
+
+[[stages]]
+place = "layas"
+part = 1
+cite = "Book I, chapter I"
+passage = "Howbeit, they have a city upon the sea, which is called Layas, at which there is a great trade."
+
+[[stages]]
+place = "tauris"
+part = 1
+cite = "Book I, chapter XI"
+passage = "Tauris is a great and noble city, situated in a great province called Yrac, in which are many other towns and villages."
+
+[[stages]]
+place = "yasdi"
+part = 1
+cite = "Book I, chapter XVI"
+passage = "Yasdi also is properly in Persia; it is a good and noble city, and has a great amount of trade."
+
+[[stages]]
+place = "kerman"
+part = 1
+cite = "Book I, chapter XVII"
+passage = "Kerman is a kingdom which is also properly in Persia, and formerly it had a hereditary prince."
+
+[[stages]]
+place = "hormos"
+part = 1
+cite = "Book I, chapter XIX"
+passage = "When you have ridden these two days you come to the Ocean Sea, and on the shore you find a city with a harbour which is called Hormos."
+
+[[stages]]
+place = "cobinan"
+part = 1
+cite = "Book I, chapter XXI"
+passage = "There is much Iron and Steel and Ondanique, and they make steel mirrors of great size and beauty."
+
+[[stages]]
+place = "sapurgan"
+part = 1
+cite = "Book I, chapter XXVI"
+passage = "So after travelling for six days as I have told you, you come to a city called Sapurgan. It has great plenty of everything, but especially of the very best melons in the world."
+
+[[stages]]
+place = "balc"
+part = 1
+cite = "Book I, chapter XXVII"
+passage = "Balc is a noble city and a great, though it was much greater in former days. But the Tartars and other nations have greatly ravaged and destroyed it."
+
+[[stages]]
+place = "badashan"
+part = 1
+cite = "Book I, chapter XXIX"
+passage = "Badashan is a Province inhabited by people who worship Mahommet, and have a peculiar language. It forms a very great kingdom, and the royalty is hereditary."
+
+[[stages]]
+place = "pamier"
+part = 1
+cite = "Book I, chapter XXXII"
+passage = "The plain is called Pamier, and you ride across it for twelve days together, finding nothing but a desert without habitations or any green thing, so that travellers are obliged to carry with them whatever they have need of."
+
+[[stages]]
+place = "cascar"
+part = 1
+cite = "Book I, chapter XXXIII"
+passage = "Cascar is a region lying between north-east and east, and constituted a kingdom in former days"
+
+[[stages]]
+place = "yarcan"
+part = 1
+cite = "Book I, chapter XXXV"
+passage = "The people follow the Law of Mahommet, but there are also Nestorian and Jacobite Christians."
+
+[[stages]]
+place = "cotan"
+part = 1
+cite = "Book I, chapter XXXVI"
+passage = "Cotan is a province lying between north-east and east, and is eight days’ journey in length."
+
+[[stages]]
+place = "charchan"
+part = 1
+cite = "Book I, chapter XXXVIII"
+passage = "The Province contains rivers which bring down Jasper and Chalcedony, and these are carried for sale into Cathay, where they fetch great prices."
+
+[[stages]]
+place = "sachiu"
+part = 1
+cite = "Book I, chapter XL"
+passage = "you come to a city called Sachiu, lying between north-east and east ; it belongs to the Great Kaan, and is in a province called Tangut."
+
+[[stages]]
+place = "campichu"
+part = 1
+cite = "Book I, chapter XLIV"
+passage = "Campichu is also a city of Tangut, and a very great and noble one. Indeed it is the capital and place of government of the whole province of Tangut."
+
+[[stages]]
+place = "chandu"
+part = 1
+cite = "Book I, chapter LXI"
+passage = "And when you have ridden three days from the city last mentioned, between north-east and north, you come to a city called Chandu / There is at this place a very fine marble Palace, the rooms of which are all gilt and painted with figures of men and beasts and birds"
+
+[[stages]]
+place = "cambaluc"
+part = 2
+cite = "Book II, chapter XI"
+passage = "Now there was on that spot in old times a great and noble city called Cambaluc"
+
+[[stages]]
+place = "juju"
+part = 2
+cite = "Book II, chapter XXXVI"
+passage = "you come after 30 miles to a fine large city called Juju, where there are many abbeys of idolaters, and the people live by trade and manufactures."
+
+[[stages]]
+place = "taianfu"
+part = 2
+cite = "Book II, chapter XXXVII"
+passage = "After riding then those ten days from the city of Juju, you find yourself in a kingdom called Taianfu, and the city at which you arrive, which is the capital, is also called Taianfu, a very great and fine city."
+
+[[stages]]
+place = "kenjanfu"
+part = 2
+cite = "Book II, chapter XLI"
+passage = "A very great and fine city it is, and the capital of the kingdom of Kenjanfu, which in old times was a noble, rich, and powerful realm, and had many great and wealthy and puissant kings."
+
+[[stages]]
+place = "sindafu"
+part = 2
+cite = "Book II, chapter XLIV"
+passage = "then you arrive at a plain belonging to a province called Sindafu, which still is on the confines of Manzi"
+
+[[stages]]
+place = "yachi"
+part = 2
+cite = "Book II, chapter XLVIII"
+passage = "called Yachi, a very great and noble city, in which are numerous merchants and craftsmen."
+
+[[stages]]
+place = "mien"
+part = 2
+cite = "Book II, chapter LIV"
+passage = "then you arrive at the capital city of this Province of Mien, and it also is called Amien, and is a very great and noble city."
+
+[[stages]]
+place = "cambaluc"
+part = 3
+cite = "Book II, chapter XI"
+passage = "So he caused the present city to be built close beside the old one, with only a river between them."
+
+[[stages]]
+place = "yanju"
+part = 3
+cite = "Book II, chapter LXVIII"
+passage = "at the end of your journey you arrive at the very great and noble city of Yanju, which has seven-and-twenty other wealthy cities under its administration / And Messer Marco Polo himself, of whom this book speaks, did govern this city for three full years, by the order of the Great Kaan."
+
+[[stages]]
+place = "kinsay"
+part = 3
+cite = "Book II, chapter LXXVI"
+passage = "When you have left the city of Changan and have travelled for three days through a splendid country, passing a number of towns and villages, you arrive at the most noble city of Kinsay"
+
+[[stages]]
+place = "fuju"
+part = 3
+cite = "Book II, chapter LXXXI"
+passage = "Now this city of Fuju is the key of the kingdom which is called Chonka, and which is one of the nine great divisions of Manzi."
+
+[[stages]]
+place = "zayton"
+part = 3
+cite = "Book II, chapter LXXXII"
+passage = "When you have accomplished those five days’ journey you arrive at the very great and noble city of Zayton, which is also subject to Fuju. At this city you must know is the Haven of Zayton, frequented by all the ships of India, which bring thither spicery and all other kinds of costly wares."
+
+[[stages]]
+place = "zayton"
+part = 4
+cite = "Book III, chapter V"
+passage = "You must know that on leaving the port of Zayton you sail west-south-west for 1500 miles, and then you come to a country called Chamba"
+
+[[stages]]
+place = "chamba"
+part = 4
+cite = "Book III, chapter V"
+passage = "a very rich region, having a king of its own."
+
+[[stages]]
+place = "samara"
+part = 4
+cite = "Book III, chapter X"
+passage = "So you must know that when you leave the kingdom of Basma you come to another kingdom called Samara, on the same Island. / And in that kingdom Messer Marco Polo was detained five months by the weather, which would not allow of his going on."
+
+[[stages]]
+place = "seilan"
+part = 4
+cite = "Book III, chapter XIV"
+passage = "When you leave the Island of Angamanain and sail about a thousand miles in a direction a little south of west, you come to the Island of Seilan"
+
+[[stages]]
+place = "maabar"
+part = 4
+cite = "Book III, chapter XVI"
+passage = "you come to the great province of Maabar which is styled India the Greater ; it is best of all the Indies and is on the mainland."
+
+[[stages]]
+place = "hormos"
+part = 4
+cite = "Book III, chapter XL"
+passage = "When you leave the City of Calatu, and go for 300 miles between north-west and north, you come to the city of Hormos; a great and noble city on the sea."
+
+[[stages]]
+place = "trebizond"
+part = 4
+cite = "Prologue, chapter XVIII"
+passage = "Having left Kiacatu they travelled day by day till they came to Trebizond"
+
+[[stages]]
+place = "constantinople"
+part = 4
+cite = "Prologue, chapter XVIII"
+passage = "and thence to Constantinople"
+
+[[stages]]
+place = "negropont"
+part = 4
+cite = "Prologue, chapter XVIII"
+passage = "from Constantinople to Negropont"
+
+[[stages]]
+place = "venice"
+part = 4
+year = 1295
+cite = "Prologue, chapter XVIII"
+passage = "and from Negropont to Venice. And this was in the year 1295 of Christ’s Incarnation."

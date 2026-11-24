@@ -1,0 +1,428 @@
+# The journey of the monk Xuanzang to India and back, as his Records of the Western Regions (大唐西域記, 646) describe
+# it country by country, in the order of its twelve books, from Gaochang to Khotan. The stages are the countries he
+# describes along his way, each with words of its section; the Records name far more, some he only heard of.
+# Each country is placed at its capital or main site, by its Wikidata item, from which its coordinates come.
+
+title = "The Journey of Xuanzang"
+work = "Xuanzang and Bianji, Records of the Western Regions of the Great Tang (646)"
+text = "https://zh.wikisource.org/wiki/%E5%A4%A7%E5%94%90%E8%A5%BF%E5%9F%9F%E8%A8%98"
+licence = "Public domain (text)"
+
+[places.gaochang]
+name = "Gaochang (高昌)"
+wikidata = "Q877381"
+point = [89.529166666, 42.852777777]
+
+[places.agni]
+name = "Agni (阿耆尼), at Karasahr"
+wikidata = "Q1156662"
+point = [86.566666666, 42.05]
+
+[places.kucha]
+name = "Kucha (屈支)"
+wikidata = "Q1328546"
+point = [82.9, 41.65]
+
+[places.baluka]
+name = "Baluka (跋祿迦), at Aksu"
+wikidata = "Q421648"
+point = [80.25, 41.166389]
+
+[places.chach]
+name = "Chach (赭時), at Tashkent"
+wikidata = "Q269"
+point = [69.279722222, 41.311111111]
+
+[places.samarkand]
+name = "Samarkand (颯秣建)"
+wikidata = "Q5753"
+point = [66.975833333, 39.654722222]
+
+[places.termez]
+name = "Termez (呾蜜)"
+wikidata = "Q491879"
+point = [67.278333333, 37.224166666]
+
+[places.balkh]
+name = "Balkh (縛喝)"
+wikidata = "Q182159"
+point = [66.898888888, 36.758055555]
+
+[places.bamiyan]
+name = "Bamiyan (梵衍那), its standing Buddhas"
+wikidata = "Q484458"
+point = [67.826802777, 34.832041666]
+
+[places.kapisa]
+name = "Kapisa (迦畢試), at Bagram"
+wikidata = "Q814388"
+point = [69.233333333, 34.933333333]
+
+[places.nagarahara]
+name = "Nagarahara (那揭羅曷), at Jalalabad"
+wikidata = "Q183303"
+point = [70.452777777, 34.430277777]
+
+[places.gandhara]
+name = "Gandhara (健馱邏), at Purushapura (Peshawar)"
+wikidata = "Q1113311"
+point = [71.5675, 34.014444444]
+
+[places.udyana]
+name = "Udyana (烏仗那), the Swat valley"
+wikidata = "Q389161"
+point = [72.361944444, 34.782777777]
+
+[places.taxila]
+name = "Taxila (呾叉始羅)"
+wikidata = "Q156093"
+point = [72.7875, 33.745833333]
+
+[places.kashmir]
+name = "Kashmir (迦濕彌羅), at Srinagar"
+wikidata = "Q170115"
+point = [74.806111111, 34.091111111]
+
+[places.mathura]
+name = "Mathura (秣菟羅)"
+wikidata = "Q200311"
+point = [77.673673, 27.4924134]
+
+[places.sthanesvara]
+name = "Sthanesvara (薩他泥濕伐羅), at Thanesar"
+wikidata = "Q2088448"
+point = [76.824909, 29.968834]
+
+[places.kanyakubja]
+name = "Kanyakubja (羯若鞠闍), at Kannauj"
+wikidata = "Q614890"
+point = [79.922019444, 27.031336111]
+
+[places.ayodhya]
+name = "Ayodhya (阿逾陀)"
+wikidata = "Q186040"
+point = [82.204444444, 26.799166666]
+
+[places.prayaga]
+name = "Prayaga (缽邏耶伽), at Prayagraj"
+wikidata = "Q162442"
+point = [81.85, 25.45]
+
+[places.kausambi]
+name = "Kausambi (憍賞彌)"
+wikidata = "Q1194868"
+point = [81.392897222, 25.338983333]
+
+[places.sravasti]
+name = "Sravasti (室羅伐悉底)"
+wikidata = "Q2594448"
+point = [82.050619, 27.517073]
+
+[places.kapilavastu]
+name = "Kapilavastu (劫比羅伐窣堵), at Tilaurakot"
+wikidata = "Q3417973"
+point = [83.08, 27.58]
+
+[places.kusinagara]
+name = "Kusinagara (拘尸那揭羅), at Kushinagar"
+wikidata = "Q825673"
+point = [83.888888888, 26.740277777]
+
+[places.varanasi]
+name = "Varanasi (婆羅痆斯)"
+wikidata = "Q79980"
+point = [83.012777777, 25.318888888]
+
+[places.vaisali]
+name = "Vaisali (吠舍釐)"
+wikidata = "Q1509463"
+point = [85.125591666, 25.986594444]
+
+[places.bodhgaya]
+name = "Magadha (摩揭陀), the Bodhi tree at Bodh Gaya"
+wikidata = "Q176767"
+point = [84.9925, 24.695]
+
+[places.nalanda]
+name = "Magadha (摩揭陀), the monastery of Nalanda"
+wikidata = "Q216243"
+point = [85.443827777, 25.136797222]
+
+[places.kamarupa]
+name = "Kamarupa (迦摩縷波)"
+wikidata = "Q1194765"
+point = [91.0, 26.0]
+
+[places.tamralipti]
+name = "Tamralipti (耽摩栗底), at Tamluk"
+wikidata = "Q118278"
+point = [87.916666666, 22.3]
+
+[places.dravida]
+name = "Dravida (達羅毗荼), at Kanchipura (Kanchipuram)"
+wikidata = "Q212332"
+point = [79.707777777, 12.830833333]
+
+[places.valabhi]
+name = "Valabhi (伐臘毗)"
+wikidata = "Q2772307"
+point = [71.8795, 21.8878]
+
+[places.jaguda]
+name = "Jaguda (漕矩咤), at Ghazni"
+wikidata = "Q173731"
+point = [68.423333333, 33.549166666]
+
+[places.huo]
+name = "Huo (活), at Kunduz"
+wikidata = "Q108155"
+point = [68.856944444, 36.728888888]
+
+[places.tashkurgan]
+name = "Kabhanda (朅盤陀), at Tashkurgan"
+wikidata = "Q979927"
+point = [75.228611111, 37.770555555]
+
+[places.kashgar]
+name = "Kashgar (佉沙)"
+wikidata = "Q170521"
+point = [75.983333, 39.45]
+
+[places.karghalik]
+name = "Cakuka (斫句迦), at Karghalik"
+wikidata = "Q1023102"
+point = [77.413056, 37.885]
+
+[places.khotan]
+name = "Khotan (瞿薩旦那)"
+wikidata = "Q914898"
+point = [80.0167, 37.1]
+
+[[stages]]
+place = "gaochang"
+cite = "Book 1, preface"
+passage = "出高昌故地，自近者始，曰阿耆尼國。"
+summary = "Leaving the old land of Gaochang, and beginning with the nearest, the first country is Agni."
+
+[[stages]]
+place = "agni"
+cite = "Book 1, Agni"
+passage = "阿耆尼國東西六百餘里，南北四百餘里。國大都城周六七里，四面據山，道險易守。"
+summary = "Agni is more than 600 li from east to west and 400 from north to south. Its capital, 6 or 7 li round, has hills on every side; the roads are steep and easy to hold."
+
+[[stages]]
+place = "kucha"
+cite = "Book 1, Kucha"
+passage = "屈支國。東西千餘里。南北六百餘里。國大都城周十七八里。宜穈麥有粳稻出蒲萄石榴。"
+summary = "Kucha is more than 1,000 li from east to west and 600 from north to south; its capital is 17 or 18 li round. It grows millet, wheat and rice, grapes and pomegranates."
+
+[[stages]]
+place = "baluka"
+cite = "Book 1, Baluka"
+passage = "國西北行三百餘里度石磧至凌山。此則葱嶺北原。水多東流矣。山谷積雪春夏合凍。"
+summary = "Going north-west for more than 300 li, across a stony desert, one comes to the Ice Mountain, the northern height of the Pamirs, whose waters mostly flow east; its valleys hold snow frozen through spring and summer."
+
+[[stages]]
+place = "chach"
+cite = "Book 1, Chach"
+passage = "赭時國。周千餘里。西臨葉河。東西狹南北長。"
+summary = "Chach is more than 1,000 li round, bordered on the west by the Ye river (the Syr Darya), narrow from east to west and long from north to south."
+
+[[stages]]
+place = "samarkand"
+cite = "Book 1, Samarkand"
+passage = "颯秣建國。周千六七百里。東西長南北狹。國大都城周二十餘里。極險固多居人。異方寶貨多聚此國。"
+summary = "Samarkand is 1,600 or 1,700 li round; its capital, more than 20 li round, is strongly defended and populous, and the precious goods of foreign lands gather there."
+
+[[stages]]
+place = "termez"
+cite = "Book 1, Termez"
+passage = "呾蜜國。東西六百餘里。南北四百餘里。國大都城周二十餘里。東西長南北狹。伽藍十餘所。僧徒千餘人。"
+summary = "Termez is more than 600 li from east to west and 400 from north to south; its capital is more than 20 li round, with some ten monasteries and more than 1,000 monks."
+
+[[stages]]
+place = "balkh"
+cite = "Book 1, Balkh"
+passage = "縛喝國。東西八百餘里。南北四百餘里。北臨縛芻河。國大都城周二十餘里。人皆謂之小王舍城也。"
+summary = "Balkh is more than 800 li from east to west and 400 from north to south, bordered on the north by the Oxus; its capital, more than 20 li round, is called the Little Rajagriha."
+
+[[stages]]
+place = "bamiyan"
+cite = "Book 1, Bamiyan"
+passage = "王城東北山阿有立佛石像。高百四五十尺。金色晃曜寶飾煥爛。"
+summary = "On a hillside north-east of the royal city stands a stone image of the Buddha, 140 or 150 feet high, shining with gold and brilliant ornaments."
+
+[[stages]]
+place = "kapisa"
+cite = "Book 1, Kapisa"
+passage = "迦畢試國。周四千餘里。北背雪山。三陲黑嶺。國大都城周十餘里。"
+summary = "Kapisa is more than 4,000 li round, with the Snowy Mountains to the north and Black Ranges on its other three sides; its capital is more than 10 li round."
+
+[[stages]]
+place = "nagarahara"
+cite = "Book 2, Nagarahara"
+passage = "那揭羅曷國東西六百餘里，南北二百五六十里。山周四境，懸隔危險。"
+summary = "Nagarahara is more than 600 li from east to west and 250 or 260 from north to south, surrounded by steep and dangerous mountains."
+
+[[stages]]
+place = "gandhara"
+cite = "Book 2, Gandhara"
+passage = "健馱邏國東西千餘里，南北八百餘里，東臨信度河。國大都城號布路沙布邏，周四十餘里。"
+summary = "Gandhara is more than 1,000 li from east to west and 800 from north to south, bordered on the east by the Indus; its capital, Purushapura, is more than 40 li round."
+
+[[stages]]
+place = "udyana"
+cite = "Book 3, Udyana"
+passage = "烏仗那國周五千餘里，山谷相屬，川澤連原。"
+summary = "Udyana is more than 5,000 li round, of mountains and valleys, with rivers and marshes between the plains."
+
+[[stages]]
+place = "taxila"
+cite = "Book 3, Taxila"
+passage = "呾叉始羅國周二千餘里，國大都城周十餘里。酋豪力競，王族絕嗣，往者役屬迦畢試國，近又附庸迦濕彌羅國。"
+summary = "Taxila is more than 2,000 li round, its capital more than 10 li; its chiefs vie for power, the royal line has died out, and it was subject to Kapisa before and to Kashmir now."
+
+[[stages]]
+place = "kashmir"
+cite = "Book 3, Kashmir"
+passage = "迦濕彌羅國周七千餘里，四境負山。山極峭峻，雖有門徑，而復隘狹，自古鄰敵無能攻伐。"
+summary = "Kashmir is more than 7,000 li round, enclosed by mountains so steep, with passes so narrow, that no neighbouring enemy has ever been able to attack it."
+
+[[stages]]
+place = "mathura"
+cite = "Book 4, Mathura"
+passage = "秣菟羅國周五千餘里。國大都城周二十餘里。土地膏腴，稼穡是務。庵沒羅果家植成林，雖同一名而有兩種，小者生青熟黃，大者始終青色。"
+summary = "Mathura is more than 5,000 li round, its capital more than 20 li; the soil is rich and farmed, and mangoes grow in groves by every house, of two kinds under one name: the small ones green, turning yellow when ripe, the large ones green throughout."
+
+[[stages]]
+place = "sthanesvara"
+cite = "Book 4, Sthanesvara"
+passage = "薩他泥濕伐羅國周七千餘里。國大都城周二十餘里。土地沃壤，稼穡滋盛。"
+summary = "Sthanesvara is more than 7,000 li round, its capital more than 20 li; the soil is fertile and the crops abundant."
+
+[[stages]]
+place = "kanyakubja"
+cite = "Book 5, Kanyakubja"
+passage = "羯若鞠阇國周四千餘里。國大都城西臨殑伽河，其長二十餘里，廣四五里。"
+summary = "Kanyakubja is more than 4,000 li round; its capital, on the Ganges to the west, is more than 20 li long and 4 or 5 li wide."
+
+[[stages]]
+place = "ayodhya"
+cite = "Book 5, Ayodhya"
+passage = "阿逾陁國周五千餘里。國大都城周二十餘里。穀稼豐盛，花果繁茂。"
+summary = "Ayodhya is more than 5,000 li round, its capital more than 20 li; its crops are plentiful and its flowers and fruit abundant."
+
+[[stages]]
+place = "prayaga"
+cite = "Book 5, Prayaga"
+passage = "缽邏耶伽國周五千餘里。國大都城據兩河交，周二十餘里，稼穡滋盛，果木扶疏。"
+summary = "Prayaga is more than 5,000 li round; its capital, more than 20 li round, stands where two rivers meet, among rich crops and fruit trees."
+
+[[stages]]
+place = "kausambi"
+cite = "Book 5, Kausambi"
+passage = "城內故宮中有大精舍，高六十餘尺，有刻檀佛像，上懸石蓋，鄔陀衍那王之所作也。"
+summary = "In the old palace of the city is a great temple, more than 60 feet high, with an image of the Buddha carved in sandalwood under a stone canopy, made by King Udayana."
+
+[[stages]]
+place = "sravasti"
+cite = "Book 6, Sravasti"
+passage = "室羅伐悉底國周六千餘里。都城荒頹，疆埸無紀。"
+summary = "Sravasti is more than 6,000 li round; its capital is in ruins and its borders are not known."
+
+[[stages]]
+place = "kapilavastu"
+cite = "Book 6, Kapilavastu"
+passage = "劫比羅伐窣堵國周四千餘里。空城十數，荒蕪已甚。"
+summary = "Kapilavastu is more than 4,000 li round, with some ten deserted towns, wholly in ruins."
+note = "Where Kapilavastu stood is debated: Tilaurakot in Nepal and Piprahwa in India are both proposed."
+
+[[stages]]
+place = "kusinagara"
+cite = "Book 6, Kusinagara"
+passage = "拘屍那揭羅國城郭頹毀，邑里蕭條。故城磚基，周十餘里。"
+summary = "The walls of Kusinagara are fallen and its towns desolate; the brick foundations of the old city are more than 10 li round."
+
+[[stages]]
+place = "varanasi"
+cite = "Book 7, Varanasi"
+passage = "婆羅痆斯國周四千餘里。國大都城臨殑伽河，長十八九里，廣五六里。"
+summary = "Varanasi is more than 4,000 li round; its capital, on the Ganges, is 18 or 19 li long and 5 or 6 li wide."
+
+[[stages]]
+place = "vaisali"
+cite = "Book 7, Vaisali"
+passage = "吠舍厘國周五千餘里。土地沃壤，花果茂盛，庵沒羅果、茂遮果既多且貴。"
+summary = "Vaisali is more than 5,000 li round, its soil fertile, its flowers and fruit abundant, mangoes and plantains plentiful and prized."
+
+[[stages]]
+place = "bodhgaya"
+cite = "Book 8, Magadha: the enclosure of the Bodhi tree"
+passage = "前正覺山西南行十四五里，至菩提樹。周垣磚壘，崇峻險固，東西長，南北狹，周五百餘步。"
+summary = "Fourteen or fifteen li south-west of the Pragbodhi mountain is the Bodhi tree, in a high brick enclosure, long from east to west and narrow from north to south, more than 500 paces round."
+
+[[stages]]
+place = "nalanda"
+cite = "Book 9, Magadha: the monastery of Nalanda"
+passage = "從此北行三十餘里，至那爛陁僧伽藍。"
+summary = "Going north from here for more than 30 li, one comes to the monastery of Nalanda."
+
+[[stages]]
+place = "kamarupa"
+cite = "Book 10, Kamarupa"
+passage = "迦摩縷波國周萬餘里，國大都城周三十餘里。土地泉濕，稼穡時播。"
+summary = "Kamarupa is more than 10,000 li round, its capital more than 30 li; the land is low and moist, and the crops are sown in their seasons."
+
+[[stages]]
+place = "tamralipti"
+cite = "Book 10, Tamralipti"
+passage = "耽摩栗底國周千四五百里，國大都城周十餘里。濱近海垂，土地卑濕。"
+summary = "Tamralipti is 1,400 or 1,500 li round, its capital more than 10 li; it lies by the sea, on low and damp land."
+
+[[stages]]
+place = "dravida"
+cite = "Book 10, Dravida"
+passage = "達羅毗荼國周六千餘里，國大都城號建志補羅，周三十餘里。"
+summary = "Dravida is more than 6,000 li round; its capital, Kanchipura, is more than 30 li round."
+
+[[stages]]
+place = "valabhi"
+cite = "Book 11, Valabhi"
+passage = "伐臘毗國周六千餘里，國大都城周三十餘里。土地所產，氣序所宜，風俗人性，同摩臘婆國。"
+summary = "Valabhi is more than 6,000 li round, its capital more than 30 li; its produce, climate and customs are those of Malava."
+
+[[stages]]
+place = "jaguda"
+cite = "Book 12, Jaguda"
+passage = "漕矩咤國周七千餘里。國大都城號鶴悉那，周三十餘里，或都鶴薩羅城，城周三十餘里，並堅峻險固也。"
+summary = "Jaguda is more than 7,000 li round; its capital, Ghazni, is more than 30 li round, or else Hasala, as large, both strongly defended."
+
+[[stages]]
+place = "huo"
+cite = "Book 12, Huo"
+passage = "活國，睹貨邏國故地也，周二千餘里。國大都城周二十餘里。無別君長，役屬突厥。"
+summary = "Huo, in the old land of Tukhara, is more than 2,000 li round, its capital more than 20 li; it has no king of its own and is subject to the Turks."
+
+[[stages]]
+place = "tashkurgan"
+cite = "Book 12, Kabhanda"
+passage = "朅盤陁國周二千餘里，國大都城基大石嶺，背徒多河，周二十餘里。山嶺連屬，川原隘狹。"
+summary = "Kabhanda is more than 2,000 li round; its capital, more than 20 li round, is built on a great rocky ridge with the Sita river behind it, among mountains and narrow valleys."
+
+[[stages]]
+place = "kashgar"
+cite = "Book 12, Kashgar"
+passage = "佉沙國周五千餘里，多沙磧，少壤土。稼穡殷盛，花果繁茂。"
+summary = "Kashgar is more than 5,000 li round, mostly sand and stones with little soil, yet its crops are rich and its flowers and fruit abundant."
+
+[[stages]]
+place = "karghalik"
+cite = "Book 12, Cakuka"
+passage = "斫句迦國周千餘里。國大都城周十餘里，堅峻險固，編戶殷盛。"
+summary = "Cakuka is more than 1,000 li round; its capital, more than 10 li round, is strongly defended and populous."
+
+[[stages]]
+place = "khotan"
+cite = "Book 12, Khotan"
+passage = "瞿薩旦那國周四千餘里，沙磧太半，壤土隘狹。宜穀稼，多眾果。"
+summary = "Khotan is more than 4,000 li round, more than half of it sand and stones, with little arable soil; it grows grain and many fruits."

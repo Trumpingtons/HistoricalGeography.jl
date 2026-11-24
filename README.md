@@ -1,6 +1,6 @@
 # HistoricalGeography.jl
 
-The borders of states, the populations of the past and old maps, read into DuckDB from Julia.
+The borders of states, the populations of the past, old maps and topic maps, read into DuckDB from Julia.
 
 - **Cliopatria** (Seshat: Global History Databank), version 0.2.1: the polities of the world from 3400 BCE to 2024, each shape with the years it held, as realms (the polities inside no other) or as their parts.
 - **historical-basemaps** (André Ourednik): world maps at 37 chosen years from 100 to 2010, such as 1492, 1715, 1815, 1914 and 1945, each standing for its year until the next map.
@@ -25,6 +25,14 @@ Old maps come in three kinds, each given as the address a web map draws it from:
 - **Eight famous maps of the world**, from the Tabula Peutingeriana to the Tasman map, which have no georeference: `famous_map` gives the address of the image, from its library's IIIF image server or Wikimedia Commons, its terms, and a box around the region it shows.
 
 `save_geotiff`, with ArchGDAL.jl, saves the tiles of a map over an area as a GeoTIFF.
+
+Topic maps put a work on the map, each event, stage or place with the words of its source:
+
+- **The events of a war**: `war_events(con, "Q8676"; folder)` writes the battles, sieges and campaigns that Wikidata gives as parts of a war, with a place and a date, as the table `events`; `war_events(con, :qin; folder)` the conquests of Qin Shi Huang, written by hand from chapter 6 of Sima Qian's *Records of the Grand Historian*, each with its passage in Chinese and an English summary. `battlefields` writes the battlefields of the Civil War, the War of Independence or the War of 1812 as the American Battlefield Protection Program of the National Park Service drew them.
+- **The stages of a journey**: `journey(con, name; folder)` writes the stages of a journey written by hand from its source, with their dates or years, passages and Wikidata items, and the route through them, split where it crosses the antimeridian: `:bly` (Nellie Bly, *Around the World in Seventy-Two Days*), `:zhenghe` (the Changle and Liujiagang inscriptions of Zheng He), `:xuanzang` (the *Records of the Western Regions of the Great Tang*), `:polo` (Marco Polo in Henry Yule's translation) and `:odysseus` (the *Odyssey* in A. T. Murray's translation, each place of legend where Strabo or Thucydides put it, in their words).
+- **The places a text names**: `text_places(con, :herodotus; folder)` writes the places of Herodotus' *Histories* that the Perseus Digital Library tags with the Getty Thesaurus of Geographic Names or its own gazetteer, each with the number of times it is named and the passages; `:genji` (*The Tale of Genji*, in Shibuya Eiichi's text) and `:nights` (*The Arabian Nights*, in Richard F. Burton's translation) the places written by hand from them, each with its passages.
+
+The hand-written data are in `data/topics`, one TOML file per work, every passage as its source prints it and every place with its Wikidata item, from which its coordinates come.
 
 ## Usage
 
@@ -87,11 +95,11 @@ using ArchGDAL
 save_geotiff(cassini.url, (2.30, 48.83, 2.39, 48.89); zoom = 14, path = "cassini-paris.tif")
 ```
 
-In Pollis, the Historical Borders panel of the Historical Geography and Archaeology Toolbox draws the borders on a map with a year slider, the Historical Populations panel the cities and the grid, and the Old Maps panel an old map beside today's map, with a line to swipe between them.
+In Pollis, the Historical Borders panel of the Historical Geography and Archaeology Toolbox draws the borders on a map with a year slider, the Historical Populations panel the cities and the grid, the Historical Maps panel an old map beside today's map, with a line to swipe between them, and the Topic Maps page the topic maps, under At War, Conquests, Places and Journeys.
 
 ## Sources
 
-The data belong to their authors, whose terms apply: [Cliopatria](https://github.com/Seshat-Global-History-Databank/cliopatria), [historical-basemaps](https://github.com/aourednik/historical-basemaps), [CShapes 2.0](https://icr.ethz.ch/data/cshapes/), [European urban population, 700 - 2000](https://doi.org/10.17026/dans-xzy-u62q), [Historical Urban Population: 3700 BC - AD 2000](https://doi.org/10.7927/H4ZG6QBX), [HYDE 3.5](https://doi.org/10.24416/UU01-F45D44), and the maps of IGN under the [Licence Ouverte](https://www.etalab.gouv.fr/licence-ouverte-open-licence/), whose map of Cassini is cited with the source `ign_layer` gives. The maps of Allmaps and the famous maps are under the terms of the libraries that hold them, which `famous_map` gives for each famous map.
+The data belong to their authors, whose terms apply: [Cliopatria](https://github.com/Seshat-Global-History-Databank/cliopatria), [historical-basemaps](https://github.com/aourednik/historical-basemaps), [CShapes 2.0](https://icr.ethz.ch/data/cshapes/), [European urban population, 700 - 2000](https://doi.org/10.17026/dans-xzy-u62q), [Historical Urban Population: 3700 BC - AD 2000](https://doi.org/10.7927/H4ZG6QBX), [HYDE 3.5](https://doi.org/10.24416/UU01-F45D44), and the maps of IGN under the [Licence Ouverte](https://www.etalab.gouv.fr/licence-ouverte-open-licence/), whose map of Cassini is cited with the source `ign_layer` gives. The maps of Allmaps and the famous maps are under the terms of the libraries that hold them, which `famous_map` gives for each famous map. The items of [Wikidata](https://www.wikidata.org) are under CC0 1.0, the texts of the [Perseus Digital Library](https://github.com/PerseusDL/canonical-greekLit) under CC BY-SA 4.0, the [Getty Thesaurus of Geographic Names](https://www.getty.edu/research/tools/vocabularies/tgn/) under the Open Data Commons Attribution License, and Shibuya Eiichi's text of *The Tale of Genji* on [Wikisource](https://ja.wikisource.org) under CC BY-SA 3.0, which the passages of `data/topics/genji.toml` share; the other texts quoted are in the public domain, as are the [battlefield boundaries](https://www.nps.gov/orgs/2287/battlefield-boundaries-map.htm) of the National Park Service.
 
 - Bennett, J. S. and 12 coauthors (2025). Cliopatria - A geospatial database of world-wide political entities from 3400BCE to 2024CE. *Scientific Data* 12(1), 247. [doi:10.1038/s41597-025-04516-9](https://doi.org/10.1038/s41597-025-04516-9)
 - Buringh, E. (2020). European urban population, 700 - 2000. DANS Data Station Social Sciences and Humanities. [doi:10.17026/dans-xzy-u62q](https://doi.org/10.17026/dans-xzy-u62q)

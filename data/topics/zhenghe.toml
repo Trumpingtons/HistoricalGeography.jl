@@ -1,0 +1,234 @@
+# The seven voyages of Zheng He, 1405 to 1431, as the inscription he and his officers set up at Changle in 1431 records
+# them, voyage by voyage, with the inscription they set up at Liujiagang the same year. Each stage is a country a
+# voyage reached, with the inscription's words; the inscriptions name the countries, not the order the fleet reached
+# them in, so the stages are not joined by a route. The years are those of the reigns, Yongle (its third year is 1405)
+# and Xuande (its sixth year is 1431). Each place has its Wikidata item, from which its coordinates come.
+
+title = "The Voyages of Zheng He"
+work = "Zheng He and his officers, the Changle inscription (1431), with the Liujiagang inscription (1431)"
+text = "https://zh.wikisource.org/wiki/%E5%A4%A9%E5%A6%83%E4%B9%8B%E7%A5%9E%E9%9D%88%E6%87%89%E8%A8%98"
+licence = "Public domain (text)"
+route = false
+
+[places.calicut]
+name = "Calicut (古里)"
+wikidata = "Q28729"
+point = [75.780277777, 11.247777777]
+
+[places.palembang]
+name = "Palembang (三佛齊)"
+wikidata = "Q8131"
+point = [104.764444444, -2.983333333]
+
+[places.java]
+name = "Java (爪哇), at Trowulan"
+wikidata = "Q25259418"
+point = [112.388888888, -7.5475]
+
+[places.cochin]
+name = "Cochin (柯枝)"
+wikidata = "Q150056"
+point = [76.338611111, 9.952777777]
+
+[places.siam]
+name = "Siam (暹羅), at Ayutthaya"
+wikidata = "Q203370"
+point = [100.5761452, 14.359359083]
+
+[places.ceylon]
+name = "Ceylon (錫蘭山)"
+wikidata = "Q854"
+point = [81.0, 7.0]
+
+[places.hormuz]
+name = "Hormuz (忽魯謨斯)"
+wikidata = "Q2478280"
+point = [56.452276, 27.092432]
+
+[places.samudera]
+name = "Samudera (蘇門答剌)"
+wikidata = "Q3284315"
+point = [97.2005618, 5.1340555]
+
+[places.malacca]
+name = "Malacca (滿剌加)"
+wikidata = "Q61089"
+point = [102.251111111, 2.188888888]
+
+[places.aden]
+name = "Aden (阿丹)"
+wikidata = "Q131694"
+point = [45.033333333, 12.8]
+
+[places.mogadishu]
+name = "Mogadishu (木骨都束)"
+wikidata = "Q2449"
+point = [45.341944444, 2.039166666]
+
+[places.brava]
+name = "Brava (卜剌哇)"
+wikidata = "Q613246"
+point = [44.030277777, 1.113333333]
+
+[places.liujiagang]
+name = "Liujiagang (劉家港), Taicang"
+wikidata = "Q61985"
+point = [121.10435, 31.45152]
+
+[places.changle]
+name = "Changle (長樂)"
+wikidata = "Q766619"
+point = [119.50611, 25.96253]
+
+[[stages]]
+place = "calicut"
+part = 1
+year = 1405
+cite = "Changle inscription, first voyage"
+passage = "一、永樂三年，統領舟師，至古里等國。"
+summary = "In the third year of Yongle, the fleet sails to Calicut and other countries."
+
+[[stages]]
+place = "palembang"
+part = 1
+year = 1405
+cite = "Changle inscription, first voyage"
+passage = "時海寇陳祖義聚衆三佛齊國，劫掠番商，亦來犯我舟師，卽有神兵陰助，一鼓而殄滅之，至五年廻。"
+summary = "The pirate Chen Zuyi, gathering men in Palembang to plunder foreign merchants, attacks the fleet and is destroyed; the fleet is back in the fifth year."
+
+[[stages]]
+place = "java"
+part = 2
+year = 1407
+cite = "Changle inscription, second voyage"
+passage = "一、永樂五年，統領舟師，往爪哇、古里、柯枝、暹羅等國，王各以珎寶珎禽異獸貢獻，至七年廻還。"
+summary = "In the fifth year of Yongle, the fleet sails to Java, Calicut, Cochin, Siam and other countries, whose kings offer treasures, rare birds and strange animals; it is back in the seventh year."
+
+[[stages]]
+place = "calicut"
+part = 2
+year = 1407
+cite = "Changle inscription, second voyage"
+passage = "一、永樂五年，統領舟師，往爪哇、古里、柯枝、暹羅等國，王各以珎寶珎禽異獸貢獻，至七年廻還。"
+summary = "In the fifth year of Yongle, the fleet sails to Java, Calicut, Cochin, Siam and other countries, whose kings offer treasures, rare birds and strange animals; it is back in the seventh year."
+
+[[stages]]
+place = "cochin"
+part = 2
+year = 1407
+cite = "Changle inscription, second voyage"
+passage = "一、永樂五年，統領舟師，往爪哇、古里、柯枝、暹羅等國，王各以珎寶珎禽異獸貢獻，至七年廻還。"
+summary = "In the fifth year of Yongle, the fleet sails to Java, Calicut, Cochin, Siam and other countries, whose kings offer treasures, rare birds and strange animals; it is back in the seventh year."
+
+[[stages]]
+place = "siam"
+part = 2
+year = 1407
+cite = "Changle inscription, second voyage"
+passage = "一、永樂五年，統領舟師，往爪哇、古里、柯枝、暹羅等國，王各以珎寶珎禽異獸貢獻，至七年廻還。"
+summary = "In the fifth year of Yongle, the fleet sails to Java, Calicut, Cochin, Siam and other countries, whose kings offer treasures, rare birds and strange animals; it is back in the seventh year."
+
+[[stages]]
+place = "ceylon"
+part = 3
+year = 1409
+cite = "Changle inscription, third voyage"
+passage = "一、永樂七年，統領舟師，往前各國，道經錫蘭山國。其王亞烈苦奈兒負固不恭，謀害舟師，賴神顯應知覺，遂生擒其王，至九年歸獻，尋蒙恩宥，俾歸本國。"
+summary = "In the seventh year of Yongle, on the way to the same countries, the fleet passes Ceylon, whose king Alagakkonara plots against it; he is taken alive, brought back in the ninth year, pardoned and sent home."
+
+[[stages]]
+place = "hormuz"
+part = 4
+year = 1413
+cite = "Changle inscription, fourth voyage"
+passage = "一、永樂十一年，統領舟師，往忽魯謨斯等國。"
+summary = "In the eleventh year of Yongle, the fleet sails to Hormuz and other countries."
+note = "The Liujiagang inscription gives the twelfth year of Yongle (1414) for this voyage."
+
+[[stages]]
+place = "samudera"
+part = 4
+year = 1413
+cite = "Changle inscription, fourth voyage"
+passage = "其蘇門答剌國有僞王蘇幹剌，寇侵本國，其王宰奴里阿比丁遣使赴闕陳訴，就率官兵勦捕，賴神默助，生擒僞王，至十三年廻獻。"
+summary = "In Samudera a usurper, Sekandar, attacks the kingdom; its king, Zain al-Abidin, appeals to the court, and the fleet takes the usurper alive and brings him back in the thirteenth year."
+
+[[stages]]
+place = "malacca"
+part = 4
+year = 1415
+cite = "Changle inscription, fourth voyage"
+passage = "是年滿剌加國王親率妻子朝貢。"
+summary = "That year the King of Malacca comes himself, with his wife and children, to bring tribute to the court."
+
+[[stages]]
+place = "hormuz"
+part = 5
+year = 1417
+cite = "Changle inscription, fifth voyage"
+passage = "一、永樂十五年，統領舟師往西域，其忽魯謨斯國進獅子、金錢豹、大西馬。"
+summary = "In the fifteenth year of Yongle, the fleet sails to the western regions; Hormuz offers lions, leopards and great western horses."
+
+[[stages]]
+place = "aden"
+part = 5
+year = 1417
+cite = "Changle inscription, fifth voyage"
+passage = "阿丹國進麒麟，番名祖剌法，并長角馬哈獸。"
+summary = "Aden offers a qilin, in its own tongue zurafa (a giraffe), and long-horned maha beasts."
+
+[[stages]]
+place = "mogadishu"
+part = 5
+year = 1417
+cite = "Changle inscription, fifth voyage"
+passage = "木骨都束國進花福祿并獅子。"
+summary = "Mogadishu offers zebras and lions."
+
+[[stages]]
+place = "brava"
+part = 5
+year = 1417
+cite = "Changle inscription, fifth voyage"
+passage = "卜剌哇國進千里駱駝并駝雞。"
+summary = "Brava offers thousand-li camels and ostriches."
+
+[[stages]]
+place = "java"
+part = 5
+year = 1417
+cite = "Changle inscription, fifth voyage"
+passage = "爪哇、古里國進糜里羔獸。"
+summary = "Java and Calicut offer miligao beasts."
+
+[[stages]]
+place = "calicut"
+part = 5
+year = 1417
+cite = "Changle inscription, fifth voyage"
+passage = "爪哇、古里國進糜里羔獸。"
+summary = "Java and Calicut offer miligao beasts."
+
+[[stages]]
+place = "hormuz"
+part = 6
+year = 1421
+cite = "Changle inscription, sixth voyage"
+passage = "一、永樂十九年，統領舟師，遣忽魯謨斯等國使臣久侍京都者，悉還本國。其各國王益脩職貢，視前有加。"
+summary = "In the nineteenth year of Yongle, the fleet takes home the envoys of Hormuz and other countries who had long stayed at the capital; their kings send more tribute than before."
+
+[[stages]]
+place = "liujiagang"
+part = 7
+year = 1430
+cite = "Liujiagang inscription"
+passage = "宣德五年冬復奉使諸番國，艤舟祠下，官軍人等瞻禮勤誠，祀享絡繹。"
+summary = "In the winter of the fifth year of Xuande, sent again to the foreign countries, the fleet moors below the temple of the Celestial Consort, where officers and men worship."
+
+[[stages]]
+place = "changle"
+part = 7
+year = 1431
+cite = "Changle inscription, seventh voyage"
+passage = "一、宣德六年，仍統舟師往諸番國，開讀賞賜，駐泊茲港，等候朔風開洋。"
+summary = "In the sixth year of Xuande, the fleet sails again for the foreign countries, to read the imperial edicts and give gifts, and waits in this harbour for the north wind to put to sea."

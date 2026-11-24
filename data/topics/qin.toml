@@ -1,0 +1,203 @@
+# The wars by which King Zheng of Qin, later Qin Shi Huang, conquered the six other states, 230 to 221 BCE, as the
+# Basic Annals of Qin Shi Huang tell them, year by year of his reign (his first year is 246 BCE).
+# Each event quotes its passage of the Chinese text; each place has its Wikidata item, from which its coordinates come.
+
+title = "The Conquests of Qin Shi Huang"
+work = "Sima Qian, Records of the Grand Historian (Shiji), chapter 6: Basic Annals of Qin Shi Huang"
+text = "https://zh.wikisource.org/wiki/%E5%8F%B2%E8%A8%98/%E5%8D%B7006"
+licence = "Public domain (text)"
+
+[places.zhenghan]
+name = "Xinzheng (新鄭), capital of Han"
+wikidata = "Q17026198"
+point = [113.72227, 34.412314]
+
+[places.handan]
+name = "Handan (邯鄲), capital of Zhao"
+wikidata = "Q58570"
+point = [114.48937, 36.61161]
+
+[places.dai]
+name = "Dai (代)"
+wikidata = "Q10884434"
+point = [114.67607, 39.88376]
+
+[places.yi]
+name = "Yi River (易水), in Yi County"
+wikidata = "Q197865"
+point = [115.49596, 39.34991]
+
+[places.ji]
+name = "Ji (薊), capital of Yan"
+wikidata = "Q6192085"
+point = [116.382425, 39.894262]
+
+[places.daliang]
+name = "Daliang (大梁), capital of Wei"
+wikidata = "Q208471"
+point = [114.345, 34.795]
+
+[places.chen]
+name = "Chen (陳)"
+wikidata = "Q1198882"
+point = [114.86686, 33.73344]
+
+[places.huainan]
+name = "South of the Huai (淮南), in Shou County"
+wikidata = "Q1349884"
+point = [116.77938, 32.57822]
+
+[places.liaodong]
+name = "Liaodong (遼東)"
+wikidata = "Q7208494"
+point = [123.177222222, 41.264444444]
+
+[places.kuaiji]
+name = "Kuaiji (會稽)"
+wikidata = "Q8193392"
+point = [120.619444444, 31.3]
+
+[places.linzi]
+name = "Linzi (臨淄), capital of Qi"
+wikidata = "Q225872"
+point = [118.3, 36.816666666]
+
+[[events]]
+name = "Han Conquered"
+kind = "conquest"
+year = -230
+reign = 17
+place = "zhenghan"
+sides = "Qin; Han"
+passage = "十七年，內史騰攻韓，得韓王安，盡納其地，以其地為郡，命曰潁川。"
+summary = "Teng, Clerk of the Capital, attacks Han, takes King An and all his land, and makes it the commandery of Yingchuan."
+
+[[events]]
+name = "Siege of Handan"
+kind = "siege"
+year = -229
+reign = 18
+place = "handan"
+sides = "Qin; Zhao"
+passage = "十八年，大興兵攻趙，王翦將上地，下井陘，端和將河內，羌瘣伐趙，端和圍邯鄲城。"
+summary = "A great army attacks Zhao: Wang Jian leads the troops of Shangdi down through Jingxing, Duanhe those of Henei, and Duanhe lays siege to Handan."
+
+[[events]]
+name = "King of Zhao Taken"
+kind = "conquest"
+year = -228
+reign = 19
+place = "handan"
+sides = "Qin; Zhao"
+passage = "十九年，王翦、羌瘣盡定取趙地東陽，得趙王。"
+summary = "Wang Jian and Qiang Hui take all the land of Zhao at Dongyang and capture the King of Zhao."
+
+[[events]]
+name = "Prince Jia King of Dai"
+kind = "flight"
+year = -228
+reign = 19
+place = "dai"
+sides = "Zhao; Yan"
+passage = "趙公子嘉率其宗數百人之代，自立為代王，東與燕合兵，軍上谷。"
+summary = "Prince Jia of Zhao leads a few hundred of his clan to Dai, makes himself King of Dai, and joins his troops with Yan's in Shanggu."
+
+[[events]]
+name = "Battle West of the Yi River"
+kind = "battle"
+year = -227
+reign = 20
+place = "yi"
+sides = "Qin; Yan; Dai"
+passage = "二十年，燕太子丹患秦兵至國，恐，使荊軻刺秦王。秦王覺之，體解軻以徇，而使王翦、辛勝攻燕。燕、代發兵擊秦軍，秦軍破燕易水之西。"
+summary = "Crown Prince Dan of Yan sends Jing Ke to kill the King of Qin, who sends Wang Jian and Xin Sheng against Yan; Qin defeats Yan and Dai west of the Yi River."
+
+[[events]]
+name = "Ji Taken"
+kind = "conquest"
+year = -226
+reign = 21
+place = "ji"
+sides = "Qin; Yan"
+passage = "乃益發卒詣王翦軍，遂破燕太子軍，取燕薊城，得太子丹之首。燕王東收遼東而王之。"
+summary = "With more troops, Wang Jian defeats the army of Crown Prince Dan and takes Ji, the city of Yan; the King of Yan withdraws east to rule Liaodong."
+
+[[events]]
+name = "Revolt of Xinzheng"
+kind = "revolt"
+year = -226
+reign = 21
+place = "zhenghan"
+sides = "Qin; Han"
+passage = "新鄭反。"
+summary = "Xinzheng, the former capital of Han, revolts."
+
+[[events]]
+name = "Daliang Flooded"
+kind = "siege"
+year = -225
+reign = 22
+place = "daliang"
+sides = "Qin; Wei"
+passage = "二十二年，王賁攻魏，引河溝灌大梁，大梁城壞，其王請降，盡取其地。"
+summary = "Wang Ben attacks Wei and turns the canals of the Yellow River on Daliang; its walls give way, the King of Wei surrenders, and Qin takes all his land."
+
+[[events]]
+name = "King of Jing Taken"
+kind = "conquest"
+year = -224
+reign = 23
+place = "chen"
+sides = "Qin; Jing (Chu)"
+passage = "二十三年，秦王復召王翦，彊起之，使將擊荊。取陳以南至平輿，虜荊王。秦王游至郢陳。荊將項燕立昌平君為荊王，反秦於淮南。"
+summary = "Wang Jian, recalled, attacks Jing (Chu), takes the land from Chen south to Pingyu and captures its king; Xiang Yan makes the Lord of Changping King of Jing and rises against Qin south of the Huai."
+
+[[events]]
+name = "Army of Jing Defeated"
+kind = "battle"
+year = -223
+reign = 24
+place = "huainan"
+sides = "Qin; Jing (Chu)"
+passage = "二十四年，王翦、蒙武攻荊，破荊軍，昌平君死，項燕遂自殺。"
+summary = "Wang Jian and Meng Wu defeat the army of Jing; the Lord of Changping dies and Xiang Yan kills himself."
+
+[[events]]
+name = "King Xi of Yan Taken"
+kind = "conquest"
+year = -222
+reign = 25
+place = "liaodong"
+sides = "Qin; Yan"
+passage = "二十五年，大興兵，使王賁將，攻燕遼東，得燕王喜。"
+summary = "Wang Ben leads a great army against Liaodong and captures King Xi of Yan."
+
+[[events]]
+name = "King Jia of Dai Taken"
+kind = "conquest"
+year = -222
+reign = 25
+place = "dai"
+sides = "Qin; Dai"
+passage = "還攻代，虜代王嘉。"
+summary = "On his way back, Wang Ben attacks Dai and captures King Jia."
+
+[[events]]
+name = "Jing South of the Yangtze"
+kind = "conquest"
+year = -222
+reign = 25
+place = "kuaiji"
+sides = "Qin; Jing (Chu); Yue"
+passage = "王翦遂定荊江南地；降越君，置會稽郡。"
+summary = "Wang Jian subdues the land of Jing south of the Yangtze, receives the surrender of the lords of Yue, and makes the commandery of Kuaiji."
+
+[[events]]
+name = "King Jian of Qi Taken"
+kind = "conquest"
+year = -221
+reign = 26
+place = "linzi"
+sides = "Qin; Qi"
+passage = "二十六年，齊王建與其相后勝發兵守其西界，不通秦。秦使將軍王賁從燕南攻齊，得齊王建。"
+summary = "King Jian of Qi and his minister Hou Sheng guard the western border and break with Qin; Wang Ben marches south from Yan, attacks Qi and captures King Jian."

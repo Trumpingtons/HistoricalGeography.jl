@@ -15,12 +15,18 @@ Old maps come from three places: the historical maps of France that IGN serves a
 map of the état-major, aerial photographs since 1950), the maps that Allmaps holds georeferenced, found by place,
 and famous maps of the world in the images their libraries publish.
 
+Topic maps put a work on the map: the events of a war, from Wikidata or written by hand from its source; the
+battlefields of the National Park Service; the stages of a journey and the route through them; and the places a text
+names, from the texts of the Perseus Digital Library or written by hand, each with the passages of its source. The
+hand-written data are in `data/topics`, one TOML file per work.
+
 The functions take a DuckDB connection with the extension `spatial` loaded and `SET geometry_always_xy = true`
 (longitude, latitude); they write tables in it, or return the SQL that reads what they downloaded.
 """
 module HistoricalGeography
 
 using DBInterface, Downloads, JSON, Tables
+import Dates, TOML
 using Base64: base64encode
 
 # The sources, as SQL of their records: name, starts, ends, geom
@@ -38,6 +44,8 @@ export largest_cities, city_history, cell_history, total_population
 export earthdata_token
 # Old maps: IGN's maps of France, the georeferenced maps of Allmaps, famous maps of the world
 export ign_layers, ign_layer, allmaps, famous_maps, famous_map, save_geotiff
+# Topic maps: the events of a war, the stages of a journey, the places a text names
+export war_events, battlefields, journey, text_places
 
 const AGENT = "User-Agent" => "HistoricalGeography.jl (https://pollis.org)"
 
@@ -73,5 +81,6 @@ include("borders.jl")
 include("earthdata.jl")
 include("populations.jl")
 include("oldmaps.jl")
+include("topics.jl")
 
 end

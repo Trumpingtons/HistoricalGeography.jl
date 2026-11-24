@@ -55,4 +55,45 @@ using HistoricalGeography, Test
 	@testset "Names written into SQL" begin
 		@test HistoricalGeography.quoted("Jacques' maps/x.geojson") == "Jacques'' maps/x.geojson"
 	end
+
+	@testset "Dates, points and queries of Wikidata" begin
+		# Wikidata writes 490 BCE as -0489 (year 0 is 1 BCE)
+		@test (HistoricalGeography.wikidata_year("-0489-09-12T00:00:00Z"), HistoricalGeography.wikidata_year("1863-07-01T00:00:00Z"),
+			HistoricalGeography.wikidata_year("unknown")) == (-490, 1863, nothing)
+		@test (HistoricalGeography.wikidata_point("Point(23.9667 38.1167)"), HistoricalGeography.wikidata_point("Point(1 2"),
+			HistoricalGeography.wikidata_point(nothing)) == ((23.9667, 38.1167), nothing, nothing)
+		@test HistoricalGeography.query_escape("wd:Q8676 é'~") == "wd%3AQ8676%20%C3%A9%27~"
+	end
+
+	@testset "Routes across the antimeridian" begin
+		# from 170 E to 170 W the short way: 10 degrees to the line, 10 beyond it, the latitude halfway between
+		@test HistoricalGeography.route_lines([[170.0, 10.0], [-170.0, 20.0], [-160.0, 20.0]]) ==
+			[Any[[170.0, 10.0], [180.0, 15.0]], Any[[-180.0, 15.0], [-170.0, 20.0], [-160.0, 20.0]]]
+		@test HistoricalGeography.route_lines([[0.0, 0.0], [10.0, 5.0]]) == [Any[[0.0, 0.0], [10.0, 5.0]]]
+	end
+
+	@testset "Places named in a Perseus text" begin
+		xml = """<div type="textpart" subtype="book" n="1"><div type="textpart" subtype="chapter" n="2">
+			<placeName key="tgn,7001289">Argos</placeName> and <name type="place" key="perseus,Phoenicia"><reg>Phoenicia [35.5,34.0] (Perseus)</reg>the Phoenicians</name>
+			<note>a note naming <placeName key="tgn,7010720">Athens</placeName></note></div></div>"""
+		mentions, located = HistoricalGeography.perseus_mentions(xml)
+		@test (mentions, located) == ([(key = "tgn,7001289", name = "Argos", passage = "1.2"), (key = "perseus,Phoenicia", name = "the Phoenicians", passage = "1.2")],
+			Dict("perseus,Phoenicia" => (35.5, 34.0)))
+	end
+
+	@testset "The topic data written by hand" begin
+		@test HistoricalGeography.topic_names() == [:bly, :genji, :nights, :odysseus, :polo, :qin, :xuanzang, :zhenghe]
+		# every event, stage and mention names a place of its file, and every place is named
+		for name in HistoricalGeography.topic_names()
+			data = HistoricalGeography.topic_data(name)
+			items = [get(data, "events", []); get(data, "stages", []); get(data, "mentions", [])]
+			named = Set(item["place"] for item in items)
+			@test (name, issubset(named, keys(data["places"])), length(named) == length(data["places"]), all(item -> !isempty(item["passage"]), items)) ==
+				(name, true, true, true)
+		end
+		@test_throws ArgumentError HistoricalGeography.topic_data(:iliad)
+		@test_throws ArgumentError journey(nothing, :iliad; folder = mktempdir())
+		@test_throws ArgumentError text_places(nothing, :iliad; folder = mktempdir())
+		@test_throws ArgumentError battlefields(nothing, :korea; folder = mktempdir())
+	end
 end

@@ -1,0 +1,173 @@
+# Places of The Tale of Genji, chapter by chapter, each with a passage of the Japanese text in the edition of Shibuya
+# Eiichi on Wikisource (CC BY-SA 3.0) and an English summary of it. Each place has its Wikidata item, from which its
+# coordinates come; a place the text names only as a district is put at its best-known site.
+
+title = "Places of The Tale of Genji"
+work = "Murasaki Shikibu, The Tale of Genji, edited by Shibuya Eiichi"
+text = "https://ja.wikisource.org/wiki/%E6%BA%90%E6%B0%8F%E7%89%A9%E8%AA%9E_(%E6%B8%8B%E8%B0%B7%E6%A0%84%E4%B8%80%E6%A0%A1%E8%A8%82)"
+licence = "CC BY-SA 3.0 (text)"
+
+[places.palace]
+name = "The Palace (内裏), Heian-kyō"
+wikidata = "Q304501"
+point = [135.74222222, 35.01361111]
+
+[places.nonomiya]
+name = "Nonomiya (野の宮)"
+wikidata = "Q501266"
+point = [135.67416667, 35.01777778]
+
+[places.ise]
+name = "Ise (伊勢), the residence of the Ise Priestess"
+wikidata = "Q3135853"
+point = [136.616836, 34.541207]
+
+[places.suma]
+name = "Suma (須磨)"
+wikidata = "Q1155010"
+point = [135.133694444, 34.658638888]
+
+[places.akashi]
+name = "Akashi (明石)"
+wikidata = "Q26406"
+point = [134.940277777, 34.682777777]
+
+[places.sumiyoshi]
+name = "Sumiyoshi (住吉)"
+wikidata = "Q705949"
+point = [135.492934, 34.612513]
+
+[places.osaka]
+name = "The Ōsaka Barrier (逢坂の関)"
+wikidata = "Q10551417"
+point = [135.855695, 34.994243]
+
+[places.ishiyama]
+name = "Ishiyama (石山)"
+wikidata = "Q1082791"
+point = [135.905625, 34.96041944]
+
+[places.oi]
+name = "The Ōi River (大堰川), at Arashiyama"
+wikidata = "Q2859566"
+point = [135.666388888, 35.009583333]
+
+[places.sagano]
+name = "Sagano (嵯峨野)"
+wikidata = "Q11477322"
+point = [135.672917, 35.018333]
+
+[places.tsukushi]
+name = "Tsukushi (筑紫), at Dazaifu"
+wikidata = "Q144845"
+point = [130.51514444, 33.51454167]
+
+[places.hatsuse]
+name = "Hatsuse (初瀬)"
+wikidata = "Q1457787"
+point = [135.90694444, 34.53583333]
+
+[places.oharano]
+name = "Ōharano (大原野)"
+wikidata = "Q3594020"
+point = [135.65611111, 34.96027778]
+
+[places.uji]
+name = "Uji (宇治)"
+wikidata = "Q326956"
+point = [135.799805555, 34.884361111]
+
+[places.yokawa]
+name = "Yokawa (横川), on Mount Hiei"
+wikidata = "Q917195"
+point = [135.841111111, 35.070555555]
+
+[[mentions]]
+place = "palace"
+cite = "Chapter 1, Kiritsubo"
+passage = "内裏より御使あり。三位の位贈りたまふよし、勅使来てその宣命読むなむ、悲しきことなりける。"
+summary = "A messenger comes from the Palace: the Emperor gives the dead Kiritsubo lady the third rank, and his envoy reads the decree, a sorrowful thing."
+
+[[mentions]]
+place = "nonomiya"
+cite = "Chapter 10, Sakaki"
+passage = "野の宮に参うでたまふ。 / 遥けき野辺を分け入りたまふより、いとものあはれなり。"
+summary = "Genji goes to the shrine of Nonomiya; from the moment he makes his way into the wide moor, all is full of melancholy."
+
+[[mentions]]
+place = "ise"
+cite = "Chapter 10, Sakaki"
+passage = "鈴鹿川八十瀬の波に濡れ濡れず伊勢まで誰れか思ひおこせむ"
+summary = "The Rokujō lady's answer to Genji, from beyond the barrier: whether or not my sleeves are wet in the many shallows of the Suzuka River, who will think of me as far as Ise?"
+
+[[mentions]]
+place = "suma"
+cite = "Chapter 12, Suma"
+passage = "かの須磨は、昔こそ人の住みかなどもありけれ、今は、いと里離れ心すごくて、海人の家だにまれに"
+summary = "Suma, Genji hears, had dwellings once, but is now far from any village and desolate, with hardly even a fisherman's hut."
+
+[[mentions]]
+place = "akashi"
+cite = "Chapter 13, Akashi"
+passage = "明石の浦より、前の守新発意の、御舟装ひて参れるなり。"
+summary = "The former governor, now a lay monk, has come with a boat from the bay of Akashi."
+
+[[mentions]]
+place = "sumiyoshi"
+cite = "Chapter 14, Miotsukushi"
+passage = "その秋、住吉に詣でたまふ。願ども果たしたまふべければ、いかめしき御ありきにて、世の中ゆすりて、上達部、殿上人、我も我もと仕うまつりたまふ。"
+summary = "That autumn Genji goes on pilgrimage to Sumiyoshi to fulfil his vows, in a great procession that stirs the whole world, nobles and courtiers vying to attend him."
+
+[[mentions]]
+place = "osaka"
+cite = "Chapter 16, Sekiya"
+passage = "逢坂の関やいかなる関なればしげき嘆きの仲を分くらむ"
+summary = "Utsusemi's poem: what barrier is the Ōsaka Barrier, that it parts two who grieve so much?"
+
+[[mentions]]
+place = "ishiyama"
+cite = "Chapter 16, Sekiya"
+passage = "関入る日しも、この殿、石山に御願果しに詣でたまひけり。"
+summary = "On the very day that her party comes through the barrier, Genji goes to Ishiyama to fulfil a vow."
+
+[[mentions]]
+place = "oi"
+cite = "Chapter 18, Matsukaze"
+passage = "昔、母君の御祖父、中務宮と聞こえけるが領じたまひける所、大堰川のわたりにありけるを"
+summary = "The Akashi novice remembers an estate by the Ōi River, long left to ruin, that his wife's grandfather, a Prince of the Ministry of Central Affairs, had owned."
+
+[[mentions]]
+place = "sagano"
+cite = "Chapter 18, Matsukaze"
+passage = "嵯峨野の御堂にも、飾りなき仏の御訪らひすべければ、二、三日ははべりなむ"
+summary = "Genji tells Murasaki that he must also see to the unadorned Buddha of his chapel at Sagano, and will be away two or three days."
+
+[[mentions]]
+place = "tsukushi"
+cite = "Chapter 22, Tamakazura"
+passage = "かの若君の四つになる年ぞ、筑紫へは行きける。"
+summary = "In the year the little girl turned four, her nurse's family went down to Tsukushi."
+
+[[mentions]]
+place = "hatsuse"
+cite = "Chapter 22, Tamakazura"
+passage = "仏の御なかには、初瀬なむ、日の本のうちには、あらたなる験現したまふと、唐土にだに聞こえあむなり。 / 前より行く水をば、初瀬川といふなりけり。"
+summary = "Of all the Buddhas in Japan, Hatsuse shows the most wondrous signs, as even China has heard; the stream that flows before the temple is the Hatsuse River."
+
+[[mentions]]
+place = "oharano"
+cite = "Chapter 29, Miyuki"
+passage = "その師走に、大原野の行幸とて、世に残る人なく見騒ぐを、六条院よりも、御方々引き出でつつ見たまふ。"
+summary = "That twelfth month the Emperor goes in procession to Ōharano; no one stays behind, and the ladies of the Rokujō mansion come out to watch."
+
+[[mentions]]
+place = "uji"
+cite = "Chapter 45, Hashihime"
+passage = "宇治といふ所に、よしある山里持たまへりけるに渡りたまふ。"
+summary = "His palace burnt, the Eighth Prince moves to a fine mountain village he owns at a place called Uji."
+
+[[mentions]]
+place = "yokawa"
+cite = "Chapter 53, Tenarai"
+passage = "そのころ、横川に、なにがし僧都とか言ひて、いと尊き人住みけり。"
+summary = "At that time a most venerable man, a bishop of some name, lived at Yokawa."

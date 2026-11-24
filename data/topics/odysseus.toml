@@ -1,0 +1,172 @@
+# The wanderings of Odysseus from Troy to Ithaca, as the Odyssey tells them (books 5 to 13, in A. T. Murray's
+# translation), each stage with its lines. The places after Cape Malea are of legend: each is put where an ancient
+# author identified it, with that author's words, in the translations of Perseus (Strabo by H. C. Hamilton and
+# W. Falconer, and by H. L. Jones; Thucydides by R. Crawley). Each place has its Wikidata item, from which its
+# coordinates come.
+
+title = "The Wanderings of Odysseus"
+work = "Homer, Odyssey, translated by A. T. Murray"
+text = "https://github.com/PerseusDL/canonical-greekLit/blob/master/data/tlg0012/tlg002/tlg0012.tlg002.perseus-eng3.xml"
+licence = "CC BY-SA 4.0 (Perseus)"
+
+[places.troy]
+name = "Troy (Ilios)"
+wikidata = "Q22647"
+point = [26.238888888, 39.9575]
+
+[places.ismarus]
+name = "Ismarus, city of the Cicones, near Maroneia"
+wikidata = "Q12874068"
+point = [25.516667, 40.9]
+identified = "Strabo, Geography 7, fragment 44: Beyond the inland lake are Xanthia, Maronia, and Ismarus, cities of the Cicones. Ismarus is now called Ismara-near-Maronia."
+
+[places.malea]
+name = "Cape Malea"
+wikidata = "Q1471621"
+point = [23.198611111, 36.438055555]
+
+[places.lotus]
+name = "The land of the Lotus-eaters, at Meninx (Djerba)"
+wikidata = "Q188938"
+point = [10.8833, 33.7837]
+identified = "Strabo, Geography 17.3.17: Meninx is supposed to be the land of the lotus-eaters mentioned by Homer."
+
+[places.cyclopes]
+name = "The land of the Cyclopes, about Mount Etna"
+wikidata = "Q16990"
+point = [14.993220288, 37.750834514]
+identified = "Strabo, Geography 1.2.9: He tells us that king Aeolus governed the Lipari Islands, that around Mount Aetna and Leontini dwelt the Cyclopae, and certain Laestrygonians inhospitable to strangers."
+
+[places.aeolia]
+name = "The Aeolian isle, in the Lipari Islands"
+wikidata = "Q179883"
+point = [14.935833333, 38.496666666]
+identified = "Strabo, Geography 6.1.5: Off this coast lie the islands of the Liparaei, at a distance of two hundred stadia from the Strait. According to some, they are the islands of Aeolus, of whom the Poet makes mention in the Odyssey."
+
+[places.laestrygonians]
+name = "Telepylus of the Laestrygonians, about Leontini"
+wikidata = "Q488240"
+point = [15.0, 37.283333333]
+identified = "Strabo, Geography 1.2.9: He tells us that king Aeolus governed the Lipari Islands, that around Mount Aetna and Leontini dwelt the Cyclopae, and certain Laestrygonians inhospitable to strangers."
+
+[places.aeaea]
+name = "Aeaea, the isle of Circe, at Mount Circaeum"
+wikidata = "Q2530284"
+point = [13.05553, 41.23109]
+identified = "Strabo, Geography 5.3.6: At 290 stadia from Antium is Mount Circaeum, insulated by the sea and marshes. They say that it contains numerous roots, but this perhaps is only to harmonize with the myth relating to Circe."
+
+[places.hades]
+name = "The land of the Cimmerians and the dead, at Lake Avernus"
+wikidata = "Q782896"
+point = [14.075, 40.838333333]
+identified = "Strabo, Geography 5.4.5: Former writers, mingling fable with history, have applied to Avernus the expressions of Homer in his Invocation of Departed Spirits, and relate that here formerly was an oracle of the dead, and that it was to this place that Ulysses came."
+
+[places.sirens]
+name = "The isle of the Sirens, at the Sirenussae"
+wikidata = "Q1812834"
+point = [14.432323888, 40.581031944]
+identified = "Strabo, Geography 1.2.12: some of them assert that the Sirenes of Homer are situated close to Pelorus, and others that they are more than two thousand stadia distant, near the Sirenussae, a three-peaked rock which separates the Gulfs of Cummaea and Posidonium."
+
+[places.charybdis]
+name = "Scylla and Charybdis, in the Strait of Messina"
+wikidata = "Q134705"
+point = [15.6325, 38.245833333]
+identified = "Thucydides, History of the Peloponnesian War 4.24.5: The strait in question consists of the sea between Rhegium and Messina, at the point where Sicily approaches nearest to the continent, and is the Charybdis through which the story makes Ulysses sail"
+
+[places.thrinacia]
+name = "The isle Thrinacia, Sicily"
+wikidata = "Q4951156"
+point = [14.266666666, 37.566666666]
+identified = "Strabo, Geography 6.2.1: SICILY is triangular in form, and on this account was at first called Trinacria, but afterwards the name was softened and it was changed into Thrinacia."
+
+[places.ogygia]
+name = "Ogygia, the isle of Calypso, at Gaudos (Gozo)"
+wikidata = "Q170488"
+point = [14.258888888, 36.045]
+identified = "Strabo, Geography 7.3.6, of Callimachus: for he calls Gaudos the “Isle of Calypso” and Corcyra “Scheria.” And 6.2.11: Off Pachynus lie Melita, whence come the little dogs called Melitaean, and Gaudos, both eighty-eight miles distant from the Cape."
+
+[places.scheria]
+name = "Scheria, the land of the Phaeacians, at Corcyra (Corfu)"
+wikidata = "Q121378"
+point = [19.87, 39.6]
+identified = "Strabo, Geography 7.3.6, of Callimachus: for he calls Gaudos the “Isle of Calypso” and Corcyra “Scheria.” And Thucydides 1.25.4, of the Corcyraeans: an island whose nautical renown dated from the days of its old inhabitants, the Phaeacians."
+
+[places.ithaca]
+name = "Ithaca"
+wikidata = "Q187471"
+point = [20.666666666, 38.416666666]
+
+[[stages]]
+place = "troy"
+cite = "Odyssey 9.38"
+passage = "I came from Troy. “From Ilios the wind bore me and brought me to the Cicones,"
+
+[[stages]]
+place = "ismarus"
+cite = "Odyssey 9.40"
+passage = "to Ismarus. There I sacked the city and slew the men; and from the city we took their wives and great store of treasure, and divided them among us"
+
+[[stages]]
+place = "malea"
+cite = "Odyssey 9.80"
+passage = "but the wave and the current and the North Wind beat me back as I was rounding Malea, and drove me from my course past Cythera."
+
+[[stages]]
+place = "lotus"
+cite = "Odyssey 9.82"
+passage = "Thence for nine days' space I was borne by direful winds over the teeming deep; but on the tenth we set foot on the land of the Lotus-eaters, who eat a flowery food."
+
+[[stages]]
+place = "cyclopes"
+cite = "Odyssey 9.105"
+passage = "Thence we sailed on, grieved at heart, and we came to the land of the Cyclopes, an overweening and lawless folk"
+
+[[stages]]
+place = "aeolia"
+cite = "Odyssey 10.1"
+passage = "Then to the Aeolian isle we came, where dwelt Aeolus, son of Hippotas, dear to the immortal gods, in a floating island"
+
+[[stages]]
+place = "laestrygonians"
+cite = "Odyssey 10.80"
+passage = "So for six days we sailed, night and day alike, and on the seventh we came to the lofty citadel of Lamus, even to Telepylus of the Laestrygonians"
+
+[[stages]]
+place = "aeaea"
+cite = "Odyssey 10.135"
+passage = "and we came to the isle of Aeaea, where dwelt fair-tressed Circe, a dread goddess of human speech"
+
+[[stages]]
+place = "hades"
+cite = "Odyssey 11.13"
+passage = "She came to deep-flowing Oceanus, that bounds the Earth, where is the land and city of the Cimmerians,"
+
+[[stages]]
+place = "sirens"
+cite = "Odyssey 12.166"
+passage = "Meanwhile the well-built ship speedily came to the isle of the two Sirens, for a fair and gentle wind bore her on."
+
+[[stages]]
+place = "charybdis"
+cite = "Odyssey 12.234"
+passage = "We then sailed on up the narrow strait with wailing. For on one side lay Scylla and on the other divine Charybdis terribly sucked down the salt water of the sea."
+
+[[stages]]
+place = "thrinacia"
+cite = "Odyssey 12.260"
+passage = "Now when we had escaped the rocks, and dread Charybdis and Scylla, presently then we came to the goodly island of the god, where were the fair kine, broad of brow, and the many goodly flocks of Helios Hyperion."
+
+[[stages]]
+place = "ogygia"
+cite = "Odyssey 12.447"
+passage = "Thence for nine days was I borne, and on the tenth night the gods brought me to Ogygia, where the fair-tressed Calypso dwells, dread goddess of human speech,"
+
+[[stages]]
+place = "scheria"
+cite = "Odyssey 6.1"
+passage = "So he lay there asleep, the much-enduring goodly Odysseus, overcome with sleep and weariness; but Athena went to the land and city of the Phaeacians."
+
+[[stages]]
+place = "ithaca"
+cite = "Odyssey 13.95"
+passage = "even then the seafaring ship drew near to the island. There is in the land of Ithaca a certain harbor of Phorcys, the old man of the sea"

@@ -1,0 +1,246 @@
+# Nellie Bly's journey around the world for the New York World, 14 November 1889 to 25 January 1890, as her book
+# tells it: each stage with its date and its passage, most from the record of her last chapter, "The Record".
+# Each place has its Wikidata item, from which its coordinates come.
+
+title = "Nellie Bly Around the World"
+work = "Nellie Bly, Around the World in Seventy-Two Days (1890)"
+text = "https://en.wikisource.org/wiki/Around_the_World_in_Seventy-Two_Days"
+licence = "Public domain (text)"
+
+[places.hoboken]
+name = "Hoboken"
+wikidata = "Q138578"
+point = [-74.0325, 40.745]
+
+[places.southampton]
+name = "Southampton"
+wikidata = "Q79848"
+point = [-1.404444444, 50.906666666]
+
+[places.london]
+name = "London"
+wikidata = "Q84"
+point = [-0.1275, 51.507222222]
+
+[places.boulogne]
+name = "Boulogne"
+wikidata = "Q81997"
+point = [1.613888888, 50.725555555]
+
+[places.amiens]
+name = "Amiens"
+wikidata = "Q41604"
+point = [2.297777777, 49.891944444]
+
+[places.calais]
+name = "Calais"
+wikidata = "Q6454"
+point = [1.855555555, 50.9475]
+
+[places.brindisi]
+name = "Brindisi"
+wikidata = "Q13496"
+point = [17.945833333, 40.638333333]
+
+[places.portsaid]
+name = "Port Said"
+wikidata = "Q134509"
+point = [32.306111111, 31.2625]
+
+[places.ismailia]
+name = "Ismailia"
+wikidata = "Q217156"
+point = [32.266666666, 30.583333333]
+
+[places.suez]
+name = "Suez"
+wikidata = "Q134514"
+point = [32.533333333, 29.966666666]
+
+[places.aden]
+name = "Aden"
+wikidata = "Q131694"
+point = [45.033333333, 12.8]
+
+[places.colombo]
+name = "Colombo"
+wikidata = "Q35381"
+point = [79.860555555, 6.926666666]
+
+[places.penang]
+name = "Penang (Prince of Wales Island)"
+wikidata = "Q1150673"
+point = [100.26, 5.37]
+
+[places.singapore]
+name = "Singapore"
+wikidata = "Q334"
+point = [103.8, 1.3]
+
+[places.hongkong]
+name = "Hong Kong (Victoria)"
+wikidata = "Q963152"
+point = [114.174444444, 22.278333333]
+
+[places.canton]
+name = "Canton"
+wikidata = "Q16572"
+point = [113.26, 23.13]
+
+[places.yokohama]
+name = "Yokohama"
+wikidata = "Q38283"
+point = [139.634222222, 35.450333333]
+
+[places.sanfrancisco]
+name = "San Francisco"
+wikidata = "Q62"
+point = [-122.419444444, 37.775]
+
+[places.chicago]
+name = "Chicago"
+wikidata = "Q1297"
+point = [-87.627777777, 41.881944444]
+
+[places.philadelphia]
+name = "Philadelphia"
+wikidata = "Q1345"
+point = [-75.163611111, 39.952777777]
+
+[places.jerseycity]
+name = "Jersey City"
+wikidata = "Q26339"
+point = [-74.06, 40.71]
+
+[[stages]]
+place = "hoboken"
+date = 1889-11-14
+cite = "Chapter II"
+passage = "ON Thursday, November 14, 1889, at 9.40.30 o'clock, I started on my tour around the world."
+
+[[stages]]
+place = "southampton"
+date = 1889-11-22
+cite = "Chapter XVIII"
+passage = "Nov. 22–2.30 a.m. Arrived Southampton-London"
+
+[[stages]]
+place = "london"
+date = 1889-11-22
+cite = "Chapter III"
+passage = "With a newspaper spread over our laps for a table-cloth, we brought out what the basket contained and put in our time eating and chatting about my journey until the train reached London."
+
+[[stages]]
+place = "boulogne"
+date = 1889-11-22
+cite = "Chapter III"
+passage = "It was bitterly cold, but I found the cold bracing until we anchored at Boulogne, France."
+
+[[stages]]
+place = "amiens"
+date = 1889-11-22
+cite = "Chapter III"
+passage = "Freed at last, we stepped out on the platform at Amiens."
+
+[[stages]]
+place = "calais"
+date = 1889-11-23
+cite = "Chapter V; Chapter XVIII"
+passage = "When I reached Calais, I found that I had two hours and more to spend in waiting. / Nov. 23–1.30 a.m. Left Calais"
+
+[[stages]]
+place = "brindisi"
+date = 1889-11-25
+cite = "Chapter V; Chapter XVIII"
+passage = "We arrived at Brindisi two hours late. / Nov. 25–1.30 a.m. Arrived Brindisi. 3.00 a.m. Left Brindisi, steamship Victoria"
+
+[[stages]]
+place = "portsaid"
+date = 1889-11-27
+cite = "Chapter VII; Chapter XVIII"
+passage = "IT was in the afternoon when the Victoria anchored at Port Said. / Nov. 27–3.30 p.m. Arrived Port Said."
+
+[[stages]]
+place = "ismailia"
+date = 1889-11-28
+cite = "Chapter VII"
+passage = "About noon of our first day in the canal we anchored in the bay fronting Ismailia."
+
+[[stages]]
+place = "suez"
+date = 1889-11-28
+cite = "Chapter XVIII"
+passage = "Nov. 28–11.00 a.m. Arrived Ismallia, 9.00 p.m. Suez."
+
+[[stages]]
+place = "aden"
+date = 1889-12-03
+cite = "Chapter VIII; Chapter XVIII"
+passage = "After a seven hours stay at Aden we left for Colombo, being followed a long ways out from land by the divers. / Dec. 3–11.00 Arrived Aden."
+
+[[stages]]
+place = "colombo"
+date = 1889-12-08
+cite = "Chapter IX; Chapter XVIII"
+passage = "ABOUT nine o'clock in the morning we anchored in the bay at Colombo, Ceylon. / Dec. 8–11.00 a.m. Arrived Colombo (Ceylon)."
+
+[[stages]]
+place = "penang"
+date = 1889-12-16
+cite = "Chapter X; Chapter XVIII"
+passage = "The next day we anchored at Penang, or Prince of Wales Island, one of the Straits Settlements. / Dec. 16–7.00 a.m. Arrived Penang."
+
+[[stages]]
+place = "singapore"
+date = 1889-12-18
+cite = "Chapter XVIII"
+passage = "Dec. 18–5.00 a.m. Arrived Singapore."
+
+[[stages]]
+place = "hongkong"
+date = 1889-12-23
+cite = "Chapter XII"
+passage = "I was leaving particularly elated, because the good ship Oriental not only made up the five days I had lost in Colombo, but reached Hong Kong two days before I was due, according to my schedule."
+note = "The record of Chapter XVIII gives December 25 for Hong Kong, the day she was due; two days before it is December 23."
+
+[[stages]]
+place = "canton"
+date = 1889-12-25
+cite = "Chapter XII; Chapter XIII"
+passage = "So, on Christmas eve, I started for the city of Canton. / Before daybreak we anchored at Canton."
+
+[[stages]]
+place = "hongkong"
+date = 1889-12-28
+cite = "Chapter XIV; Chapter XVIII"
+passage = "SHORTLY after my return to Hong Kong I sailed for Japan on the Oceanic. / Dec. 28–2.30 p.m. Left Hong Kong for Yokohama."
+
+[[stages]]
+place = "yokohama"
+date = 1890-01-07
+cite = "Chapter XV, One Hundred and Twenty Hours in Japan; Chapter XVIII"
+passage = "Jan. 7–10.55 a.m. Left Yokohama via Occidental and Oriental Steamship."
+
+[[stages]]
+place = "sanfrancisco"
+date = 1890-01-21
+cite = "Chapter XVIII"
+passage = "Jan. 21–8.00 a.m. Arrived San Francisco"
+
+[[stages]]
+place = "chicago"
+date = 1890-01-23
+cite = "Chapter XVII; Chapter XVIII"
+passage = "I had probably slept two hours when the porter called me, saying we would soon be in Chicago. / Jan. 23–7.05 a.m. Arrived Chicago."
+
+[[stages]]
+place = "philadelphia"
+date = 1890-01-25
+cite = "Chapter XVII"
+passage = "Almost before I knew it I was at Philadelphia, and all too soon to please me, for my trip was so pleasant I dreaded the finish of it."
+
+[[stages]]
+place = "jerseycity"
+date = 1890-01-25
+cite = "Chapter XVIII"
+passage = "I STARTED from Hoboken, on my trip, around the world, November 14, 1889. I finished it in Jersey, January 25, 1890. / Jan. 25–3.51 p.m. Arrived New York."

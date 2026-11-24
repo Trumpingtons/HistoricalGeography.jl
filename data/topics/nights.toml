@@ -1,0 +1,139 @@
+# Places of The Arabian Nights, in the order of the Nights, each with its passage of Richard F. Burton's translation,
+# The Book of the Thousand Nights and a Night (1885): volume 1 (the frame story to Night 34), volume 2 (Nights 34 to
+# 107) and volume 6 (Sindbad the Seaman), in the text of Project Gutenberg kept at the Internet Archive. Each place has
+# its Wikidata item, from which its coordinates come.
+
+title = "Places of The Arabian Nights"
+work = "The Book of the Thousand Nights and a Night, translated by Richard F. Burton"
+text = "https://archive.org/details/aplainandliteral51252gut"
+licence = "Public domain (text)"
+
+[places.samarcand]
+name = "Samarcand"
+wikidata = "Q5753"
+point = [66.975833333, 39.654722222]
+
+[places.baghdad]
+name = "Baghdad"
+wikidata = "Q1530"
+point = [44.366111111, 33.315277777]
+
+[places.giza]
+name = "Jízah and the Pyramids"
+wikidata = "Q12508"
+point = [31.132778, 29.976111]
+
+[places.jerusalem]
+name = "Jerusalem, the Holy City"
+wikidata = "Q1218"
+point = [35.234156, 31.776679]
+
+[places.aleppo]
+name = "Aleppo"
+wikidata = "Q41183"
+point = [37.16, 36.2]
+
+[places.damascus]
+name = "Damascus"
+wikidata = "Q3766"
+point = [36.292, 33.513]
+
+[places.basra]
+name = "Bassorah (Basra)"
+wikidata = "Q48195"
+point = [47.81, 30.515]
+
+[places.cairo]
+name = "Cairo"
+wikidata = "Q85"
+point = [31.235833333, 30.044444444]
+
+[places.mosul]
+name = "Mosul"
+wikidata = "Q83317"
+point = [43.129166666, 36.341666666]
+
+[places.constantinople]
+name = "Constantinople"
+wikidata = "Q16869"
+point = [28.976018, 41.01224]
+
+[places.mecca]
+name = "Meccah (Mecca)"
+wikidata = "Q5806"
+point = [39.826111111, 21.4225]
+
+[places.sarandib]
+name = "The Island Sarandib (Sri Lanka)"
+wikidata = "Q854"
+point = [81.0, 7.0]
+
+[[mentions]]
+place = "samarcand"
+cite = "Story of King Shahryar and his Brother"
+passage = "His name was King Shahryár, and he made his younger brother, Shah Zamán hight, King of Samarcand in Barbarian-land."
+
+[[mentions]]
+place = "baghdad"
+cite = "Night 9, The Porter and the Three Ladies of Baghdad"
+passage = "Once upon a time there was a Porter in Baghdad, who was a bachelor and who would remain unmarried."
+
+[[mentions]]
+place = "giza"
+cite = "Night 20, Tale of Nur al-Din Ali and his Son Badr al-Din Hasan"
+passage = "As soon as morning dawned the Sultan fared forth in state and crossed over from Cairo to Jízah and made for the Pyramids"
+
+[[mentions]]
+place = "jerusalem"
+cite = "Night 20, Tale of Nur al-Din Ali and his Son Badr al-Din Hasan"
+passage = "When morning dawned he mounted and rode onward till he reached the Holy City, Jerusalem"
+
+[[mentions]]
+place = "aleppo"
+cite = "Night 20, Tale of Nur al-Din Ali and his Son Badr al-Din Hasan"
+passage = "and thence he made Aleppo, where he dismounted at one of the caravanserais and abode three days to rest himself and the mule and to smell the air."
+
+[[mentions]]
+place = "damascus"
+cite = "Night 22, Tale of Nur al-Din Ali and his Son Badr al-Din Hasan"
+passage = "they alighted at Damascus of Syria, and the Ifritah set down her burden at one of the city-gates and flew away. / thou sleepest in Cairo and thou wakest in the morning at the gate of Damascus-city!"
+
+[[mentions]]
+place = "basra"
+cite = "Night 23, Tale of Nur al-Din Ali and his Son Badr al-Din Hasan"
+passage = "Thence he fared on by way of Hamah and Aleppo and thence through Diyár Bakr and Máridin and Mosul, still enquiring, till he arrived at Bassorah-city."
+
+[[mentions]]
+place = "cairo"
+cite = "Night 28, Tale of the Jewish Doctor"
+passage = "Quoth my father, \"Whoso hath not seen Cairo hath not seen the world. Her dust is golden and her Nile a miracle holden;"
+
+[[mentions]]
+place = "mosul"
+cite = "Night 28, Tale of the Jewish Doctor"
+passage = "So I took leave of my father and we fared forth from Mosul and gave not over travelling till we reached Aleppo where we halted certain days."
+
+[[mentions]]
+place = "baghdad"
+cite = "Night 36, Nur al-Din Ali and the Damsel Anis al-Jalis"
+passage = "till they arrived in safety at Baghdad, and the captain said to them, \"This is Baghdad and 'tis the city where security is to be had:"
+
+[[mentions]]
+place = "constantinople"
+cite = "Night 45, Tale of King Omar bin al-Nu'uman and his Sons"
+passage = "\"O King there be come Ambassadors from the King of Roum, Lord of Constantinople the Great, and they desire admission to thee and submission to thy decree:"
+
+[[mentions]]
+place = "mecca"
+cite = "Night 53, Tale of King Omar bin al-Nu'uman and his Sons"
+passage = "till they entered Meccah the Holy and stood upon Arafat and performed the pilgrimage-rites."
+
+[[mentions]]
+place = "basra"
+cite = "Night 538, Sindbad the Seaman and Sindbad the Landsman"
+passage = "I embarked, with a company of merchants, on board a ship bound for Bassorah."
+
+[[mentions]]
+place = "sarandib"
+cite = "Night 562, Sindbad the Seaman and Sindbad the Landsman"
+passage = "Now the Island Sarandib lieth under the equinoctial line, its night and day both numbering twelve hours. / I ascended that mountain and solaced myself with a view of its marvels which are indescribable and afterwards I returned to the King."
