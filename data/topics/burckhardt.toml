@@ -1,0 +1,345 @@
+# The journeys of John Lewis (Johann Ludwig) Burckhardt from 1812 to 1815, as his journals tell them in the three
+# books published after his death by the African Association: Travels in Syria and the Holy Land (1822), his journey
+# of 1812 from Damascus through Arabia Petraea to Cairo, by Wady Mousa, the ruins of Petra; Travels in Nubia (1819),
+# his journey of 1813 up the Nile from Assouan to Mahass, back by the temples of Ebsambal (Abu Simbel), and his journey
+# of 1814 with a caravan of slave traders across the desert to Berber and Shendy, and on to Souakin on the Red Sea; and
+# Travels in Arabia (1829), his stay in the Hedjaz in 1814 and 1815, at Mekka and Medina as a Muslim pilgrim. Each
+# journey is a part of its own, and each stage is a place of the journals with its date and Burckhardt's words; the
+# places keep his spelling, with today's names in brackets. Each place has its Wikidata item, from which its
+# coordinates come.
+#
+# The texts: Travels in Syria and the Holy Land, https://www.gutenberg.org/ebooks/8884; Travels in Nubia,
+# https://archive.org/details/travelsinnubia00burc; Travels in Arabia, https://www.gutenberg.org/ebooks/9457.
+
+title = "The Journeys of Burckhardt"
+work = "John Lewis Burckhardt, Travels in Syria and the Holy Land (1822), Travels in Nubia (1819) and Travels in Arabia (1829)"
+text = "https://www.gutenberg.org/ebooks/8884"
+licence = "Public domain (text)"
+
+[places.damascus]
+name = "Damascus"
+wikidata = "Q3766"
+point = [36.291944444, 33.513055555]
+
+[places.szaffad]
+name = "Szaffad (Safed)"
+wikidata = "Q188336"
+point = [35.498333333, 32.965833333]
+
+[places.tabaria]
+name = "Tabaria (Tiberias)"
+wikidata = "Q151920"
+point = [35.524722222, 32.789722222]
+
+[places.tabor]
+name = "Mount Tabor"
+wikidata = "Q193785"
+point = [35.392916666, 32.68625]
+
+[places.szalt]
+name = "Szalt (Salt)"
+wikidata = "Q867586"
+point = [35.727222222, 32.039166666]
+
+[places.kerek]
+name = "Kerek (Al-Karak)"
+wikidata = "Q31572"
+point = [35.705, 31.184444444]
+
+[places.tafyle]
+name = "Tafyle (Tafilah)"
+wikidata = "Q2550996"
+point = [35.604444444, 30.8375]
+
+[places.shobak]
+name = "Shobak (Shoubak)"
+wikidata = "Q3299624"
+point = [35.538611111, 30.52]
+
+[places.petra]
+name = "Wady Mousa, the ruins of Petra"
+wikidata = "Q5788"
+point = [35.440277777, 30.328888888]
+
+[places.haroun]
+name = "The tomb of Haroun (Mount Haroun)"
+wikidata = "Q2900633"
+point = [35.407, 30.317]
+
+[places.cairo]
+name = "Cairo"
+wikidata = "Q85"
+point = [31.235833333, 30.044444444]
+
+[places.assouan]
+name = "Assouan (Aswan)"
+wikidata = "Q29888"
+point = [32.899730555, 24.088919444]
+
+[places.soleb]
+name = "Soleb, in Mahass"
+wikidata = "Q1457914"
+point = [30.33333333, 20.43333333]
+
+[places.ebsambal]
+name = "Ebsambal (Abu Simbel)"
+wikidata = "Q134140"
+point = [31.625555555, 22.336944444]
+
+[places.daraou]
+name = "Daraou (Daraw)"
+wikidata = "Q6000830"
+point = [32.930555555, 24.400277777]
+
+[places.berber]
+name = "Ankheyre, in Berber"
+wikidata = "Q375935"
+point = [33.994444444, 18.015302777]
+
+[places.damer]
+name = "Damer (Ad-Damir)"
+wikidata = "Q311312"
+point = [33.959166666, 17.592777777]
+
+[places.shendy]
+name = "Shendy (Shendi)"
+wikidata = "Q997838"
+point = [33.433888888, 16.691388888]
+
+[places.souakin]
+name = "Souakin (Suakin)"
+wikidata = "Q571215"
+point = [37.33, 19.1025]
+
+[places.djidda]
+name = "Djidda (Jeddah)"
+wikidata = "Q374365"
+point = [39.161111111, 21.529166666]
+
+[places.tayf]
+name = "Tayf (Ta'if)"
+wikidata = "Q182640"
+point = [40.416666666, 21.266666666]
+
+[places.mekka]
+name = "Mekka (Mecca)"
+wikidata = "Q5806"
+point = [39.826111111, 21.4225]
+
+[places.arafat]
+name = "Mount Arafat"
+wikidata = "Q216894"
+point = [39.983886, 21.354831]
+
+[places.medina]
+name = "Medina"
+wikidata = "Q35484"
+point = [39.61, 24.47]
+
+[places.yembo]
+name = "Yembo (Yanbu)"
+wikidata = "Q466027"
+point = [38.061944444, 24.089444444]
+
+[places.tor]
+name = "Tor (El-Tor)"
+wikidata = "Q867603"
+point = [33.616666666, 28.233333333]
+
+[places.suez]
+name = "Suez"
+wikidata = "Q134514"
+point = [32.533333333, 29.966666666]
+
+[[stages]]
+place = "damascus"
+part = 1
+date = 1812-06-18
+cite = "Travels in Syria and the Holy Land, Journey from Damascus through Arabia Petraea to Cairo, 18 June 1812"
+passage = "I assumed the most common Bedouin dress, took no baggage with me, and mounted a mare that was not likely to excite the cupidity of the Arabs. / After sun-set, on the 18th of June, 1812, I left Damascus"
+
+[[stages]]
+place = "szaffad"
+part = 1
+date = 1812-06-21
+cite = "Travels in Syria and the Holy Land, Journey from Damascus through Arabia Petraea to Cairo, 22 June 1812"
+passage = "As there is no Khan for travellers at Szaffad, and I had no letters to any person in the town, I was obliged to lodge at the public coffee house."
+
+[[stages]]
+place = "tabaria"
+part = 1
+date = 1812-06-23
+cite = "Travels in Syria and the Holy Land, Journey from Damascus through Arabia Petraea to Cairo, 23 June 1812"
+passage = "There being no Khan for travellers at Tabaria I went to the Catholic priest, and desired him to let me have the keys of the church, that I might take up my quarters there; he gave them to me, but finding the place swarming with vermin, I removed into the open churchyard."
+
+[[stages]]
+place = "tabor"
+part = 1
+date = 1812-06-26
+cite = "Travels in Syria and the Holy Land, Journey from Damascus through Arabia Petraea to Cairo, 26 June 1812"
+passage = "I took a guide to Mount Tabor."
+
+[[stages]]
+place = "szalt"
+part = 1
+date = 1812-07-03
+cite = "Travels in Syria and the Holy Land, Journey from Damascus through Arabia Petraea to Cairo, 3 July 1812"
+passage = "In three hours and three quarters we descended the southern side of the mountain, near the tomb of Osha, and reached Szalt / I alighted at Szalt at the house of one of my companions, where I was hospitably entertained during the whole of my stay at this place."
+
+[[stages]]
+place = "kerek"
+part = 1
+date = 1812-07-15
+cite = "Travels in Syria and the Holy Land, Journey from Damascus through Arabia Petraea to Cairo, 15 July 1812"
+passage = "At the end of five hours we entered a mountainous district, full of Wadys; and after a march of six hours we reached the town of Kerek."
+
+[[stages]]
+place = "tafyle"
+part = 1
+date = 1812-08-08
+cite = "Travels in Syria and the Holy Land, Journey from Damascus through Arabia Petraea to Cairo, 8 August 1812"
+passage = "Tafyle contains about six hundred houses; its Sheikh is the nominal chief of Djebal, but in reality the Arabs Howeytat govern the whole district"
+
+[[stages]]
+place = "shobak"
+part = 1
+date = 1812-08-19
+cite = "Travels in Syria and the Holy Land, Journey from Damascus through Arabia Petraea to Cairo, 19 August 1812"
+passage = "In the morning I went to the castle of Shobak, where I wished to purchase some provisions."
+
+[[stages]]
+place = "petra"
+part = 1
+date = 1812-08-22
+cite = "Travels in Syria and the Holy Land, Journey from Damascus through Arabia Petraea to Cairo, 22 August 1812"
+passage = "I was particularly desirous of visiting Wady Mousa, of the antiquities of which I had heard the country people speak in terms of great admiration / I replied that it was mere curiosity, which prompted me to look at the ancient works, and that I had no other view in coming here, than to sacrifice to Haroun / it appears very probable that the ruins in Wady Mousa are those of the ancient Petra"
+summary = "The first European known to see Petra since the Crusades, under the pretext of a sacrifice at the tomb of Aaron."
+
+[[stages]]
+place = "haroun"
+part = 1
+date = 1812-08-23
+cite = "Travels in Syria and the Holy Land, Journey from Damascus through Arabia Petraea to Cairo, 23 August 1812"
+passage = "I had no great desire to see the tomb of Haroun, which stands on the summit of the mountain that was opposite to us"
+
+[[stages]]
+place = "cairo"
+part = 1
+date = 1812-09-04
+cite = "Travels in Syria and the Holy Land, Journey from Damascus through Arabia Petraea to Cairo, 4 September 1812"
+passage = "I entered Cairo before sunrise; and thus concluded my journey, by the blessing of God, without either loss of health, or exposure to any imminent danger."
+
+[[stages]]
+place = "assouan"
+part = 2
+date = 1813-02-22
+cite = "Travels in Nubia, Journey along the Banks of the Nile, 22 February 1813"
+passage = "arrived at Assouan on the 22d of February, 1813, being actuated by a strong desire of continuing my journey up the river, as far as I should be able to do it, without exposing myself to imminent danger."
+
+[[stages]]
+place = "soleb"
+part = 2
+date = 1813-03-15
+cite = "Travels in Nubia, Journey along the Banks of the Nile, 13 and 15 March 1813"
+passage = "After a ride of four hours, we reached the camp of Mohammed Kashef, opposite the Wady Tinareh, a cluster of hamlets, situated round the brick castle of that name, and the chief place in Mahass; here was the termination of my journey southwards. / Instead of proceeding across the desert to Waouy, we followed the river"
+note = "Wady Tinareh, where Burckhardt turned back on 13 March, is a little to the south of Soleb, which he passed on the way back two days later."
+
+[[stages]]
+place = "ebsambal"
+part = 2
+date = 1813-03-22
+cite = "Travels in Nubia, Journey along the Banks of the Nile, 22 March 1813"
+passage = "to view the temple of Ebsambal, of which I had heard many magnificent descriptions. / I fell in with what is yet visible of four immense colossal statues cut out of the rock, at a distance of about two hundred yards from the temple"
+summary = "The great temple of Ramesses II, its colossi almost buried in sand."
+
+[[stages]]
+place = "daraou"
+part = 3
+date = 1814-03-02
+cite = "Travels in Nubia, Journey from Upper Egypt through the Deserts of Nubia, 1 and 2 March 1814"
+passage = "On the 1st of March, all the traders had assembled at Daraou / We were accompanied for about half an hour beyond the village by all the women and children."
+
+[[stages]]
+place = "berber"
+part = 3
+date = 1814-03-23
+cite = "Travels in Nubia, Journey from Upper Egypt through the Deserts of Nubia, 23 March 1814"
+passage = "At the end of nine hours we reached about ten o'clock at night the village of Ankheyre / the principal place in the district of Berber"
+
+[[stages]]
+place = "damer"
+part = 3
+date = 1814-04-09
+cite = "Travels in Nubia, Journey from Berber to Shendy, 9 April 1814"
+passage = "At the end of six hours, and after sun-set, we entered Damer / a place of considerable note and reputation in this part of the world, and whose inhabitants, I was glad to find, are of a much better disposition than their neighbours of Berber."
+
+[[stages]]
+place = "shendy"
+part = 3
+year = 1814
+cite = "Travels in Nubia, Journey from Berber to Shendy, 16 April 1814, and Journey from Shendy to Taka"
+passage = "As traders never enter Shendy in the day time, we halted till sun-set, and then proceeded slowly towards the town, which we reached after about nine hours march from our departure from Djebail. / Early in the morning of the 17th of May, the Souakin caravan took its departure"
+
+[[stages]]
+place = "souakin"
+part = 3
+date = 1814-06-26
+cite = "Travels in Nubia, Journey from Taka to Souakin, 26 June 1814"
+passage = "We reached the invirons of Souakin at the end of two hours, and pitched our little sheds at about twenty minutes walk from the town"
+
+[[stages]]
+place = "djidda"
+part = 4
+date = 1814-07-15
+cite = "Travels in Arabia, Arrival at Djidda"
+passage = "On entering the town of Djidda, in the morning of the 15th of July, 1814, I went to the house of a person on whom I had a letter of credit"
+
+[[stages]]
+place = "tayf"
+part = 4
+year = 1814
+cite = "Travels in Arabia, Route from Djidda to Tayf"
+passage = "From the summit of the declivity just mentioned, Tayf is seen in the distance."
+
+[[stages]]
+place = "mekka"
+part = 4
+date = 1814-09-09
+cite = "Travels in Arabia, Journey to Mekka, 9 September 1814"
+passage = "I arrived at Mekka about mid-day, when my companions went in search of their acquaintance among the soldiers, and left me to shift for myself, without knowing a single individual in the town"
+summary = "In Mekka as a Muslim pilgrim, Sheikh Ibrahim ibn Abdallah."
+
+[[stages]]
+place = "arafat"
+part = 4
+year = 1814
+cite = "Travels in Arabia, The Hadj or Pilgrimage"
+passage = "I walked to Mount Arafat, to enjoy from its summit a more distinct view of the whole. / From the summit of Arafat, I counted about three thousand tents dispersed over the plain"
+
+[[stages]]
+place = "medina"
+part = 4
+date = 1815-01-28
+cite = "Travels in Arabia, Journey from Mekka to Medina, 28 January 1815"
+passage = "We entered Medina at sun-rise on the 28th of January, the thirteenth day after our leaving Mekka, having halted two days on the road."
+
+[[stages]]
+place = "yembo"
+part = 4
+year = 1815
+cite = "Travels in Arabia, Journey from Medina to Yembo, and Yembo"
+passage = "we saw Yembo at sun-rise; and after a ride of fifteen hours and a half, at a very slow pace, we reached the gate of the town / until the fifteenth of May, when I finally left Yembo, after a stay of eighteen days in the midst of the plague."
+
+[[stages]]
+place = "tor"
+part = 4
+date = 1815-06-08
+cite = "Travels in Arabia, From Yembo to Cairo, 8 June 1815"
+passage = "We reached Tor, in about three hours and a half from our resting-place."
+
+[[stages]]
+place = "suez"
+part = 4
+year = 1815
+cite = "Travels in Arabia, From Yembo to Cairo"
+passage = "In the morning we passed Ayoun Mousa, and reached Suez in the afternoon."
