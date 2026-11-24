@@ -1,0 +1,367 @@
+# The journey of Alexander von Humboldt and Aimé Bonpland in the Americas, from Corunna on 5 June 1799 to
+# Philadelphia in 1804, as Humboldt tells it in four of his works: the Personal Narrative of Travels to the
+# Equinoctial Regions of America (translated by Thomasina Ross, 1852), which ends at Cartagena in 1801, then Views of
+# Nature (translated by Elizabeth Otté and Henry George Bohn, 1850), Researches concerning the Institutions and
+# Monuments of the Ancient Inhabitants of America (translated by Helen Maria Williams, 1814) and the Political Essay on
+# the Kingdom of New Spain (translated by John Black, 1811). Each stage is a place Humboldt dates or describes on the
+# way, with his words, in the order of the journey; the stages without a date in his words have their year only.
+# Each place has its Wikidata item, from which its coordinates come.
+#
+# The texts: Personal Narrative, https://www.gutenberg.org/ebooks/6322, 7014 and 7254; Views of Nature,
+# https://archive.org/details/ofnatureviewsorc00humbrich; Researches, https://archive.org/details/researchesconcer01humb
+# and researchesconcer02humb; Political Essay, https://archive.org/details/b29350451_0001.
+
+title = "The Journey of Humboldt and Bonpland"
+work = "Alexander von Humboldt, Personal Narrative of Travels to the Equinoctial Regions of America (1852), Views of Nature (1850), Researches concerning the Institutions and Monuments of the Ancient Inhabitants of America (1814) and Political Essay on the Kingdom of New Spain (1811)"
+text = "https://www.gutenberg.org/ebooks/6322"
+licence = "Public domain (text)"
+
+[places.corunna]
+name = "Corunna (A Coruña)"
+wikidata = "Q8757"
+point = [-8.396111111, 43.371111111]
+
+[places.teide]
+name = "The Peak of Teneriffe (Teide)"
+wikidata = "Q38954"
+point = [-16.643611111, 28.272638888]
+
+[places.cumana]
+name = "Cumana (Cumaná)"
+wikidata = "Q319476"
+point = [-64.166666666, 10.45]
+
+[places.guacharo]
+name = "Cavern of the Guacharo, Caripe"
+wikidata = "Q17599750"
+point = [-63.553888888, 10.171666666]
+
+[places.caracas]
+name = "Caracas"
+wikidata = "Q1533"
+point = [-66.914444444, 10.506111111]
+
+[places.valencia]
+name = "Lake of Valencia"
+wikidata = "Q1469728"
+point = [-67.733333333, 10.183333333]
+
+[places.calabozo]
+name = "Calabozo"
+wikidata = "Q1026185"
+point = [-67.428333333, 8.921944444]
+
+[places.sanfernando]
+name = "San Fernando de Apure"
+wikidata = "Q990764"
+point = [-67.473, 7.894]
+
+[places.atures]
+name = "Rapids of Atures"
+wikidata = "Q23696743"
+point = [-67.62081, 5.59716]
+
+[places.maypures]
+name = "San José de Maypures"
+wikidata = "Q6119043"
+point = [-67.83, 5.2]
+
+[places.pimichin]
+name = "Caño Pimichín, the portage from Javita"
+wikidata = "Q56506618"
+point = [-67.56899, 2.73233]
+
+[places.sancarlos]
+name = "San Carlos del Rio Negro"
+wikidata = "Q1269422"
+point = [-67.061111111, 1.92]
+
+[places.casiquiare]
+name = "The Cassiquiare (Casiquiare)"
+wikidata = "Q331455"
+point = [-65.88, 3.138333333]
+
+[places.esmeralda]
+name = "Esmeralda (La Esmeralda)"
+wikidata = "Q430374"
+point = [-65.546666666, 3.173888888]
+
+[places.angostura]
+name = "Angostura (Ciudad Bolívar)"
+wikidata = "Q26906"
+point = [-63.5469562, 8.1028532]
+
+[places.barcelona]
+name = "Nueva Barcelona (Barcelona)"
+wikidata = "Q391221"
+point = [-64.683333333, 10.133333333]
+
+[places.havana]
+name = "The Havannah (Havana)"
+wikidata = "Q1563"
+point = [-82.358888888, 23.136666666]
+
+[places.trinidad]
+name = "Villa de la Trinidad (Trinidad)"
+wikidata = "Q319272"
+point = [-79.966666666, 21.8]
+
+[places.cartagena]
+name = "Carthagena (Cartagena)"
+wikidata = "Q657461"
+point = [-75.525277777, 10.423611111]
+
+[places.turbaco]
+name = "Turbaco"
+wikidata = "Q2080243"
+point = [-75.414166666, 10.331944444]
+
+[places.icononzo]
+name = "The natural bridges of Icononzo"
+wikidata = "Q1525390"
+point = [-74.532777777, 4.175833333]
+
+[places.pichincha]
+name = "Pichincha"
+wikidata = "Q742216"
+point = [-78.598888888, -0.177222222]
+
+[places.cotopaxi]
+name = "Cotopaxi"
+wikidata = "Q181476"
+point = [-78.437777777, -0.680555555]
+
+[places.chimborazo]
+name = "Chimborazo"
+wikidata = "Q14081"
+point = [-78.8175, -1.469166666]
+
+[places.cajamarca]
+name = "Caxamarca (Cajamarca)"
+wikidata = "Q205119"
+point = [-78.5175, -7.1575]
+
+[places.trujillo]
+name = "Truxillo (Trujillo)"
+wikidata = "Q214173"
+point = [-79.028888888, -8.111944444]
+
+[places.callao]
+name = "Callao"
+wikidata = "Q105037"
+point = [-77.139166666, -12.052222222]
+
+[places.guayaquil]
+name = "Guayaquil"
+wikidata = "Q43509"
+point = [-79.8875, -2.19]
+
+[places.acapulco]
+name = "Acapulco"
+wikidata = "Q81398"
+point = [-99.8870087, 16.8628695]
+
+[places.mexico]
+name = "Mexico (Mexico City)"
+wikidata = "Q1489"
+point = [-99.13589, 19.353773]
+
+[places.philadelphia]
+name = "Philadelphia"
+wikidata = "Q1345"
+point = [-75.163611111, 39.952777777]
+
+[[stages]]
+place = "corunna"
+date = 1799-06-05
+cite = "Personal Narrative, Chapter I"
+passage = "On the 4th of June, in the evening, the wind turned to north-east, a point which, on the coast of Galicia, is considered very constant during the summer. The Pizarro prepared to sail on the 5th / The Pizarro set sail at two in the afternoon."
+
+[[stages]]
+place = "teide"
+date = 1799-06-21
+cite = "Personal Narrative, Chapter II"
+passage = "On the morning of the 21st of June, we were on our way to the summit of the volcano. / We prolonged in vain our stay on the summit of the Peak"
+
+[[stages]]
+place = "cumana"
+date = 1799-07-16
+cite = "Personal Narrative, Chapter IV"
+passage = "On the 16th of July, 1799, at break of day, we beheld a verdant coast, of picturesque aspect."
+
+[[stages]]
+place = "guacharo"
+date = 1799-09-18
+cite = "Personal Narrative, Chapter VII"
+passage = "That which confers most celebrity on the valley of Caripe, besides the extraordinary coolness of its climate, is the great Cueva, or Cavern of the Guacharo. / We set out for the Sierra on the 18th of September"
+
+[[stages]]
+place = "caracas"
+date = 1799-11-21
+cite = "Personal Narrative, Chapter XI"
+passage = "I reached Caracas on the 21st of November"
+
+[[stages]]
+place = "valencia"
+date = 1800-02-21
+cite = "Personal Narrative, Chapter XVI"
+passage = "On the 21st of February, in the evening, we set out from the beautiful Hacienda de Cura for Guacara and Nueva Valencia. / By felling the trees which cover the tops and the sides of mountains, men in every climate prepare at once two calamities for future generations; want of fuel and scarcity of water."
+
+[[stages]]
+place = "calabozo"
+date = 1800-03-24
+cite = "Personal Narrative, Chapter XVII"
+passage = "nothing at Calabozo excited in us so great an interest as the gymnoti, which are animated electrical apparatuses. / We left the town of Calabozo on the 24th of March, highly satisfied with our stay, and the experiments we had made on an object so worthy of the attention of physiologists."
+
+[[stages]]
+place = "sanfernando"
+date = 1800-03-27
+cite = "Personal Narrative, Chapter XVII"
+passage = "We arrived on the 27th of March at the Villa de San Fernando, the capital of the Mission of the Capuchins in the province of Varinas."
+
+[[stages]]
+place = "atures"
+date = 1800-04-16
+cite = "Personal Narrative, Chapter XX"
+passage = "On the 16th of April, towards evening, we received tidings that in less than six hours our boat had passed the rapids, and had arrived in good condition in a cove called el Puerto de arriba, or the Port of the Expedition."
+summary = "The rapids of Atures, the first great cataract of the Orinoco."
+
+[[stages]]
+place = "maypures"
+year = 1800
+cite = "Personal Narrative, Chapter XXI"
+passage = "They redoubled their efforts, and we arrived at nightfall, without any accident, in the port of Maypures."
+
+[[stages]]
+place = "pimichin"
+date = 1800-05-05
+cite = "Personal Narrative, Chapter XXII"
+passage = "On the 5th of May we set off, to follow on foot our canoe, which had at length arrived, by the portage, at the Cano Pimichin."
+
+[[stages]]
+place = "sancarlos"
+year = 1800
+cite = "Personal Narrative, Chapter XXIII"
+passage = "We left the island of Dapa long before daybreak; and notwithstanding the rapidity of the current, and the activity of our rowers, our passage to the fort of San Carlos del Rio Negro occupied twelve hours."
+
+[[stages]]
+place = "casiquiare"
+date = 1800-05-20
+cite = "Personal Narrative, Chapter XXIII"
+passage = "We passed the night of the 20th of May, the last of our passage on the Cassiquiare, near the point of the bifurcation of the Orinoco."
+summary = "The Cassiquiare joins the Orinoco to the Rio Negro, and so to the Amazon."
+
+[[stages]]
+place = "esmeralda"
+date = 1800-05-23
+cite = "Personal Narrative, Chapter XXIV"
+passage = "We left the mission of Esmeralda on the 23rd of May."
+
+[[stages]]
+place = "angostura"
+year = 1800
+cite = "Personal Narrative, Chapter XXIV"
+passage = "It would be difficult for me to express the satisfaction we felt on landing at Angostura, the capital of Spanish Guiana / we resolved to stay at Angostura till the 10th of July."
+
+[[stages]]
+place = "barcelona"
+date = 1800-07-23
+cite = "Personal Narrative, Chapter XXVI"
+passage = "We arrived, on the 23rd of July, at the town of Nueva Barcelona"
+
+[[stages]]
+place = "havana"
+date = 1800-12-19
+cite = "Personal Narrative, Chapter XXVIII"
+passage = "We anchored in the port of the Havannah on the 19th December after a passage of twenty-five days in continuous bad weather."
+
+[[stages]]
+place = "trinidad"
+year = 1801
+cite = "Personal Narrative, Chapter XXIX"
+passage = "Proceeding from the mouth of the Rio Guaurabo to the Villa de la Trinidad, I saw on the north-west, the Lomas de San Juan"
+
+[[stages]]
+place = "cartagena"
+date = 1801-03-30
+cite = "Personal Narrative, Chapter XXX"
+passage = "On the morning of the 30th of March we doubled Punta Gigantes, and made for the Boca Chica, the present entrance of the port of Carthagena."
+
+[[stages]]
+place = "turbaco"
+year = 1801
+cite = "Researches, Volume 2"
+passage = "We resided in this charming spot in the month of April, 1801, when, after a toilsome passage from the island of Cuba to Carthagena, we were preparing ourselves for a long journey to Santa Fe de Bogota, and the elevated plain of Quito."
+
+[[stages]]
+place = "icononzo"
+year = 1801
+cite = "Researches, Volume 1"
+passage = "In the month of September, 1801, we passed these natural bridges of Icononzo, on our journey from Santa Fe de Bogota to Popayan and Quito."
+
+[[stages]]
+place = "cotopaxi"
+year = 1802
+cite = "Researches, Volume 2"
+passage = "In the month of April, 1802, in an excursion to the volcano of Cotopaxi, M. Bonpland and myself visited these slight remains of Peruvian architecture"
+
+[[stages]]
+place = "pichincha"
+year = 1802
+cite = "Personal Narrative, Chapter IV"
+passage = "we were witnesses of it in 1802, on the brink of the immense crater of Pichincha, from which, nevertheless, at that time, clouds of sulphureous acid vapours only issued."
+
+[[stages]]
+place = "chimborazo"
+date = 1802-06-23
+cite = "Views of Nature, Physiognomy of Plants"
+passage = "When MM. Bonpland, Carlos Montufarr and myself, on the 23rd of June, 1802, ascended the eastern declivity of Mount Chimborazo, to a height of 19,286 feet"
+
+[[stages]]
+place = "cajamarca"
+year = 1802
+cite = "Views of Nature, The Plateau or Highlands of Caxamarca"
+passage = "Descendants of the Inca still dwell in Caxamarca, amidst the dreary architectural ruins of departed splendour. / We now, for the first time, commanded a view of the Pacific."
+note = "Humboldt saw the Pacific from the Alto de Guangamarca, on the way from Caxamarca down to Truxillo."
+
+[[stages]]
+place = "trujillo"
+year = 1802
+cite = "Personal Narrative, Chapter XXX"
+passage = "I found the surface of the Pacific ocean, in the month of October 1802 on the coast of Truxillo"
+
+[[stages]]
+place = "callao"
+date = 1802-11-09
+cite = "Views of Nature, The Plateau or Highlands of Caxamarca"
+passage = "The transit of Mercury over the Sun's disc, on the 9th of November, 1802 (which I observed at Callao, the port of Lima, from the Round Tower of the Fort of San Felipe)"
+
+[[stages]]
+place = "guayaquil"
+year = 1803
+cite = "Personal Narrative, Chapter V"
+passage = "During our abode at Guayaquil, in the month of January 1803"
+
+[[stages]]
+place = "acapulco"
+year = 1803
+cite = "Researches, Volume 1"
+passage = "When, arriving in New Spain by way of the South Sea, I went in the month of April, 1803, from Acapulco to Cuernavacca"
+
+[[stages]]
+place = "mexico"
+year = 1803
+cite = "Political Essay on the Kingdom of New Spain, Geographical Introduction"
+passage = "my arrival at Mexico in the month of April, 1803."
+
+[[stages]]
+place = "havana"
+year = 1804
+cite = "Personal Narrative, Chapter XXIX"
+passage = "On my second visit to the Havannah, in 1804, I could not return to the Sienega of Batabano"
+
+[[stages]]
+place = "philadelphia"
+year = 1804
+cite = "Political Essay on the Kingdom of New Spain, Volume 1, the opening of the Essay"
+passage = "A short, but interesting stay, which I made in 1804 at Philadelphia and Washington, enabled me also to draw comparisons between the actual state of the United States and that of Peru and Mexico."
