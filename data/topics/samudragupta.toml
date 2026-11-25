@@ -1,0 +1,112 @@
+# The conquests of Samudragupta, Gupta emperor of the fourth century, as his pillar inscription at Allahabad tells
+# them, in the translation of John Faithfull Fleet, Corpus Inscriptionum Indicarum, volume III (1888), number 1,
+# taken from the scan of a copy at the Internet Archive; the errors of the scan's text are corrected, and the names
+# are written without Fleet's diacritics. The inscription gives no years, so the events are in its order: the Kota
+# prince captured and the king at Pushpa (line 13), the kings of the south captured and then set free (line 19), the
+# frontier kings who paid him taxes and obeisance (line 22), and the people of Simhala who served him (line 23).
+# Pushpa is Pushpapura, a name of Pataliputra, as Fleet takes it, though he notes that Kanauj was also once called
+# Kusumapura. Only the places that are known for certain are on the map: Kosala, Mahakantara, Kerala, Kottura,
+# Erandapalla, Avamukta, Palakka, Devarashtra, Kusthalapura, Davaka, Kartripura and the kings of Aryavarta whom he
+# exterminated, whose cities the inscription does not name, are left out, as are the tribes.
+# Each place has its Wikidata item, from which its coordinates come.
+
+title = "The Conquests of Samudragupta"
+work = "The Allahabad pillar inscription of Samudragupta, translated by John Faithfull Fleet, Corpus Inscriptionum Indicarum, volume III: Inscriptions of the Early Gupta Kings and Their Successors (1888), number 1"
+text = "https://archive.org/details/dli.csl.8714"
+licence = "Public domain (text)"
+
+[places.pushpa]
+name = "Pushpa (Pataliputra)"
+wikidata = "Q389755"
+point = [85.144, 25.611]
+
+[places.pishtapura]
+name = "Pishtapura (Pithapuram)"
+wikidata = "Q2563530"
+point = [82.2667, 17.1167]
+
+[places.kanchi]
+name = "Kanchi (Kanchipuram)"
+wikidata = "Q212332"
+point = [79.707778, 12.830833]
+
+[places.vengi]
+name = "Vengi, at Pedavegi"
+wikidata = "Q7159019"
+point = [81.106777, 16.809484]
+
+[places.samatata]
+name = "Samatata (Lower Bengal)"
+wikidata = "Q3470658"
+point = [91, 23.5]
+
+[places.kamarupa]
+name = "Kamarupa (Assam)"
+wikidata = "Q1194765"
+point = [91, 26]
+
+[places.nepala]
+name = "Nepala, in the Kathmandu Valley"
+wikidata = "Q970717"
+point = [85.308583, 27.703944]
+
+[places.simhala]
+name = "Simhala (Ceylon), at Anuradhapura"
+wikidata = "Q5724"
+point = [80.410833, 8.335]
+
+[[events]]
+name = "Kota Prince Captured"
+kind = "capture"
+place = "pushpa"
+sides = "Samudragupta; the family of the Kotas"
+passage = "causing him who was born in the family of the Kotas to be captured by (his) armies, (and) taking his pleasure at (the city) that had the name of Pushpa"
+
+[[events]]
+name = "Mahendra of Pishtapura Captured and Set Free"
+kind = "capture"
+place = "pishtapura"
+sides = "Samudragupta; Mahendra of Pishtapura"
+passage = "Whose great good fortune was mixed with, so as to be increased by (his) glory produced by the favour shewn in capturing and then liberating / Mahendra of Pishtapura"
+
+[[events]]
+name = "Vishnugopa of Kanchi Captured and Set Free"
+kind = "capture"
+place = "kanchi"
+sides = "Samudragupta; Vishnugopa of Kanchi"
+passage = "Whose great good fortune was mixed with, so as to be increased by (his) glory produced by the favour shewn in capturing and then liberating / Vishnugopa of Kanchi"
+
+[[events]]
+name = "Hastivarman of Vengi Captured and Set Free"
+kind = "capture"
+place = "vengi"
+sides = "Samudragupta; Hastivarman of Vengi"
+passage = "Whose great good fortune was mixed with, so as to be increased by (his) glory produced by the favour shewn in capturing and then liberating / Hastivarman of Vengi / and all the other kings of the region of the south"
+
+[[events]]
+name = "Tribute of Samatata"
+kind = "tribute"
+place = "samatata"
+sides = "Samudragupta; the frontier-kings of Samatata"
+passage = "Whose imperious commands were fully gratified, by giving all (kinds of) taxes and obeying (his) orders and coming to perform obeisance, by the frontier-kings of Samatata, Davaka, Kamarupa, Nepala, Kartripura, and other (countries)"
+
+[[events]]
+name = "Tribute of Kamarupa"
+kind = "tribute"
+place = "kamarupa"
+sides = "Samudragupta; the frontier-kings of Kamarupa"
+passage = "Whose imperious commands were fully gratified, by giving all (kinds of) taxes and obeying (his) orders and coming to perform obeisance, by the frontier-kings of Samatata, Davaka, Kamarupa, Nepala, Kartripura, and other (countries)"
+
+[[events]]
+name = "Tribute of Nepala"
+kind = "tribute"
+place = "nepala"
+sides = "Samudragupta; the frontier-kings of Nepala"
+passage = "Whose imperious commands were fully gratified, by giving all (kinds of) taxes and obeying (his) orders and coming to perform obeisance, by the frontier-kings of Samatata, Davaka, Kamarupa, Nepala, Kartripura, and other (countries)"
+
+[[events]]
+name = "Homage of Simhala"
+kind = "homage"
+place = "simhala"
+sides = "Samudragupta; the people of Simhala"
+passage = "whose binding together of the (whole) world, by means of the amplitude of the vigour of (his) arm, was effected by the acts of respectful service, such as offering themselves as sacrifices, bringing presents of maidens, (giving) Garuda-tokens, (surrendering) the enjoyment of their own territories, soliciting (his) commands, &c., (rendered) by the Daivaputras, Shahis, Shahanushahis, Sakas, and Murundas, and by the people of Simhala and all (other) dwellers in islands"
