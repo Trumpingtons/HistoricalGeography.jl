@@ -1,0 +1,204 @@
+# The North West Passage of Roald Amundsen in the Gjøa, 1903 to 1906, as he tells it in The North West Passage
+# (1908): from Christiania by Godhavn, Dalrymple Rock and Beechey Island to Gjøa Haven on King William Land, where he
+# wintered twice; through Simpson Strait and the unsailed waters to Cape Colborne and on to Nelson Head, where the
+# first whaler came in sight; a third winter at King Point, from which he went by Herschel Island and Fort Yukon to
+# the telegraph at Eagle City and back; and on by Point Barrow and Bering Strait to Nome. The three parts are the
+# voyage to King Point, the journey to Eagle City and the voyage to Nome. Each stage has his words, taken from the
+# scan of the University of Toronto's copy at the Internet Archive and read against a second scan of each volume;
+# the errors of the scans' text are corrected. The dates are those Amundsen gives: Godhavn is the day after July
+# 24th, Nome the day after August 30th, and Eagle City and Point Barrow, which he does not date, have their year.
+# Each place has its Wikidata item, from which its coordinates come.
+
+title = "The North West Passage of Roald Amundsen"
+work = "Roald Amundsen, The North West Passage: Being the Record of a Voyage of Exploration of the Ship Gjøa, 1903–1907, two volumes (1908)"
+text = "https://archive.org/details/northwestpassage01amunuoft"
+licence = "Public domain (text)"
+
+[places.christiania]
+name = "Christiania (Oslo)"
+wikidata = "Q585"
+point = [10.738889, 59.913333]
+
+[places.godhavn]
+name = "Godhavn (Qeqertarsuaq)"
+wikidata = "Q847668"
+point = [-53.533333, 69.247222]
+
+[places.dalrymple]
+name = "Dalrymple Rock (Igánaq)"
+wikidata = "Q24842593"
+point = [-70.227778, 76.472222]
+
+[places.beechey]
+name = "Beechey Island"
+wikidata = "Q741133"
+point = [-91.85, 74.716667]
+
+[places.gjoahavn]
+name = "Gjøahavn (Gjoa Haven)"
+wikidata = "Q719585"
+point = [-95.866667, 68.633333]
+
+[places.colborne]
+name = "Cape Colborne"
+wikidata = "Q22419477"
+point = [-105.24113, 68.96468]
+
+[places.nelson]
+name = "Nelson Head"
+wikidata = "Q6990558"
+point = [-122.766667, 71.066667]
+
+[places.kingpoint]
+name = "King Point"
+wikidata = "Q22418319"
+point = [-137.97318, 69.10141]
+
+[places.herschel]
+name = "Herschel Island"
+wikidata = "Q1547493"
+point = [-139.099167, 69.589722]
+
+[places.fortyukon]
+name = "Fort Yukon"
+wikidata = "Q79408"
+point = [-145.258333, 66.563889]
+
+[places.eagle]
+name = "Eagle City and Fort Egbert"
+wikidata = "Q1023677"
+point = [-141.201, 64.7875]
+
+[places.barrow]
+name = "Point Barrow"
+wikidata = "Q1343019"
+point = [-156.361111, 71.391944]
+
+[places.princeofwales]
+name = "Cape Prince of Wales"
+wikidata = "Q369193"
+point = [-168.12, 65.64]
+
+[places.nome]
+name = "Nome"
+wikidata = "Q79996"
+point = [-165.4, 64.5]
+
+[[stages]]
+place = "christiania"
+date = 1903-06-16
+part = 1
+cite = "Volume I, chapter II"
+passage = "The only thing that showed a visible sign of emotion at our departure was the sky. But this it did emphatically. When we cast off on the night of June 16th, 1903, the rain fell in torrents."
+
+[[stages]]
+place = "godhavn"
+date = 1903-07-25
+part = 1
+cite = "Volume I, chapter II"
+passage = "At 8 o'clock in the evening we were still 30 miles off, and only at half-past ten the next forenoon did we get in near the shore. A barrier of grounded icebergs seemed to block the entrance to Godhavn. / Godhavn lies on a small, low island, separated from Disco by a very narrow sound. In 1903 the town numbered 108 souls."
+
+[[stages]]
+place = "dalrymple"
+date = 1903-08-15
+part = 1
+cite = "Volume I, chapter II"
+passage = "At four o'clock on August 15th we reached Dalrymple Rock, where the Scotch whalers, Captains Milne and Adams, had deposited considerable stores for us."
+
+[[stages]]
+place = "beechey"
+date = 1903-08-22
+part = 1
+cite = "Volume I, chapter II"
+passage = "After rather hard tacking we reached Beechey Island on August 22nd, at 9 o'clock in the evening, and anchored in Erebus Bay."
+
+[[stages]]
+place = "gjoahavn"
+date = 1903-09-12
+part = 1
+cite = "Volume I, chapter III"
+passage = "At 8.30 the \"Gjoa\" was anchored in Gjoahavn. We had got thus far. A good deal of work had been done, and we had every reason to be pleased."
+
+[[stages]]
+place = "gjoahavn"
+date = 1905-08-13
+part = 1
+cite = "Volume II, chapter X"
+passage = "Precisely at 3 a.m. on August 13th, 1905, the windlass played a lively tune on the deck of the \"Gjoa.\""
+
+[[stages]]
+place = "colborne"
+date = 1905-08-17
+part = 1
+cite = "Volume II, chapter X"
+passage = "We anchored on August 17th, at 5 a.m., on the west side of Cape Colborne, and this was a significant day in the history of our Expedition — for we had now sailed the \"Gjoa\" through the hitherto unsolved link in the North West Passage."
+
+[[stages]]
+place = "nelson"
+date = 1905-08-26
+part = 1
+cite = "Volume II, chapter X"
+passage = "During the early morning the air became clearer, and I knew then that this land was not Cape Parry on the mainland of America, but Nelson Head on Baring Land. / But then Lieutenant Hansen came rushing down into the cabin and called out the ever memorable words: \"Vessel in sight, sir!\" He bolted again immediately, and I was alone. The North West Passage had been accomplished — my dream from childhood."
+
+[[stages]]
+place = "kingpoint"
+date = 1905-09-09
+part = 1
+cite = "Volume II, chapter X"
+passage = "New ice, several inches thick, was now forming every night, and our fate was soon sealed for another winter. On Saturday, September 9th, we were able to walk on the ice, and we must therefore regard this as the opening chapter of our third winter."
+
+[[stages]]
+place = "herschel"
+date = 1905-10-21
+part = 2
+cite = "Volume II, chapter XII"
+passage = "When I arrived at Herschel Island on October 21st, 1905, the preparations for the approaching mail trip were not yet completed."
+
+[[stages]]
+place = "fortyukon"
+date = 1905-11-20
+part = 2
+cite = "Volume II, chapter XII"
+passage = "At 1.30 in the afternoon of November 20th we arrived at Fort Yukon, which is situated on a steep river bank, where the Porcupine joins the Yukon River. / I had built my hopes on finding a telegraph station here, but, unfortunately, the nearest station was Eagle City, 200 miles to the south, higher up the river."
+
+[[stages]]
+place = "eagle"
+year = 1905
+part = 2
+cite = "Volume II, chapter XII"
+passage = "When we got near the town, we left the ice and drove into the city to the telegraph office, which was situated within the walls of Fort Egbert. / I despatched my precious telegram, which was only just in time, as shortly afterwards the wires broke down, owing to the intense cold. I remained two months in Eagle City, waiting the mail from home."
+
+[[stages]]
+place = "kingpoint"
+date = 1906-03-12
+part = 2
+cite = "Volume II, chapter XI"
+passage = "On March 12th at 6 p.m. I was back on board and brought newspapers and letters for all."
+
+[[stages]]
+place = "herschel"
+date = 1906-07-13
+part = 3
+cite = "Volume II, chapter XIII"
+passage = "However, we managed to squeeze through, and at 2.30 a.m. of July 13th we cast anchor. This afforded us a very good, though brief, opportunity of studying Herschel Island without its pall of snow."
+
+[[stages]]
+place = "barrow"
+year = 1906
+part = 3
+cite = "Volume II, chapter XIII"
+passage = "At 10 p.m. we rounded Barrow Point, the north-west point of America. It was late at night, yet we thought we really must hoist our flag, and we did so."
+
+[[stages]]
+place = "princeofwales"
+date = 1906-08-30
+part = 3
+cite = "Volume II, chapter XIII"
+passage = "On August 30th, at 11 a.m., we sighted Cape Prince of Wales. This marks the eastern entrance to Behring Strait."
+
+[[stages]]
+place = "nome"
+date = 1906-08-31
+part = 3
+cite = "Volume II, chapter XIII"
+passage = "The houses in Nome were soon visible on the horizon / Suddenly a steam launch appeared in front of us, and we heard whistling, shouting, and cheering, — the American's mode of expressing enthusiasm."
