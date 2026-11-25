@@ -1,0 +1,332 @@
+# The four voyages of Christopher Columbus, 1492 to 1504, as R. H. Major's Select Letters of Christopher Columbus
+# (second edition, 1870) gives them: the first, from Palos to Guanahani, Juana and Española, where he left the men of
+# La Navidad, and back by Santa Maria of the Azores and Lisbon; the second, from Cadiz by Ferro to Dominica,
+# Marigalante, Guadaloupe and Burenquen, to the ruins of La Navidad and the founding of Isabella; the third, from San
+# Lucar by the Cape Verde Islands to Trinidad, Paria and San Domingo; and the fourth, from Cadiz to Española, the cape
+# of Gracias a Dios, Cariay and Veragua, to Jamaica, where he was stranded, and home by San Domingo to San Lucar. The
+# four parts are the four voyages. Each stage has the words of the book: the letters of Columbus and of Dr. Chanca,
+# the physician of the second voyage, where they tell of the place, and otherwise Major's introduction, taken from the
+# scan of the University of California's copy at the Internet Archive and read against a second scan; the errors of
+# the scans' text are corrected, and the marks of Major's notes left out; Guanaham is as the book prints it, after the
+# Spanish text it translates. The dates are those of the letters, or of Major's introduction and notes; a stage
+# neither dates has its year. Guadaloupe, which Chanca does not name, is the island Major's note puts there;
+# Columbus's river at Veragua is the Belén, as Major's introduction says, and his Jamaica is placed at Saint Ann's
+# Bay, where he was stranded. Each place has its Wikidata item, from which its coordinates come.
+
+title = "The Voyages of Columbus"
+work = "R. H. Major (translator and editor), Select Letters of Christopher Columbus, with Other Original Documents, Relating to His Four Voyages to the New World, second edition (1870)"
+text = "https://archive.org/details/selectlettersofc00colurich"
+licence = "Public domain (text)"
+
+[places.palos]
+name = "Palos (Palos de la Frontera)"
+wikidata = "Q622030"
+point = [-6.893226, 37.22777]
+
+[places.guanahani]
+name = "Guanahani, which he named San Salvador (San Salvador Island)"
+wikidata = "Q845540"
+point = [-74.4975, 24.035]
+
+[places.juana]
+name = "Juana (Cuba)"
+wikidata = "Q586657"
+point = [-79.0, 22.0]
+
+[places.navidad]
+name = "Villa de Navidad (La Navidad), on Española"
+wikidata = "Q1798978"
+point = [-72.015833, 19.690556]
+
+[places.santamaria]
+name = "St. Mary's, one of the Azores (Santa Maria Island)"
+wikidata = "Q217262"
+point = [-25.0945, 36.9732]
+
+[places.lisbon]
+name = "Lisbon"
+wikidata = "Q597"
+point = [-9.139016, 38.708042]
+
+[places.cadiz]
+name = "Cadiz (Cádiz)"
+wikidata = "Q15682"
+point = [-6.2975, 36.535]
+
+[places.ferro]
+name = "The island of Ferro (El Hierro)"
+wikidata = "Q1036287"
+point = [-18.0, 27.75]
+
+[places.dominica]
+name = "Dominica"
+wikidata = "Q784"
+point = [-61.333333, 15.416667]
+
+[places.marigalante]
+name = "Marigalante (Marie-Galante)"
+wikidata = "Q1334492"
+point = [-61.266667, 15.933333]
+
+[places.guadaloupe]
+name = "Guadaloupe, at Basse-Terre Island"
+wikidata = "Q153822"
+point = [-61.666667, 16.15]
+
+[places.burenquen]
+name = "Burenquen (Puerto Rico)"
+wikidata = "Q1183"
+point = [-66.5, 18.25]
+
+[places.isabella]
+name = "Isabella (La Isabela), on Española"
+wikidata = "Q1543031"
+point = [-71.07852, 19.88998]
+
+[places.sanlucar]
+name = "San Lucar (Sanlúcar de Barrameda)"
+wikidata = "Q210887"
+point = [-6.353889, 36.778889]
+
+[places.sal]
+name = "The Cape Verde Islands, at Sal"
+wikidata = "Q111989"
+point = [-22.936111, 16.737222]
+
+[places.trinidad]
+name = "Trinidad"
+wikidata = "Q128323"
+point = [-61.248611, 10.460556]
+
+[places.paria]
+name = "Paria (Paria Peninsula)"
+wikidata = "Q1668558"
+point = [-62.5, 10.7]
+
+[places.santodomingo]
+name = "San Domingo (Santo Domingo), on Española"
+wikidata = "Q34820"
+point = [-69.936111, 18.4625]
+
+[places.graciasadios]
+name = "The cape of Gracias a Dios"
+wikidata = "Q1024890"
+point = [-83.130123, 15.006485]
+
+[places.cariay]
+name = "The land of Cariay, at Limón"
+wikidata = "Q30620"
+point = [-83.084037, 10.002216]
+
+[places.veragua]
+name = "Veragua, at the river Belén"
+wikidata = "Q4884974"
+point = [-80.86667, 8.88333]
+
+[places.jamaica]
+name = "Jamaica, at Saint Ann's Bay"
+wikidata = "Q630692"
+point = [-77.201667, 18.435]
+
+[[stages]]
+place = "palos"
+date = 1492-08-03
+part = 1
+cite = "Introduction"
+passage = "At length having overcome all difficulties, he set sail with a fleet of three ships on the 3rd of August"
+
+[[stages]]
+place = "guanahani"
+date = 1492-10-12
+part = 1
+cite = "Letter on the first voyage"
+passage = "To the first island that I found I gave the name of San Salvador, in remembrance of His High Majesty, who hath marvellously brought all these things to pass; the Indians call it Guanaham."
+
+[[stages]]
+place = "juana"
+year = 1492
+part = 1
+cite = "Letter on the first voyage"
+passage = "When I reached Juana, I followed its coast to the westward, and found it so large that I thought it must be the mainland, — the province of Cathay"
+
+[[stages]]
+place = "navidad"
+year = 1492
+part = 1
+cite = "Letter on the first voyage"
+passage = "To that city I gave the name of Villa de Navidad, and fortified it with a fortress, which by this time will be quite completed, and I have left in it a sufficient number of men with arms, artillery, and provisions for more than a year, a barge, and a sailing master skilful in the arts necessary for building others."
+
+[[stages]]
+place = "santamaria"
+date = 1493-02-18
+part = 1
+cite = "Introduction"
+passage = "During this period Columbus passed three days and nights without sleep, and with scanty and bad food, so that when, on the 18th, he arrived at St. Mary's, one of the Azores, he felt his limbs quite crippled with exposure to the cold and wet."
+
+[[stages]]
+place = "lisbon"
+date = 1493-03-04
+part = 1
+cite = "Letter on the first voyage"
+passage = "After this letter was written, as I was in the sea of Castille, there arose a south-west wind, which compelled me to lighten my vessels and run this day into this port of Lisbon, an event which I consider the most marvellous thing in the world"
+
+[[stages]]
+place = "palos"
+date = 1493-03-15
+part = 1
+cite = "Introduction"
+passage = "leaving Portugal in safety, on the 13th of March, Columbus arrived on the 15th at the little port of Palos, from whence he had sailed on the 3rd of August in the preceding year."
+
+[[stages]]
+place = "cadiz"
+date = 1493-09-25
+part = 2
+cite = "Letter of Dr. Chanca"
+passage = "The expedition which their Catholic Majesties sent, by Divine permission, from Spain to the Indies, under the command of Christopher Columbus, admiral of the ocean, left Cadiz on the twenty-fifth of September"
+
+[[stages]]
+place = "ferro"
+date = 1493-10-13
+part = 2
+cite = "Letter of Dr. Chanca"
+passage = "After this we had, by the goodness of God, a return of fine weather, more continuous than any fleet ever enjoyed during so long a voyage; so that leaving Ferro on the thirteenth of October, within twenty days we came in sight of land"
+
+[[stages]]
+place = "dominica"
+date = 1493-11-03
+part = 2
+cite = "Letter of Dr. Chanca"
+passage = "On the first Sunday after All Saints, namely, the third of November, about dawn, a pilot of the ship Capitana cried out \"The reward, I see the land!\" / On the morning of the aforesaid Sunday, we saw lying before us an island, and soon on the right hand another appeared: the first was high and mountainous, on the side nearest to us"
+
+[[stages]]
+place = "marigalante"
+date = 1493-11-03
+part = 2
+cite = "Letter of Dr. Chanca"
+passage = "the admiral decided that we should go to the other island, which appeared on the right, and which was at four or five leagues distance / and there the admiral, accompanied by a great number of men, landed with the royal banner in his hands, and took formal possession on behalf of their Majesties."
+
+[[stages]]
+place = "guadaloupe"
+date = 1493-11-04
+part = 2
+cite = "Letter of Dr. Chanca"
+passage = "on the following morning we left for another very large island, situated below this at the distance of seven or eight leagues. We approached it under the side of a great mountain, that seemed almost to reach the skies"
+
+[[stages]]
+place = "burenquen"
+year = 1493
+part = 2
+cite = "Letter of Dr. Chanca"
+passage = "on the evening of the next we discovered another island called Burenquen, which we judged to be thirty leagues in length, for we were coasting along it the whole of one day."
+
+[[stages]]
+place = "navidad"
+date = 1493-11-27
+part = 2
+cite = "Letter of Dr. Chanca"
+passage = "some of our men landed by command of the admiral, and went to the spot where the Spaniards had formerly been: they found the building which they had inhabited, and which they had in some degree fortified with a palisade, burnt and levelled with the ground"
+
+[[stages]]
+place = "isabella"
+year = 1494
+part = 2
+cite = "Letter of Dr. Chanca"
+passage = "It pleased God, however, that through the check upon our progress caused by contrary winds, we succeeded in finding the best and most suitable spot that we could have selected for a settlement, where there was an excellent harbour, and abundance of fish"
+
+[[stages]]
+place = "cadiz"
+date = 1496-06-11
+part = 2
+cite = "Introduction"
+passage = "He sailed with his fleet finally for Spain on the 28th of April, 1496, and after nearly two months' struggle against the trade-winds (during which provisions became so reduced, that there was talk of killing, and even eating the Indian prisoners), reached the bay of Cadiz on the 11th of June."
+
+[[stages]]
+place = "sanlucar"
+date = 1498-05-30
+part = 3
+cite = "Letter on the third voyage"
+passage = "I started from San Lucar, in the name of the most Holy Trinity, on Wednesday the 30th of May, much fatigued with my voyage, for I had hoped, when I left the Indies, to find repose in Spain; whereas, on the contrary, I experienced nothing but opposition and vexation."
+
+[[stages]]
+place = "sal"
+date = 1498-06-27
+part = 3
+cite = "Letter on the third voyage"
+passage = "But having reached the Cape Verde islands (an incorrect name, for they are so barren that nothing green was to be seen there, and the people so sickly that I did not venture to remain among them) I sailed away four hundred and eighty miles, which is equivalent to a hundred and twenty leagues, towards the south-west"
+
+[[stages]]
+place = "trinidad"
+date = 1498-07-31
+part = 3
+cite = "Letter on the third voyage"
+passage = "one of the sailors went up to the main-top and saw to the westward a range of three mountains. / at the hour of complines we reached a cape, which I called Cape Galea, having already given to the island the name of Trinidad"
+
+[[stages]]
+place = "paria"
+year = 1498
+part = 3
+cite = "Letter on the third voyage"
+passage = "I then anchored at the mouth of a river, and we were soon visited by a great number of the inhabitants, who informed us, that the country was called Paria, and that further westward it was more fully peopled."
+
+[[stages]]
+place = "santodomingo"
+date = 1498-08-30
+part = 3
+cite = "Letter to the nurse of Prince John"
+passage = "In the voyage which I made by way of Paria, I found nearly half the colonists of Española in a state of revolt, and they have made war upon me until now as if I had been a Moor; while on the other side, I had to contend with the no less cruel Indians."
+
+[[stages]]
+place = "cadiz"
+date = 1502-05-09
+part = 4
+cite = "Introduction"
+passage = "finally, on the 9th of May, 1502, he sailed from Cadiz on his fourth and last voyage of discovery."
+
+[[stages]]
+place = "santodomingo"
+year = 1502
+part = 4
+cite = "Letter on the fourth voyage"
+passage = "On reaching the island of Española I despatched a packet of letters, by which I begged as a favour that a ship should be supplied me at my own cost in lieu of one of those that I had brought with me, and which had become unseaworthy, and could no longer carry sail."
+
+[[stages]]
+place = "graciasadios"
+date = 1502-09-12
+part = 4
+cite = "Letter on the fourth voyage"
+passage = "I at length reached the Cape of Gracias a Dios, and after that the Lord granted me fair wind and tide; this was on the twelfth of September."
+
+[[stages]]
+place = "cariay"
+date = 1502-09-25
+part = 4
+cite = "Letter on the fourth voyage"
+passage = "I reached the land of Cariay, where I stopped to repair my vessels and take in provisions, as well as to afford relaxation to the men, who had become very weak."
+
+[[stages]]
+place = "veragua"
+date = 1503-01-06
+part = 4
+cite = "Letter on the fourth voyage"
+passage = "On the day of the Epiphany, I reached Veragua in a state of exhaustion; there, by our Lord's goodness, I found a river and a safe harbour, although at the entrance there were only ten spans of water."
+
+[[stages]]
+place = "jamaica"
+date = 1503-07-07
+part = 4
+cite = "Letter on the fourth voyage"
+passage = "After eight days I put to sea again, and reached Jamaica by the end of June; but always beating against contrary winds, and with the ships in the worst possible condition. / Done in the Indies, in the island of Jamaica, on the seventh of July, in the year one thousand five hundred and three."
+
+[[stages]]
+place = "santodomingo"
+date = 1504-08-13
+part = 4
+cite = "Introduction"
+passage = "he was enabled, on the 28th of June, 1504, to leave his wrecked vessels behind him, and start with revived hopes for San Domingo, which he reached on the 13th of August."
+
+[[stages]]
+place = "sanlucar"
+date = 1504-11-07
+part = 4
+cite = "Introduction"
+passage = "finally, on the 7th of November, he arrived, in a vessel as shattered as his own broken and care-worn frame, in the welcome harbour of San Lucar."
