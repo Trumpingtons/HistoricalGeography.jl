@@ -88,6 +88,38 @@ function write_features(con, features, path, table, columns)
 	return path
 end
 
+"""The file of corrections to the Wikidata items that `war_events` reads, written by hand."""
+const WIKIDATA_CORRECTIONS = joinpath(dirname(@__DIR__), "data", "wikidata-corrections.toml")
+
+"""
+The corrections to Wikidata items, by item id, each checked: a `note` that says what Wikidata gives wrong and the
+source of the correction, and only `name`, `kind`, `starts`, `ends` and `wikipedia` corrected.
+"""
+function wikidata_corrections()
+	corrections = TOML.parsefile(WIKIDATA_CORRECTIONS)
+	for (id, fix) in corrections
+		ok = occursin(r"^Q[1-9][0-9]*$", id) && !isempty(get(fix, "note", "")) &&
+			issubset(keys(fix), ("note", "name", "kind", "starts", "ends", "wikipedia")) &&
+			all(field -> get(fix, field, 0) isa Integer, ("starts", "ends")) && get(fix, "starts", 0) <= get(fix, "ends", get(fix, "starts", 0))
+		ok || error("the correction of $(id) needs a Wikidata id, a note, and only name, kind, starts <= ends and wikipedia")
+	end
+	return corrections
+end
+
+"""
+The kind of an event of a war, `name`, from the kinds Wikidata gives it (`kinds`, joined by `|`), leaving out `war`,
+since an item that is part of a war and also a war is one of its battles or campaigns: the kind the name starts with
+(a siege for the Siege of Massilia, which Wikidata gives as a siege and a naval battle), else the first in
+alphabetical order; `war` when it is the only one, and an empty text when there are none.
+"""
+function event_kind(kinds, name = "")
+	names = sort!(unique!(filter!(!isempty, split(something(kinds, ""), "|"))))
+	others = filter(!=("war"), names)
+	isempty(others) && return isempty(names) ? "" : first(names)
+	named = findfirst(kind -> startswith(lowercase(something(name, "")), lowercase(kind)), others)
+	return others[something(named, 1)]
+end
+
 """
 	war_events(con, war; folder, table = "events", refresh = false)
 
@@ -95,7 +127,13 @@ Writes the table `table` of the events of the war `war` that Wikidata gives with
 sieges, treaties and other items that are part of the war (P361, at any depth) or name it as their conflict (P607),
 within the war's own years (P580 to P582, a year either side) when Wikidata gives them.
 `war` is the Wikidata id of the war, such as `"Q76026"` (the Greco-Persian Wars) or `"Q12551"` (the Hundred Years'
-War). An event without coordinates of its own takes those of its location (P276).
+War), or a vector of ids, for a war with a part that Wikidata does not give as one, such as
+`["Q1238338", "Q9377266"]` (Caesar's Civil War and the Alexandrian War); their events are written together, within
+the first and last of their years. An event without coordinates of its own takes those of its location (P276).
+
+An event that Wikidata gives several kinds takes the one its name starts with, else the first in alphabetical order,
+leaving out `war`. The dates, kind, name or Wikipedia article of an item that Wikidata gives wrong are corrected by
+hand in the package's `data/wikidata-corrections.toml`, each with a note of its source.
 
 The table has `name`, `kind` (such as battle or siege), `starts` and `ends` (years, negative before the Common Era),
 `until` (the last year of any event, so that a map with a year slider keeps every event on it from its year),
@@ -105,13 +143,18 @@ and a box around them: `(; path, count, since, upto, box)`.
 
 Wikidata's answer is kept in `folder` and read again unless `refresh`. Its items are CC0.
 """
-function war_events(con, war::AbstractString; folder::AbstractString, table::AbstractString = "events", refresh::Bool = false)
-	occursin(r"^Q[1-9][0-9]*$", war) || throw(ArgumentError("war is the Wikidata id of a war, such as \"Q76026\", not \"$(war)\""))
+function war_events(con, war::Union{AbstractString, AbstractVector{<:AbstractString}}; folder::AbstractString, table::AbstractString = "events", refresh::Bool = false)
+	wars = war isa AbstractString ? [war] : collect(war)
+	isempty(wars) && throw(ArgumentError("war is the Wikidata id of a war, or a vector of them, not an empty vector"))
+	for id in wars
+		occursin(r"^Q[1-9][0-9]*$", id) || throw(ArgumentError("war is the Wikidata id of a war, such as \"Q76026\", not \"$(id)\""))
+	end
+	parts = join(["{ ?e wdt:P361+ wd:$(id) } UNION { ?e wdt:P607 wd:$(id) }" for id in wars], " UNION ")
 	query = """
-	SELECT ?e (SAMPLE(?name) AS ?label) (SAMPLE(?kindName) AS ?kind) (MIN(?d0) AS ?from) (MAX(?d1) AS ?to)
+	SELECT ?e (SAMPLE(?name) AS ?label) (GROUP_CONCAT(DISTINCT ?kindName; separator = "|") AS ?kinds) (MIN(?d0) AS ?from) (MAX(?d1) AS ?to)
 		(SAMPLE(?own) AS ?ownPoint) (SAMPLE(?at) AS ?placePoint) (SAMPLE(?placeName) AS ?place) (SAMPLE(?article) AS ?wiki)
 		(GROUP_CONCAT(DISTINCT ?sideName; separator = "; ") AS ?sides) WHERE {
-	  { ?e wdt:P361+ wd:$(war) } UNION { ?e wdt:P607 wd:$(war) }
+	  $(parts)
 	  # a date first: it leaves out the people, ships and memorials that name the war as their conflict
 	  FILTER EXISTS { ?e wdt:P585|wdt:P580 [] }
 	  FILTER NOT EXISTS { ?e wdt:P31 wd:Q5 }
@@ -128,33 +171,37 @@ function war_events(con, war::AbstractString; folder::AbstractString, table::Abs
 	  OPTIONAL { ?article schema:about ?e ; schema:isPartOf <https://en.wikipedia.org/> }
 	} GROUP BY ?e"""
 	mkpath(folder)
-	rows = sparql(WIKIDATA_SPARQL, query, joinpath(folder, "wikidata-$(war).json"); refresh)["results"]["bindings"]
-	# the war's own years, within which its events must fall: items that name it can be of other years
-	dates = sparql(WIKIDATA_SPARQL, "SELECT ?from ?to WHERE { OPTIONAL { wd:$(war) wdt:P580 ?from } OPTIONAL { wd:$(war) wdt:P582 ?to } }",
-		joinpath(folder, "wikidata-$(war)-years.json"); refresh)["results"]["bindings"]
+	stem = join(wars, "-")
+	rows = sparql(WIKIDATA_SPARQL, query, joinpath(folder, "wikidata-$(stem).json"); refresh)["results"]["bindings"]
+	# the wars' own years, within which their events must fall: items that name a war can be of other years
+	values = join(("wd:$(id)" for id in wars), " ")
+	dates = sparql(WIKIDATA_SPARQL, "SELECT ?from ?to WHERE { VALUES ?war { $(values) } OPTIONAL { ?war wdt:P580 ?from } OPTIONAL { ?war wdt:P582 ?to } }",
+		joinpath(folder, "wikidata-$(stem)-years.json"); refresh)["results"]["bindings"]
 	years_of(name) = [year for year in (wikidata_year(something(binding(row, name), "")) for row in dates) if year !== nothing]
 	first_year, last_year = isempty(years_of("from")) ? nothing : minimum(years_of("from")), isempty(years_of("to")) ? nothing : maximum(years_of("to"))
+	corrections = wikidata_corrections()
 	events = []
 	for row in rows
 		own = wikidata_point(binding(row, "ownPoint"))
 		at = own === nothing ? wikidata_point(binding(row, "placePoint")) : own
-		starts = wikidata_year(something(binding(row, "from"), ""))
+		id = last(split(binding(row, "e"), "/"))
+		fix = get(corrections, id, Dict{String, Any}())
+		starts = get(fix, "starts", wikidata_year(something(binding(row, "from"), "")))
 		(at === nothing || starts === nothing) && continue
 		(first_year !== nothing && starts < first_year - 1 || last_year !== nothing && starts > last_year + 1) && continue
-		ends = something(wikidata_year(something(binding(row, "to"), "")), starts)
-		id = last(split(binding(row, "e"), "/"))
-		push!(events, (; id, name = something(binding(row, "label"), id), kind = something(binding(row, "kind"), ""), starts,
-			ends = max(ends, starts), point = at, located = own === nothing ? "place" : "event", place = something(binding(row, "place"), ""),
-			sides = something(binding(row, "sides"), ""), wikipedia = something(binding(row, "wiki"), "")))
+		ends = get(fix, "ends", haskey(fix, "starts") ? starts : something(wikidata_year(something(binding(row, "to"), "")), starts))
+		push!(events, (; id, name = get(fix, "name", something(binding(row, "label"), id)), kind = get(fix, "kind", event_kind(binding(row, "kinds"), binding(row, "label"))),
+			starts, ends = max(ends, starts), point = at, located = own === nothing ? "place" : "event", place = something(binding(row, "place"), ""),
+			sides = something(binding(row, "sides"), ""), wikipedia = get(fix, "wikipedia", something(binding(row, "wiki"), ""))))
 	end
-	isempty(events) && error("Wikidata gives no event of $(war) with a place and a date")
+	isempty(events) && error("Wikidata gives no event of $(join(wars, ", ")) with a place and a date")
 	sort!(events; by = event -> (event.starts, event.name))
 	since, upto = minimum(event.starts for event in events), maximum(event.ends for event in events)
 	features = [Dict("type" => "Feature", "geometry" => Dict("type" => "Point", "coordinates" => collect(event.point)),
 		"properties" => Dict("name" => event.name, "kind" => event.kind, "starts" => event.starts, "ends" => event.ends, "until" => upto,
 			"place" => event.place, "sides" => event.sides, "located" => event.located,
 			"wikidata" => "https://www.wikidata.org/wiki/$(event.id)", "wikipedia" => event.wikipedia)) for event in events]
-	path = write_features(con, features, joinpath(folder, "war-$(war).geojson"), table,
+	path = write_features(con, features, joinpath(folder, "war-$(stem).geojson"), table,
 		"name, kind, starts::INTEGER AS starts, ends::INTEGER AS ends, until::INTEGER AS until, place, sides, located, wikidata, wikipedia")
 	return (; path, count = length(events), since, upto, box = points_box([event.point for event in events]))
 end
@@ -189,24 +236,31 @@ Writes the table `table` of the events of a war written by hand from its source,
 Qin Shi Huang, from chapter 6 of Sima Qian's Records of the Grand Historian). The table has the columns of the
 Wikidata wars, `name`, `kind`, `starts`, `ends`, `until`, `place`, `sides` and `wikidata` (the place's item), with
 `reign` (the year of the ruler's reign the source dates it by), `passage` (the source's words) and `summary` (an
-English summary of them), and `geom`. It is also written as GeoJSON in `folder`; returns `(; path, count, since, upto, box)`.
+English summary of them, for a source in another language), and `geom`. A source that gives no years, such as
+`:samudragupta` (the conquests of Samudragupta, from his Allahabad pillar inscription), has events without `starts`,
+`ends` or `reign`, in the order of the source, and `since` and `upto` are `nothing`. It is also written as GeoJSON in
+`folder`; returns `(; path, count, since, upto, box)`.
 """
 function war_events(con, war::Symbol; folder::AbstractString, table::AbstractString = "events")
 	data = topic_data(war)
 	places = data["places"]
-	events = sort(data["events"]; by = event -> event["year"])
-	since, upto = first(events)["year"], last(events)["year"]
+	events = data["events"]
+	years = [event["year"] for event in events if haskey(event, "year")]
+	# events dated by year in the order of their years; those of a source that gives no years in its own order
+	length(years) == length(events) && (events = sort(events; by = event -> event["year"]))
+	since, upto = isempty(years) ? (nothing, nothing) : extrema(years)
 	features = map(events) do event
 		place = places[event["place"]]
+		year = get(event, "year", nothing)
 		Dict("type" => "Feature", "geometry" => Dict("type" => "Point", "coordinates" => place["point"]),
-			"properties" => Dict("name" => event["name"], "kind" => event["kind"], "starts" => event["year"], "ends" => event["year"],
-				"until" => upto, "place" => place["name"], "sides" => event["sides"], "reign" => event["reign"],
-				"passage" => event["passage"], "summary" => event["summary"],
+			"properties" => Dict("name" => event["name"], "kind" => event["kind"], "starts" => year, "ends" => year,
+				"until" => upto, "place" => place["name"], "sides" => event["sides"], "reign" => get(event, "reign", nothing),
+				"passage" => event["passage"], "summary" => get(event, "summary", nothing),
 				"wikidata" => "https://www.wikidata.org/wiki/$(place["wikidata"])"))
 	end
 	mkpath(folder)
 	path = write_features(con, features, joinpath(folder, "war-$(war).geojson"), table,
-		"name, kind, starts::INTEGER AS starts, ends::INTEGER AS ends, until::INTEGER AS until, place, sides, reign::INTEGER AS reign, passage, summary, wikidata")
+		"name, kind, starts::INTEGER AS starts, ends::INTEGER AS ends, until::INTEGER AS until, place, sides, reign::INTEGER AS reign, passage, summary::VARCHAR AS summary, wikidata")
 	return (; path, count = length(events), since, upto, box = points_box([places[event["place"]]["point"] for event in events]))
 end
 
@@ -385,7 +439,9 @@ Library (PerseusDL/canonical-greekLit, CC BY-SA 4.0), whose editors tagged each 
 Thesaurus of Geographic Names (TGN) or in Perseus' own gazetteer. A place of TGN has TGN's coordinates (Open Data
 Commons Attribution License), a place of Perseus' gazetteer those its editors give in the text. `work` can also be a
 text whose places are written by hand from it: `:genji` (The Tale of Genji, in the text of Shibuya Eiichi on
-Wikisource, CC BY-SA 3.0) or `:nights` (The Arabian Nights, in Richard F. Burton's translation); each place then has
+Wikisource, CC BY-SA 3.0), `:nights` (The Arabian Nights, in Richard F. Burton's translation), `:periplus` (The Periplus
+of the Erythraean Sea, in Wilfred H. Schoff's translation) or `:meghaduta` (Kalidasa's Cloud-Messenger, in Arthur W.
+Ryder's translation); each place then has
 the coordinates of its Wikidata item, `key` is that item and `link` its page, and the table also has `order` (the
 order in which the text first names it), `passage` and `summary`, the words of each passage joined by ` / `.
 

@@ -63,6 +63,12 @@ using HistoricalGeography, Test
 		@test (HistoricalGeography.wikidata_point("Point(23.9667 38.1167)"), HistoricalGeography.wikidata_point("Point(1 2"),
 			HistoricalGeography.wikidata_point(nothing)) == ((23.9667, 38.1167), nothing, nothing)
 		@test HistoricalGeography.query_escape("wd:Q8676 é'~") == "wd%3AQ8676%20%C3%A9%27~"
+		# an item that is part of a war and also a war is one of its battles
+		@test HistoricalGeography.event_kind.(["war|battle", "war", "siege|naval battle", "naval battle|siege", "", nothing], ["Battle of Ilerda", "Gallic War", "Battle of Tauris", "Siege of Massilia", "", nothing]) ==
+			["battle", "war", "naval battle", "siege", "", ""]
+		@test HistoricalGeography.wikidata_corrections()["Q21008973"]["starts"] == -49
+		@test_throws ArgumentError war_events(nothing, ["Q1238338", "Caesar"]; folder = mktempdir())
+		@test_throws ArgumentError war_events(nothing, String[]; folder = mktempdir())
 	end
 
 	@testset "Routes across the antimeridian" begin
@@ -82,7 +88,8 @@ using HistoricalGeography, Test
 	end
 
 	@testset "The topic data written by hand" begin
-		@test HistoricalGeography.topic_names() == [:bly, :burckhardt, :darwin, :genji, :humboldt, :nights, :odysseus, :petrie, :polo, :qin, :stark, :xuanzang, :zhenghe]
+		@test HistoricalGeography.topic_names() == [:amundsen, :bly, :burckhardt, :columbus, :darwin, :faxian, :genji, :humboldt, :magellan, :meghaduta, :nights,
+			:nikitin, :odysseus, :periplus, :peter, :petrie, :polo, :qin, :samudragupta, :stark, :xuanzang, :zhenghe]
 		# every event, stage and mention names a place of its file, and every place is named
 		for name in HistoricalGeography.topic_names()
 			data = HistoricalGeography.topic_data(name)

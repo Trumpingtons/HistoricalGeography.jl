@@ -1,0 +1,9 @@
+# Corrections to Wikidata items that war_events reads, by item: what Wikidata gives wrong, and the value that replaces
+# it, with the source of the correction in the note. Fields: name, kind, starts and ends (years, negative before the
+# Common Era) and wikipedia. Wikidata is corrected too when it can be; an entry here stays until Wikidata has the fix.
+
+[Q21008973]
+note = "Siege of Brundisium, part of Caesar's Civil War: Wikidata dates it AD 49 (+0049). Caesar besieged Pompey at Brundisium in March 49 BCE (Caesar, Commentaries on the Civil War 1.25-28). Its English article is on the item Q25444447, which has no date."
+starts = -49
+ends = -49
+wikipedia = "https://en.wikipedia.org/wiki/Siege_of_Brundisium"
