@@ -178,7 +178,7 @@ function allmaps(con; at = nothing, box = nothing, largest::Union{Real, Nothing}
 			"editor" => "https://editor.allmaps.org/#/images?url=" * get(resource, "id", "") * "/info.json"))
 	end
 	path = joinpath(folder, "allmaps-maps.geojson")
-	open(io -> JSON.json(io, Dict("type" => "FeatureCollection", "features" => records)), path, "w")
+	write(path, JSON.json(Dict("type" => "FeatureCollection", "features" => records)))
 	DBInterface.execute(con, """CREATE OR REPLACE TABLE "$(table)" AS SELECT id, coalesce(title, '') AS title, TRY_CAST(year AS INTEGER) AS year, coalesce(library, '') AS library,
 		km2::DOUBLE AS km2, tiles, image, manifest, editor, geom FROM ST_Read('$(quoted(path))') ORDER BY km2""")
 	return length(records)

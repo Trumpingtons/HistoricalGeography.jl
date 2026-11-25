@@ -83,7 +83,8 @@ end
 
 """Writes `features` as a GeoJSON file at `path` and as the table `table` of `con`, and returns `path`."""
 function write_features(con, features, path, table, columns)
-	open(io -> JSON.json(io, Dict("type" => "FeatureCollection", "features" => features)), path, "w")
+	# JSON.json of a value, a text, in JSON 0.21 as in 1: JSON.json(io, value) writes to io only in 1
+	write(path, JSON.json(Dict("type" => "FeatureCollection", "features" => features)))
 	DBInterface.execute(con, """CREATE OR REPLACE TABLE "$(table)" AS SELECT $(columns), geom FROM ST_Read('$(quoted(path))')""")
 	return path
 end
