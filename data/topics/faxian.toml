@@ -1,0 +1,379 @@
+# The journey of the monk Faxian (Fâ-Hien) from Chang'an to India in search of the Books of Discipline, 399 to 414, as
+# he wrote it in his Record of Buddhistic Kingdoms: across the Sandy Desert to Khotan, over the Onion mountains into
+# North India, down the Indus to Peshawar and Nagara, across the Little Snowy mountains, through Central India to the
+# places of the Buddha's life, three years at Pataliputra and two at Tamalipti, two years in Ceylon, and home by sea,
+# by way of Java, to the coast of Shandong and Nanking. Each stage has his words in James Legge's translation (1886),
+# from Project Gutenberg's text, without the marks of Legge's notes.
+# Faxian dates his journey by its summer retreats and by the length of his stays, so the years of the stages are
+# approximate: those of Legge's notes where he gives one (399 at the start, 400 at Chang-yih, 402 in Udyana, 404 at
+# Lo-e, 413 at Ts'ing-chow, 414 for the narrative), and counted from Faxian's own words between them. The places Legge
+# leaves unidentified are left out: Shen-shen, Tsze-hoh, Yu-hwuy, K'eeh-ch'a, Lo-e, Bhida and Java-dvipa; Woo-e is
+# placed at Karasahr, and T'o-leih in the Darel valley, as Legge's notes say others have put them. Places the text
+# gives no stage of their own, such as Gandhara and Sha-che, are left out too.
+# Each place has its Wikidata item, from which its coordinates come.
+
+title = "The Journey of Faxian"
+work = "Faxian, A Record of Buddhistic Kingdoms, translated by James Legge (1886)"
+text = "https://www.gutenberg.org/ebooks/2124"
+licence = "Public domain (text)"
+
+[places.changan]
+name = "Ch’ang-gan (Chang’an), at Xi’an"
+wikidata = "Q5826"
+point = [108.942222, 34.261111]
+
+[places.zhangye]
+name = "Chang-yih (Zhangye)"
+wikidata = "Q197402"
+point = [100.45529, 38.93545]
+
+[places.dunhuang]
+name = "T’un-hwang (Dunhuang)"
+wikidata = "Q319114"
+point = [94.663889, 40.141111]
+
+[places.wooe]
+name = "Woo-e, at Karasahr"
+wikidata = "Q1156662"
+point = [86.566667, 42.05]
+
+[places.khotan]
+name = "Yu-teen (Khotan)"
+wikidata = "Q235389"
+point = [79.9327, 37.1012]
+
+[places.toleih]
+name = "T’o-leih, in the Darel valley"
+wikidata = "Q134740257"
+point = [73.61904, 35.66092]
+
+[places.udyana]
+name = "Woo-chang (Udyana), in Swat"
+wikidata = "Q389161"
+point = [72.361944, 34.782778]
+
+[places.taxila]
+name = "Takshasila (Taxila)"
+wikidata = "Q156093"
+point = [72.7875, 33.745833]
+
+[places.peshawar]
+name = "Purushapura (Peshawar)"
+wikidata = "Q1113311"
+point = [71.5675, 34.014444]
+
+[places.hadda]
+name = "He-lo, at Hadda"
+wikidata = "Q515069"
+point = [70.469167, 34.366111]
+
+[places.safedkoh]
+name = "The Little Snowy mountains (Safed Koh)"
+wikidata = "Q2367275"
+point = [70.373056, 33.9875]
+
+[places.bannu]
+name = "Poh-na (Bannu)"
+wikidata = "Q806916"
+point = [70.605556, 32.988889]
+
+[places.mathura]
+name = "Ma-t’aou-lo (Mathura)"
+wikidata = "Q200311"
+point = [77.673673, 27.492413]
+
+[places.sankasya]
+name = "Sankasya, at Sankissa"
+wikidata = "Q864810"
+point = [79.271111, 27.333889]
+
+[places.kannauj]
+name = "Kanyakubja (Kannauj)"
+wikidata = "Q614890"
+point = [79.922019, 27.031336]
+
+[places.sravasti]
+name = "Sravasti"
+wikidata = "Q2594448"
+point = [82.050619, 27.517073]
+
+[places.lumbini]
+name = "Lumbini"
+wikidata = "Q9213"
+point = [83.275829, 27.4814]
+
+[places.kusinagara]
+name = "Kusanagara (Kushinagar)"
+wikidata = "Q825673"
+point = [83.888889, 26.740278]
+
+[places.vaisali]
+name = "Vaisali"
+wikidata = "Q1509463"
+point = [85.125592, 25.986594]
+
+[places.pataliputra]
+name = "Pataliputtra (Patna)"
+wikidata = "Q389755"
+point = [85.144, 25.611]
+
+[places.rajagriha]
+name = "Rajagriha (Rajgir)"
+wikidata = "Q863683"
+point = [85.42, 25.03]
+
+[places.gridhrakuta]
+name = "Mount Gridhra-kuta (Vulture Peak)"
+wikidata = "Q19755572"
+point = [85.446389, 25.001667]
+
+[places.gaya]
+name = "Gaya"
+wikidata = "Q251329"
+point = [85.016667, 24.75]
+
+[places.bodhgaya]
+name = "The patra tree, at Bodh Gaya"
+wikidata = "Q176767"
+point = [84.9925, 24.695]
+
+[places.varanasi]
+name = "Varanasi"
+wikidata = "Q79980"
+point = [83.012778, 25.318889]
+
+[places.sarnath]
+name = "The Rishi’s Deer-wild (Sarnath)"
+wikidata = "Q324394"
+point = [83.021389, 25.381111]
+
+[places.champa]
+name = "Champa"
+wikidata = "Q5069932"
+point = [86.941694, 25.237417]
+
+[places.tamalipti]
+name = "Tamalipti (Tamluk)"
+wikidata = "Q118278"
+point = [87.916667, 22.3]
+
+[places.singhala]
+name = "Singhala (Ceylon), at Anuradhapura"
+wikidata = "Q5724"
+point = [80.410833, 8.335]
+
+[places.laoshan]
+name = "Mount Lao"
+wikidata = "Q1698782"
+point = [120.591667, 36.191667]
+
+[places.qingzhou]
+name = "Ts’ing-chow (Qingzhou)"
+wikidata = "Q1360781"
+point = [118.479722, 36.696667]
+
+[places.nanking]
+name = "Nanking (Jiankang)"
+wikidata = "Q16666"
+point = [118.778889, 32.060833]
+
+[[stages]]
+place = "changan"
+year = 399
+cite = "A Record of Buddhistic Kingdoms, chapter I"
+passage = "Fâ-Hien had been living in Ch’ang-gan. / After starting from Ch’ang-gan, they passed through Lung, and came to the kingdom of K’een-kwei, where they stopped for the summer retreat."
+
+[[stages]]
+place = "zhangye"
+year = 400
+cite = "A Record of Buddhistic Kingdoms, chapter I"
+passage = "When that was over, they went forward to the kingdom of Now-t’an, crossed the mountain of Yang-low, and reached the emporium of Chang-yih. There they found the country so much disturbed that travelling on the roads was impossible for them. Its king, however, was very attentive to them, kept them (in his capital), and acted the part of their danapati."
+
+[[stages]]
+place = "dunhuang"
+year = 400
+cite = "A Record of Buddhistic Kingdoms, chapter I"
+passage = "Le Hao, the prefect of T’un-hwang, had supplied them with the means of crossing the desert (before them), in which there are many evil demons and hot winds. (Travellers) who encounter them perish all to a man. There is not a bird to be seen in the air above, nor an animal on the ground below."
+
+[[stages]]
+place = "wooe"
+year = 400
+cite = "A Record of Buddhistic Kingdoms, chapter II"
+passage = "Here they stayed for about a month, and then proceeded on their journey, fifteen days walking to the north-west bringing them to the country of Woo-e. In this also there were more than four thousand monks, all students of the hinayana."
+note = "Legge leaves Woo-e unidentified, and quotes Watters: “We cannot be far wrong if we place it in Kharaschar, or between that and Kutscha.”"
+
+[[stages]]
+place = "khotan"
+year = 401
+cite = "A Record of Buddhistic Kingdoms, chapters II and III"
+passage = "in the course of a month and five days they succeeded in reaching Yu-teen. / Yu-teen is a pleasant and prosperous kingdom, with a numerous and flourishing population. / Fâ-Hien and the others, wishing to see the procession of images, remained behind for three months."
+
+[[stages]]
+place = "toleih"
+year = 402
+cite = "A Record of Buddhistic Kingdoms, chapter VI"
+passage = "When (the travellers) had got through them, they were in North India, and immediately on entering its borders, found themselves in a small kingdom called T’o-leih, where also there were many monks, all students of the hinayana."
+note = "Legge doubts that T’o-leih is Darada, as Eitel and others hold, and quotes Cunningham: “Darel is a valley on the right or western bank of the Indus.”"
+
+[[stages]]
+place = "udyana"
+year = 402
+cite = "A Record of Buddhistic Kingdoms, chapter VIII"
+passage = "After crossing the river, (the travellers) immediately came to the kingdom of Woo-chang, which is indeed (a part) of North India. / Fâ-Hien and the others remained in Woo-chang, and kept the summer retreat."
+
+[[stages]]
+place = "taxila"
+year = 402
+cite = "A Record of Buddhistic Kingdoms, chapter XI"
+passage = "Seven days’ journey from this to the east brought the travellers to the kingdom of Takshasila, which means “the severed head” in the language of China."
+
+[[stages]]
+place = "peshawar"
+year = 403
+cite = "A Record of Buddhistic Kingdoms, chapter XII"
+passage = "Going southwards from Gandhara, (the travellers) in four days arrived at the kingdom of Purushapura. / Of all the topes and temples which (the travellers) saw in their journeyings, there was not one comparable to this in solemn beauty and majestic grandeur."
+
+[[stages]]
+place = "hadda"
+year = 403
+cite = "A Record of Buddhistic Kingdoms, chapter XIII"
+passage = "Going west for sixteen yojanas, he came to the city He-lo in the borders of the country of Nagara, where there is the flat-bone of Buddha’s skull, deposited in a vihâra adorned all over with gold-leaf and the seven sacred substances."
+
+[[stages]]
+place = "safedkoh"
+year = 404
+cite = "A Record of Buddhistic Kingdoms, chapter XIV"
+passage = "Having stayed there till the third month of winter, Fâ-Hien and the two others, proceeding southwards, crossed the Little Snowy mountains. On them the snow lies accumulated both winter and summer. / Hwuy-king could not go any farther. A white froth came from his mouth, and he said to Fâ-Hien, “I cannot live any longer. Do you immediately go away, that we do not all die here;” and with these words he died."
+
+[[stages]]
+place = "bannu"
+year = 404
+cite = "A Record of Buddhistic Kingdoms, chapter XIV"
+passage = "Here they stayed for the summer retreat, and when that was over, they went on to the south, and ten days’ journey brought them to the kingdom of Poh-na, where there are also more than three thousand monks, all students of the hinayana."
+
+[[stages]]
+place = "mathura"
+year = 404
+cite = "A Record of Buddhistic Kingdoms, chapter XVI"
+passage = "After passing all these places, they came to a country named Ma-t’aou-lo. They still followed the course of the P’oo-na river, on the banks of which, left and right, there were twenty monasteries, which might contain three thousand monks; and (here) the Law of Buddha was still more flourishing."
+
+[[stages]]
+place = "sankasya"
+year = 405
+cite = "A Record of Buddhistic Kingdoms, chapter XVII"
+passage = "From this they proceeded south-east for eighteen yojanas, and found themselves in a kingdom called Sankasya, at the place where Buddha came down, after ascending to the Trayastrimsas heaven, and there preaching for three months his Law for the benefit of his mother."
+
+[[stages]]
+place = "kannauj"
+year = 405
+cite = "A Record of Buddhistic Kingdoms, chapter XVIII"
+passage = "Fâ-Hien stayed at the Dragon vihâra till after the summer retreat, and then, travelling to the south-east for seven yojanas, he arrived at the city of Kanyakubja, lying along the Ganges."
+
+[[stages]]
+place = "sravasti"
+year = 405
+cite = "A Record of Buddhistic Kingdoms, chapter XX"
+passage = "Going on from this to the south, for eight yojanas, (the travellers) came to the city of Sravasti in the kingdom of Kosala / When Fâ-Hien and Tao-ching first arrived at the Jetavana monastery, and thought how the World-honoured one had formerly resided there for twenty-five years, painful reflections arose in their minds."
+
+[[stages]]
+place = "lumbini"
+year = 405
+cite = "A Record of Buddhistic Kingdoms, chapter XXII"
+passage = "Fifty le east from the city was a garden, named Lumbini, where the queen entered the pond and bathed."
+
+[[stages]]
+place = "kusinagara"
+year = 405
+cite = "A Record of Buddhistic Kingdoms, chapter XXIV"
+passage = "Going on twelve yojanas, still to the east, they came to the city of Kusanagara, on the north of which, between two trees, on the bank of the Nairanjana river, is the place where the World-honoured one, with his head to the north, attained to pari-nirvâna (and died)."
+
+[[stages]]
+place = "vaisali"
+year = 405
+cite = "A Record of Buddhistic Kingdoms, chapter XXV"
+passage = "East from this city ten yojanas, (the travellers) came to the kingdom of Vaisali."
+
+[[stages]]
+place = "pataliputra"
+year = 405
+cite = "A Record of Buddhistic Kingdoms, chapter XXVII"
+passage = "Having crossed the river, and descended south for a yojana, (the travellers) came to the town of Pataliputtra, in the kingdom of Magadha, the city where king Asoka ruled."
+
+[[stages]]
+place = "rajagriha"
+year = 406
+cite = "A Record of Buddhistic Kingdoms, chapter XXVIII"
+passage = "Leaving the city by the south gate, and proceeding south four le, one enters a valley, and comes to a circular space formed by five hills, which stand all round it, and have the appearance of the suburban wall of a city."
+
+[[stages]]
+place = "gridhrakuta"
+year = 406
+cite = "A Record of Buddhistic Kingdoms, chapter XXIX"
+passage = "Entering the valley, and keeping along the mountains on the south-east, after ascending fifteen le, (the travellers) came to mount Gridhra-kuta. / With this, in front of the rock cavern, he chanted the Surangama Sutra, remained there over the night, and then returned towards the New City."
+
+[[stages]]
+place = "gaya"
+year = 406
+cite = "A Record of Buddhistic Kingdoms, chapter XXXI"
+passage = "From this place, after travelling to the west for four yojanas, (the pilgrims) came to the city of Gaya; but inside the city all was emptiness and desolation."
+
+[[stages]]
+place = "bodhgaya"
+year = 406
+cite = "A Record of Buddhistic Kingdoms, chapter XXXI"
+passage = "The Bodhisattva went forward to the patra tree, placed the kusa grass at the foot of it, and sat down with his face to the east."
+
+[[stages]]
+place = "varanasi"
+year = 406
+cite = "A Record of Buddhistic Kingdoms, chapter XXXIV"
+passage = "Pursuing the same course, and going still to the west, he arrived, after twelve yojanas, at the city of Varanasi in the kingdom of Kasi."
+
+[[stages]]
+place = "sarnath"
+year = 406
+cite = "A Record of Buddhistic Kingdoms, chapter XXXIV"
+passage = "Rather more than ten le to the north-east of the city, he found the vihâra in the park of “The rishi’s Deer-wild.” In this park there formerly resided a Pratyeka Buddha, with whom the deer were regularly in the habit of stopping for the night."
+
+[[stages]]
+place = "pataliputra"
+year = 406
+cite = "A Record of Buddhistic Kingdoms, chapter XXXVI"
+passage = "From Varanasi (the travellers) went back east to Pataliputtra. / In consequence (of this success in his quest) Fâ-Hien stayed here for three years, learning Sanskrit books and the Sanskrit speech, and writing out the Vinaya rules."
+
+[[stages]]
+place = "champa"
+year = 409
+cite = "A Record of Buddhistic Kingdoms, chapter XXXVII"
+passage = "Following the course of the Ganges, and descending eastwards for eighteen yojanas, he found on the southern bank the great kingdom of Champa, with topes reared at the places where Buddha walked in meditation by his vihâra, and where he and the three Buddhas, his predecessors, sat."
+
+[[stages]]
+place = "tamalipti"
+year = 409
+cite = "A Record of Buddhistic Kingdoms, chapter XXXVII"
+passage = "Continuing his journey east for nearly fifty yojanas, he came to the country of Tamalipti, (the capital of which is) a seaport. / Here Fâ-Hien stayed two years, writing out his Sûtras, and drawing pictures of images."
+
+[[stages]]
+place = "singhala"
+year = 411
+cite = "A Record of Buddhistic Kingdoms, chapters XXXVII and XXXVIII"
+passage = "It was the beginning of winter, and the wind was favourable; and, after fourteen days, sailing day and night, they came to the country of Singhala. / Several years had now elapsed since Fâ-Hien left the land of Han; the men with whom he had been in intercourse had all been of regions strange to him; his eyes had not rested on an old and familiar hill or river, plant or tree"
+
+[[stages]]
+place = "laoshan"
+year = 413
+cite = "A Record of Buddhistic Kingdoms, chapter XL"
+passage = "After proceeding in this way for rather more than ninety days, they arrived at a country called Java-dvipa / after sailing day and night for twelve days, they reached the shore on the south of mount Lao, on the borders of the prefecture of Ch’ang-kwang, and immediately got good water and vegetables."
+
+[[stages]]
+place = "qingzhou"
+year = 413
+cite = "A Record of Buddhistic Kingdoms, chapter XL"
+passage = "(but) when (Fâ-Hien) arrived at Ts’ing-chow, (the prefect there) begged him (to remain with him) for a winter and a summer."
+
+[[stages]]
+place = "nanking"
+year = 414
+cite = "A Record of Buddhistic Kingdoms, chapter XL"
+passage = "After the summer retreat was ended, Fâ-Hien, having been separated for a long time from his (fellow-)masters, wished to hurry to Ch’ang-gan; but as the business which he had in hand was important, he went south to the Capital"
+note = "Legge takes the Capital to be “Nan-king, which was the capital of the Eastern Tsin dynasty under another name.”"
