@@ -1,0 +1,99 @@
+# Places of Kalidasa's Meghaduta, The Cloud-Messenger, in which an exiled Yaksha sends a cloud from Rama's peak in
+# central India north over Vidisha and Ujjain, the field of the epic battles and the Ganges to Mount Kailasa and the
+# city of Alaka, in the order of the poem, each with its stanzas in Arthur W. Ryder's translation (1912), from
+# Project Gutenberg's text, and with Ryder's analysis of the stanza, in italics in his book, where it names the
+# place. The places are those Ryder names or explains: Rama's peak, which he puts "probably one near the modern
+# Nagpore", is placed at Ramtek, the field where Arjuna fought at Kurukshetra, and Alaka, "the city of the Yakshas"
+# on Kailasa, at Mount Kailash. Places that cannot be told for certain from his translation, such as the Mala
+# plateau, the Mango Peak, Nichais' mountain, Holy Peak and the Ten Cities, are left out, as are the rivers.
+# Each place has its Wikidata item, from which its coordinates come.
+
+title = "Places of The Cloud-Messenger"
+work = "Kalidasa, The Cloud-Messenger (Meghaduta), in Translations of Shakuntala and Other Works, translated by Arthur W. Ryder (1912)"
+text = "https://www.gutenberg.org/ebooks/16659"
+licence = "Public domain (text)"
+
+[places.ramagiri]
+name = "Rama's peak (Ramagiri), at Ramtek"
+wikidata = "Q2545077"
+point = [79.327, 21.395]
+
+[places.kailasa]
+name = "Kailasa (Mount Kailash), with Alaka, the city of the Yakshas"
+wikidata = "Q229107"
+point = [81.312778, 31.066944]
+
+[places.vidisha]
+name = "Vidisha"
+wikidata = "Q1637471"
+point = [77.8061, 23.5239]
+
+[places.ujjain]
+name = "Ujjain"
+wikidata = "Q200119"
+point = [75.777222, 23.182778]
+
+[places.mahakala]
+name = "Mahakala, the shrine of Shiva at Ujjain"
+wikidata = "Q2721992"
+point = [75.768333, 23.182778]
+
+[places.kurukshetra]
+name = "The field of the epic battles (Kurukshetra)"
+wikidata = "Q593256"
+point = [76.85, 29.970833]
+
+[places.prayaga]
+name = "Prayaga (Allahabad, now Prayagraj)"
+wikidata = "Q162442"
+point = [81.85, 25.45]
+
+[[mentions]]
+place = "ramagiri"
+cite = "Former Cloud, stanza I"
+passage = "On Rama's shady peak where hermits roam, / Mid streams by Sita's bathing sanctified, / An erring Yaksha made his hapless home, / Doomed by his master humbly to abide, / And spend a long, long year of absence from his bride."
+
+[[mentions]]
+place = "kailasa"
+cite = "Former Cloud, stanza XI"
+passage = "And when they hear thy welcome thunders break, / When mushrooms sprout to greet thy fertile weeks, / The swans who long for the Himalayan lake / Will be thy comrades to Kailasa's peaks, / With juicy bits of lotus-fibre in their beaks."
+
+[[mentions]]
+place = "ramagiri"
+cite = "Former Cloud, stanza XII"
+passage = "One last embrace upon this mount bestow / Whose flanks were pressed by Rama's holy feet, / Who yearly strives his love for thee to show"
+
+[[mentions]]
+place = "vidisha"
+cite = "Former Cloud, stanza XXIV"
+passage = "and its capital Vidisha, on the banks of Reed River. / There shalt thou see the royal city, known / Afar, and win the lover's fee complete, / If thou subdue thy thunders to a tone / Of murmurous gentleness, and taste the sweet, / Love-rippling features of the river at thy feet."
+
+[[mentions]]
+place = "ujjain"
+cite = "Former Cloud, stanza XXVII"
+passage = "The famous old city of Ujjain, the home of the poet, and dearly beloved by him / Swerve from thy northern path; for westward rise / The palace balconies thou mayst not slight / In fair Ujjain; and if bewitching eyes / That flutter at thy gleams, should not delight / Thine amorous bosom, useless were thy gift of sight."
+
+[[mentions]]
+place = "mahakala"
+cite = "Former Cloud, stanza XXXIII"
+passage = "especially its famous shrine to Shiva, called Mahakala / Black as the neck of Shiva, very God, / Dear therefore to his hosts, thou mayest go / To his dread shrine, round which the gardens nod / When breezes rich with lotus-pollen blow / And ointments that the gaily bathing maidens know."
+
+[[mentions]]
+place = "kurukshetra"
+cite = "Former Cloud, stanza XLVIII"
+passage = "The Hallowed Land, where were fought the awful battles of the ancient epic time. / Then veil the Hallowed Land in cloudy shade; / Visit the field where to this very hour / Lie bones that sank beneath the soldier's blade, / Where Arjuna discharged his arrowy shower / On men, as thou thy rain-jets on the lotus-flower."
+
+[[mentions]]
+place = "prayaga"
+cite = "Former Cloud, stanza LI"
+passage = "The dark cloud is permitted to mingle with the clear stream of Ganges, as the muddy Jumna River does near the city now called Allahabad. / If thou, like some great elephant of the sky, / Shouldst wish from heaven's eminence to bend / And taste the crystal stream, her beauties high-- / As thy dark shadows with her whiteness blend-- / Would be what Jumna's waters at Prayaga lend."
+
+[[mentions]]
+place = "kailasa"
+cite = "Former Cloud, stanza LVIII"
+passage = "And at Mount Kailasa, the long journey is ended; / Seek then Kailasa's hospitable care, / With peaks by magic arms asunder riven, / To whom, as mirror, goddesses repair"
+
+[[mentions]]
+place = "kailasa"
+cite = "Former Cloud, stanza LXIII"
+passage = "for on this mountain is the city of the Yakshas. / Then, in familiar Alaka find rest, / Down whom the Ganges' silken river swirls, / Whose towers cling to her mountain lover's breast, / While clouds adorn her face like glossy curls / And streams of rain like strings of close-inwoven pearls."
