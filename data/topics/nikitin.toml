@@ -1,0 +1,354 @@
+# The journey of Afanasy Nikitin, a merchant of Tver, beyond three seas, as he wrote it: down the Volga, where the
+# Tatars robbed him below Astrakhan, to Derbent and Baku, across Persia to Hormuz, by sea to Chaul in India, where he
+# lived some four years in the Deccan, at Junnar, Bidar, Pervota and Kulburga, and back by Dabul, Muscat, Hormuz,
+# Persia and Trebizond across the Black Sea to Kaffa. Each stage has his words in Count Wielhorsky's translation, The
+# Travels of Athanasius Nikitin, of Twer, in R. H. Major's India in the Fifteenth Century (Hakluyt Society, 1857),
+# taken from the scan of the University of California's copy at the Internet Archive and read against a second scan,
+# Brandeis University's; the errors of the scans' text are corrected. The last stage, Smolensk, has the words of the
+# edition's introduction, as Nikitin's own narrative ends at Kaffa.
+# Nikitin dates his stages by the Christian and Muslim feasts, not by years, so no stage has a year: the introduction
+# of the edition puts the journey from 1468 to 1474, and later scholars date it otherwise. Places the narrative names
+# only in passing, or that cannot be told for certain, are left out: Chebokhara, which the translation reads as
+# Bokhara although Nikitin puts it in Mazanderan, Kulongher, Kowrooh, the orda of Uzun Hasan and Arzizin.
+# Each place has its Wikidata item, from which its coordinates come.
+
+title = "Journey Beyond Three Seas"
+work = "Afanasy Nikitin, The Travels of Athanasius Nikitin, of Twer, translated by Count Wielhorsky, in R. H. Major (ed.), India in the Fifteenth Century (Hakluyt Society, 1857)"
+text = "https://archive.org/details/indiainfifteenth00majorich"
+licence = "Public domain (text)"
+
+[places.tver]
+name = "Tver (Twer)"
+wikidata = "Q2288"
+point = [35.921928, 56.857828]
+
+[places.kalyazin]
+name = "Koliazin (Kalyazin)"
+wikidata = "Q143775"
+point = [37.85, 57.233333]
+
+[places.uglich]
+name = "Ooglich (Uglich)"
+wikidata = "Q196786"
+point = [38.333333, 57.533333]
+
+[places.kostroma]
+name = "Kostromah (Kostroma)"
+wikidata = "Q2592"
+point = [40.926944, 57.768056]
+
+[places.nizhny]
+name = "Nijni-Novgorod (Nizhny Novgorod)"
+wikidata = "Q891"
+point = [44.0075, 56.326944]
+
+[places.kazan]
+name = "Kazan"
+wikidata = "Q900"
+point = [49.114444, 55.790833]
+
+[places.astrakhan]
+name = "Astrakhan"
+wikidata = "Q3927"
+point = [48.035, 46.35]
+
+[places.derbent]
+name = "Derbend (Derbent)"
+wikidata = "Q131416"
+point = [48.288889, 42.057778]
+
+[places.baku]
+name = "Bakou (Baku)"
+wikidata = "Q9248"
+point = [49.835183, 40.366656]
+
+[places.sari]
+name = "Sareh (Sari)"
+wikidata = "Q168843"
+point = [53.059722, 36.565833]
+
+[places.amol]
+name = "Amyl (Amol)"
+wikidata = "Q331078"
+point = [52.350833, 36.469722]
+
+[places.damavand]
+name = "Dimovand (Damavand)"
+wikidata = "Q745055"
+point = [52.065, 35.717778]
+
+[places.rey]
+name = "Orey (Rey)"
+wikidata = "Q636188"
+point = [51.434444, 35.5975]
+
+[places.kashan]
+name = "Kashan"
+wikidata = "Q240475"
+point = [51.4425, 33.988056]
+
+[places.nain]
+name = "Nain"
+wikidata = "Q720388"
+point = [53.0875, 32.86]
+
+[places.yazd]
+name = "Yezd (Yazd)"
+wikidata = "Q182394"
+point = [54.3675, 31.897222]
+
+[places.lar]
+name = "Lar"
+wikidata = "Q721029"
+point = [54.341667, 27.683333]
+
+[places.hormuz]
+name = "Hormuz"
+wikidata = "Q695265"
+point = [56.46, 27.0675]
+
+[places.chaul]
+name = "Chivil (Chaul)"
+wikidata = "Q1068374"
+point = [72.9272, 18.5461]
+
+[places.junnar]
+name = "Jooneer (Junnar)"
+wikidata = "Q2445461"
+point = [73.88, 19.2]
+
+[places.bidar]
+name = "Beder (Bidar)"
+wikidata = "Q461922"
+point = [77.55, 17.9]
+
+[places.pervota]
+name = "Pervota (Srisailam)"
+wikidata = "Q2269015"
+point = [78.868, 16.074]
+identified = "India in the Fifteenth Century, note to Pervota: See an account of Perwuttum and its pagoda, by Colonel Colin Mackenzie, in Asiatic Researches, vol. v, 304."
+
+[places.kulburga]
+name = "Kulburga (Kalaburagi)"
+wikidata = "Q37112"
+point = [76.833333, 17.333333]
+
+[places.dabul]
+name = "Dabul (Dabhol)"
+wikidata = "Q5207479"
+point = [73.175211, 17.586839]
+
+[places.muscat]
+name = "Muscat"
+wikidata = "Q3826"
+point = [58.592222, 23.613889]
+
+[places.shiraz]
+name = "Shiraz"
+wikidata = "Q6397066"
+point = [52.531111, 29.610278]
+
+[places.isfahan]
+name = "Ispahan (Isfahan)"
+wikidata = "Q42053"
+point = [51.674722, 32.6525]
+
+[places.tabriz]
+name = "Tabreez (Tabriz)"
+wikidata = "Q80053"
+point = [46.296111, 38.073889]
+
+[places.trebizond]
+name = "Trebizond (Trabzon)"
+wikidata = "Q45301"
+point = [39.7225, 41.005]
+
+[places.kaffa]
+name = "Caffa (Feodosia)"
+wikidata = "Q158491"
+point = [35.379167, 45.048889]
+
+[places.smolensk]
+name = "Smolensk"
+wikidata = "Q2337"
+point = [32.045278, 54.782778]
+
+[[stages]]
+place = "tver"
+cite = "The Travels of Athanasius Nikitin, of Twer"
+passage = "This is, as I wrote it, my sinful wandering beyond the three seas: the first, the sea of Derbend / the second, the India Sea / the third, the Black Sea / I started from the church of our holy Saviour of Zlatoverkh, with the kind permission of the Grand-Duke Michael Borissowich and the bishop Gennadius of Twer"
+
+[[stages]]
+place = "kalyazin"
+cite = "The Travels of Athanasius Nikitin, of Twer"
+passage = "went down the Volga, came to the convent of the holy life-giving Trinity, and the holy shrines of Boris and Gleb the martyrs; and received the blessing of the hegumen Macarius and the brethren."
+
+[[stages]]
+place = "uglich"
+cite = "The Travels of Athanasius Nikitin, of Twer"
+passage = "From Koliazin I went to Ooglich"
+
+[[stages]]
+place = "kostroma"
+cite = "The Travels of Athanasius Nikitin, of Twer"
+passage = "thence to Kostromah, to the Kniaz Alexander, with an epistle."
+
+[[stages]]
+place = "nizhny"
+cite = "The Travels of Athanasius Nikitin, of Twer"
+passage = "I went on by Plesso to Nijni-Novgorod, to the namestnik Michael Kisseleff, and to Iwan Saraeff, the collector of duties, both of whom let me pass freely. / I stopped a fortnight to wait for the Tartar ambassador of Shirvanshah"
+
+[[stages]]
+place = "kazan"
+cite = "The Travels of Athanasius Nikitin, of Twer"
+passage = "With him I descended the Volga. We passed unmolested through Kazan, the Orda, Ooslan, Sarai, and Berekezany, and we entered the river Buzan."
+
+[[stages]]
+place = "astrakhan"
+cite = "The Travels of Athanasius Nikitin, of Twer"
+passage = "I abandoned my boat and crept into the ambassador's with my companions, and we sailed by Astrakhan at moonlight. / In the larger we reached the sea, but having grounded at the mouth of the Volga we were taken"
+
+[[stages]]
+place = "derbent"
+cite = "The Travels of Athanasius Nikitin, of Twer"
+passage = "And so we went on to Derbend in two boats / A storm having arisen at sea, the smaller boat was wrecked on shore. Then came the Kaitaks and made the whole party prisoners"
+
+[[stages]]
+place = "baku"
+cite = "The Travels of Athanasius Nikitin, of Twer"
+passage = "As for me, I went to Derbend and then to Bakou, where the fire burns unextinguished"
+
+[[stages]]
+place = "sari"
+cite = "The Travels of Athanasius Nikitin, of Twer"
+passage = "one month I lived at Sareh, in the land of Mazanderan"
+
+[[stages]]
+place = "amol"
+cite = "The Travels of Athanasius Nikitin, of Twer"
+passage = "and one month at Amyl (Amol)."
+
+[[stages]]
+place = "damavand"
+cite = "The Travels of Athanasius Nikitin, of Twer"
+passage = "Then I went to Dimovand (Demowend)"
+
+[[stages]]
+place = "rey"
+cite = "The Travels of Athanasius Nikitin, of Twer"
+passage = "and from Demowend to Orey"
+
+[[stages]]
+place = "kashan"
+cite = "The Travels of Athanasius Nikitin, of Twer"
+passage = "to Kashan, where I remained one month."
+
+[[stages]]
+place = "nain"
+cite = "The Travels of Athanasius Nikitin, of Twer"
+passage = "I also spent a month at Nain"
+
+[[stages]]
+place = "yazd"
+cite = "The Travels of Athanasius Nikitin, of Twer"
+passage = "and another at Yezd."
+
+[[stages]]
+place = "lar"
+cite = "The Travels of Athanasius Nikitin, of Twer"
+passage = "and from Tarem to Lar, and from Lar to Bender (Bunder Abbas); and here there is a seaport, Hormyz (Hormuz)"
+
+[[stages]]
+place = "hormuz"
+cite = "The Travels of Athanasius Nikitin, of Twer"
+passage = "Hormuz is four miles across the water and stands on an island. Twice a day the sea flows around it / At Hormuz the sun is scorching and burns man. I stopped there a month."
+
+[[stages]]
+place = "chaul"
+cite = "The Travels of Athanasius Nikitin, of Twer"
+passage = "We sailed six weeks in the tava till we reached Chivil / This is an Indian country. / When I go out many people follow me, and stare at the white man."
+
+[[stages]]
+place = "junnar"
+cite = "The Travels of Athanasius Nikitin, of Twer"
+passage = "And I, poor sinner, brought a stallion to the land of India; with God's help I reached Jooneer all well, but it cost me a hundred roubles. / At Jooneer the khan took away my horse, and having heard that I was no Mahommedan, but a Russian"
+
+[[stages]]
+place = "bidar"
+cite = "The Travels of Athanasius Nikitin, of Twer"
+passage = "Beder is the chief town of the whole of Mahomedan Hindostan; the city is large, and contains a great many people. / I sold my stallion at Beder, and got by him 60 and 8 footoons, having kept him a whole year."
+
+[[stages]]
+place = "pervota"
+cite = "The Travels of Athanasius Nikitin, of Twer"
+passage = "Having spent four months at Beder, I agreed with some Hindoos to go to Pervota, which is their Jerusalem / We were a month on the route. A fair is held there during five days."
+
+[[stages]]
+place = "bidar"
+cite = "The Travels of Athanasius Nikitin, of Twer"
+passage = "From Pervota we returned to Beder, a fortnight before the great Mahommedan festival (Ulu Bairam)."
+
+[[stages]]
+place = "kulburga"
+cite = "The Travels of Athanasius Nikitin, of Twer"
+passage = "On the fifth great day I thought of returning to Russia, and I set out from Beder a month before the Mahommedan Bairam. / I kept Lent time with the Mussulmans and broke fasting with them on Easter day, which I did at Kulburga"
+
+[[stages]]
+place = "dabul"
+cite = "The Travels of Athanasius Nikitin, of Twer"
+passage = "Dabul, a port of the vast Indian Sea. It is a very large town, the great meeting-place for all nations living along the coast of India and of Ethiopia. / So I embarked in a tava, and settled to pay for my passage to Hormuz two pieces of gold."
+
+[[stages]]
+place = "muscat"
+cite = "The Travels of Athanasius Nikitin, of Twer"
+passage = "From thence I reached Muscat in twelve days; and there I held the sixth great holiday."
+
+[[stages]]
+place = "hormuz"
+cite = "The Travels of Athanasius Nikitin, of Twer"
+passage = "Nine days journey brought me to Hormuz, where I stayed twenty days."
+
+[[stages]]
+place = "lar"
+cite = "The Travels of Athanasius Nikitin, of Twer"
+passage = "From Hormuz I proceeded thus: First to Lar, where I stopped three days"
+
+[[stages]]
+place = "shiraz"
+cite = "The Travels of Athanasius Nikitin, of Twer"
+passage = "then in twelve days from Lar to Shiraz, stopped there seven days"
+
+[[stages]]
+place = "yazd"
+cite = "The Travels of Athanasius Nikitin, of Twer"
+passage = "in nine days from Velergh to Yezd, stopped there eight days"
+
+[[stages]]
+place = "isfahan"
+cite = "The Travels of Athanasius Nikitin, of Twer"
+passage = "in five days from Yezd to Ispahan, stopped there six days"
+
+[[stages]]
+place = "kashan"
+cite = "The Travels of Athanasius Nikitin, of Twer"
+passage = "from Ispahan to Kashan, where I stopped five days"
+
+[[stages]]
+place = "tabriz"
+cite = "The Travels of Athanasius Nikitin, of Twer"
+passage = "from Kashan I went by Koom, Sava, Sultania, Tabreez, and came to the orda of Assanbek. There I spent ten days, as there was no road further on."
+
+[[stages]]
+place = "trebizond"
+cite = "The Travels of Athanasius Nikitin, of Twer"
+passage = "thence to Trebizond, where I arrived on the festival of the Protection of our Lady the holy Virgin Mary. / I was very much annoyed at Trebizond by the pasha / it was searched, especially for writings, as I was coming from the orda of Assanbek."
+
+[[stages]]
+place = "kaffa"
+cite = "The Travels of Athanasius Nikitin, of Twer"
+passage = "At last, with God's blessing, I reached Caffa, nine days before the fast of St. Philip. / through the mercy of God I have crossed three seas"
+
+[[stages]]
+place = "smolensk"
+cite = "India in the Fifteenth Century, introduction, page lxxix"
+passage = "The chronicler only remarks that, in the year he obtained the description of Nikitin's travels (1475), it was reported that he (Nikitin) had died before he reached Smolensk."
