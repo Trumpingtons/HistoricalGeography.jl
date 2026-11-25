@@ -1,0 +1,373 @@
+# The Grand Embassy of Peter the Great, 1697 and 1698, as Eugene Schuyler tells it in Peter the Great, Emperor of Russia
+# (1884), volume 1, chapters XXIX to XXXII: from Moscow by Riga, Mitau and Libau to Konigsberg, across Germany to
+# Zaandam and Amsterdam, where the Tsar worked as a ship-carpenter, to London and Deptford, and home by Dresden and
+# Vienna, from which the revolt of the Streltsi called him back to Moscow. Peter wrote no account of the journey, so
+# each stage has Schuyler's words, taken from the scan of the University of Toronto's copy at the Internet Archive and
+# read against a second scan, Cornell University's; the errors of the scans' text are corrected (Riga for Piga,
+# Rogge for Kogge, Düna for Diina). The dates are those Schuyler gives, in the New Style; a stage he does not date has
+# its year. The excursions from Amsterdam to Utrecht, the Hague, Delft and Leyden are in the order Schuyler tells them.
+# Each place has its Wikidata item, from which its coordinates come.
+
+title = "The Grand Embassy: Peter the Great Tours Western Europe"
+work = "Eugene Schuyler, Peter the Great, Emperor of Russia: A Study of Historical Biography, volume 1 (1884)"
+text = "https://archive.org/details/petergreatempero01schuuoft"
+licence = "Public domain (text)"
+
+[places.moscow]
+name = "Moscow"
+wikidata = "Q649"
+point = [37.6175, 55.750556]
+
+[places.riga]
+name = "Riga"
+wikidata = "Q1773"
+point = [24.106944, 56.9475]
+
+[places.mitau]
+name = "Mitau (Jelgava)"
+wikidata = "Q179830"
+point = [23.724444, 56.652222]
+
+[places.libau]
+name = "Libau (Liepāja)"
+wikidata = "Q167668"
+point = [21.011111, 56.508333]
+
+[places.konigsberg]
+name = "Konigsberg, the Kneiphof (Kaliningrad)"
+wikidata = "Q940206"
+point = [20.510833, 54.706389]
+
+[places.pillau]
+name = "Pillau (Baltiysk)"
+wikidata = "Q5660"
+point = [19.916667, 54.65]
+
+[places.colberg]
+name = "Colberg (Kołobrzeg)"
+wikidata = "Q110011"
+point = [15.576111, 54.176111]
+
+[places.brocken]
+name = "The Brocken"
+wikidata = "Q155721"
+point = [10.615637, 51.799125]
+
+[places.koppenbrugge]
+name = "Koppenbrügge (Coppenbrügge)"
+wikidata = "Q555626"
+point = [9.549331, 52.120253]
+
+[places.zaandam]
+name = "Zaandam"
+wikidata = "Q211260"
+point = [4.842222, 52.441667]
+
+[places.amsterdam]
+name = "Amsterdam"
+wikidata = "Q727"
+point = [4.883333, 52.366667]
+
+[places.utrecht]
+name = "Utrecht"
+wikidata = "Q803"
+point = [5.121667, 52.090833]
+
+[places.hague]
+name = "The Hague"
+wikidata = "Q36600"
+point = [4.31, 52.08]
+
+[places.delft]
+name = "Delft"
+wikidata = "Q690"
+point = [4.359167, 52.011667]
+
+[places.leyden]
+name = "Leyden (Leiden)"
+wikidata = "Q43631"
+point = [4.49, 52.16]
+
+[places.london]
+name = "London"
+wikidata = "Q84"
+point = [-0.1275, 51.507222]
+
+[places.deptford]
+name = "Sayes Court, Deptford"
+wikidata = "Q7429217"
+point = [-0.02879, 51.4849]
+
+[places.portsmouth]
+name = "Portsmouth"
+wikidata = "Q72259"
+point = [-1.087222, 50.805833]
+
+[places.oxford]
+name = "Oxford"
+wikidata = "Q34217"
+point = [-1.257778, 51.751944]
+
+[places.kensington]
+name = "Kensington Palace"
+wikidata = "Q207385"
+point = [-0.188333, 51.505278]
+
+[places.chatham]
+name = "Chatham"
+wikidata = "Q729006"
+point = [0.523333, 51.381944]
+
+[places.cleves]
+name = "Cleves (Kleve)"
+wikidata = "Q6842"
+point = [6.14, 51.79]
+
+[places.bielefeld]
+name = "Bielefeld"
+wikidata = "Q2112"
+point = [8.533333, 52.016667]
+
+[places.dresden]
+name = "The Green Vaults, Dresden"
+wikidata = "Q707407"
+point = [13.7364, 51.0528]
+
+[places.konigstein]
+name = "Konigstein Fortress"
+wikidata = "Q700562"
+point = [14.056667, 50.918889]
+
+[places.vienna]
+name = "Vienna"
+wikidata = "Q1741"
+point = [16.3725, 48.208333]
+
+[places.cracow]
+name = "Cracow (Kraków)"
+wikidata = "Q31487"
+point = [19.937222, 50.061389]
+
+[places.wieliczka]
+name = "The salt mines of Wieliczka"
+wikidata = "Q454019"
+point = [20.055655, 49.983053]
+
+[places.rawa]
+name = "Rawa (Rava-Ruska)"
+wikidata = "Q997343"
+point = [23.616667, 50.25]
+
+[places.zamosc]
+name = "Zamosc (Zamość)"
+wikidata = "Q145972"
+point = [23.258611, 50.720556]
+
+[places.brzesc]
+name = "Brzesc-Litewski (Brest)"
+wikidata = "Q140147"
+point = [23.656944, 52.084722]
+
+[[stages]]
+place = "moscow"
+date = 1697-03-20
+cite = "Volume 1, chapter XXIX, The Journey of Peter to Western Europe"
+passage = "When these trials were completed, the embassy set out, on March 20, 1697. It was intended to go first to Vienna, then to Venice and Rome, then to Holland and England, and to return by the way of Konigsberg."
+
+[[stages]]
+place = "riga"
+year = 1697
+cite = "Volume 1, chapter XXIX, The Journey of Peter to Western Europe"
+passage = "Unfortunately, the embassy was detained at Riga for a whole week by the breaking up of the ice on the Düna, which made crossing impossible. Peter preserved his incognito, and went out to see the town. His military curiosity naturally led him to inspect the fortifications and measure the width and depth of the ditches, when he was somewhat rudely ordered away by the sentinel."
+
+[[stages]]
+place = "mitau"
+year = 1697
+cite = "Volume 1, chapter XXIX, The Journey of Peter to Western Europe"
+passage = "Here the Tsar consented to give up in part his incognito, made visits to the Duke, and received them in return. A week was quickly passed in amusement and pleasure, but even with this Peter found time to exercise himself in a carpenter's shop."
+
+[[stages]]
+place = "libau"
+year = 1697
+cite = "Volume 1, chapter XXIX, The Journey of Peter to Western Europe"
+passage = "From Mitau Peter proceeded to Libau, where he was detained by bad weather for a week, until he finally took passage on a small ship going to Pillau, the port of Konigsberg. During his stay at Libau, he passed for the skipper of a Russian privateer"
+
+[[stages]]
+place = "konigsberg"
+year = 1697
+cite = "Volume 1, chapter XXIX, The Journey of Peter to Western Europe"
+passage = "After taking small lodgings in a street on the Kneiphof, he went out in a close carriage, late at night, and paid a visit to the Elector, entering the palace by a private staircase. The interview lasted for an hour and a half, and the sovereigns were mutually pleased."
+
+[[stages]]
+place = "pillau"
+date = 1697-06-20
+cite = "Volume 1, chapter XXIX, The Journey of Peter to Western Europe"
+passage = "On June 20, after nearly a month's stay, Peter went to Pillau, with the intention of taking ship directly to Holland, for he found it more convenient to defer his visit to Vienna till his return."
+
+[[stages]]
+place = "colberg"
+year = 1697
+cite = "Volume 1, chapter XXIX, The Journey of Peter to Western Europe"
+passage = "Instead of going by sea from Pillau to Holland, Peter went no farther than Colberg, as he was fearful of falling in with the French squadron, which was said to be escorting the Prince de Conti to Poland."
+
+[[stages]]
+place = "brocken"
+year = 1697
+cite = "Volume 1, chapter XXIX, The Journey of Peter to Western Europe"
+passage = "From that place he travelled by land as speedily as possible, stopping only to look at the famous iron-works near Ilsenburg, and to ascend the Brocken for the view."
+
+[[stages]]
+place = "koppenbrugge"
+year = 1697
+cite = "Volume 1, chapter XXIX, The Journey of Peter to Western Europe, quoting the Electress Sophia of Hanover"
+passage = "He told us that he worked himself in building ships, showed us his hands, and made us touch the callous places that had been caused by work."
+
+[[stages]]
+place = "zaandam"
+date = 1697-08-18
+cite = "Volume 1, chapter XXX, Peter in Holland"
+passage = "the Tsar reached Zaandam early on the morning of August 18, having with him only six volunteers, including the Prince of Imeritia and the two brothers Menshikof. / The next day he entered himself as a ship-carpenter at the wharf of Lynst Rogge, on the Buitenzaan."
+
+[[stages]]
+place = "amsterdam"
+date = 1697-08-30
+cite = "Volume 1, chapter XXX, Peter in Holland"
+passage = "He returned early the next morning, August 30, and went straight to the wharf of the East India Company, at Oostenburg. For more than four months, with occasional absences, he worked here at ship-building, under the direction of the Baas Gerrit Claes Pool."
+
+[[stages]]
+place = "utrecht"
+year = 1697
+cite = "Volume 1, chapter XXX, Peter in Holland"
+passage = "Partly for this purpose he went to Utrecht together with Lefort and Witsen, where he had an interview with the King in the Toelast Hotel. Although the details of this interview have never been known, it was thought worthy of a commemorative medal."
+
+[[stages]]
+place = "hague"
+year = 1697
+cite = "Volume 1, chapter XXX, Peter in Holland"
+passage = "The embassy was splendidly received at the Hague, and lodged in the Oude Doelen Hotel, as the palace of Prince Maurice, the usual ambassadorial lodging, was already full. / the presence of the Tsar (for he had gone on to the Hague for a few days, to witness the ceremonies) gave additional effect."
+
+[[stages]]
+place = "leyden"
+year = 1697
+cite = "Volume 1, chapter XXX, Peter in Holland"
+passage = "In Leyden he made the acquaintance of the great Boerhave, and visited the celebrated botanical garden under his guidance"
+
+[[stages]]
+place = "delft"
+year = 1697
+cite = "Volume 1, chapter XXX, Peter in Holland"
+passage = "he studied the microscope under the naturalist Leeuwenhoek."
+
+[[stages]]
+place = "amsterdam"
+date = 1698-01-17
+cite = "Volume 1, chapter XXX, Peter in Holland"
+passage = "Together with a favourable answer, came English vessels for himself and the great embassy, and on January 17, 1698, Peter, leaving his embassy in Holland, set out for England."
+
+[[stages]]
+place = "london"
+year = 1698
+cite = "Volume 1, chapter XXXI, Visit of the Tsar to England"
+passage = "Leaving its convoy at the mouth of the Thames, the yacht anchored at St. Katherine's, and Peter was rowed in a barge past the Tower and London Bridge, and landed at a house in Norfolk Street, Strand"
+
+[[stages]]
+place = "deptford"
+year = 1698
+cite = "Volume 1, chapter XXXI, Visit of the Tsar to England"
+passage = "For greater convenience, and to get rid of the crowds who watched for his appearance, he removed to Deptford, where he occupied Sayes Court, the house of John Evelyn."
+
+[[stages]]
+place = "portsmouth"
+year = 1698
+cite = "Volume 1, chapter XXXI, Visit of the Tsar to England"
+passage = "a week spent in going to Portsmouth, where he was gratified by a review of the English fleet off Spithead"
+
+[[stages]]
+place = "oxford"
+year = 1698
+cite = "Volume 1, chapter XXXI, Visit of the Tsar to England"
+passage = "a couple of days at Oxford, where he received the degree of Doctor of Laws"
+
+[[stages]]
+place = "kensington"
+date = 1698-04-28
+cite = "Volume 1, chapter XXXI, Visit of the Tsar to England"
+passage = "Peter and Golovin took their leave of the King at Kensington Palace, on April 28."
+
+[[stages]]
+place = "chatham"
+year = 1698
+cite = "Volume 1, chapter XXXI, Visit of the Tsar to England"
+passage = "On May 2, he left Deptford in the yacht, the 'Transport Royal,' given to him by King William, but even then could not resist running up to Chatham to see the docks there"
+
+[[stages]]
+place = "amsterdam"
+date = 1698-05-19
+cite = "Volume 1, chapter XXXI, Visit of the Tsar to England"
+passage = "On arriving at Amsterdam, Peter found several relatives of Lefort who had come from Geneva for the purpose of seeing him."
+
+[[stages]]
+place = "cleves"
+year = 1698
+cite = "Volume 1, chapter XXXII, The Journey Home"
+passage = "walked through the beautiful park at Cleves, where he carved his name on a birch-tree."
+
+[[stages]]
+place = "bielefeld"
+year = 1698
+cite = "Volume 1, chapter XXXII, The Journey Home"
+passage = "He also visited the linen factories at Bielefeld"
+
+[[stages]]
+place = "dresden"
+year = 1698
+cite = "Volume 1, chapter XXXII, The Journey Home"
+passage = "In Dresden he was delighted with the curiosities of the Green Vaults, where he went immediately after his arrival, and stayed all night."
+
+[[stages]]
+place = "konigstein"
+year = 1698
+cite = "Volume 1, chapter XXXII, The Journey Home"
+passage = "surveyed the fortifications of Konigstein"
+
+[[stages]]
+place = "vienna"
+date = 1698-06-26
+cite = "Volume 1, chapter XXXII, The Journey Home"
+passage = "In spite of his haste, it took Peter a month to reach Vienna, where he arrived on June 26 / Peter appeared as a Frisian peasant / his post-horses took the road for Moscow, and not for Venice."
+
+[[stages]]
+place = "cracow"
+year = 1698
+cite = "Volume 1, chapter XXXII, The Journey Home"
+passage = "Peter travelled day and night, and refused even to stop in Cracow, where a banquet had been prepared for him."
+
+[[stages]]
+place = "wieliczka"
+year = 1698
+cite = "Volume 1, chapter XXXII, The Journey Home"
+passage = "He was therefore able to travel more leisurely, looked carefully at the great salt mines of Wieliczka, and at Bochnia inspected the Polish army, which was encamped there."
+
+[[stages]]
+place = "rawa"
+date = 1698-08-09
+cite = "Volume 1, chapter XXXII, The Journey Home"
+passage = "At Rawa, a small village of Galicia, he met King Augustus on August 9, and was his guest for four days."
+
+[[stages]]
+place = "zamosc"
+year = 1698
+cite = "Volume 1, chapter XXXII, The Journey Home"
+passage = "After leaving the King, Peter went on to Moscow through Zamosc, where he was entertained by the widow of the castellan."
+
+[[stages]]
+place = "brzesc"
+year = 1698
+cite = "Volume 1, chapter XXXII, The Journey Home"
+passage = "At Brzesc-Litewski there was an unfortunate adventure with the Metropolitan of the Uniates"
+
+[[stages]]
+place = "moscow"
+date = 1698-09-04
+cite = "Volume 1, chapter XXXII, The Journey Home"
+passage = "Notwithstanding these delays, Peter arrived at Moscow much sooner than he was expected — on September 4, at six o'clock in the evening."
