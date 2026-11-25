@@ -1,0 +1,225 @@
+# The voyage of Ferdinand Magellan, 1519 to 1522, the first round the world, as Antonio Pigafetta, who sailed with
+# him, tells it in his relation, in the translation of James Alexander Robertson, Magellan's Voyage Around the World
+# (1906): from Seville and San Lucar by Tenerife to the land of Verzin and the port of Santo Julianno, through the
+# strait from the cape of the Eleven Thousand Virgins to the Pacific, across it to the islands of Ladroni and the
+# Philippines, where Magellan was killed at Matan, and on, without him, by Burne to Tadore in the Moluccas, Timor,
+# the cape of Good Hope and the Cape Verde Islands, back to San Lucar and Seville. Each stage has Pigafetta's words,
+# taken from the scan of the volumes at the Internet Archive, the English beside the Italian of the Ambrosian
+# manuscript, without the marks of Robertson's notes; the errors of the scan's text are corrected. The dates are
+# those Pigafetta gives (August x and September xx, as printed, are August 10th and September 20th); a stage he does
+# not date has its year. Each place has its Wikidata item, from which its coordinates come.
+
+title = "The Voyage of Magellan"
+work = "Antonio Pigafetta, Magellan's Voyage Around the World, translated by James Alexander Robertson, volumes I and II (1906)"
+text = "https://archive.org/details/magellansvoyagea01piga"
+licence = "Public domain (text)"
+
+[places.seville]
+name = "Siviglia (Seville)"
+wikidata = "Q8717"
+point = [-5.995, 37.388611]
+
+[places.sanlucar]
+name = "San Lucar (Sanlúcar de Barrameda)"
+wikidata = "Q210887"
+point = [-6.353889, 36.778889]
+
+[places.tenerife]
+name = "Teneriphe (Tenerife)"
+wikidata = "Q40846"
+point = [-16.605556, 28.268611]
+
+[places.verzin]
+name = "The land of Verzin, at the bay of Rio de Janeiro"
+wikidata = "Q224101"
+point = [-43.155669, -22.790428]
+
+[places.julian]
+name = "The port of Santo Julianno (Puerto San Julián)"
+wikidata = "Q955668"
+point = [-67.729785, -49.306953]
+
+[places.virgins]
+name = "The cape of the Eleven Thousand Virgins (Cape Virgenes)"
+wikidata = "Q153731"
+point = [-68.354167, -52.333333]
+
+[places.deseado]
+name = "Cape Deseado"
+wikidata = "Q23647289"
+point = [-74.728056, -52.730556]
+
+[places.ladroni]
+name = "The islands of Ladroni, at Guam"
+wikidata = "Q16635"
+point = [144.8, 13.5]
+
+[places.humunu]
+name = "Humunu (Homonhon)"
+wikidata = "Q1626237"
+point = [125.716667, 10.733333]
+
+[places.mazaua]
+name = "Mazaua (Limasawa)"
+wikidata = "Q173678"
+point = [125.075, 9.907778]
+
+[places.zubu]
+name = "Zubu (Cebu)"
+wikidata = "Q1467"
+point = [123.902, 10.293]
+
+[places.matan]
+name = "Matan (Mactan)"
+wikidata = "Q685318"
+point = [123.966667, 10.3]
+
+[places.bohol]
+name = "Bohol"
+wikidata = "Q6497558"
+point = [124.166667, 9.833333]
+
+[places.burne]
+name = "The city of Burne, at Kampong Ayer"
+wikidata = "Q1990199"
+point = [114.9425, 4.8825]
+
+[places.tadore]
+name = "Tadore (Tidore)"
+wikidata = "Q19153"
+point = [127.4, 0.683333]
+
+[places.timor]
+name = "Timor"
+wikidata = "Q83067"
+point = [125.083333, -9.083333]
+
+[places.goodhope]
+name = "The cape of Bonna Speranza (Cape of Good Hope)"
+wikidata = "Q4092"
+point = [18.471944, -34.358056]
+
+[places.santiago]
+name = "Sancto Jacobo (Santiago), in the Cape Verde Islands"
+wikidata = "Q108448"
+point = [-23.624722, 15.077778]
+
+[[stages]]
+place = "seville"
+date = 1519-08-10
+cite = "Volume I"
+passage = "On Monday morning, August x, St. Lawrence's day, in the year abovesaid, the fleet, having been supplied with all the things necessary for the sea, (and counting those of every nationality, we were two hundred and thirty-seven men), made ready to leave the harbor of Siviglia."
+
+[[stages]]
+place = "sanlucar"
+date = 1519-09-20
+cite = "Volume I"
+passage = "We left that village, by name San Luchar, on Tuesday, September xx of the same year, and took a southwest course."
+
+[[stages]]
+place = "tenerife"
+date = 1519-09-26
+cite = "Volume I"
+passage = "On the 26th of the said month, we reached an island of the Great Canaria, called Teneriphe, which lies in a latitude of 28 degrees, [landing there] in order to get flesh, water, and wood."
+
+[[stages]]
+place = "verzin"
+date = 1519-12-13
+cite = "Volume I"
+passage = "After we had passed the equinoctial line going south, we lost the north star, and hence we sailed south south-west until [we reached] a land called the land of Verzin which lies in 23½ degrees of the Antarctic Pole [i.e., south latitude]. / We entered that port on St. Lucy's day."
+
+[[stages]]
+place = "julian"
+year = 1520
+cite = "Volume I"
+passage = "In that port which we called the port of Santo Julianno, we remained about five months. Many things happened there. / it happened that as soon as we had entered the port, the captains of the other four ships plotted treason in order that they might kill the captain-general"
+
+[[stages]]
+place = "virgins"
+date = 1520-10-21
+cite = "Volume I"
+passage = "Then going to fifty-two degrees toward the same pole, we found a strait on the day of the [feast of the] eleven thousand virgins [i.e., October 21], whose head is called Capo de le Undici Millia Vergine [i.e., cape of the Eleven Thousand Virgins] because of that very great miracle."
+
+[[stages]]
+place = "deseado"
+date = 1520-11-28
+cite = "Volume I"
+passage = "Wednesday, November 28, 1520, we debouched from that strait, engulfing ourselves in the Pacific Sea. We were three months and twenty days without getting any kind of fresh food. / The latter is a cape of that strait at the Ocean Sea, straight east and west with Cape Deseado of the Pacific Sea."
+
+[[stages]]
+place = "ladroni"
+date = 1521-03-06
+cite = "Volume I"
+passage = "we discovered on Wednesday, March 6, a small island to the northwest, and two others toward the southwest, one of which was higher and larger than the other two. / Those people are poor, but ingenious and very thievish, on account of which we called those three islands the islands of Ladroni [i.e., of thieves]."
+
+[[stages]]
+place = "humunu"
+date = 1521-03-17
+cite = "Volume I"
+passage = "The following day, the captain-general desired to land on another island which was uninhabited and lay to the right of the abovementioned island, in order to be more secure, and to get water and have some rest. / The island where we were is called Humunu; but inasmuch as we found two springs there of the clearest water, we called it Acquada da li buoni Segnialli [i.e., \"the Watering-place of good Signs\"], for there were the first signs of gold which we found in those districts."
+
+[[stages]]
+place = "mazaua"
+date = 1521-03-28
+cite = "Volume I"
+passage = "On Thursday morning, March twenty-eight, as we had seen a fire on an island the night before, we anchored near it. / It is twenty-five from the Acquada, and is called Mazaua."
+
+[[stages]]
+place = "zubu"
+date = 1521-04-07
+cite = "Volume I"
+passage = "At noon on Sunday, April seven, we entered the port of Zubu, passing by many villages, where we saw many houses built upon logs."
+
+[[stages]]
+place = "matan"
+date = 1521-04-27
+cite = "Volume I"
+passage = "until they killed our mirror, our light, our comfort, and our true guide. When they wounded him, he turned back many times to see whether we were all in the boats. / The captain desired to fight on Saturday, because it was the day especially holy to him."
+
+[[stages]]
+place = "bohol"
+year = 1521
+cite = "Volume II"
+passage = "In the midst of that archipelago, at a distance of eighteen leguas from that island of Zzubu, at the head of the other island called Bohol, we burned the ship \"Conceptione,\" for too few men of us were left [to work it]."
+
+[[stages]]
+place = "burne"
+year = 1521
+cite = "Volume II"
+passage = "That city is entirely built in salt water, except the houses of the king and certain chiefs. It contains twenty-five thousand fires [i.e., families]. / It lies in a latitude of five and one-fourth degrees toward the Arctic Pole, and in a longitude of one hundred and seventy-six and two-thirds degrees from the line of demarcation, and its name is Burne."
+
+[[stages]]
+place = "tadore"
+date = 1521-11-08
+cite = "Volume II"
+passage = "Three hours before sunset on Friday, November eight, 1521, we entered into a harbor of an island called Tadore, and anchoring near the shore in twenty brazas we fired all our artillery."
+
+[[stages]]
+place = "timor"
+date = 1522-01-26
+cite = "Volume II"
+passage = "On Sunday, the twenty-sixth, we reached a large island which lies five leguas to the south southwest of Malua. / On Tuesday night as it drew near Wednesday, February eleven, 1522, we left the island of Timor and took to the great open sea called Laut Chidol."
+
+[[stages]]
+place = "goodhope"
+year = 1522
+cite = "Volume II"
+passage = "In order that we might double the cape of Bonna Speranza [i.e., \"Good Hope\"], we descended to forty-two degrees on the side of the Antarctic Pole. We were nine weeks near that cape with our sails hauled down because we had the west and northwest winds on our bow quarter and because of a most furious storm."
+
+[[stages]]
+place = "santiago"
+date = 1522-07-09
+cite = "Volume II"
+passage = "Finally, constrained by our great extremity, we went to the islands of Capo Verde. Wednesday, July nine, we reached one of those islands called Sancto Jacobo"
+
+[[stages]]
+place = "sanlucar"
+date = 1522-09-06
+cite = "Volume II"
+passage = "On Saturday, September six, 1522, we entered the bay of San Lucar with only eighteen men and the majority of them sick, all that were left of the sixty men who left Malucho."
+
+[[stages]]
+place = "seville"
+date = 1522-09-08
+cite = "Volume II"
+passage = "From the time we left that bay [of San Lucar] until the present day [of our return], we had sailed fourteen thousand four hundred and sixty leguas, and furthermore had completed the circumnavigation of the world from east to west. On Monday, September eight, we cast anchor near the quay of Seviglia, and discharged all our artillery."
