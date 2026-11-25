@@ -1,0 +1,331 @@
+# Places of The Periplus of the Erythraean Sea, the guide of a Greek merchant of the first century to the ports and
+# markets of the Red Sea, Arabia, the Persian Gulf and India, in the order of its sections, each with its passage of
+# Wilfred H. Schoff's translation (1912), taken from the scan of Cornell University's copy at the Internet Archive
+# and read against a second scan, the University of Toronto's; the errors of the scans' text are corrected, and the
+# ligature æ is written ae. A place is on the map when Schoff's notes identify it with a site that has a Wikidata
+# item: Avalites with Zeila, Malao with Berbera, Opone with Ras Hafun, Muza with Mocha, Cana with Hisn Ghorab by
+# Bir Ali, Moscha with Khor Reiri (Khor Rori), Apologus with Obollah (Al-Ubulla), Barygaza with Broach (Bharuch),
+# Poduca with Pondicherry, and so on; the places he leaves in doubt, such as Rhapta, Menuthias, Ommana, Barbaricum,
+# Minnagara, Nelcynda and the Ganges market-town, are left out, as are Syagrus (Ras Fartak) and Tagara (Ter), for
+# which no item was found. Each place has the coordinates of its Wikidata item, which for Mussel Harbor (Myos
+# Hormos) is at Quseir al-Qadim, south of Ras Abu Somer, where Schoff put it.
+
+title = "Places of The Periplus of the Erythraean Sea"
+work = "The Periplus of the Erythraean Sea: Travel and Trade in the Indian Ocean by a Merchant of the First Century, translated by Wilfred H. Schoff (1912)"
+text = "https://archive.org/details/cu31924030139236"
+licence = "Public domain (text)"
+
+[places.mussel]
+name = "Mussel Harbor (Myos Hormos)"
+wikidata = "Q1956723"
+point = [34.241583, 26.15655]
+
+[places.berenice]
+name = "Berenice"
+wikidata = "Q819050"
+point = [35.489444, 23.943056]
+
+[places.meroe]
+name = "Meroe"
+wikidata = "Q5780"
+point = [33.75075, 16.935139]
+
+[places.adulis]
+name = "Adulis"
+wikidata = "Q378940"
+point = [39.660556, 15.263611]
+
+[places.coloe]
+name = "Coloe, at Qohaito"
+wikidata = "Q4236500"
+point = [39.424, 14.866]
+
+[places.axum]
+name = "The city of the Auxumites (Axum)"
+wikidata = "Q5832"
+point = [38.733333, 14.116667]
+
+[places.avalites]
+name = "Avalites, at Zeila"
+wikidata = "Q157800"
+point = [43.473889, 11.353889]
+
+[places.malao]
+name = "Malao, at Berbera"
+wikidata = "Q191718"
+point = [45.01305, 10.43953]
+
+[places.opone]
+name = "Opone, at Ras Hafun"
+wikidata = "Q7098410"
+point = [51.286582, 10.4118]
+
+[places.petra]
+name = "Petra"
+wikidata = "Q5788"
+point = [35.440278, 30.328889]
+
+[places.muza]
+name = "Muza, at Mocha"
+wikidata = "Q339258"
+point = [43.25, 13.316667]
+
+[places.sana]
+name = "Sana (Sanaa)"
+wikidata = "Q2471"
+point = [44.2, 15.35]
+
+[places.saphar]
+name = "Saphar (Zafar)"
+wikidata = "Q140131"
+point = [44.402874, 14.213898]
+
+[places.ocelis]
+name = "Ocelis"
+wikidata = "Q7076260"
+point = [43.65096, 12.766503]
+
+[places.eudaemon]
+name = "Eudaemon Arabia (Aden)"
+wikidata = "Q131694"
+point = [45.033333, 12.8]
+
+[places.cana]
+name = "Cana, at Bir Ali"
+wikidata = "Q2904319"
+point = [48.341944, 14.025]
+
+[places.sabbatha]
+name = "Sabbatha (Shabwa)"
+wikidata = "Q2005211"
+point = [47.023611, 15.368889]
+
+[places.dioscorida]
+name = "Dioscorida (Socotra)"
+wikidata = "Q82859"
+point = [53.92, 12.51]
+
+[places.moscha]
+name = "Moscha, at Khor Rori"
+wikidata = "Q826118"
+point = [54.4344, 17.039]
+
+[places.sarapis]
+name = "Sarapis (Masirah Island)"
+wikidata = "Q1793853"
+point = [58.815278, 20.471111]
+
+[places.apologus]
+name = "Apologus (Al-Ubulla)"
+wikidata = "Q619594"
+point = [47.5, 30.31]
+
+[places.barygaza]
+name = "Barygaza (Bharuch)"
+wikidata = "Q760153"
+point = [72.966667, 21.7]
+
+[places.ozene]
+name = "Ozene (Ujjain)"
+wikidata = "Q200119"
+point = [75.777222, 23.182778]
+
+[places.paethana]
+name = "Paethana (Paithan)"
+wikidata = "Q2445534"
+point = [75.38, 19.48]
+
+[places.suppara]
+name = "Suppara (Sopara)"
+wikidata = "Q7562815"
+point = [72.8, 19.47]
+
+[places.calliena]
+name = "Calliena (Kalyan)"
+wikidata = "Q366754"
+point = [73.15, 19.25]
+
+[places.muziris]
+name = "Muziris"
+wikidata = "Q2974112"
+point = [76.2, 10.15]
+
+[places.comari]
+name = "Comari (Kanyakumari)"
+wikidata = "Q222267"
+point = [77.541667, 8.091111]
+
+[places.colchi]
+name = "Colchi (Korkai)"
+wikidata = "Q3523812"
+point = [78.066667, 8.633333]
+
+[places.poduca]
+name = "Poduca (Pondicherry)"
+wikidata = "Q639421"
+point = [79.83, 11.93]
+
+[places.taprobane]
+name = "Taprobane (Sri Lanka)"
+wikidata = "Q854"
+point = [81, 7]
+
+[[mentions]]
+place = "mussel"
+cite = "Section 1"
+passage = "Of the designated ports on the Erythraean Sea, and the market-towns around it, the first is the Egyptian port of Mussel Harbor."
+
+[[mentions]]
+place = "berenice"
+cite = "Section 1"
+passage = "To those sailing down from that place, on the right hand, after eighteen hundred stadia, there is Berenice. The harbors of both are at the boundary of Egypt, and are bays opening from the Erythraean Sea."
+
+[[mentions]]
+place = "meroe"
+cite = "Section 2"
+passage = "and behind them, further inland, in the country toward the west, there lies a city called Meroe."
+
+[[mentions]]
+place = "adulis"
+cite = "Section 4"
+passage = "Below Ptolemais of the Hunts, at a distance of about three thousand stadia, there is Adulis, a port established by law, lying at the inner end of a bay that runs in toward the south."
+
+[[mentions]]
+place = "coloe"
+cite = "Section 4"
+passage = "Opposite Mountain Island, on the mainland twenty stadia from shore, lies Adulis, a fair-sized village, from which there is a three-days' journey to Coloe, an inland town and the first market for ivory."
+
+[[mentions]]
+place = "axum"
+cite = "Section 4"
+passage = "From that place to the city of the people called Auxumites there is a five days' journey more; to that place all the ivory is brought from the country beyond the Nile through the district called Cyeneum, and thence to Adulis."
+
+[[mentions]]
+place = "avalites"
+cite = "Section 7"
+passage = "The first is called Avalites; to this place the voyage from Arabia to the far-side coast is the shortest. Here there is a small market-town called Avalites, which must be reached by boats and rafts."
+
+[[mentions]]
+place = "malao"
+cite = "Section 8"
+passage = "After Avalites there is another market-town, better than this, called Malao, distant a sail of about eight hundred stadia. The anchorage is an open roadstead, sheltered by a spit running out from the east. Here the natives are more peaceable."
+
+[[mentions]]
+place = "opone"
+cite = "Section 13"
+passage = "And then, after sailing four hundred stadia along a promontory, toward which place the current also draws you, there is another market-town called Opone, into which the same things are imported as those already mentioned, and in it the greatest quantity of cinnamon is produced, (the arebo and moto), and slaves of the better sort, which are brought to Egypt in increasing numbers; and a great quantity of tortoise-shell, better than that found elsewhere."
+
+[[mentions]]
+place = "petra"
+cite = "Section 19"
+passage = "Now to the left of Berenice, sailing for two or three days from Mussel Harbor eastward across the adjacent gulf, there is another harbor and fortified place, which is called White Village, from which there is a road to Petra, which is subject to Malichas, King of the Nabataeans."
+
+[[mentions]]
+place = "muza"
+cite = "Section 21"
+passage = "Beyond these places, in a bay at the foot of the left side of this gulf, there is a place by the shore called Muza, a market-town established by law, distant altogether from Berenice for those sailing southward, about twelve thousand stadia. And the whole place is crowded with Arab shipowners and seafaring men, and is busy with the affairs of commerce; for they carry on a trade with the far-side coast and with Barygaza, sending their own ships there."
+
+[[mentions]]
+place = "sana"
+cite = "Section 22"
+passage = "Three days inland from this port there is a city called Sana, in the midst of the region called Mapharitis; and there is a vassal-chief named Cholaebus who lives in that city."
+
+[[mentions]]
+place = "saphar"
+cite = "Section 23"
+passage = "And after nine days more there is Saphar, the metropolis, in which lives Charibael, lawful king of two tribes, the Homerites and those living next to them, called the Sabaites; through continual embassies and gifts, he is a friend of the Emperors."
+
+[[mentions]]
+place = "ocelis"
+cite = "Section 25"
+passage = "Directly on this strait by the shore there is a village of Arabs, subject to the same chief, called Ocelis; which is not so much a market-town as it is an anchorage and watering-place and the first landing for those sailing into the gulf."
+
+[[mentions]]
+place = "eudaemon"
+cite = "Section 26"
+passage = "after about twelve hundred stadia there is Eudaemon Arabia, a village by the shore, also of the Kingdom of Charibael, and having convenient anchorages, and watering-places, sweeter and better than those at Ocelis / But not long before our own time Charibael destroyed the place."
+
+[[mentions]]
+place = "cana"
+cite = "Section 27"
+passage = "just beyond the cape projecting from this bay there is another market-town by the shore, Cana, of the Kingdom of Eleazus, the Frankincense Country"
+
+[[mentions]]
+place = "sabbatha"
+cite = "Section 27"
+passage = "Inland from this place lies the metropolis Sabbatha, in which the King lives. All the frankincense produced in the country is brought by camels to that place to be stored"
+
+[[mentions]]
+place = "dioscorida"
+cite = "Section 30"
+passage = "it is called Dioscorida, and is very large but desert and marshy, having rivers in it and crocodiles and many snakes and great lizards"
+
+[[mentions]]
+place = "moscha"
+cite = "Section 32"
+passage = "beyond this is a port established for receiving the Sachalitic frankincense; the harbor is called Moscha, and ships from Cana call there regularly"
+
+[[mentions]]
+place = "sarapis"
+cite = "Section 33"
+passage = "Sailing along this coast well out at sea for two thousand stadia from the Zenobian Islands, there meets you an island called Sarapis, about one hundred and twenty stadia from the mainland."
+
+[[mentions]]
+place = "apologus"
+cite = "Section 35"
+passage = "At the upper end of this Gulf there is a market-town designated by law, called Apologus, situated near Charax Spasini and the River Euphrates."
+
+[[mentions]]
+place = "barygaza"
+cite = "Section 44"
+passage = "These basins are deeper places in the river as far as Barygaza; which lies by the river, about three hundred stadia up from the mouth."
+
+[[mentions]]
+place = "barygaza"
+cite = "Section 47"
+passage = "to the present day ancient drachmae are current in Barygaza, coming from this country, bearing inscriptions in Greek letters, and the devices of those who reigned after Alexander, Apollodotus and Menander."
+
+[[mentions]]
+place = "ozene"
+cite = "Section 48"
+passage = "Inland from this place and to the east, is the city called Ozene, formerly a royal capital; from this place are brought down all things needed for the welfare of the country about Barygaza, and many things for our trade: agate and carnelian, Indian muslins and mallow cloth, and much ordinary cloth."
+
+[[mentions]]
+place = "paethana"
+cite = "Section 51"
+passage = "Among the market-towns of Dachinabades there are two of special importance; Paethana, distant about twenty days' journey south from Barygaza / from Paethana carnelian in great quantity"
+
+[[mentions]]
+place = "suppara"
+cite = "Section 52"
+passage = "The market-towns of this region are, in order, after Barygaza: Suppara"
+
+[[mentions]]
+place = "calliena"
+cite = "Section 52"
+passage = "and the city of Calliena, which in the time of the elder Saraganus became a lawful market-town; but since it came into the possession of Sandares the port is much obstructed, and Greek ships landing there may chance to be taken to Barygaza under guard."
+
+[[mentions]]
+place = "muziris"
+cite = "Section 54"
+passage = "Muziris, of the same Kingdom, abounds in ships sent there with cargoes from Arabia, and by the Greeks; it is located on a river, distant from Tyndis by river and sea five hundred stadia, and up the river from the shore twenty stadia."
+
+[[mentions]]
+place = "comari"
+cite = "Section 58"
+passage = "Beyond this there is another place called Comari, at which are the Cape of Comari and a harbor; hither come those men who wish to consecrate themselves for the rest of their lives, and bathe and dwell in celibacy; and women also do the same; for it is told that a goddess once dwelt here and bathed."
+
+[[mentions]]
+place = "colchi"
+cite = "Section 59"
+passage = "From Comari toward the south this region extends to Colchi, where the pearl-fisheries are; (they are worked by condemned criminals); and it belongs to the Pandian Kingdom."
+
+[[mentions]]
+place = "poduca"
+cite = "Section 60"
+passage = "Among the market-towns of these countries, and the harbors where the ships put in from Damirica and from the north, the most important are, in order as they lie, first Camara, then Poduca, then Sopatma"
+
+[[mentions]]
+place = "taprobane"
+cite = "Section 61"
+passage = "About the following region, the course trending toward the east, lying out at sea toward the west is the island Palaesimundu, called by the ancients Taprobane."
