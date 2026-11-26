@@ -605,3 +605,24 @@ pages of the volume where they begin in brackets, as [460], kept in `folder/wiki
 afterwards.
 """
 meyers_text(article; folder::AbstractString) = replace(wikisource_text("de", article.title; folder), r"\n+Anmerkungen \(Wikisource\)$" => "")
+
+"""
+	soviet_encyclopedia_search(words)
+
+The articles of the first edition of the Great Soviet Encyclopedia (Большая советская энциклопедия, 1926–1947) on
+Russian Wikisource that its search finds for `words`, in Russian, the most relevant first, up to the 10,000 it lists,
+500 a request: each with its `rank`, its `headword`, its `title` on Wikisource, its number of `words`, the `snippet`
+of it that the search shows, and its address on `wikisource`. Wikisource has about 25,000 of its articles, not the
+whole work. Returns `(total, articles)`.
+"""
+soviet_encyclopedia_search(words::AbstractString) = encyclopedia_search("ru", "БСЭ1/", words)
+
+"""
+	soviet_encyclopedia_text(article; folder)
+
+The text of an article of [`soviet_encyclopedia_search`](@ref), from Wikisource's parse of its page, a paragraph a
+line, without the rows of dots of its tables of contents, kept in `folder/wikisource/ru/pages` and read from there
+afterwards.
+"""
+soviet_encyclopedia_text(article; folder::AbstractString) =
+	replace(wikisource_text("ru", article.title; folder), r"^author: [^\n]*\n+" => "", r"(?m)^[ .]{10,}\n" => "")
