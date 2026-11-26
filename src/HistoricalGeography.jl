@@ -20,13 +20,24 @@ battlefields of the National Park Service; the stages of a journey and the route
 names, from the texts of the Perseus Digital Library or written by hand, each with the passages of its source. The
 hand-written data are in `data/topics`, one TOML file per work.
 
+The sources of the written past are downloaded once into a folder each, and read as tables: the manuscripts,
+abbreviations and data sets of handwriting of paleography (e-codices, Cappelli's Lexicon Abbreviaturarum, HTR-United,
+CATMuS Medieval, CLaMM, DIVA-HisDB, BiblIA, Muharaf, Kuzushiji-49); the databases of papyri.info, the Demotic
+sentences of the Thesaurus Linguae Aegyptiae and the data sets of papyri of papyrology; and the databases and corpora
+of inscriptions of epigraphy (EDH, LIST, EDR, IRT, I.Sicily, IIP, USEP, CDLI, ORACC, DIO, Rundata). A source is
+returned as a vector of named tuples, a row each, or as a named tuple of such tables; one read with DuckDB is written
+to a table of the connection given, and its number of rows returned.
+
 The functions take a DuckDB connection with the extension `spatial` loaded and `SET geometry_always_xy = true`
 (longitude, latitude); they write tables in it, or return the SQL that reads what they downloaded.
 """
 module HistoricalGeography
 
 using DBInterface, Downloads, JSON, Tables
-import Dates, TOML
+import Dates, TOML, EzXML, Mmap, Tar
+using CodecZlib: GzipDecompressor, GzipDecompressorStream
+using Logging: NullLogger, with_logger
+using ZipArchives: ZipReader, zip_names, zip_readentry
 using Base64: base64encode
 
 # The sources, as SQL of their records: name, starts, ends, geom
@@ -46,6 +57,12 @@ export earthdata_token
 export ign_layers, ign_layer, allmaps, famous_maps, famous_map, save_geotiff
 # Topic maps: the events of a war, the stages of a journey, the places a text names
 export war_events, battlefields, journey, text_places
+# The sources of paleography, papyrology and epigraphy, and what they share
+export ecodices_libraries, ecodices, ecodices_image, cappelli, cappelli_image, htr_united, catmus_files, catmus, catmus_image,
+	clamm, clamm_image, divahisdb, biblia, muharaf, kuzushiji, kuzushiji_image
+export ddbdp, hgv, dclp, apis, apd, bibliographie_papyrologique, tla_demotic, vesuvius, icdar2023, helldate, zenon
+export edh, list_inscriptions, edr, irt, isicily, iip, usep, cdli, oracc, dio, rundata
+export tally, tallied, century, findspots_geojson
 
 const AGENT = "User-Agent" => "HistoricalGeography.jl (https://pollis.org)"
 
@@ -82,5 +99,9 @@ include("earthdata.jl")
 include("populations.jl")
 include("oldmaps.jl")
 include("topics.jl")
+include("records.jl")
+include("paleography.jl")
+include("papyrology.jl")
+include("epigraphy.jl")
 
 end

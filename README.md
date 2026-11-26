@@ -1,6 +1,6 @@
 # HistoricalGeography.jl
 
-The borders of states, the populations of the past, old maps and topic maps, read into DuckDB from Julia.
+The borders of states, the populations of the past, old maps, topic maps and the written sources of the past, read into DuckDB and Julia.
 
 - **Cliopatria** (Seshat: Global History Databank), version 0.2.1: the polities of the world from 3400 BCE to 2024, each shape with the years it held, as realms (the polities inside no other) or as their parts.
 - **historical-basemaps** (André Ourednik): world maps at 37 chosen years from 100 to 2010, such as 1492, 1715, 1815, 1914 and 1945, each standing for its year until the next map.
@@ -33,6 +33,14 @@ Topic maps put a work on the map, each event, stage or place with the words of i
 - **The places a text names**: `text_places(con, :herodotus; folder)` writes the places of Herodotus' *Histories* that the Perseus Digital Library tags with the Getty Thesaurus of Geographic Names or its own gazetteer, each with the number of times it is named and the passages; `:genji` (*The Tale of Genji*, in Shibuya Eiichi's text), `:nights` (*The Arabian Nights*, in Richard F. Burton's translation), `:periplus` (*The Periplus of the Erythraean Sea*, in Wilfred H. Schoff's translation) and `:meghaduta` (Kalidasa's *Cloud-Messenger*, in Arthur W. Ryder's translation) the places written by hand from them, each with its passages.
 
 The hand-written data are in `data/topics`, one TOML file per work, every passage as its source prints it and every place with its Wikidata item, from which its coordinates come.
+
+The written sources of the past are each downloaded once into a folder and read as a table, a row per record: a vector of named tuples, or a named tuple of them for a source of more than one table, or, for a source read with DuckDB, a table of the connection given, whose number of rows is returned.
+
+- **Paleography**: the manuscripts of a library of e-codices from their IIIF manifests, with their images (`ecodices_libraries`, `ecodices`, `ecodices_image`); the abbreviations of Cappelli's *Lexicon Abbreviaturarum* (`cappelli`, `cappelli_image`); the catalogue of HTR-United (`htr_united`); the lines of a manuscript of CATMuS Medieval (`catmus_files`, `catmus`, `catmus_image`); the scripts and dates of CLaMM (`clamm`, `clamm_image`); the layout of the pages of DIVA-HisDB (`divahisdb`); the Hebrew pages and lines of BiblIA (`biblia`); the pages of Muharaf (`muharaf`); and the hiragana of Kuzushiji-49 (`kuzushiji`, `kuzushiji_image`).
+- **Papyrology**: the databases of papyri.info, the DDbDP, the HGV, the DCLP, APIS, the APD and the Bibliographie Papyrologique (`ddbdp`, `hgv`, `dclp`, `apis`, `apd`, `bibliographie_papyrologique`); the Demotic sentences of the Thesaurus Linguae Aegyptiae (`tla_demotic`); the samples of the Vesuvius Challenge (`vesuvius`); and the data sets of Greek letters on papyri of ICDAR 2023, of Hell-Date and of the Zenon papyri (`icdar2023`, `helldate`, `zenon`).
+- **Epigraphy**: the EDH, LIST, the EDR, the IRT, I.Sicily, the IIP and the USEP (`edh`, `list_inscriptions`, `edr`, `irt`, `isicily`, `iip`, `usep`); the cuneiform texts of the CDLI and of a project of ORACC, with its glossary (`cdli`, `oracc`); the German Inscriptions Online (`dio`); and the runic inscriptions of Rundata (`rundata`).
+
+The records of TEI and EpiDoc files give their text as written, its abbreviations expanded, without the regularised spellings and the editors' corrections. `tally` and `tallied` count the values of a column, `century` gives the century of a year, and `findspots_geojson` writes the places of records with coordinates, each with its number of records, as GeoJSON for a map.
 
 ## Usage
 
@@ -95,11 +103,26 @@ using ArchGDAL
 save_geotiff(cassini.url, (2.30, 48.83, 2.39, 48.89); zoom = 14, path = "cassini-paris.tif")
 ```
 
-In Pollis, the Historical Borders panel of the Historical Geography and Archaeology Toolbox draws the borders on a map with a year slider, the Historical Populations panel the cities and the grid, the Historical Maps panel an old map beside today's map, with a line to swipe between them, and the Topic Maps page the topic maps, under At War, Conquests, Places and Journeys.
+```julia
+# The abbreviations of Cappelli's Lexicon as the table cappelli, read with DuckDB's extension excel
+cappelli(con; folder = "data")
+abbreviations = Tables.rowtable(DBInterface.execute(con, "SELECT * FROM cappelli"))
+tallied((a.transcription for a in abbreviations); top = 10)   # the most abbreviated words
+
+# The inscriptions of I.Sicily, and their findspots as GeoJSON
+inscriptions = isicily(; folder = "data")
+tallied(i.language for i in inscriptions)
+path = findspots_geojson(inscriptions; name = :place, fallback = :modern_place)
+
+# The texts of the Royal Inscriptions of the Neo-Assyrian Period in ORACC, and the glossary of their words
+texts, glossary = oracc("rinap"; folder = "data")
+```
+
+In Pollis, the Historical Borders panel of the Historical Geography and Archaeology Toolbox draws the borders on a map with a year slider, the Historical Populations panel the cities and the grid, the Historical Maps panel an old map beside today's map, with a line to swipe between them, the Topic Maps page the topic maps, under At War, Conquests, Places and Journeys, and the Paleography, Papyrology and Epigraphy panels the written sources, each with what it covers, its period, size, access and licence.
 
 ## Sources
 
-The data belong to their authors, whose terms apply: [Cliopatria](https://github.com/Seshat-Global-History-Databank/cliopatria), [historical-basemaps](https://github.com/aourednik/historical-basemaps), [CShapes 2.0](https://icr.ethz.ch/data/cshapes/), [European urban population, 700 - 2000](https://doi.org/10.17026/dans-xzy-u62q), [Historical Urban Population: 3700 BC - AD 2000](https://doi.org/10.7927/H4ZG6QBX), [HYDE 3.5](https://doi.org/10.24416/UU01-F45D44), and the maps of IGN under the [Licence Ouverte](https://www.etalab.gouv.fr/licence-ouverte-open-licence/), whose map of Cassini is cited with the source `ign_layer` gives. The maps of Allmaps and the famous maps are under the terms of the libraries that hold them, which `famous_map` gives for each famous map. The items of [Wikidata](https://www.wikidata.org) are under CC0 1.0, the texts of the [Perseus Digital Library](https://github.com/PerseusDL/canonical-greekLit) under CC BY-SA 4.0, the [Getty Thesaurus of Geographic Names](https://www.getty.edu/research/tools/vocabularies/tgn/) under the Open Data Commons Attribution License, and Shibuya Eiichi's text of *The Tale of Genji* on [Wikisource](https://ja.wikisource.org) under CC BY-SA 3.0, which the passages of `data/topics/genji.toml` share; the passages of `data/topics/stark.toml` are short quotations of the books of Freya Stark, whose copyright is her estate's; the images of the paintings of `data/topics/vangogh.toml` are Wikimedia Commons' reproductions of paintings in the public domain; the other texts quoted are in the public domain, as are the [battlefield boundaries](https://www.nps.gov/orgs/2287/battlefield-boundaries-map.htm) of the National Park Service.
+The data belong to their authors, whose terms apply: [Cliopatria](https://github.com/Seshat-Global-History-Databank/cliopatria), [historical-basemaps](https://github.com/aourednik/historical-basemaps), [CShapes 2.0](https://icr.ethz.ch/data/cshapes/), [European urban population, 700 - 2000](https://doi.org/10.17026/dans-xzy-u62q), [Historical Urban Population: 3700 BC - AD 2000](https://doi.org/10.7927/H4ZG6QBX), [HYDE 3.5](https://doi.org/10.24416/UU01-F45D44), and the maps of IGN under the [Licence Ouverte](https://www.etalab.gouv.fr/licence-ouverte-open-licence/), whose map of Cassini is cited with the source `ign_layer` gives. The maps of Allmaps and the famous maps are under the terms of the libraries that hold them, which `famous_map` gives for each famous map. The items of [Wikidata](https://www.wikidata.org) are under CC0 1.0, the texts of the [Perseus Digital Library](https://github.com/PerseusDL/canonical-greekLit) under CC BY-SA 4.0, the [Getty Thesaurus of Geographic Names](https://www.getty.edu/research/tools/vocabularies/tgn/) under the Open Data Commons Attribution License, and Shibuya Eiichi's text of *The Tale of Genji* on [Wikisource](https://ja.wikisource.org) under CC BY-SA 3.0, which the passages of `data/topics/genji.toml` share; the passages of `data/topics/stark.toml` are short quotations of the books of Freya Stark, whose copyright is her estate's; the images of the paintings of `data/topics/vangogh.toml` are Wikimedia Commons' reproductions of paintings in the public domain; the sources of paleography, papyrology and epigraphy are under the terms of their makers, from public domain and CC0 to licences that forbid commercial use, which the panels of Pollis give for each; the other texts quoted are in the public domain, as are the [battlefield boundaries](https://www.nps.gov/orgs/2287/battlefield-boundaries-map.htm) of the National Park Service.
 
 - Bennett, J. S. and 12 coauthors (2025). Cliopatria - A geospatial database of world-wide political entities from 3400BCE to 2024CE. *Scientific Data* 12(1), 247. [doi:10.1038/s41597-025-04516-9](https://doi.org/10.1038/s41597-025-04516-9)
 - Buringh, E. (2020). European urban population, 700 - 2000. DANS Data Station Social Sciences and Humanities. [doi:10.17026/dans-xzy-u62q](https://doi.org/10.17026/dans-xzy-u62q)

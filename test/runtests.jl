@@ -11,6 +11,41 @@ using HistoricalGeography, Test
 		@test_throws ArgumentError historical_basemaps(; folder = mktempdir(), since = 2011, upto = 2024)  # before any download
 	end
 
+	@testset "Counts, centuries and findspots of records" begin
+		@test tally(["b", "a", "b", "c", "a", "b"]) == ["b" => 3, "a" => 2, "c" => 1]
+		@test tally(["b", "a", "b", "c", "a", "b"]; top = 2) == ["b" => 3, "a" => 2]
+		@test tallied([1900, 1800, 1900]) == "1900 (2), 1800 (1)"
+		@test tallied([1900, 1800, 1900]; ordered = true) == "1800 (1), 1900 (2)"
+		@test century.([-250, -101, -100, -1, 1, 100, 101, 1999]) == [-3, -2, -1, -1, 1, 1, 2, 20]
+		rows = [(place = "Roma", modern = "", lon = 12.5, lat = 41.9), (place = "", modern = "", lon = 12.5, lat = 41.9),
+			(place = "", modern = "Ostia Antica", lon = 12.3, lat = 41.75), (place = "Lost", modern = "", lon = missing, lat = missing)]
+		features = HistoricalGeography.JSON.parse(read(findspots_geojson(rows; name = :place, fallback = :modern), String))["features"]
+		@test [(f["geometry"]["coordinates"], f["properties"]["place"], f["properties"]["inscriptions"]) for f in features] ==
+			[([12.5, 41.9], "Roma", 2), ([12.3, 41.75], "Ostia Antica", 1)]
+	end
+
+	@testset "The text of an EpiDoc edition" begin
+		tei = """<TEI xmlns="http://www.tei-c.org/ns/1.0"><text><body><div type="edition"><head>Text</head><ab><lb n="1"/>Dis
+			<expan>Manibus</expan><lb n="2"/>Ze<lb n="3" break="no"/>thi <choice><sic>vixt</sic><corr>vixit</corr></choice></ab></div>
+			<origDate notBefore="-0049" notAfter="0050"/><geo>37.49025, 14.06216</geo></body></text></TEI>"""
+		doc = HistoricalGeography.EzXML.parsexml(tei)
+		@test HistoricalGeography.edition_text(HistoricalGeography.element(doc, "//t:div[@type='edition']")) == "Dis Manibus Zethi vixt"
+		@test HistoricalGeography.origin_years(doc) == (-49, 50)
+		@test HistoricalGeography.latlon(HistoricalGeography.field(doc, "//t:geo")) == (14.06216, 37.49025)
+		@test HistoricalGeography.field(doc, "//t:title") == ""
+	end
+
+	@testset "Arrays of NumPy files" begin
+		header = "{'descr': '|u1', 'fortran_order': False, 'shape': (2, 3), }"
+		header = rpad(header, 64 - 10 - 1) * "\n"
+		bytes = [0x93; codeunits("NUMPY"); 0x01; 0x00; UInt8(length(header)); 0x00; codeunits(header); UInt8[1, 2, 3, 4, 5, 6]]
+		@test HistoricalGeography.npy(bytes) == UInt8[1 2 3; 4 5 6]
+		header = "{'descr': '<i8', 'fortran_order': False, 'shape': (2,), }"
+		header = rpad(header, 64 - 10 - 1) * "\n"
+		bytes = [0x93; codeunits("NUMPY"); 0x01; 0x00; UInt8(length(header)); 0x00; codeunits(header); reinterpret(UInt8, Int64[7, -1])]
+		@test HistoricalGeography.npy(bytes) == [7, -1]
+	end
+
 	@testset "Requests refused before any download" begin
 		@test_throws ArgumentError cliopatria(; folder = mktempdir(), units = :provinces)
 		@test_throws ArgumentError historical_borders(nothing, :seshat; folder = mktempdir())
