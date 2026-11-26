@@ -101,6 +101,25 @@ using HistoricalGeography, Test
 		@test HistoricalGeography.manifest_year(dated) == 1777
 		@test ismissing(HistoricalGeography.manifest_year(Dict("metadata" => [Dict("label" => "Title", "value" => "Bologna 1702")])))
 	end
+	@testset "The pages of an e-codices manuscript, from the web or a saved copy" begin
+		# A manifest of two canvases, already in the folder of downloads, so that nothing is downloaded
+		folder, saved = mktempdir(), mktempdir()
+		manifest = "https://e-codices.ch/metadata/iiif/kba-Test0001/manifest.json"
+		mkpath(joinpath(folder, "e-codices"))
+		write(joinpath(folder, "e-codices", "kba-Test0001-manifest.json"), """{"sequences": [{"canvases": [
+			{"label": "1r", "images": [{"resource": {"@id": "https://e-codices.ch/loris/kba/1r.jp2/full/full/0/default.jpg"}}]},
+			{"label": "Front cover/back", "images": [{"resource": {"@id": "https://e-codices.ch/loris/kba/fc.jp2/full/full/0/default.jpg"}}]}]}]}""")
+		web = (images = ["https://e-codices.ch/loris/kba/1r.jp2/full/2000,/0/default.jpg",
+			"https://e-codices.ch/loris/kba/fc.jp2/full/2000,/0/default.jpg"], labels = ["1r", "Front cover/back"])
+		@test ecodices_pages(manifest; folder) == web
+		# A copy without its record is unfinished, and the pages still come from the web
+		copy = joinpath(saved, "e-codices", "kba-Test0001")
+		mkpath(copy)
+		@test (ecodices_saved(manifest, saved), ecodices_pages(manifest; folder, saved)) == (nothing, web)
+		write(joinpath(copy, "record.toml"), "images = 2\n")
+		@test (ecodices_saved(manifest, saved), ecodices_pages(manifest; folder, saved)) ==
+			(copy, (images = [joinpath(copy, "0001 1r.jpg"), joinpath(copy, "0002 Front cover_back.jpg")], labels = web.labels))
+	end
 
 	@testset "Allmaps and the famous maps" begin
 		@test_throws ArgumentError allmaps(nothing; folder = mktempdir())  # neither at nor box, before any download

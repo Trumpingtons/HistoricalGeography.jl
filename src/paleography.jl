@@ -27,33 +27,39 @@ function manifest_field(manifest, label::AbstractString)
 end
 
 """
-	ecodices(library; folder)
+	ecodices(library; folder, saved = nothing)
 
 The manuscripts of a library of e-codices (see [`ecodices_libraries`](@ref)), from their IIIF manifests, each
 downloaded once into `folder`, a second apart: a row per manuscript with its shelfmark in the library (`manuscript`,
 as MsMurF 3), title, date, summary, century, place of origin, language, material, number of pages, dimensions,
-number of images, DOI, its `citation`, how to quote it as e-codices writes it (Aarau, Aargauer Kantonsbibliothek, MsBN 47: Henry
-Suso, Büchlein der ewigen Weisheit, and the address of its page), its `page` on e-codices, where it is read and
-described, and the address of its IIIF `manifest`, from which [`ecodices_pages`](@ref) reads its images. The rows are in the order of the shelfmarks, their numbers counted as numbers: MsMurF 2 before MsMurF 10.
-A field that comes more than once, as the century of a manuscript of two centuries, has its values joined by `; `.
-[`linked`](@ref) shows the shelfmarks as links to the pages.
+number of images, DOI, its `citation`, how to quote it as e-codices writes it (Aarau, Aargauer Kantonsbibliothek,
+MsBN 47: Henry Suso, Büchlein der ewigen Weisheit, and the address of its page), its `page` on e-codices, where it is
+read and described, the address of its IIIF `manifest`, from which [`ecodices_pages`](@ref) reads its images, and
+whether it is `saved` whole in the folder `saved` by [`ecodices_save`](@ref). The rows are in the order of the
+shelfmarks, their numbers counted as numbers: MsMurF 2 before MsMurF 10. A field that comes more than once, as the
+century of a manuscript of two centuries, has its values joined by `; `. [`linked`](@ref) shows the shelfmarks as
+links to the pages.
 """
-function ecodices(library::AbstractString; folder::AbstractString)
+function ecodices(library::AbstractString; folder::AbstractString, saved::Union{AbstractString, Nothing} = nothing)
 	rows = map(ecodices_file(ECODICES * "collection/$(library).json", folder)["manifests"]) do entry
-		m = ecodices_file(entry["@id"], folder)
-		shelfmark = manifest_field(m, "Shelfmark")
-		title, page = manifest_field(m, "Title (English)"), string(get(m, "related", ""))
-		cited = join(filter(!isempty, [manifest_field(m, "Location"), manifest_field(m, "Collection Name"), shelfmark]), ", ")
-		(manuscript = isempty(shelfmark) ? m["label"] : shelfmark, title = title,
-			date = manifest_field(m, "Date of Origin (English)"), summary = manifest_field(m, "Summary (English)"),
-			century = manifest_field(m, "Century"), origin = manifest_field(m, "Place of Origin (English)"),
-			language = manifest_field(m, "Text Language"), material = manifest_field(m, "Material"),
-			pages = manifest_field(m, "Number of Pages"), dimensions = manifest_field(m, "Dimensions"),
-			images = length(m["sequences"][1]["canvases"]), doi = manifest_field(m, "DOI"),
-			citation = cited * (isempty(title) ? "" : ": " * title) * (isempty(page) ? "" : " ($(page))") * ".",
-			page = page, manifest = entry["@id"])
+		manuscript_row(ecodices_file(entry["@id"], folder), entry["@id"], saved)
 	end
 	return sort!(rows; by = r -> natural_order(r.manuscript))
+end
+
+"""The row of a manuscript of e-codices, from its manifest `m` at `url`, as [`ecodices`](@ref) gives it."""
+function manuscript_row(m, url::AbstractString, saved::Union{AbstractString, Nothing})
+	shelfmark = manifest_field(m, "Shelfmark")
+	title, page = manifest_field(m, "Title (English)"), string(get(m, "related", ""))
+	cited = join(filter(!isempty, [manifest_field(m, "Location"), manifest_field(m, "Collection Name"), shelfmark]), ", ")
+	return (manuscript = isempty(shelfmark) ? m["label"] : shelfmark, title = title,
+		date = manifest_field(m, "Date of Origin (English)"), summary = manifest_field(m, "Summary (English)"),
+		century = manifest_field(m, "Century"), origin = manifest_field(m, "Place of Origin (English)"),
+		language = manifest_field(m, "Text Language"), material = manifest_field(m, "Material"),
+		pages = manifest_field(m, "Number of Pages"), dimensions = manifest_field(m, "Dimensions"),
+		images = length(m["sequences"][1]["canvases"]), doi = manifest_field(m, "DOI"),
+		citation = cited * (isempty(title) ? "" : ": " * title) * (isempty(page) ? "" : " ($(page))") * ".",
+		page = page, manifest = String(url), saved = ecodices_saved(url, saved) !== nothing)
 end
 
 """
@@ -68,6 +74,9 @@ function ecodices_library(library::AbstractString; folder::AbstractString)
 	return only(names)
 end
 
+"""The address of an image of e-codices, `width` pixels wide, from the address of its IIIF image at full size."""
+ecodices_width(url::AbstractString, width::Integer) = replace(url, "/full/full/" => "/full/$(width),/")
+
 """
 	ecodices_image(manifest, n; folder, width = 1000)
 
@@ -77,24 +86,86 @@ label, as `(; file, label)`.
 """
 function ecodices_image(manifest::AbstractString, n::Integer; folder::AbstractString, width::Integer = 1000)
 	canvas = ecodices_file(manifest, folder)["sequences"][1]["canvases"][n]
-	url = replace(canvas["images"][1]["resource"]["@id"], "/full/full/" => "/full/$(width),/")
+	url = ecodices_width(canvas["images"][1]["resource"]["@id"], width)
 	name = chopsuffix(basename(dirname(dirname(dirname(dirname(url))))), ".jp2") * "-$(width).jpg"
 	path = joinpath(folder, "e-codices", name)
 	isfile(path) || sleep(1)
 	return (file = kept(url, path), label = string(canvas["label"]))
 end
 
+"""The folder of the saved copy of a manuscript of e-codices in `saved`, as `e-codices/kba-BN0047`, from its manifest's address."""
+ecodices_copy(manifest::AbstractString, saved::AbstractString) = joinpath(saved, "e-codices", basename(dirname(manifest)))
+
+"""The file of the `n`th image of a saved copy, with its label, as `0003 V1r.jpg`."""
+ecodices_page_file(n::Integer, label::AbstractString) = lpad(n, 4, '0') * " " * replace(label, r"[^\p{L}\p{N} .()-]" => "_") * ".jpg"
+
 """
-	ecodices_pages(manifest; folder)
+	ecodices_saved(manifest, saved)
+
+The folder of the copy of the manuscript of a IIIF manifest of e-codices that [`ecodices_save`](@ref) saved whole in
+`saved`, or `nothing` when there is none, or `saved` is `nothing` or empty.
+"""
+function ecodices_saved(manifest::AbstractString, saved::Union{AbstractString, Nothing})
+	(saved === nothing || isempty(saved)) && return nothing
+	copy = ecodices_copy(manifest, saved)
+	return isfile(joinpath(copy, "record.toml")) ? copy : nothing
+end
+
+"""
+	ecodices_pages(manifest; folder, width = 2000, saved = nothing)
 
 The images of the manuscript of a IIIF manifest of e-codices (the column `manifest` of [`ecodices`](@ref)), each
-leaf, cover and paste-down in the order of the manuscript, at the size it was photographed: their addresses on the
-IIIF image server (`images`) and their labels (`labels`), as `V1r`, `1v` or `Front cover`, which
-`Pollis.browse(images; labels)` goes through page by page. Only the manifest is downloaded, once, into `folder`.
+leaf, cover and paste-down in the order of the manuscript, `width` pixels wide: their addresses on the IIIF image
+server, or their files when [`ecodices_save`](@ref) saved the manuscript whole in `saved` (`images`), and their labels
+(`labels`), as `V1r`, `1v` or `Front cover`, which `Pollis.browse(images; labels)` goes through page by page. Only the
+manifest is downloaded, once, into `folder`.
 """
-function ecodices_pages(manifest::AbstractString; folder::AbstractString)
+function ecodices_pages(manifest::AbstractString; folder::AbstractString, width::Integer = 2000, saved::Union{AbstractString, Nothing} = nothing)
 	canvases = ecodices_file(manifest, folder)["sequences"][1]["canvases"]
-	return (images = [string(c["images"][1]["resource"]["@id"]) for c in canvases], labels = [string(c["label"]) for c in canvases])
+	labels = [string(c["label"]) for c in canvases]
+	copy = ecodices_saved(manifest, saved)
+	images = copy === nothing ? [ecodices_width(string(c["images"][1]["resource"]["@id"]), width) for c in canvases] :
+		[joinpath(copy, ecodices_page_file(n, label)) for (n, label) in enumerate(labels)]
+	return (images = images, labels = labels)
+end
+
+"""
+	ecodices_save(manifest; folder, saved, width = 2000)
+
+Saves the manuscript of a IIIF manifest of e-codices whole into its own folder of `saved`, as `e-codices/kba-BN0047`:
+each image `width` pixels wide, a second apart, named by its number and label (`0003 V1r.jpg`), the manifest
+(`manifest.json`) and, once every image is there, `record.toml`, with the citation, title, date, page on e-codices,
+manifest and number of images, by which [`ecodices_saved`](@ref) knows the copy whole. Images saved before are kept,
+so a save that stopped goes on from where it stopped. Prints how far it has come every 25 images. Returns the folder,
+the number of images saved and the numbers of those that did not come, as `(; folder, saved, missed)`.
+"""
+function ecodices_save(manifest::AbstractString; folder::AbstractString, saved::AbstractString, width::Integer = 2000)
+	isempty(saved) && throw(ArgumentError("ecodices_save needs the folder to save in"))
+	m = ecodices_file(manifest, folder)
+	canvases = m["sequences"][1]["canvases"]
+	copy = mkpath(ecodices_copy(manifest, saved))
+	missed = Int[]
+	for (n, canvas) in enumerate(canvases)
+		path = joinpath(copy, ecodices_page_file(n, string(canvas["label"])))
+		if !isfile(path)
+			sleep(1)
+			try
+				kept(ecodices_width(string(canvas["images"][1]["resource"]["@id"]), width), path)
+			catch
+				push!(missed, n)
+			end
+		end
+		n % 25 == 0 && println(n, " of ", length(canvases), " images")
+	end
+	write(joinpath(copy, "manifest.json"), JSON.json(m))
+	if isempty(missed)
+		row = manuscript_row(m, manifest, nothing)
+		open(joinpath(copy, "record.toml"), "w") do io
+			TOML.print(io, Dict("manuscript" => row.manuscript, "title" => row.title, "date" => row.date, "citation" => row.citation,
+				"page" => row.page, "manifest" => row.manifest, "images" => length(canvases), "width" => width))
+		end
+	end
+	return (folder = copy, saved = length(canvases) - length(missed), missed = missed)
 end
 
 const CAPPELLI = "https://www.adfontes.uzh.ch/media/files/5_Ressourcen/cappelli.zip"
