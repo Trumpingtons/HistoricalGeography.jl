@@ -152,7 +152,7 @@ function allmaps(con; at = nothing, box = nothing, largest::Union{Real, Nothing}
 				mv(cached * ".part", cached; force = true)
 				return year
 			catch e
-				e isa InterruptException && rethrow()
+				interrupted(e) && rethrow()
 				@debug "The manifest gives no year" id exception = e
 				rm(cached * ".part"; force = true)
 				return missing

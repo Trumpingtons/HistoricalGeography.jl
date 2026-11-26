@@ -272,7 +272,7 @@ function gutenberg_texts(books, query::TextQuery; at_most::Integer = 100, order:
 			try
 				Downloads.download("$GUTENBERG_MIRROR/cache/epub/$(r.ebook)/pg$(r.ebook).txt", file; headers = [RESEARCH_AGENT])
 			catch e
-				e isa InterruptException && rethrow()
+				interrupted(e) && rethrow()
 				println("No plain text of book ", r.ebook, ", ", r.title)
 				continue
 			end

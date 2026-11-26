@@ -275,7 +275,7 @@ function save_texts(folder::AbstractString, rows; count::Integer = length(rows),
 		body = try
 			text(r)
 		catch e
-			e isa InterruptException && rethrow()
+			interrupted(e) && rethrow()
 			""
 		end
 		isempty(body) && (push!(missed, r.number); continue)

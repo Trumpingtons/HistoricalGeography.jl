@@ -65,7 +65,7 @@ export ign_layers, ign_layer, allmaps, famous_maps, famous_map, save_geotiff
 # Topic maps: the events of a war, the stages of a journey, the places a text names
 export war_events, battlefields, journey, text_places
 # The sources of paleography, papyrology and epigraphy, and what they share
-export ecodices_libraries, ecodices, ecodices_library, ecodices_image, ecodices_pages, ecodices_save, ecodices_saved, cappelli, cappelli_image, htr_united, catmus_files, catmus, catmus_image,
+export ecodices_libraries, ecodices, ecodices_library, ecodices_image, ecodices_pages, ecodices_save, ecodices_saved, ecodices_copies, ecodices_copy_pages, cappelli, cappelli_image, htr_united, catmus_files, catmus, catmus_image,
 	clamm, clamm_image, divahisdb, biblia, muharaf, kuzushiji, kuzushiji_image
 export ddbdp, hgv, dclp, apis, apd, bibliographie_papyrologique, tla_demotic, vesuvius, icdar2023, helldate, zenon
 export edh, list_inscriptions, edr, irt, isicily, iip, usep, cdli, oracc, dio, rundata
@@ -89,6 +89,9 @@ quoted(text::AbstractString) = replace(text, "'" => "''")
 
 rows(con, sql) = Tables.columntable(DBInterface.execute(con, sql))
 
+"""Whether `e` is an interrupt, Ctrl+C, which a download gives inside a `TaskFailedException`: a loop that goes on past failed downloads rethrows it, so that Ctrl+C stops it."""
+interrupted(e) = e isa InterruptException || e isa TaskFailedException && interrupted(e.task.exception)
+
 """
 	kept(url, path; headers, agent = AGENT)
 
@@ -104,6 +107,7 @@ function kept(url::AbstractString, path::AbstractString; headers = Pair{String, 
 			Downloads.download(url, path * ".part"; headers = [agent; headers])
 			return mv(path * ".part", path; force = true)
 		catch e
+			interrupted(e) && rethrow()
 			status = e isa Downloads.RequestError ? e.response.status : 0
 			(k == 4 || 400 <= status < 500 && status != 429) && rethrow()
 			@info "The download of $(basename(path)) failed (HTTP $(status)): trying again in $(5 * 2^k) s"

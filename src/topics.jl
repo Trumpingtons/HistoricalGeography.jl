@@ -43,7 +43,7 @@ function sparql(endpoint, query, path; refresh::Bool = false, timeout::Real = 12
 			mv(path * ".part", path; force = true)
 			return results
 		catch e
-			e isa InterruptException && rethrow()
+			interrupted(e) && rethrow()
 			rm(path * ".part"; force = true)
 			attempt == 3 && rethrow()
 			sleep(wait)

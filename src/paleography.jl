@@ -121,12 +121,44 @@ server, or their files when [`ecodices_save`](@ref) saved the manuscript whole i
 manifest is downloaded, once, into `folder`.
 """
 function ecodices_pages(manifest::AbstractString; folder::AbstractString, width::Integer = 2000, saved::Union{AbstractString, Nothing} = nothing)
-	canvases = ecodices_file(manifest, folder)["sequences"][1]["canvases"]
-	labels = [string(c["label"]) for c in canvases]
 	copy = ecodices_saved(manifest, saved)
-	images = copy === nothing ? [ecodices_width(string(c["images"][1]["resource"]["@id"]), width) for c in canvases] :
-		[joinpath(copy, ecodices_page_file(n, label)) for (n, label) in enumerate(labels)]
-	return (images = images, labels = labels)
+	copy === nothing || return ecodices_copy_pages(saved, basename(copy))
+	canvases = ecodices_file(manifest, folder)["sequences"][1]["canvases"]
+	return (images = [ecodices_width(string(c["images"][1]["resource"]["@id"]), width) for c in canvases], labels = [string(c["label"]) for c in canvases])
+end
+
+"""
+	ecodices_copies(saved)
+
+The manuscripts of e-codices that [`ecodices_save`](@ref) saved whole in the folder `saved`, of any library, as rows
+`manuscript`, `title`, `date`, `library` (its place and name), `images`, `citation`, `folder` (the name of the copy's
+folder in `saved/e-codices`, as `kba-BN0047`) and `page` (its page on e-codices), in the order of their folders. Read
+from the copies, without a connection.
+"""
+function ecodices_copies(saved::AbstractString)
+	root = joinpath(saved, "e-codices")
+	folders = isdir(root) ? filter(f -> isfile(joinpath(root, f, "record.toml")), readdir(root)) : String[]
+	return map(folders) do f
+		r = TOML.parsefile(joinpath(root, f, "record.toml"))
+		# The citation starts with the library's place and name, then the shelfmark: "Aarau, Aargauer Kantonsbibliothek, MsBN 47: ..."
+		library = first(split(r["citation"], ", $(r["manuscript"]):"))
+		(manuscript = r["manuscript"], title = r["title"], date = r["date"], library = String(library), images = r["images"],
+			citation = r["citation"], folder = f, page = r["page"])
+	end
+end
+
+"""
+	ecodices_copy_pages(saved, folder)
+
+The images of a manuscript that [`ecodices_save`](@ref) saved whole in `saved`, in its folder `folder` (the column
+`folder` of [`ecodices_copies`](@ref), as `kba-BN0047`): their files (`images`) and labels (`labels`), as
+[`ecodices_pages`](@ref) gives them, read without a connection.
+"""
+function ecodices_copy_pages(saved::AbstractString, folder::AbstractString)
+	copy = joinpath(saved, "e-codices", folder)
+	isfile(joinpath(copy, "record.toml")) || throw(ArgumentError("There is no whole copy of a manuscript in $copy"))
+	labels = [string(c["label"]) for c in JSON.parse(read(joinpath(copy, "manifest.json"), String))["sequences"][1]["canvases"]]
+	return (images = [joinpath(copy, ecodices_page_file(n, label)) for (n, label) in enumerate(labels)], labels = labels)
 end
 
 """
@@ -151,7 +183,8 @@ function ecodices_save(manifest::AbstractString; folder::AbstractString, saved::
 			sleep(1)
 			try
 				kept(ecodices_width(string(canvas["images"][1]["resource"]["@id"]), width), path)
-			catch
+			catch e
+				interrupted(e) && rethrow()
 				push!(missed, n)
 			end
 		end

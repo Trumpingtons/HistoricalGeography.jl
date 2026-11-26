@@ -106,7 +106,8 @@ using HistoricalGeography, Test
 		folder, saved = mktempdir(), mktempdir()
 		manifest = "https://e-codices.ch/metadata/iiif/kba-Test0001/manifest.json"
 		mkpath(joinpath(folder, "e-codices"))
-		write(joinpath(folder, "e-codices", "kba-Test0001-manifest.json"), """{"sequences": [{"canvases": [
+		cached = joinpath(folder, "e-codices", "kba-Test0001-manifest.json")
+		write(cached, """{"sequences": [{"canvases": [
 			{"label": "1r", "images": [{"resource": {"@id": "https://e-codices.ch/loris/kba/1r.jp2/full/full/0/default.jpg"}}]},
 			{"label": "Front cover/back", "images": [{"resource": {"@id": "https://e-codices.ch/loris/kba/fc.jp2/full/full/0/default.jpg"}}]}]}]}""")
 		web = (images = ["https://e-codices.ch/loris/kba/1r.jp2/full/2000,/0/default.jpg",
@@ -116,9 +117,29 @@ using HistoricalGeography, Test
 		copy = joinpath(saved, "e-codices", "kba-Test0001")
 		mkpath(copy)
 		@test (ecodices_saved(manifest, saved), ecodices_pages(manifest; folder, saved)) == (nothing, web)
-		write(joinpath(copy, "record.toml"), "images = 2\n")
-		@test (ecodices_saved(manifest, saved), ecodices_pages(manifest; folder, saved)) ==
-			(copy, (images = [joinpath(copy, "0001 1r.jpg"), joinpath(copy, "0002 Front cover_back.jpg")], labels = web.labels))
+		# A whole copy, with its manifest and record as ecodices_save writes them, is read without the downloads
+		cp(cached, joinpath(copy, "manifest.json"))
+		rm(cached)
+		write(joinpath(copy, "record.toml"), """
+			manuscript = "MsTest 1"
+			title = "A Test Psalter"
+			date = "around 1300"
+			citation = "Aarau, Aargauer Kantonsbibliothek, MsTest 1: A Test Psalter (https://e-codices.ch/en/list/one/kba/Test0001)."
+			page = "https://e-codices.ch/en/list/one/kba/Test0001"
+			images = 2
+			""")
+		local_pages = (images = [joinpath(copy, "0001 1r.jpg"), joinpath(copy, "0002 Front cover_back.jpg")], labels = web.labels)
+		@test (ecodices_saved(manifest, saved), ecodices_pages(manifest; folder, saved), ecodices_copy_pages(saved, "kba-Test0001")) ==
+			(copy, local_pages, local_pages)
+		@test ecodices_copies(saved) == [(manuscript = "MsTest 1", title = "A Test Psalter", date = "around 1300",
+			library = "Aarau, Aargauer Kantonsbibliothek", images = 2,
+			citation = "Aarau, Aargauer Kantonsbibliothek, MsTest 1: A Test Psalter (https://e-codices.ch/en/list/one/kba/Test0001).",
+			folder = "kba-Test0001", page = "https://e-codices.ch/en/list/one/kba/Test0001")]
+		@test isempty(ecodices_copies(mktempdir()))
+		# Ctrl+C during a download comes inside a TaskFailedException, and stops the save as Ctrl+C elsewhere does
+		failed(e) = try wait(schedule(Task(() -> throw(e)))) catch caught caught end
+		@test HistoricalGeography.interrupted.([InterruptException(), failed(InterruptException()), failed(ErrorException("x")), ErrorException("x")]) ==
+			[true, true, false, false]
 	end
 
 	@testset "Allmaps and the famous maps" begin
