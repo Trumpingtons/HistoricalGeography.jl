@@ -1,14 +1,15 @@
-# Places of The Decameron, in the order of the book, each with its passage of John Payne's translation, The
-# Decameron of Giovanni Boccaccio (1886), in the text of Project Gutenberg kept at the Internet Archive. Each mention
-# has its level: the frame story, in which ten young people leave Florence in the plague of 1348, or the stories they
-# tell. The two villas of the frame are those that tradition identifies with the palaces the text describes without
-# naming them: the Villa di Poggio Gherardo, two miles from the city, and the Villa Palmieri. The text names some
-# places with no Wikidata item, which are not on the map: the Ladies' Valley of Days 6 and 7, Camerata (Days 7 and 9),
-# Bengodi (Day 8, Story 3) and the imaginary lands of Frate Cipolla (Day 6, Story 10); and Cathay (Day 10, Story 3),
-# whose item has no coordinates. Malpertugio, the street of Naples of Day 2, Story 5, has no item either, and its
-# passage is under Naples. Payne's text opens Day 10, Story 8 with Fiammetta, who told Story 6; the opening of Story 9
-# and Boccaccio's Italian give it to Filomena. Two stories have a painting, with its image at Wikimedia Commons. Each
-# place has its Wikidata item, from which its coordinates come.
+# Places of The Decameron, in the order of the book, each with its passage of John Payne's translation, The Decameron of
+# Giovanni Boccaccio (1886), in the text of Project Gutenberg kept at the Internet Archive. Each mention has its level:
+# the frame story, in which ten young people leave Florence in the plague of 1348, or the stories they tell. The two
+# villas of the frame are those that tradition identifies with the palaces the text describes without naming them: the
+# Villa di Poggio Gherardo, two miles from the city, and the Villa Palmieri. The text names some places with no Wikidata
+# item, which are not on the map: the Ladies' Valley of Days 6 and 7, Camerata (Days 7 and 9), Bengodi (Day 8, Story 3)
+# and the imaginary lands of Frate Cipolla (Day 6, Story 10); and Cathay (Day 10, Story 3), whose item has no
+# coordinates. Malpertugio, the street of Naples of Day 2, Story 5, has no item either, and its passage is under Naples.
+# The Alba of Day 2, Story 9 is on the map as Albisola Superiore, with which it is usually identified, and its note says
+# that the identification has been questioned. Payne's text opens Day 10, Story 8 with Fiammetta, who told Story 6; the
+# opening of Story 9 and Boccaccio's Italian give it to Filomena. Two stories have a painting, with its image at
+# Wikimedia Commons. Each place has its Wikidata item, from which its coordinates come.
 #
 # The text: https://archive.org/details/thedecameronofgi23700gut
 
@@ -231,6 +232,11 @@ point = [-3.633333, 52.35]
 name = "Ireland"
 wikidata = "Q22890"
 point = [-7.921, 53.351]
+
+[places.albisola]
+name = "Alba (Albisola Superiore)"
+wikidata = "Q270492"
+point = [8.510133, 44.339503]
 
 [places.acre]
 name = "Acre"
@@ -971,6 +977,13 @@ place = "genoa"
 cite = "Day 2, Story 9, told by Filomena"
 level = "Stories"
 passage = "who hight Bernabo Lomellini of Genoa, maintained the contrary, avouching that he, by special grace of God, had a lady to wife who was belike the most accomplished woman of all Italy in all those qualities which a lady"
+
+[[mentions]]
+place = "albisola"
+cite = "Day 2, Story 9, told by Filomena"
+level = "Stories"
+passage = "she found a Catalan gentleman, by name Senor Encararch, who had landed at Alba from a ship he had in the offing, to refresh himself at a spring there."
+note = "The text's Alba, usually identified with Albisola; the precise identification has been questioned in later philological research."
 
 [[mentions]]
 place = "alexandria"
