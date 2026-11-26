@@ -30,21 +30,38 @@ end
 	ecodices(library; folder)
 
 The manuscripts of a library of e-codices (see [`ecodices_libraries`](@ref)), from their IIIF manifests, each
-downloaded once into `folder`, a second apart: a row per manuscript with its shelfmark (`manuscript`), title, date,
-century, place of origin, language, material, number of pages, dimensions, number of images, summary, DOI and the
-address of its manifest. A field that comes more than once, as the century of a manuscript of two centuries, has its
-values joined by `; `.
+downloaded once into `folder`, a second apart: a row per manuscript with its shelfmark in the library (`manuscript`,
+as MsMurF 3), title, date, century, place of origin, language, material, number of pages, dimensions, number of
+images, summary, DOI, its `page` on e-codices, where it is read and described, and the address of its IIIF
+`manifest`. The rows are in the order of the shelfmarks, their numbers counted as numbers: MsMurF 2 before MsMurF 10.
+A field that comes more than once, as the century of a manuscript of two centuries, has its values joined by `; `.
+[`linked`](@ref) shows the shelfmarks as links to the pages.
 """
 function ecodices(library::AbstractString; folder::AbstractString)
-	map(ecodices_file(ECODICES * "collection/$(library).json", folder)["manifests"]) do entry
+	rows = map(ecodices_file(ECODICES * "collection/$(library).json", folder)["manifests"]) do entry
 		m = ecodices_file(entry["@id"], folder)
-		(manuscript = m["label"], title = manifest_field(m, "Title (English)"), date = manifest_field(m, "Date of Origin (English)"),
-			century = manifest_field(m, "Century"), origin = manifest_field(m, "Place of Origin (English)"),
-			language = manifest_field(m, "Text Language"), material = manifest_field(m, "Material"),
-			pages = manifest_field(m, "Number of Pages"), dimensions = manifest_field(m, "Dimensions"),
-			images = length(m["sequences"][1]["canvases"]), summary = manifest_field(m, "Summary (English)"),
-			doi = manifest_field(m, "DOI"), manifest = entry["@id"])
+		shelfmark = manifest_field(m, "Shelfmark")
+		(manuscript = isempty(shelfmark) ? m["label"] : shelfmark, title = manifest_field(m, "Title (English)"),
+			date = manifest_field(m, "Date of Origin (English)"), century = manifest_field(m, "Century"),
+			origin = manifest_field(m, "Place of Origin (English)"), language = manifest_field(m, "Text Language"),
+			material = manifest_field(m, "Material"), pages = manifest_field(m, "Number of Pages"),
+			dimensions = manifest_field(m, "Dimensions"), images = length(m["sequences"][1]["canvases"]),
+			summary = manifest_field(m, "Summary (English)"), doi = manifest_field(m, "DOI"),
+			page = string(get(m, "related", "")), manifest = entry["@id"])
 	end
+	return sort!(rows; by = r -> natural_order(r.manuscript))
+end
+
+"""
+	ecodices_library(library; folder)
+
+The name of a library of e-codices from the name of its collection, as `Aarau, Aargauer Kantonsbibliothek` for `kba`
+(see [`ecodices_libraries`](@ref)).
+"""
+function ecodices_library(library::AbstractString; folder::AbstractString)
+	names = [l.name for l in ecodices_libraries(; folder) if l.library == library]
+	isempty(names) && throw(ArgumentError("e-codices has no library $(repr(library)): its codes are in the column library of ecodices_libraries"))
+	return only(names)
 end
 
 """

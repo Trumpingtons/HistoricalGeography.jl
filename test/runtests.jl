@@ -24,6 +24,31 @@ using HistoricalGeography, Test
 			[([12.5, 41.9], "Roma", 2), ([12.3, 41.75], "Ostia Antica", 1)]
 	end
 
+	@testset "Queries of words and the texts of books" begin
+		q = text_query("tobacco OR (\"long s\" AND NOT pipe*)")
+		@test [q("Of Tobacco"), q("the long  s here"), q("long s pipes"), q("tobacconist")] == [true, true, false, false]
+		@test text_query("")("anything") && isempty(text_query("").patterns)
+		@test_throws ErrorException text_query("(comet OR star")
+		# as the printers of the time, u and v, i and j, and s and the long s are the same letter; OCR reads the long s as f
+		@test [text_query("loue"; early_modern = true)("Of Love"), text_query("ioy"; early_modern = true)("joy"),
+			text_query("telescope"; f_for_s = true)("a Telefcope")] == [true, true, true]
+		@test query_hits(text_query("rail*"), "Railway, rail road, a rail.") == 3
+		@test [occursin(r, "spoorwegen") for r in query_patterns("spoorweg"; prefix = true)] == [true]
+		@test period_counts([1863, 1864, 1864], 1863, 1865) == ["1863" => 1, "1864" => 2, "1865" => 0]
+		@test period_counts(Dict(1859 => 1, 1861 => 2), 1800, 1870)[end-2:end] == ["1850s" => 1, "1860s" => 2, "1870s" => 0]
+		@test period_counts([1775, 1799, 1800], 1775, 1824; each = 25) == ["1775–1799" => 2, "1800–1824" => 1]
+		rows = [(year = 2, hits = 1), (year = missing, hits = 5), (year = 1, hits = 3)]
+		@test [(r.number, r.hits) for r in ranked(rows, "newest")] == [(1, 1), (2, 3), (3, 5)]
+		@test [r.hits for r in ranked(rows, "relevance"; at_most = 2)] == [5, 3]
+		@test HistoricalGeography.csv_rows("a,\"b,\"\"c\"\"\nd\"\r\ne,f") == [["a", "b,\"c\"\nd"], ["e", "f"]]
+		@test plain_name("Spoorweg AND \"Den Haag\"") == "spoorweg-and-den-haag"
+		@test HistoricalGeography.tcp_plain_text("<teiHeader>x</teiHeader><p>to<g ref=\"char:EOLhyphen\"/>bacco <gap reason=\"illegible\"/> and</p><l>a <note>n</note> line</l>") ==
+			"tobacco 〈…〉 and\na [n] line"
+		@test HistoricalGeography.gutenberg_life("Austen, Jane, 1775-1817; Other, 1800-1850") == (born = 1775, died = 1817)
+		page = reading_page("A & B", ["a tobacco b", "none"]; marks = q.patterns, file = tempname() * ".html")
+		@test page.passages == [1] && occursin("<p id=\"p1\">a <mark>tobacco</mark> b</p>", read(page.file, String))
+	end
+
 	@testset "The text of an EpiDoc edition" begin
 		tei = """<TEI xmlns="http://www.tei-c.org/ns/1.0"><text><body><div type="edition"><head>Text</head><ab><lb n="1"/>Dis
 			<expan>Manibus</expan><lb n="2"/>Ze<lb n="3" break="no"/>thi <choice><sic>vixt</sic><corr>vixit</corr></choice></ab></div>

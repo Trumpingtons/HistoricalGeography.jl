@@ -28,6 +28,13 @@ of inscriptions of epigraphy (EDH, LIST, EDR, IRT, I.Sicily, IIP, USEP, CDLI, OR
 returned as a vector of named tuples, a row each, or as a named tuple of such tables; one read with DuckDB is written
 to a table of the connection given, and its number of rows returned.
 
+The texts of antique books (EEBO-TCP, ECCO-TCP and Evans-TCP, the Deutsches Textarchiv, Project Gutenberg,
+Wikisource), of newspaper archives (Delpher, Papers Past, Digi, Europeana Newspapers, American Stories) and of
+encyclopedias (Pliny's Naturalis Historia, Isidore's Etymologiae, the Yongle Encyclopedia, Chambers's Cyclopaedia,
+the Encyclopédie) are found by a query of words (`text_query`), downloaded once into a folder where they can be, and
+read as tables of their works, articles, pages or chapters, each with its text; `reading_page` writes a text as a
+page with its words marked, and `save_texts` saves texts with the table of their rows.
+
 The functions take a DuckDB connection with the extension `spatial` loaded and `SET geometry_always_xy = true`
 (longitude, latitude); they write tables in it, or return the SQL that reads what they downloaded.
 """
@@ -58,11 +65,21 @@ export ign_layers, ign_layer, allmaps, famous_maps, famous_map, save_geotiff
 # Topic maps: the events of a war, the stages of a journey, the places a text names
 export war_events, battlefields, journey, text_places
 # The sources of paleography, papyrology and epigraphy, and what they share
-export ecodices_libraries, ecodices, ecodices_image, cappelli, cappelli_image, htr_united, catmus_files, catmus, catmus_image,
+export ecodices_libraries, ecodices, ecodices_library, ecodices_image, cappelli, cappelli_image, htr_united, catmus_files, catmus, catmus_image,
 	clamm, clamm_image, divahisdb, biblia, muharaf, kuzushiji, kuzushiji_image
 export ddbdp, hgv, dclp, apis, apd, bibliographie_papyrologique, tla_demotic, vesuvius, icdar2023, helldate, zenon
 export edh, list_inscriptions, edr, irt, isicily, iip, usep, cdli, oracc, dio, rundata
-export tally, tallied, century, findspots_geojson
+export tally, tallied, century, findspots_geojson, linked
+# The texts of antique books, newspaper archives and encyclopedias
+export TextQuery, text_query, query_patterns, literal_patterns, query_hits, period_counts, print_bars, ranked, without, reading_page,
+	plain_name, write_table, save_texts
+export tcp_catalogue, tcp_works, tcp_texts, dta_download, dta_works, gutenberg_catalogue, gutenberg_books, gutenberg_texts,
+	wikisource_search, wikisource_years, wikisource_text
+export delpher_query, delpher_count, delpher_periods, delpher_articles, delpher_text, paperspast_search, paperspast_search_address, paperspast_articles,
+	digi_search, digi_search_address, digi_pages, digi_text, europeana_count, europeana_periods, europeana_search_address, europeana_issues,
+	europeana_pages, americanstories_download, americanstories_articles
+export pliny_book_title, pliny_chapters, pliny_page, isidore_book_title, isidore_sections, isidore_page, yongle_search, yongle_texts,
+	yongle_page, yongle_juan_address, chambers_entries, encyclopedie_search, encyclopedie_article, encyclopedie_page
 
 const AGENT = "User-Agent" => "HistoricalGeography.jl (https://pollis.org)"
 
@@ -72,17 +89,18 @@ quoted(text::AbstractString) = replace(text, "'" => "''")
 rows(con, sql) = Tables.columntable(DBInterface.execute(con, sql))
 
 """
-	kept(url, path; headers)
+	kept(url, path; headers, agent = AGENT)
 
-The file at `url`, downloaded once to `path` and read from there afterwards. A download that fails is tried again
-four times, 5, 10, 20 and 40 seconds apart, unless the server refuses the request (HTTP 4xx other than 429).
+The file at `url`, downloaded once to `path` and read from there afterwards, the request with the User-Agent `agent`.
+A download that fails is tried again four times, 5, 10, 20 and 40 seconds apart, unless the server refuses the
+request (HTTP 4xx other than 429).
 """
-function kept(url::AbstractString, path::AbstractString; headers = Pair{String, String}[])
+function kept(url::AbstractString, path::AbstractString; headers = Pair{String, String}[], agent::Pair = AGENT)
 	isfile(path) && return path
 	mkpath(dirname(path))
 	for k in 0:4
 		try
-			Downloads.download(url, path * ".part"; headers = [AGENT; headers])
+			Downloads.download(url, path * ".part"; headers = [agent; headers])
 			return mv(path * ".part", path; force = true)
 		catch e
 			status = e isa Downloads.RequestError ? e.response.status : 0
@@ -103,5 +121,9 @@ include("records.jl")
 include("paleography.jl")
 include("papyrology.jl")
 include("epigraphy.jl")
+include("texts.jl")
+include("books.jl")
+include("newspapers.jl")
+include("encyclopedias.jl")
 
 end

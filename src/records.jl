@@ -17,16 +17,40 @@ function tally(values; top::Union{Integer, Nothing} = nothing)
 end
 
 """
-	tallied(values; top = nothing, ordered = false)
+	tallied(values; top = nothing, ordered = false, separator = ", ")
 
 The [`tally`](@ref) of `values` as text, `value (count)` after another, as `Latin (120), Greek (45)`; in the order of
-the values, as centuries from the first, when `ordered` is true.
+the values, as centuries from the first, when `ordered` is true; apart by `separator`, as `"; "` for values with
+commas in them.
 """
-function tallied(values; top::Union{Integer, Nothing} = nothing, ordered::Bool = false)
+function tallied(values; top::Union{Integer, Nothing} = nothing, ordered::Bool = false, separator::AbstractString = ", ")
 	pairs = tally(values; top)
 	ordered && sort!(pairs; by = first, lt = isless)
-	return join(("$(v) ($(n))" for (v, n) in pairs), ", ")
+	return join(("$(v) ($(n))" for (v, n) in pairs), separator)
 end
+
+"""
+	linked(rows, column => address)
+
+The rows with the values of `column` written as links to the web addresses of `address`, `[text](address)`, which
+Pollis's tables show as `text` in blue, opening the address in Pollis's browser when clicked; the column `address`
+is left out. A row without an address keeps its value as it is.
+"""
+function linked(rows, link::Pair{Symbol, Symbol})
+	column, address = link
+	return map(rows) do row
+		url = getproperty(row, address)
+		value = isempty(something(url, "")) ? getproperty(row, column) : "[$(getproperty(row, column))]($(url))"
+		Base.structdiff(merge(row, NamedTuple{(column,)}((value,))), NamedTuple{(address,)})
+	end
+end
+
+"""
+	natural_order(text)
+
+A key that sorts texts with numbers in them by their numbers, as shelfmarks are: MsMurF 2 before MsMurF 10.
+"""
+natural_order(text::AbstractString) = [all(isdigit, p) ? lpad(p, 12, '0') : lowercase(p) for p in (m.match for m in eachmatch(r"\d+|\D+", text))]
 
 """
 	century(year)
