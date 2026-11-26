@@ -34,8 +34,9 @@ downloaded once into `folder`, a second apart: a row per manuscript with its she
 as MsMurF 3), title, date, summary, century, place of origin, language, material, number of pages, dimensions,
 number of images, DOI, its `citation`, how to quote it as e-codices writes it (Aarau, Aargauer Kantonsbibliothek,
 MsBN 47: Henry Suso, Büchlein der ewigen Weisheit, and the address of its page), its `page` on e-codices, where it is
-read and described, the address of its IIIF `manifest`, from which [`ecodices_pages`](@ref) reads its images, and
-whether it is `saved` whole in the folder `saved` by [`ecodices_save`](@ref). The rows are in the order of the
+read and described, the address of its IIIF `manifest`, from which [`ecodices_pages`](@ref) reads its images,
+whether it is `saved` whole in the folder `saved` by [`ecodices_save`](@ref), and whether that copy is `collated` into
+a PDF. The rows are in the order of the
 shelfmarks, their numbers counted as numbers: MsMurF 2 before MsMurF 10. A field that comes more than once, as the
 century of a manuscript of two centuries, has its values joined by `; `. [`linked`](@ref) shows the shelfmarks as
 links to the pages.
@@ -59,7 +60,7 @@ function manuscript_row(m, url::AbstractString, saved::Union{AbstractString, Not
 		pages = manifest_field(m, "Number of Pages"), dimensions = manifest_field(m, "Dimensions"),
 		images = length(m["sequences"][1]["canvases"]), doi = manifest_field(m, "DOI"),
 		citation = cited * (isempty(title) ? "" : ": " * title) * (isempty(page) ? "" : " ($(page))") * ".",
-		page = page, manifest = String(url), saved = ecodices_saved(url, saved) !== nothing)
+		page = page, manifest = String(url), saved = ecodices_saved(url, saved) !== nothing, collated = ecodices_pdf(url, saved) !== nothing)
 end
 
 """
@@ -103,7 +104,7 @@ ecodices_page_file(n::Integer, label::AbstractString) = lpad(n, 4, '0') * " " * 
 	ecodices_saved(manifest, saved)
 
 The folder of the copy of the manuscript of a IIIF manifest of e-codices that [`ecodices_save`](@ref) saved whole in
-`saved`, or `nothing` when there is none, or `saved` is `nothing` or empty.
+`saved`, as its images or collated into a PDF, or `nothing` when there is none, or `saved` is `nothing` or empty.
 """
 function ecodices_saved(manifest::AbstractString, saved::Union{AbstractString, Nothing})
 	(saved === nothing || isempty(saved)) && return nothing
@@ -112,17 +113,34 @@ function ecodices_saved(manifest::AbstractString, saved::Union{AbstractString, N
 end
 
 """
+	ecodices_pdf(manifest, saved)
+
+The PDF of the manuscript of a IIIF manifest of e-codices that [`ecodices_save`](@ref) collated in `saved`, or
+`nothing` when it is not saved, or saved as its images.
+"""
+function ecodices_pdf(manifest::AbstractString, saved::Union{AbstractString, Nothing})
+	copy = ecodices_saved(manifest, saved)
+	copy === nothing && return nothing
+	record = TOML.parsefile(joinpath(copy, "record.toml"))
+	return get(record, "collated", false) ? joinpath(copy, record["pdf"]) : nothing
+end
+
+"""
 	ecodices_pages(manifest; folder, width = 2000, saved = nothing)
 
 The images of the manuscript of a IIIF manifest of e-codices (the column `manifest` of [`ecodices`](@ref)), each
-leaf, cover and paste-down in the order of the manuscript, `width` pixels wide: their addresses on the IIIF image
-server, or their files when [`ecodices_save`](@ref) saved the manuscript whole in `saved` (`images`), and their labels
-(`labels`), as `V1r`, `1v` or `Front cover`, which `Pollis.browse(images; labels)` goes through page by page. Only the
-manifest is downloaded, once, into `folder`.
+leaf, cover and paste-down in the order of the manuscript, `width` pixels wide: their files when
+[`ecodices_save`](@ref) saved the manuscript's images in `saved`, read without a connection, else their addresses
+on the IIIF image server (`images`), and their labels (`labels`), as `V1r`, `1v` or `Front cover`, which
+`Pollis.browse(images; labels)` goes through page by page. Only the manifest is downloaded, once, into `folder`. A
+manuscript collated into a PDF is read from [`ecodices_pdf`](@ref).
 """
 function ecodices_pages(manifest::AbstractString; folder::AbstractString, width::Integer = 2000, saved::Union{AbstractString, Nothing} = nothing)
 	copy = ecodices_saved(manifest, saved)
-	copy === nothing || return ecodices_copy_pages(saved, basename(copy))
+	if copy !== nothing && ecodices_pdf(manifest, saved) === nothing
+		labels = [string(c["label"]) for c in JSON.parse(read(joinpath(copy, "manifest.json"), String))["sequences"][1]["canvases"]]
+		return (images = [joinpath(copy, ecodices_page_file(n, label)) for (n, label) in enumerate(labels)], labels = labels)
+	end
 	canvases = ecodices_file(manifest, folder)["sequences"][1]["canvases"]
 	return (images = [ecodices_width(string(c["images"][1]["resource"]["@id"]), width) for c in canvases], labels = [string(c["label"]) for c in canvases])
 end
@@ -130,59 +148,59 @@ end
 """
 	ecodices_copies(saved)
 
-The manuscripts of e-codices that [`ecodices_save`](@ref) saved whole in the folder `saved`, of any library, as rows
-`manuscript`, `title`, `date`, `library` (its place and name), `images`, `citation`, `folder` (the name of the copy's
-folder in `saved/e-codices`, as `kba-BN0047`) and `page` (its page on e-codices), in the order of their folders. Read
-from the copies, without a connection.
+The manuscripts of e-codices that [`ecodices_save`](@ref) saved whole in the folder `saved`, of any library, as the
+rows of [`ecodices`](@ref), first with the code of their `library` and its `name`: read from the copies, without a
+connection, in the order of the libraries' names and of the shelfmarks.
 """
 function ecodices_copies(saved::AbstractString)
 	root = joinpath(saved, "e-codices")
 	folders = isdir(root) ? filter(f -> isfile(joinpath(root, f, "record.toml")), readdir(root)) : String[]
-	return map(folders) do f
-		r = TOML.parsefile(joinpath(root, f, "record.toml"))
-		# The citation starts with the library's place and name, then the shelfmark: "Aarau, Aargauer Kantonsbibliothek, MsBN 47: ..."
-		library = first(split(r["citation"], ", $(r["manuscript"]):"))
-		(manuscript = r["manuscript"], title = r["title"], date = r["date"], library = String(library), images = r["images"],
-			citation = r["citation"], folder = f, page = r["page"])
+	rows = map(folders) do f
+		record = TOML.parsefile(joinpath(root, f, "record.toml"))
+		m = JSON.parse(read(joinpath(root, f, "manifest.json"), String))
+		name = join(filter(!isempty, [manifest_field(m, "Location"), manifest_field(m, "Collection Name")]), ", ")
+		(library = String(first(split(f, '-'))), name = name, manuscript_row(m, record["manifest"], saved)...)
 	end
+	return sort!(rows; by = r -> (r.name, natural_order(r.manuscript)))
 end
 
 """
-	ecodices_copy_pages(saved, folder)
+	ecodices_copy_libraries(saved)
 
-The images of a manuscript that [`ecodices_save`](@ref) saved whole in `saved`, in its folder `folder` (the column
-`folder` of [`ecodices_copies`](@ref), as `kba-BN0047`): their files (`images`) and labels (`labels`), as
-[`ecodices_pages`](@ref) gives them, read without a connection.
+The libraries of the manuscripts of e-codices saved in `saved` (see [`ecodices_copies`](@ref)), as rows `library`
+(the code of its collection), `name` and `manuscripts` (how many are saved), in the order of their names.
 """
-function ecodices_copy_pages(saved::AbstractString, folder::AbstractString)
-	copy = joinpath(saved, "e-codices", folder)
-	isfile(joinpath(copy, "record.toml")) || throw(ArgumentError("There is no whole copy of a manuscript in $copy"))
-	labels = [string(c["label"]) for c in JSON.parse(read(joinpath(copy, "manifest.json"), String))["sequences"][1]["canvases"]]
-	return (images = [joinpath(copy, ecodices_page_file(n, label)) for (n, label) in enumerate(labels)], labels = labels)
-end
+ecodices_copy_libraries(saved::AbstractString) =
+	[(library = l.library, name = l.name, manuscripts = count(c -> c.library == l.library, copies))
+		for copies in (ecodices_copies(saved),) for l in unique(c -> c.library, copies)]
 
 """
-	ecodices_save(manifest; folder, saved, width = 2000)
+	ecodices_save(manifest; folder, saved, width = 2000, collated = false)
 
 Saves the manuscript of a IIIF manifest of e-codices whole into its own folder of `saved`, as `e-codices/kba-BN0047`:
 each image `width` pixels wide, a second apart, named by its number and label (`0003 V1r.jpg`), the manifest
 (`manifest.json`) and, once every image is there, `record.toml`, with the citation, title, date, page on e-codices,
-manifest and number of images, by which [`ecodices_saved`](@ref) knows the copy whole. Images saved before are kept,
-so a save that stopped goes on from where it stopped. Prints how far it has come every 25 images. Returns the folder,
-the number of images saved and the numbers of those that did not come, as `(; folder, saved, missed)`.
+manifest and number of images, by which [`ecodices_saved`](@ref) knows the copy whole. With `collated`, the images
+then go into one PDF, `kba-BN0047.pdf`, each JPEG as it is, its pages labelled with the folios and the citation
+among its properties, and are deleted. Images saved before are kept, so a save that stopped goes on from where it
+stopped, and a manuscript saved as images is collated without downloading them again. Prints how far it has come
+every 25 images. Returns the folder, the number of images saved and the numbers of those that did not come, as
+`(; folder, saved, missed)`.
 """
-function ecodices_save(manifest::AbstractString; folder::AbstractString, saved::AbstractString, width::Integer = 2000)
+function ecodices_save(manifest::AbstractString; folder::AbstractString, saved::AbstractString, width::Integer = 2000, collated::Bool = false)
 	isempty(saved) && throw(ArgumentError("ecodices_save needs the folder to save in"))
 	m = ecodices_file(manifest, folder)
 	canvases = m["sequences"][1]["canvases"]
 	copy = mkpath(ecodices_copy(manifest, saved))
+	collated && ecodices_pdf(manifest, saved) !== nothing && return (folder = copy, saved = length(canvases), missed = Int[])
+	labels = [string(c["label"]) for c in canvases]
+	files = [joinpath(copy, ecodices_page_file(n, label)) for (n, label) in enumerate(labels)]
 	missed = Int[]
 	for (n, canvas) in enumerate(canvases)
-		path = joinpath(copy, ecodices_page_file(n, string(canvas["label"])))
-		if !isfile(path)
+		if !isfile(files[n])
 			sleep(1)
 			try
-				kept(ecodices_width(string(canvas["images"][1]["resource"]["@id"]), width), path)
+				kept(ecodices_width(string(canvas["images"][1]["resource"]["@id"]), width), files[n])
 			catch e
 				interrupted(e) && rethrow()
 				push!(missed, n)
@@ -191,14 +209,77 @@ function ecodices_save(manifest::AbstractString; folder::AbstractString, saved::
 		n % 25 == 0 && println(n, " of ", length(canvases), " images")
 	end
 	write(joinpath(copy, "manifest.json"), JSON.json(m))
-	if isempty(missed)
-		row = manuscript_row(m, manifest, nothing)
-		open(joinpath(copy, "record.toml"), "w") do io
-			TOML.print(io, Dict("manuscript" => row.manuscript, "title" => row.title, "date" => row.date, "citation" => row.citation,
-				"page" => row.page, "manifest" => row.manifest, "images" => length(canvases), "width" => width))
-		end
+	isempty(missed) || return (folder = copy, saved = length(canvases) - length(missed), missed = missed)
+	row = manuscript_row(m, manifest, nothing)
+	record = Dict("manuscript" => row.manuscript, "title" => row.title, "date" => row.date, "citation" => row.citation,
+		"page" => row.page, "manifest" => row.manifest, "images" => length(canvases), "width" => width, "collated" => collated)
+	if collated
+		println("Collating the ", length(files), " images into one PDF")
+		record["pdf"] = basename(copy) * ".pdf"
+		collate_pdf(joinpath(copy, record["pdf"]), files, labels; title = "$(row.manuscript): $(row.title)", subject = row.citation)
 	end
-	return (folder = copy, saved = length(canvases) - length(missed), missed = missed)
+	# The record before the images go, so that a copy is never without both
+	open(io -> TOML.print(io, record), joinpath(copy, "record.toml"), "w")
+	collated && foreach(rm, files)
+	return (folder = copy, saved = length(canvases), missed = missed)
+end
+
+"""The width, height and number of colour components of a JPEG, from its frame header."""
+function jpeg_size(file::AbstractString)
+	bytes = read(file)
+	length(bytes) > 4 && bytes[1] == 0xff && bytes[2] == 0xd8 || throw(ArgumentError("$file is not a JPEG"))
+	i = 3
+	while i + 9 <= length(bytes)
+		bytes[i] == 0xff || throw(ArgumentError("$file has no frame header"))
+		marker = bytes[i + 1]
+		marker == 0xff && (i += 1; continue)
+		# The frame headers of every kind of JPEG: SOF0 to SOF15 but DHT (C4), JPG (C8) and DAC (CC)
+		if 0xc0 <= marker <= 0xcf && marker ∉ (0xc4, 0xc8, 0xcc)
+			return (width = Int(bytes[i + 7]) << 8 | bytes[i + 8], height = Int(bytes[i + 5]) << 8 | bytes[i + 6], components = Int(bytes[i + 9]))
+		end
+		i += 2 + (Int(bytes[i + 2]) << 8 | bytes[i + 3])
+	end
+	throw(ArgumentError("$file has no frame header"))
+end
+
+"""A text of a PDF, in UTF-16 written in hexadecimal, so that any letter and bracket can be in it."""
+pdf_text(text::AbstractString) = "<FEFF" * join(string(u; base = 16, pad = 4) for u in transcode(UInt16, String(text))) * ">"
+
+"""
+Writes `images`, JPEG files, as the pages of one PDF at `path`, each as it is, without being decoded again, at 200
+pixels an inch, its page labelled with its label, as `1r`, and `title` and `subject` among the PDF's properties.
+"""
+function collate_pdf(path::AbstractString, images::AbstractVector{<:AbstractString}, labels::AbstractVector{<:AbstractString};
+		title::AbstractString, subject::AbstractString)
+	n = length(images)
+	# The objects: 1 the catalogue, 2 the pages, 3 the properties, and three a page: the page, its content and its image
+	offsets = zeros(Int, 3 + 3n)
+	open(path * ".part", "w") do io
+		write(io, "%PDF-1.4\n%", [0xe2, 0xe3, 0xcf, 0xd3], "\n")
+		object(k, body) = (offsets[k] = position(io); write(io, "$k 0 obj\n", body, "\nendobj\n"))
+		labelled = join(("$(k - 1) << /P $(pdf_text(labels[k])) >>" for k in 1:n), " ")
+		object(1, "<< /Type /Catalog /Pages 2 0 R /PageLabels << /Nums [$labelled] >> >>")
+		object(2, "<< /Type /Pages /Kids [$(join(("$(1 + 3k) 0 R" for k in 1:n), " "))] /Count $n >>")
+		object(3, "<< /Title $(pdf_text(title)) /Subject $(pdf_text(subject)) /Producer (HistoricalGeography.jl) >>")
+		for (k, file) in enumerate(images)
+			page = 1 + 3k
+			size = jpeg_size(file)
+			width, height = round(size.width * 72 / 200; digits = 2), round(size.height * 72 / 200; digits = 2)
+			object(page, "<< /Type /Page /Parent 2 0 R /MediaBox [0 0 $width $height] /Resources << /XObject << /Im $(page + 2) 0 R >> >> /Contents $(page + 1) 0 R >>")
+			drawn = "q $width 0 0 $height 0 0 cm /Im Do Q"
+			object(page + 1, "<< /Length $(ncodeunits(drawn)) >>\nstream\n$drawn\nendstream")
+			colours = size.components == 1 ? "/DeviceGray" : size.components == 4 ? "/DeviceCMYK" : "/DeviceRGB"
+			data = read(file)
+			offsets[page + 2] = position(io)
+			write(io, "$(page + 2) 0 obj\n<< /Type /XObject /Subtype /Image /Width $(size.width) /Height $(size.height) /ColorSpace $colours /BitsPerComponent 8 /Filter /DCTDecode /Length $(length(data)) >>\nstream\n")
+			write(io, data, "\nendstream\nendobj\n")
+		end
+		xref = position(io)
+		write(io, "xref\n0 $(n * 3 + 4)\n0000000000 65535 f \n")
+		foreach(offset -> write(io, lpad(offset, 10, '0'), " 00000 n \n"), offsets)
+		write(io, "trailer\n<< /Size $(n * 3 + 4) /Root 1 0 R /Info 3 0 R >>\nstartxref\n$xref\n%%EOF\n")
+	end
+	return mv(path * ".part", path; force = true)
 end
 
 const CAPPELLI = "https://www.adfontes.uzh.ch/media/files/5_Ressourcen/cappelli.zip"

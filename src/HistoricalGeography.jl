@@ -65,7 +65,7 @@ export ign_layers, ign_layer, allmaps, famous_maps, famous_map, save_geotiff
 # Topic maps: the events of a war, the stages of a journey, the places a text names
 export war_events, battlefields, journey, text_places
 # The sources of paleography, papyrology and epigraphy, and what they share
-export ecodices_libraries, ecodices, ecodices_library, ecodices_image, ecodices_pages, ecodices_save, ecodices_saved, ecodices_copies, ecodices_copy_pages, cappelli, cappelli_image, htr_united, catmus_files, catmus, catmus_image,
+export ecodices_libraries, ecodices, ecodices_library, ecodices_image, ecodices_pages, ecodices_save, ecodices_saved, ecodices_pdf, ecodices_copies, ecodices_copy_libraries, cappelli, cappelli_image, htr_united, catmus_files, catmus, catmus_image,
 	clamm, clamm_image, divahisdb, biblia, muharaf, kuzushiji, kuzushiji_image
 export ddbdp, hgv, dclp, apis, apd, bibliographie_papyrologique, tla_demotic, vesuvius, icdar2023, helldate, zenon
 export edh, list_inscriptions, edr, irt, isicily, iip, usep, cdli, oracc, dio, rundata

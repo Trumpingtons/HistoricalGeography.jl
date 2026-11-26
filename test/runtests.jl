@@ -101,41 +101,67 @@ using HistoricalGeography, Test
 		@test HistoricalGeography.manifest_year(dated) == 1777
 		@test ismissing(HistoricalGeography.manifest_year(Dict("metadata" => [Dict("label" => "Title", "value" => "Bologna 1702")])))
 	end
-	@testset "The pages of an e-codices manuscript, from the web or a saved copy" begin
-		# A manifest of two canvases, already in the folder of downloads, so that nothing is downloaded
-		folder, saved = mktempdir(), mktempdir()
+	@testset "An e-codices manuscript saved as its images or one PDF, and read without a connection" begin
+		# The two images of the manifest are files, which a download reads as it reads an address
+		folder, saved, server = mktempdir(), mktempdir(), mktempdir()
+		jpeg = hex2bytes(join([
+			"ffd8ffe000104a46494600010100004800480000ffe1004c4578696600004d4d002a00000008000187690004000000010000001a000000",
+			"000003a00100030000000100010000a00200040000000100000002a0030004000000010000000300000000ffed003850686f746f73686f",
+			"7020332e30003842494d04040000000000003842494d0425000000000010d41d8cd98f00b204e9800998ecf8427effc000110800030002",
+			"03012200021101031101ffc4001f0000010501010101010100000000000000000102030405060708090a0bffc400b51000020103030204",
+			"03050504040000017d01020300041105122131410613516107227114328191a1082342b1c11552d1f02433627282090a161718191a2526",
+			"2728292a3435363738393a434445464748494a535455565758595a636465666768696a737475767778797a838485868788898a92939495",
+			"969798999aa2a3a4a5a6a7a8a9aab2b3b4b5b6b7b8b9bac2c3c4c5c6c7c8c9cad2d3d4d5d6d7d8d9dae1e2e3e4e5e6e7e8e9eaf1f2f3f4",
+			"f5f6f7f8f9faffc4001f0100030101010101010101010000000000000102030405060708090a0bffc400b5110002010204040304070504",
+			"0400010277000102031104052131061241510761711322328108144291a1b1c109233352f0156272d10a162434e125f11718191a262728",
+			"292a35363738393a434445464748494a535455565758595a636465666768696a737475767778797a82838485868788898a929394959697",
+			"98999aa2a3a4a5a6a7a8a9aab2b3b4b5b6b7b8b9bac2c3c4c5c6c7c8c9cad2d3d4d5d6d7d8d9dae2e3e4e5e6e7e8e9eaf2f3f4f5f6f7f8",
+			"f9faffdb0043000606060606060a06060a0e0a0a0a0e120e0e0e0e12171212121212171c1717171717171c1c1c1c1c1c1c1c2222222222",
+			"2227272727272c2c2c2c2c2c2c2c2c2cffdb0043010707070b0a0b130a0a132e1f1a1f2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e",
+			"2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2effdd00040001ffda000c03010002110311003f00f3ea28a2bc",
+			"03ea0fffd9"]))  # a JPEG 2 pixels wide and 3 high
+		for name in ("1r", "fc")
+			mkpath(joinpath(server, name, "full", "2000,", "0"))
+			write(joinpath(server, name, "full", "2000,", "0", "default.jpg"), jpeg)
+		end
 		manifest = "https://e-codices.ch/metadata/iiif/kba-Test0001/manifest.json"
-		mkpath(joinpath(folder, "e-codices"))
-		cached = joinpath(folder, "e-codices", "kba-Test0001-manifest.json")
-		write(cached, """{"sequences": [{"canvases": [
-			{"label": "1r", "images": [{"resource": {"@id": "https://e-codices.ch/loris/kba/1r.jp2/full/full/0/default.jpg"}}]},
-			{"label": "Front cover/back", "images": [{"resource": {"@id": "https://e-codices.ch/loris/kba/fc.jp2/full/full/0/default.jpg"}}]}]}]}""")
-		web = (images = ["https://e-codices.ch/loris/kba/1r.jp2/full/2000,/0/default.jpg",
-			"https://e-codices.ch/loris/kba/fc.jp2/full/2000,/0/default.jpg"], labels = ["1r", "Front cover/back"])
-		@test ecodices_pages(manifest; folder) == web
-		# A copy without its record is unfinished, and the pages still come from the web
+		cached = joinpath(mkpath(joinpath(folder, "e-codices")), "kba-Test0001-manifest.json")
+		write(cached, """{"label": "MsTest 1", "related": "https://e-codices.ch/en/list/one/kba/Test0001", "metadata": [
+			{"label": "Location", "value": "Aarau"}, {"label": "Collection Name", "value": "Aargauer Kantonsbibliothek"},
+			{"label": "Shelfmark", "value": "MsTest 1"}, {"label": "Title (English)", "value": "A Test Psalter"},
+			{"label": "Date of Origin (English)", "value": "around 1300"}], "sequences": [{"canvases": [
+			{"label": "1r", "images": [{"resource": {"@id": "file://$server/1r/full/full/0/default.jpg"}}]},
+			{"label": "Front cover/back", "images": [{"resource": {"@id": "file://$server/fc/full/full/0/default.jpg"}}]}]}]}""")
+		web = (images = ["file://$server/1r/full/2000,/0/default.jpg", "file://$server/fc/full/2000,/0/default.jpg"], labels = ["1r", "Front cover/back"])
 		copy = joinpath(saved, "e-codices", "kba-Test0001")
-		mkpath(copy)
-		@test (ecodices_saved(manifest, saved), ecodices_pages(manifest; folder, saved)) == (nothing, web)
-		# A whole copy, with its manifest and record as ecodices_save writes them, is read without the downloads
-		cp(cached, joinpath(copy, "manifest.json"))
+		@test (ecodices_pages(manifest; folder, saved), ecodices_saved(manifest, saved)) == (web, nothing)
+		# Saved as its images, which are then read from the copy
+		@test ecodices_save(manifest; folder, saved) == (folder = copy, saved = 2, missed = Int[])
+		@test (readdir(copy), ecodices_pages(manifest; folder, saved), ecodices_pdf(manifest, saved)) ==
+			(["0001 1r.jpg", "0002 Front cover_back.jpg", "manifest.json", "record.toml"],
+			(images = [joinpath(copy, "0001 1r.jpg"), joinpath(copy, "0002 Front cover_back.jpg")], labels = web.labels), nothing)
+		# Collated from the images saved, with the image server gone: one PDF, whose objects are where its table says,
+		# with both images as they are and the folios as the labels of its pages
+		@test HistoricalGeography.jpeg_size(joinpath(server, "1r", "full", "2000,", "0", "default.jpg")) == (width = 2, height = 3, components = 3)
+		rm(server; recursive = true)
+		@test ecodices_save(manifest; folder, saved, collated = true) == (folder = copy, saved = 2, missed = Int[])
+		pdf = joinpath(copy, "kba-Test0001.pdf")
+		bytes, text = read(pdf), read(pdf, String)
+		offsets = [parse(Int, m[1]) for m in eachmatch(r"(\d{10}) 00000 n ", text)]
+		@test (readdir(copy), ecodices_pdf(manifest, saved), length(offsets),
+			all(String(bytes[o + 1:o + ncodeunits("$k 0 obj")]) == "$k 0 obj" for (k, o) in enumerate(offsets)),
+			count(r"/Type /Page ", text), count(String(Vector{UInt8}(jpeg)), text),
+			occursin(HistoricalGeography.pdf_text("Front cover/back"), text)) ==
+			(["kba-Test0001.pdf", "manifest.json", "record.toml"], pdf, 9, true, 2, 2, true)
+		# Listed and read from the copy, with the downloaded manifest gone
 		rm(cached)
-		write(joinpath(copy, "record.toml"), """
-			manuscript = "MsTest 1"
-			title = "A Test Psalter"
-			date = "around 1300"
-			citation = "Aarau, Aargauer Kantonsbibliothek, MsTest 1: A Test Psalter (https://e-codices.ch/en/list/one/kba/Test0001)."
-			page = "https://e-codices.ch/en/list/one/kba/Test0001"
-			images = 2
-			""")
-		local_pages = (images = [joinpath(copy, "0001 1r.jpg"), joinpath(copy, "0002 Front cover_back.jpg")], labels = web.labels)
-		@test (ecodices_saved(manifest, saved), ecodices_pages(manifest; folder, saved), ecodices_copy_pages(saved, "kba-Test0001")) ==
-			(copy, local_pages, local_pages)
-		@test ecodices_copies(saved) == [(manuscript = "MsTest 1", title = "A Test Psalter", date = "around 1300",
-			library = "Aarau, Aargauer Kantonsbibliothek", images = 2,
+		@test ecodices_copies(saved) == [(library = "kba", name = "Aarau, Aargauer Kantonsbibliothek", manuscript = "MsTest 1",
+			title = "A Test Psalter", date = "around 1300", summary = "", century = "", origin = "", language = "", material = "",
+			pages = "", dimensions = "", images = 2, doi = "",
 			citation = "Aarau, Aargauer Kantonsbibliothek, MsTest 1: A Test Psalter (https://e-codices.ch/en/list/one/kba/Test0001).",
-			folder = "kba-Test0001", page = "https://e-codices.ch/en/list/one/kba/Test0001")]
-		@test isempty(ecodices_copies(mktempdir()))
+			page = "https://e-codices.ch/en/list/one/kba/Test0001", manifest = manifest, saved = true, collated = true)]
+		@test (ecodices_copy_libraries(saved), ecodices_copies(mktempdir()), ecodices_copy_libraries(mktempdir())) ==
+			([(library = "kba", name = "Aarau, Aargauer Kantonsbibliothek", manuscripts = 1)], [], [])
 		# Ctrl+C during a download comes inside a TaskFailedException, and stops the save as Ctrl+C elsewhere does
 		failed(e) = try wait(schedule(Task(() -> throw(e)))) catch caught caught end
 		@test HistoricalGeography.interrupted.([InterruptException(), failed(InterruptException()), failed(ErrorException("x")), ErrorException("x")]) ==
