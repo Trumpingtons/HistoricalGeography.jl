@@ -32,8 +32,9 @@ end
 The manuscripts of a library of e-codices (see [`ecodices_libraries`](@ref)), from their IIIF manifests, each
 downloaded once into `folder`, a second apart: a row per manuscript with its shelfmark in the library (`manuscript`,
 as MsMurF 3), title, date, summary, century, place of origin, language, material, number of pages, dimensions,
-number of images, DOI, its `page` on e-codices, where it is read and described, and the address of its IIIF
-`manifest`. The rows are in the order of the shelfmarks, their numbers counted as numbers: MsMurF 2 before MsMurF 10.
+number of images, DOI, its `citation`, how to quote it as e-codices writes it (Aarau, Aargauer Kantonsbibliothek, MsBN 47: Henry
+Suso, Büchlein der ewigen Weisheit, and the address of its page), its `page` on e-codices, where it is read and
+described, and the address of its IIIF `manifest`, from which [`ecodices_pages`](@ref) reads its images. The rows are in the order of the shelfmarks, their numbers counted as numbers: MsMurF 2 before MsMurF 10.
 A field that comes more than once, as the century of a manuscript of two centuries, has its values joined by `; `.
 [`linked`](@ref) shows the shelfmarks as links to the pages.
 """
@@ -41,13 +42,16 @@ function ecodices(library::AbstractString; folder::AbstractString)
 	rows = map(ecodices_file(ECODICES * "collection/$(library).json", folder)["manifests"]) do entry
 		m = ecodices_file(entry["@id"], folder)
 		shelfmark = manifest_field(m, "Shelfmark")
-		(manuscript = isempty(shelfmark) ? m["label"] : shelfmark, title = manifest_field(m, "Title (English)"),
+		title, page = manifest_field(m, "Title (English)"), string(get(m, "related", ""))
+		cited = join(filter(!isempty, [manifest_field(m, "Location"), manifest_field(m, "Collection Name"), shelfmark]), ", ")
+		(manuscript = isempty(shelfmark) ? m["label"] : shelfmark, title = title,
 			date = manifest_field(m, "Date of Origin (English)"), summary = manifest_field(m, "Summary (English)"),
 			century = manifest_field(m, "Century"), origin = manifest_field(m, "Place of Origin (English)"),
 			language = manifest_field(m, "Text Language"), material = manifest_field(m, "Material"),
 			pages = manifest_field(m, "Number of Pages"), dimensions = manifest_field(m, "Dimensions"),
 			images = length(m["sequences"][1]["canvases"]), doi = manifest_field(m, "DOI"),
-			page = string(get(m, "related", "")), manifest = entry["@id"])
+			citation = cited * (isempty(title) ? "" : ": " * title) * (isempty(page) ? "" : " ($(page))") * ".",
+			page = page, manifest = entry["@id"])
 	end
 	return sort!(rows; by = r -> natural_order(r.manuscript))
 end
@@ -78,6 +82,19 @@ function ecodices_image(manifest::AbstractString, n::Integer; folder::AbstractSt
 	path = joinpath(folder, "e-codices", name)
 	isfile(path) || sleep(1)
 	return (file = kept(url, path), label = string(canvas["label"]))
+end
+
+"""
+	ecodices_pages(manifest; folder)
+
+The images of the manuscript of a IIIF manifest of e-codices (the column `manifest` of [`ecodices`](@ref)), each
+leaf, cover and paste-down in the order of the manuscript, at the size it was photographed: their addresses on the
+IIIF image server (`images`) and their labels (`labels`), as `V1r`, `1v` or `Front cover`, which
+`Pollis.browse(images; labels)` goes through page by page. Only the manifest is downloaded, once, into `folder`.
+"""
+function ecodices_pages(manifest::AbstractString; folder::AbstractString)
+	canvases = ecodices_file(manifest, folder)["sequences"][1]["canvases"]
+	return (images = [string(c["images"][1]["resource"]["@id"]) for c in canvases], labels = [string(c["label"]) for c in canvases])
 end
 
 const CAPPELLI = "https://www.adfontes.uzh.ch/media/files/5_Ressourcen/cappelli.zip"
