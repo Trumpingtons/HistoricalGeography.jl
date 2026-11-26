@@ -31,8 +31,8 @@ end
 
 The manuscripts of a library of e-codices (see [`ecodices_libraries`](@ref)), from their IIIF manifests, each
 downloaded once into `folder`, a second apart: a row per manuscript with its shelfmark in the library (`manuscript`,
-as MsMurF 3), title, date, century, place of origin, language, material, number of pages, dimensions, number of
-images, summary, DOI, its `page` on e-codices, where it is read and described, and the address of its IIIF
+as MsMurF 3), title, date, summary, century, place of origin, language, material, number of pages, dimensions,
+number of images, DOI, its `page` on e-codices, where it is read and described, and the address of its IIIF
 `manifest`. The rows are in the order of the shelfmarks, their numbers counted as numbers: MsMurF 2 before MsMurF 10.
 A field that comes more than once, as the century of a manuscript of two centuries, has its values joined by `; `.
 [`linked`](@ref) shows the shelfmarks as links to the pages.
@@ -42,11 +42,11 @@ function ecodices(library::AbstractString; folder::AbstractString)
 		m = ecodices_file(entry["@id"], folder)
 		shelfmark = manifest_field(m, "Shelfmark")
 		(manuscript = isempty(shelfmark) ? m["label"] : shelfmark, title = manifest_field(m, "Title (English)"),
-			date = manifest_field(m, "Date of Origin (English)"), century = manifest_field(m, "Century"),
-			origin = manifest_field(m, "Place of Origin (English)"), language = manifest_field(m, "Text Language"),
-			material = manifest_field(m, "Material"), pages = manifest_field(m, "Number of Pages"),
-			dimensions = manifest_field(m, "Dimensions"), images = length(m["sequences"][1]["canvases"]),
-			summary = manifest_field(m, "Summary (English)"), doi = manifest_field(m, "DOI"),
+			date = manifest_field(m, "Date of Origin (English)"), summary = manifest_field(m, "Summary (English)"),
+			century = manifest_field(m, "Century"), origin = manifest_field(m, "Place of Origin (English)"),
+			language = manifest_field(m, "Text Language"), material = manifest_field(m, "Material"),
+			pages = manifest_field(m, "Number of Pages"), dimensions = manifest_field(m, "Dimensions"),
+			images = length(m["sequences"][1]["canvases"]), doi = manifest_field(m, "DOI"),
 			page = string(get(m, "related", "")), manifest = entry["@id"])
 	end
 	return sort!(rows; by = r -> natural_order(r.manuscript))
