@@ -1,18 +1,19 @@
 # Places of The Decameron, in the order of the book, each with its passage of John Payne's translation, The Decameron of
-# Giovanni Boccaccio (1886), in the text of Project Gutenberg kept at the Internet Archive. Each mention has its level:
-# the frame story, in which ten young people leave Florence in the plague of 1348, or the stories they tell. The two
-# villas of the frame are those that tradition identifies with the palaces the text describes without naming them: the
-# Villa di Poggio Gherardo, two miles from the city, and the Villa Palmieri. Two places have no Wikidata item, and their
-# points have a source: Camerata (Days 7 and 9), from a photograph of Via di Camerata at Wikimedia Commons, and the
-# Ladies' Valley of Days 6 and 7, a tentative point near Poggio Gherardo, whose note says that it is not an
-# identification. Cathay (Day 10, Story 3), whose item has no coordinates, has the point of China's item. Of the far
-# countries of Frate Cipolla's journey (Day 6, Story 10), those that are streets of Florence are there; Bengodi (Day 8,
-# Story 3) and Cipolla's imaginary lands are not on the map. Malpertugio, the street of Naples of Day 2, Story 5, has no
-# item, and its passage is under Naples. The Alba of Day 2, Story 9 is on the map as Albisola Superiore, with which it
-# is usually identified, and its note says that the identification has been questioned. Payne's text opens Day 10, Story
-# 8 with Fiammetta, who told Story 6; the opening of Story 9 and Boccaccio's Italian give it to Filomena. Two stories
-# have a painting, with its image at Wikimedia Commons. Every other place has its Wikidata item, from which its
-# coordinates come.
+# Giovanni Boccaccio (1886), in the text of Project Gutenberg kept at the Internet Archive. In the frame story, ten
+# young people leave Florence in the plague of 1348 and tell a story each for ten days. Each mention has its day, with
+# the day's theme in Payne's words, shortened from the heading of the day, and its teller, or the frame story for the
+# introductions and conclusions of the days. The two villas of the frame are those that tradition identifies with the
+# palaces the text describes without naming them: the Villa di Poggio Gherardo, two miles from the city, and the Villa
+# Palmieri. Two places have no Wikidata item, and their points have a source: Camerata (Days 7 and 9), from a photograph
+# of Via di Camerata at Wikimedia Commons, and the Ladies' Valley of Days 6 and 7, a tentative point near Poggio
+# Gherardo, whose note says that it is not an identification. Cathay (Day 10, Story 3), whose item has no coordinates,
+# has the point of China's item. Of the far countries of Frate Cipolla's journey (Day 6, Story 10), those that are
+# streets of Florence are there; Bengodi (Day 8, Story 3) and Cipolla's imaginary lands are not on the map. Malpertugio,
+# the street of Naples of Day 2, Story 5, has no item, and its passage is under Naples. The Alba of Day 2, Story 9 is on
+# the map as Albisola Superiore, with which it is usually identified, and its note says that the identification has been
+# questioned. Payne's text opens Day 10, Story 8 with Fiammetta, who told Story 6; the opening of Story 9 and
+# Boccaccio's Italian give it to Filomena. Two stories have a painting, with its image at Wikimedia Commons. Every other
+# place has its Wikidata item, from which its coordinates come.
 #
 # The text: https://archive.org/details/thedecameronofgi23700gut
 
@@ -654,1268 +655,1478 @@ point = [7.490556, 44.645278]
 [[mentions]]
 place = "florence"
 cite = "Day 1, Introduction"
-level = "Frame story"
+day = "Day 1: that which is most agreeable unto each"
+teller = "The frame story"
 passage = "when into the notable city of Florence, fair over every other of Italy, there came the death-dealing pestilence, which, through the operation of the heavenly bodies or of our own iniquitous dealings"
 
 [[mentions]]
 place = "santamarianovella"
 cite = "Day 1, Introduction"
-level = "Frame story"
+day = "Day 1: that which is most agreeable unto each"
+teller = "The frame story"
 passage = "well nigh void of inhabitants,--it chanced (as I afterward heard from a person worthy of credit) that there foregathered in the venerable church of Santa Maria Novella"
 
 [[mentions]]
 place = "poggiogherardo"
 cite = "Day 1, Introduction"
-level = "Frame story"
+day = "Day 1: that which is most agreeable unto each"
+teller = "The frame story"
 passage = "nor had they gone more than two short miles from the city, when they came to the place fore-appointed of them, which was situate on a little hill, somewhat withdrawn on every side from the high way and full of various shrubs and plants, all green of leafage and pleasant to behold."
 
 [[mentions]]
 place = "paris"
 cite = "Day 1, Story 1, told by Pamfilo"
-level = "Stories"
+day = "Day 1: that which is most agreeable unto each"
+teller = "Pamfilo"
 passage = "there came to his memory a certain Master Ciapperello da Prato, who came often to his house in Paris"
 
 [[mentions]]
 place = "burgundy"
 cite = "Day 1, Story 1, told by Pamfilo"
-level = "Stories"
+day = "Day 1: that which is most agreeable unto each"
+teller = "Pamfilo"
 passage = "betook himself into Burgundy, where well nigh none knew him, and there, contrary to his nature, began courteously and blandly to seek to get in his payments and do that wherefor he was come thither"
 
 [[mentions]]
 place = "paris"
 cite = "Day 1, Story 2, told by Neifile"
-level = "Stories"
+day = "Day 1: that which is most agreeable unto each"
+teller = "Neifile"
 passage = "As I have heard tell, gracious ladies, there was once in Paris a great merchant and a very loyal and upright man, whose name was Jehannot de Chevigné and who was of great traffic in silks and stuffs."
 
 [[mentions]]
 place = "rome"
 cite = "Day 1, Story 2, told by Neifile"
-level = "Stories"
+day = "Day 1: that which is most agreeable unto each"
+teller = "Neifile"
 passage = "insomuch, indeed, that I mean, in the first place, to go to Rome and there see him who, thou sayest, is God's Vicar upon earth and consider his manners and fashions and likewise those of his chief brethren."
 
 [[mentions]]
 place = "babylon"
 cite = "Day 1, Story 3, told by Filomena"
-level = "Stories"
+day = "Day 1: that which is most agreeable unto each"
+teller = "Filomena"
 passage = "Saladin,--whose valour was such that not only from a man of little account it made him Soldan of Babylon"
 
 [[mentions]]
 place = "alexandria"
 cite = "Day 1, Story 3, told by Filomena"
-level = "Stories"
+day = "Day 1: that which is most agreeable unto each"
+teller = "Filomena"
 passage = "called to mind a rich Jew, by name Melchizedek, who lent at usance in Alexandria"
 
 [[mentions]]
 place = "lunigiana"
 cite = "Day 1, Story 4, told by Dioneo"
-level = "Stories"
+day = "Day 1: that which is most agreeable unto each"
+teller = "Dioneo"
 passage = "There was in Lunigiana, a country not very far hence, a monastery whilere more abounding in sanctity and monks than it is nowadays, and therein, among others, was a young monk, whose vigour and lustiness neither fasts nor vigils availed to mortify."
 
 [[mentions]]
 place = "monferrato"
 cite = "Day 1, Story 5, told by Fiammetta"
-level = "Stories"
+day = "Day 1: that which is most agreeable unto each"
+teller = "Fiammetta"
 passage = "The Marquis of Monferrato, a man of high worth and gonfalonier of the church, had passed beyond seas on the occasion of a general crusade undertaken by the Christians"
 
 [[mentions]]
 place = "genoa"
 cite = "Day 1, Story 5, told by Fiammetta"
-level = "Stories"
+day = "Day 1: that which is most agreeable unto each"
+teller = "Fiammetta"
 passage = "no otherwhere than at Genoa, in order that, journeying thither by land, he might have an honourable occasion of visiting the marchioness"
 
 [[mentions]]
 place = "santacroce"
 cite = "Day 1, Story 6, told by Emilia"
-level = "Stories"
+day = "Day 1: that which is most agreeable unto each"
+teller = "Emilia"
 passage = "Moreover, whenas he had gotten the money, he detained him about himself some days, enjoining him, by way of penance, hear a mass every morning at Santa Croce and present himself before him at dinner-time, and after that he might do what most pleased him the rest of the day"
 
 [[mentions]]
 place = "verona"
 cite = "Day 1, Story 7, told by Filostrato"
-level = "Stories"
+day = "Day 1: that which is most agreeable unto each"
+teller = "Filostrato"
 passage = "Being minded to make a notable and wonder-goodly entertainment in Verona, whereunto many folk should have come from divers parts and especially men of art of all kinds"
 
 [[mentions]]
 place = "paris"
 cite = "Day 1, Story 7, told by Filostrato"
-level = "Stories"
+day = "Day 1: that which is most agreeable unto each"
+teller = "Filostrato"
 passage = "finding himself once at Paris in poor case, as indeed he abode most times, for that worth is little prized of those who can most"
 
 [[mentions]]
 place = "genoa"
 cite = "Day 1, Story 8, told by Lauretta"
-level = "Stories"
+day = "Day 1: that which is most agreeable unto each"
+teller = "Lauretta"
 passage = "There was, then, in Genoa, a good while agone, a gentleman called Messer Ermino de' Grimaldi, who (according to general belief) far overpassed in wealth of lands and monies the riches of whatsoever other richest citizen was then known in Italy"
 
 [[mentions]]
 place = "cyprus"
 cite = "Day 1, Story 9, told by Elisa"
-level = "Stories"
+day = "Day 1: that which is most agreeable unto each"
+teller = "Elisa"
 passage = "I say, then, that in the days of the first King of Cyprus, after the conquest of the Holy Land by Godefroi de Bouillon, it chanced that a gentlewoman of Gascony went on a pilgrimage to the Holy Sepulchre and returning thence, came to Cyprus, where she was shamefully abused of certain lewd fellows"
 
 [[mentions]]
 place = "gascony"
 cite = "Day 1, Story 9, told by Elisa"
-level = "Stories"
+day = "Day 1: that which is most agreeable unto each"
+teller = "Elisa"
 passage = "I say, then, that in the days of the first King of Cyprus, after the conquest of the Holy Land by Godefroi de Bouillon, it chanced that a gentlewoman of Gascony went on a pilgrimage to the Holy Sepulchre and returning thence, came to Cyprus, where she was shamefully abused of certain lewd fellows"
 
 [[mentions]]
 place = "bologna"
 cite = "Day 1, Story 10, told by Pampinea"
-level = "Stories"
+day = "Day 1: that which is most agreeable unto each"
+teller = "Pampinea"
 passage = "It is not many years since there lived (and belike yet liveth) at Bologna a very great and famous physician, known by manifest renown to well nigh all the world."
 
 [[mentions]]
 place = "treviso"
 cite = "Day 2, Story 1, told by Neifile"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Neifile"
 passage = "No great while agone there was at Treviso a German called Arrigo, who, being a poor man, served whoso required him to carry burdens for hire; and withal he was held of all a man of very holy and good life."
 
 [[mentions]]
 place = "bologna"
 cite = "Day 2, Story 2, told by Filostrato"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Filostrato"
 passage = "there came a merchant called Rinaldo d'Asti to Bologna on his occasions, which having despatched and returning homeward"
 
 [[mentions]]
 place = "castelguglielmo"
 cite = "Day 2, Story 2, told by Filostrato"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Filostrato"
 passage = "to a place a little beyond Castel Guglielmo, where, at the fording of a river, the three rogues, seeing the hour advanced and the spot solitary and close shut in"
 
 [[mentions]]
 place = "florence"
 cite = "Day 2, Story 3, told by Pampinea"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Pampinea"
 passage = "They did as he counselled them and departing Florence, without leavetaking or ceremony, stayed not till they came to England, where, taking a little house in London and spending very little, they addressed themselves with the utmost diligence to lend money at usance."
 
 [[mentions]]
 place = "london"
 cite = "Day 2, Story 3, told by Pampinea"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Pampinea"
 passage = "They did as he counselled them and departing Florence, without leavetaking or ceremony, stayed not till they came to England, where, taking a little house in London and spending very little, they addressed themselves with the utmost diligence to lend money at usance."
 
 [[mentions]]
 place = "bruges"
 cite = "Day 2, Story 3, told by Pampinea"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Pampinea"
 passage = "Accordingly, he set out all alone and as chance would have it, coming out of Bruges, he saw an abbot of white friars likewise issuing thence, accompanied by many monks and with a numerous household and a great baggage-train in his van."
 
 [[mentions]]
 place = "rome"
 cite = "Day 2, Story 3, told by Pampinea"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Pampinea"
 passage = "we go with him to Rome to obtain of the Holy Father that he dispense him of his defect of overmuch youthfulness and confirm him in the dignity aforesaid"
 
 [[mentions]]
 place = "cornwall"
 cite = "Day 2, Story 3, told by Pampinea"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Pampinea"
 passage = "Thence the two knights passed into England and so wrought with the King that the latter restored to his daughter his good graces and with exceeding great rejoicing received her and his son-in-law, whom he a little after made a knight with the utmost honour and gave him the Earldom of Cornwall."
 
 [[mentions]]
 place = "ravello"
 cite = "Day 2, Story 4, told by Lauretta"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Lauretta"
 passage = "Among the said cities is one called Ravello and therein, albeit nowadays there are rich men there, there was aforetime one, Landolfo Ruffolo by name, who was exceeding rich and who, his wealth sufficing him not, came nigh, in seeking to double it, to lose it all and himself withal."
 
 [[mentions]]
 place = "cyprus"
 cite = "Day 2, Story 4, told by Lauretta"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Lauretta"
 passage = "This man, then, having, after the usance of merchants, laid his plans, bought a great ship and freighting it all of his own monies with divers merchandise, repaired therewith to Cyprus."
 
 [[mentions]]
 place = "cephalonia"
 cite = "Day 2, Story 4, told by Lauretta"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Lauretta"
 passage = "Moreover, from stress of wind it befell that that wherein was the wretched and unfortunate Landolfo smote with great violence upon a shoal over against the island of Cephalonia and parting amidships, broke all in sunder no otherwise than a glass dashed against a wall."
 
 [[mentions]]
 place = "corfu"
 cite = "Day 2, Story 4, told by Lauretta"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Lauretta"
 passage = "to the coast of the island of Corfu, where a poor woman chanced to be scouring her pots and pans and making them bright with sand and salt water."
 
 [[mentions]]
 place = "trani"
 cite = "Day 2, Story 4, told by Lauretta"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Lauretta"
 passage = "This she willingly did and he, having rendered her the best thanks in his power for the kindness received from her, shouldered his bag and going aboard a bark, passed over to Brindisi and thence made his way, along the coast, to Trani."
 
 [[mentions]]
 place = "perugia"
 cite = "Day 2, Story 5, told by Fiammetta"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Fiammetta"
 passage = "There was once in Perugia, as I have heard tell aforetime, a young man, a horse-courser, by name Andreuccio di Pietro, who, hearing that horses were good cheap at Naples, put five hundred gold florins in his purse and betook himself thither with other merchants"
 
 [[mentions]]
 place = "naples"
 cite = "Day 2, Story 5, told by Fiammetta"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Fiammetta"
 passage = "hearing that horses were good cheap at Naples, put five hundred gold florins in his purse and betook himself thither with other merchants"
 
 [[mentions]]
 place = "naples"
 cite = "Day 2, Story 5, told by Fiammetta"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Fiammetta"
 passage = "Thereupon the girl carried him to the house of her mistress, who dwelt in a street called Malpertugio, the very name whereof denoteth how reputable a quarter it is."
 
 [[mentions]]
 place = "palermo"
 cite = "Day 2, Story 5, told by Fiammetta"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Fiammetta"
 passage = "Pietro, my father and thine, as I doubt not thou knowest, abode long in Palermo and there for his good humour and pleasant composition was and yet is greatly beloved of those who knew him"
 
 [[mentions]]
 place = "naplescathedral"
 cite = "Day 2, Story 5, told by Fiammetta"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Fiammetta"
 passage = "Him they were minded to despoil and this their intent they discovered to Andreuccio, who, more covetous than well-advised, set out with them for the cathedral."
 
 [[mentions]]
 place = "naples"
 cite = "Day 2, Story 6, told by Emilia"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Emilia"
 passage = "You must know, dearest ladies, that, after the death of the Emperor Frederick the Second, Manfred was crowned King of Sicily, in very high estate with whom was a gentleman of Naples called Arrighetto Capece, who had to wife a fair and noble lady, also of Naples, by name Madam Beritola Caracciola."
 
 [[mentions]]
 place = "lipari"
 cite = "Day 2, Story 6, told by Emilia"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Emilia"
 passage = "in a little boat and fled to Lipari, where she gave birth to another male child, whom she named Scacciato, and getting her a nurse"
 
 [[mentions]]
 place = "ponza"
 cite = "Day 2, Story 6, told by Emilia"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Emilia"
 passage = "But it befell otherwise than as she purposed; for that the ship, which should have gone to Naples, was carried by stress of wind to the island of Ponza, where they entered a little bight of the sea and there awaited an occasion for continuing their voyage."
 
 [[mentions]]
 place = "lunigiana"
 cite = "Day 2, Story 6, told by Emilia"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Emilia"
 passage = "she persuaded her to go with her into Lunigiana, together with the two kids and their dam, which latter were meantime returned and had greeted her with the utmost fondness"
 
 [[mentions]]
 place = "genoa"
 cite = "Day 2, Story 6, told by Emilia"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Emilia"
 passage = "betook themselves with all the other folk to Genoa, where, the booty coming to be shared among the owners of the galley"
 
 [[mentions]]
 place = "palermo"
 cite = "Day 2, Story 6, told by Emilia"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Emilia"
 passage = "then, setting sail with a fair wind, they came speedily to Sicily, where all alike, both sons and daughters-in-law, were received by Arrighetto in Palermo with such rejoicing as might never be told"
 
 [[mentions]]
 place = "babylon"
 cite = "Day 2, Story 7, told by Pamfilo"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Pamfilo"
 passage = "It is now a pretty while since there was a certain Soldan of Babylon, by name Berminedab, to whom in his day many things happened in accordance with his pleasure."
 
 [[mentions]]
 place = "algarve"
 cite = "Day 2, Story 7, told by Pamfilo"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Pamfilo"
 passage = "in a great defeat he had inflicted upon a vast multitude of Arabs who were come upon him, been wonder-well seconded by the King of Algarve, had, at his request, given her to him to wife, of especial favour"
 
 [[mentions]]
 place = "majorca"
 cite = "Day 2, Story 7, told by Pamfilo"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Pamfilo"
 passage = "being then not far off Majorca, but knowing not where they were neither availing to apprehend it either by nautical reckoning or by sight"
 
 [[mentions]]
 place = "chiarenza"
 cite = "Day 2, Story 7, told by Pamfilo"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Pamfilo"
 passage = "There was then, by chance, in the harbour of the city a vessel laden with merchandise and bound for Chiarenza in Roumelia; whereof two young Genoese were masters, who had already hoisted sail to depart as soon as the wind should be fair."
 
 [[mentions]]
 place = "athens"
 cite = "Day 2, Story 7, told by Pamfilo"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Pamfilo"
 passage = "The report of her loveliness reaching the Duke of Athens, who was young and handsome and doughty of his person and a friend and kinsman of the prince"
 
 [[mentions]]
 place = "chios"
 cite = "Day 2, Story 7, told by Pamfilo"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Pamfilo"
 passage = "Thence, going aboard the bark again, they made their way, in a few days, to Chios, where it pleased Constantine to take up his sojourn, as in a place of safety, for fear of his father's resentment and lest the stolen lady should be taken from him."
 
 [[mentions]]
 place = "smyrna"
 cite = "Day 2, Story 7, told by Pamfilo"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Pamfilo"
 passage = "came by chance to Smyrna, where hearing how Constantine abode in Chios, without any precaution, leading a wanton life with a mistress of his"
 
 [[mentions]]
 place = "rhodes"
 cite = "Day 2, Story 7, told by Pamfilo"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Pamfilo"
 passage = "they took counsel together not to await him there and laying hands on great part of the things of most price that were there pertaining to Osbech, gat them privily to Rhodes, where they had not long abidden ere Antiochus sickened unto death."
 
 [[mentions]]
 place = "paphos"
 cite = "Day 2, Story 7, told by Pamfilo"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Pamfilo"
 passage = "they fell to dallying with each other and before they reached Baffa, whence the Cypriot came, they had clapped up an alliance together."
 
 [[mentions]]
 place = "famagusta"
 cite = "Day 2, Story 7, told by Pamfilo"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Pamfilo"
 passage = "wherefore, conceiving a sudden hope of yet by his aid regaining her royal estate, and knowing her merchant to be abroad, she let call him to her as quickliest she might and asked him, blushing, an he were not, as she supposed, Antigonus of Famagosta."
 
 [[mentions]]
 place = "calais"
 cite = "Day 2, Story 8, told by Elisa"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Elisa"
 passage = "without taking other counsel, he set his children on horseback and mounting himself to horse, made off with them, as most he might, towards Calais."
 
 [[mentions]]
 place = "london"
 cite = "Day 2, Story 8, told by Elisa"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Elisa"
 passage = "passed hastily over into England and betook himself in mean apparel to London, wherein ere he entered, with many words he lessoned his two little children"
 
 [[mentions]]
 place = "wales"
 cite = "Day 2, Story 8, told by Elisa"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Elisa"
 passage = "Having thus disposed of his daughter, well knowing to whom, he resolved to abide there no longer and accordingly, begging his way across the island, came, not without sore fatigue, as one who was unused to go afoot, into Wales."
 
 [[mentions]]
 place = "ireland"
 cite = "Day 2, Story 8, told by Elisa"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Elisa"
 passage = "he determined to abide no longer in England and passing over into Ireland, made his way, as best he might, to Stamford, where he took service with a knight belonging to an earl of the country"
 
 [[mentions]]
 place = "paris"
 cite = "Day 2, Story 8, told by Elisa"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Elisa"
 passage = "Eighteen years were now passed since the count's flight from Paris, when, as he abode in Ireland, having suffered many things in a very sorry way of life, there took him a desire to learn, as he might, what was come of his children."
 
 [[mentions]]
 place = "paris"
 cite = "Day 2, Story 9, told by Filomena"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Filomena"
 passage = "There were once at Paris in an inn certain very considerable Italian merchants, who were come thither, according to their usance"
 
 [[mentions]]
 place = "genoa"
 cite = "Day 2, Story 9, told by Filomena"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Filomena"
 passage = "who hight Bernabo Lomellini of Genoa, maintained the contrary, avouching that he, by special grace of God, had a lady to wife who was belike the most accomplished woman of all Italy in all those qualities which a lady"
 
 [[mentions]]
 place = "albisola"
 cite = "Day 2, Story 9, told by Filomena"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Filomena"
 passage = "she found a Catalan gentleman, by name Senor Encararch, who had landed at Alba from a ship he had in the offing, to refresh himself at a spring there."
 note = "The text's Alba, usually identified with Albisola; the precise identification has been questioned in later philological research."
 
 [[mentions]]
 place = "alexandria"
 cite = "Day 2, Story 9, told by Filomena"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Filomena"
 passage = "No great while after it befell that the Catalan made a voyage to Alexandria with a lading of his and carrying thither certain peregrine falcons for the Soldan, presented them to him."
 
 [[mentions]]
 place = "acre"
 cite = "Day 2, Story 9, told by Filomena"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Filomena"
 passage = "which was wont at a certain season of the year to be held in Acre, a town under the seignory of the Soldan, and to which"
 
 [[mentions]]
 place = "pisa"
 cite = "Day 2, Story 10, told by Dioneo"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Dioneo"
 passage = "in Pisa a judge, by name Messer Ricciardo di Chinzica, more gifted with wit than with bodily strength, who, thinking belike to satisfy a wife by the same means which served him to despatch his studies and being very rich"
 
 [[mentions]]
 place = "montenero"
 cite = "Day 2, Story 10, told by Dioneo"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Dioneo"
 passage = "Things standing thus, it chanced that, the heat being great and Messer Ricciardo having a mind to go a-pleasuring to a very fair country-seat he had, near Monte Nero, and there abide some days to take the air, he betook himself thither, carrying with him his fair lady."
 
 [[mentions]]
 place = "monaco"
 cite = "Day 2, Story 10, told by Dioneo"
-level = "Stories"
+day = "Day 2: those who after divers chances have won to a joyful issue"
+teller = "Dioneo"
 passage = "and after such a fashion did he console her that, ere they came to Monaco, the judge and his ordinances had altogether escaped her mind and she began to lead the merriest of lives with Paganino."
 
 [[mentions]]
 place = "villapalmieri"
 cite = "Day 3, Introduction"
-level = "Frame story"
+day = "Day 3: such as have by diligence acquired some desired thing or recovered some lost good"
+teller = "The frame story"
 passage = "without having gone over two thousand paces, to a very fair and rich palace, somewhat upraised above the plain upon a little knoll."
 
 [[mentions]]
 place = "lamporecchio"
 cite = "Day 3, Story 1, told by Filostrato"
-level = "Stories"
+day = "Day 3: such as have by diligence acquired some desired thing or recovered some lost good"
+teller = "Filostrato"
 passage = "being miscontent with his wage, settled his accounts with the ladies' bailiff and returned to Lamporecchio, whence he came."
 
 [[mentions]]
 place = "pavia"
 cite = "Day 3, Story 2, told by Pampinea"
-level = "Stories"
+day = "Day 3: such as have by diligence acquired some desired thing or recovered some lost good"
+teller = "Pampinea"
 passage = "Agilulf, King of the Lombards, as his predecessors had done, fixed the seat of his kingship at Pavia, a city of Lombardy, and took to wife Theodolinda the widow of Autari, likewise King of the Lombards, a very fair lady and exceeding discreet and virtuous, but ill fortuned in a lover."
 
 [[mentions]]
 place = "sanpancrazio"
 cite = "Day 3, Story 4, told by Pamfilo"
-level = "Stories"
+day = "Day 3: such as have by diligence acquired some desired thing or recovered some lost good"
+teller = "Pamfilo"
 passage = "there abode near San Pancrazio an honest man and a rich, called Puccio di Rinieri, who, devoting himself in his latter days altogether to religious practices"
 
 [[mentions]]
 place = "pistoia"
 cite = "Day 3, Story 5, told by Elisa"
-level = "Stories"
+day = "Day 3: such as have by diligence acquired some desired thing or recovered some lost good"
+teller = "Elisa"
 passage = "There was in Pistoia a gentleman of the Vergellesi family, by name Messer Francesco, a man of great wealth and understanding and well advised in all else, but covetous beyond measure."
 
 [[mentions]]
 place = "milan"
 cite = "Day 3, Story 5, told by Elisa"
-level = "Stories"
+day = "Day 3: such as have by diligence acquired some desired thing or recovered some lost good"
+teller = "Elisa"
 passage = "Being made provost of Milan, he had furnished himself with everything necessary for his honourable going thither, except only with a palfrey handsome enough for him, and finding none to his liking, he abode in concern thereof."
 
 [[mentions]]
 place = "naples"
 cite = "Day 3, Story 6, told by Fiammetta"
-level = "Stories"
+day = "Day 3: such as have by diligence acquired some desired thing or recovered some lost good"
+teller = "Fiammetta"
 passage = "wherefore, passing over to Naples, I shall tell how one of those she-saints, who feign themselves so shy of love, was by the ingenuity of a lover of hers brought to taste the fruits of love, ere she had known its flowers"
 
 [[mentions]]
 place = "florence"
 cite = "Day 3, Story 7, told by Emilia"
-level = "Stories"
+day = "Day 3: such as have by diligence acquired some desired thing or recovered some lost good"
+teller = "Emilia"
 passage = "There was, then, in Florence a noble youth, whose name was Tedaldo Elisei and who, being beyond measure enamoured of a lady called Madam Ermellina, the wife of one Aldobrandino Palermini, deserved for his praiseworthy fashions, to enjoy his desire."
 
 [[mentions]]
 place = "ancona"
 cite = "Day 3, Story 7, told by Emilia"
-level = "Stories"
+day = "Day 3: such as have by diligence acquired some desired thing or recovered some lost good"
+teller = "Emilia"
 passage = "came to Ancona, where, under the name of Filippo di Sanlodeccio, he made acquaintance with a rich merchant and taking service with him"
 
 [[mentions]]
 place = "cyprus"
 cite = "Day 3, Story 7, told by Emilia"
-level = "Stories"
+day = "Day 3: such as have by diligence acquired some desired thing or recovered some lost good"
+teller = "Emilia"
 passage = "he made acquaintance with a rich merchant and taking service with him, accompanied him to Cyprus on board a ship of his."
 
 [[mentions]]
 place = "tuscany"
 cite = "Day 3, Story 8, told by Lauretta"
-level = "Stories"
+day = "Day 3: such as have by diligence acquired some desired thing or recovered some lost good"
+teller = "Lauretta"
 passage = "in Tuscany, an abbey situate, like as we see many thereof, in a place not overmuch frequented of men, whereof a monk was made abbot"
 
 [[mentions]]
 place = "bologna"
 cite = "Day 3, Story 8, told by Lauretta"
-level = "Stories"
+day = "Day 3: such as have by diligence acquired some desired thing or recovered some lost good"
+teller = "Lauretta"
 passage = "in whom he much trusted and who was that day come thither from Bologna, took up Ferondo out of the tomb and carried him into a vault"
 
 [[mentions]]
 place = "roussillon"
 cite = "Day 3, Story 9, told by Neifile"
-level = "Stories"
+day = "Day 3: such as have by diligence acquired some desired thing or recovered some lost good"
+teller = "Neifile"
 passage = "There was in the kingdom of France a gentleman called Isnard, Count of Roussillon, who, for that he was scant of health, still entertained about his person a physician, by name Master Gerard de Narbonne."
 
 [[mentions]]
 place = "paris"
 cite = "Day 3, Story 9, told by Neifile"
-level = "Stories"
+day = "Day 3: such as have by diligence acquired some desired thing or recovered some lost good"
+teller = "Neifile"
 passage = "The count dying and leaving his son in the hands of the king, it behoved him betake himself to Paris, whereof the damsel abode sore disconsolate, and her own father dying no great while after, she would fain, an she might have had a seemly occasion, have gone to Paris to see Bertrand"
 
 [[mentions]]
 place = "florence"
 cite = "Day 3, Story 9, told by Neifile"
-level = "Stories"
+day = "Day 3: such as have by diligence acquired some desired thing or recovered some lost good"
+teller = "Neifile"
 passage = "and stayed not till she came to Florence, where, chancing upon a little inn, kept by a decent widow woman, she there took up her abode and lived quietly"
 
 [[mentions]]
 place = "montpellier"
 cite = "Day 3, Story 9, told by Neifile"
-level = "Stories"
+day = "Day 3: such as have by diligence acquired some desired thing or recovered some lost good"
+teller = "Neifile"
 passage = "to Montpellier, where having rested some days and made enquiry of the count and where he was, she learned that he was to hold a great entertainment of knights and ladies at Roussillon on All Saints' Day and betook herself thither"
 
 [[mentions]]
 place = "gafsa"
 cite = "Day 3, Story 10, told by Dioneo"
-level = "Stories"
+day = "Day 3: such as have by diligence acquired some desired thing or recovered some lost good"
+teller = "Dioneo"
 passage = "To come, then, to the fact, I say that in the city of Capsa in Barbary there was aforetime a very rich man, who, among his other children, had a fair and winsome young daughter, by name Alibech."
 
 [[mentions]]
 place = "thebaid"
 cite = "Day 3, Story 10, told by Dioneo"
-level = "Stories"
+day = "Day 3: such as have by diligence acquired some desired thing or recovered some lost good"
+teller = "Dioneo"
 passage = "The other answered that they best served God who most strictly eschewed the things of the world, as those did who had betaken them into the solitudes of the deserts of Thebais."
 
 [[mentions]]
 place = "montesenario"
 cite = "Day 4, Introduction, told by the Author"
-level = "Stories"
+day = "Day 4: those whose loves have had unhappy endings"
+teller = "The frame story"
 passage = "he repaired without delay to the top of Mount Asinajo, where he took up his abode with his son in a little hut and there living with him upon alms"
 
 [[mentions]]
 place = "florence"
 cite = "Day 4, Introduction, told by the Author"
-level = "Stories"
+day = "Day 4: those whose loves have had unhappy endings"
+teller = "The frame story"
 passage = "Now the good man was used to come whiles into Florence, where being succoured, according to his occasions, of the friends of God, he returned to his hut, and it chanced one day that, his son being now eighteen years old and Filippo an old man, the lad asked him whither he went."
 
 [[mentions]]
 place = "salerno"
 cite = "Day 4, Story 1, told by Fiammetta"
-level = "Stories"
+day = "Day 4: those whose loves have had unhappy endings"
+teller = "Fiammetta"
 passage = "Tancred, Lord of Salerno, was a humane prince and benign enough of nature, (had he not in his old age imbrued his hands in lover's blood,) who in all the course of his life had but one daughter, and happier had he been if he had none."
 
 [[mentions]]
 place = "venice"
 cite = "Day 4, Story 2, told by Pampinea"
-level = "Stories"
+day = "Day 4: those whose loves have had unhappy endings"
+teller = "Pampinea"
 passage = "But would God it might betide them all of their cozening tricks, as it betided a certain minor friar, and he no youngling, but held one of the first casuists in Venice"
 
 [[mentions]]
 place = "imola"
 cite = "Day 4, Story 2, told by Pampinea"
-level = "Stories"
+day = "Day 4: those whose loves have had unhappy endings"
+teller = "Pampinea"
 passage = "There was, then, noble ladies, in Imola, a man of wicked and corrupt life, who was called Berto della Massa and whose lewd fashions, being well known of the Imolese, had brought him into such ill savour with them that there was none in the town who would credit him, even when he said sooth"
 
 [[mentions]]
 place = "marseille"
 cite = "Day 4, Story 3, told by Lauretta"
-level = "Stories"
+day = "Day 4: those whose loves have had unhappy endings"
+teller = "Lauretta"
 passage = "Marseilles is, as you know, a very ancient and noble city, situate in Provence on the sea-shore, and was once more abounding in rich and great merchants than it is nowadays."
 
 [[mentions]]
 place = "crete"
 cite = "Day 4, Story 3, told by Lauretta"
-level = "Stories"
+day = "Day 4: those whose loves have had unhappy endings"
+teller = "Lauretta"
 passage = "Then, having determined among themselves to go to Crete, they sold certain lands they had, under colour of meaning to go a-trading with the price, and having made money of all their other goods, bought a light brigantine and secretly equipped it to the utmost advantage."
 
 [[mentions]]
 place = "rhodes"
 cite = "Day 4, Story 3, told by Lauretta"
-level = "Stories"
+day = "Day 4: those whose loves have had unhappy endings"
+teller = "Lauretta"
 passage = "without having leisure to take any of their goods, fled by night to Rhodes, where they lived no great while after in poverty and distress."
 
 [[mentions]]
 place = "tunis"
 cite = "Day 4, Story 4, told by Elisa"
-level = "Stories"
+day = "Day 4: those whose loves have had unhappy endings"
+teller = "Elisa"
 passage = "Amongst the rest to whose ears came the magnificent fame of Gerbino's valour and courtesy was a daughter of the King of Tunis, who, according to the report of all who had seen her, was one of the fairest creatures ever fashioned by nature and the best bred and of a noble and great soul."
 
 [[mentions]]
 place = "granada"
 cite = "Day 4, Story 4, told by Elisa"
-level = "Stories"
+day = "Day 4: those whose loves have had unhappy endings"
+teller = "Elisa"
 passage = "it befell that the King of Tunis gave her in marriage to the King of Granada, whereat she was beyond measure chagrined, bethinking herself that not only should she be separated from her lover by long distance"
 
 [[mentions]]
 place = "palermo"
 cite = "Day 4, Story 4, told by Elisa"
-level = "Stories"
+day = "Day 4: those whose loves have had unhappy endings"
+teller = "Elisa"
 passage = "despatched one of her servants secretly to Palermo, bidding him salute the gallant Gerbino on her part and tell him that she was to sail in a few days for Granada"
 
 [[mentions]]
 place = "messina"
 cite = "Day 4, Story 4, told by Elisa"
-level = "Stories"
+day = "Day 4: those whose loves have had unhappy endings"
+teller = "Elisa"
 passage = "However, urged by love and that he might not appear a craven, he betook himself to Messina, where he hastily armed two light galleys and manning them with men of approved valour, set sail with them for the coast of Sardinia, looking for the lady's ship to pass there."
 
 [[mentions]]
 place = "ustica"
 cite = "Day 4, Story 4, told by Elisa"
-level = "Stories"
+day = "Day 4: those whose loves have had unhappy endings"
+teller = "Elisa"
 passage = "Then, letting take up the fair lady's body from the sea, long and with many tears he bewept it and steering for Sicily, buried it honourably in Ustica, a little island over against Trapani; after which he returned home, the woefullest man alive."
 
 [[mentions]]
 place = "messina"
 cite = "Day 4, Story 5, told by Filomena"
-level = "Stories"
+day = "Day 4: those whose loves have had unhappy endings"
+teller = "Filomena"
 passage = "and what brought me in mind of it was the mention, a little before, of Messina, where the case befell."
 
 [[mentions]]
 place = "sangimignano"
 cite = "Day 4, Story 5, told by Filomena"
-level = "Stories"
+day = "Day 4: those whose loves have had unhappy endings"
+teller = "Filomena"
 passage = "There were then in Messina three young brothers, merchants and left very rich by their father, who was a man of San Gimignano, and they had an only sister, Lisabetta by name, a right fair and well-mannered maiden, whom, whatever might have been the reason thereof, they had not yet married."
 
 [[mentions]]
 place = "naples"
 cite = "Day 4, Story 5, told by Filomena"
-level = "Stories"
+day = "Day 4: those whose loves have had unhappy endings"
+teller = "Filomena"
 passage = "At this they were mightily amazed and feared lest the thing should get wind; wherefore, burying the head, without word said, they privily departed Messina, having taken order how they should withdraw thence, and betook themselves to Naples."
 
 [[mentions]]
 place = "brescia"
 cite = "Day 4, Story 6, told by Pamfilo"
-level = "Stories"
+day = "Day 4: those whose loves have had unhappy endings"
+teller = "Pamfilo"
 passage = "There was once in the city of Brescia a gentleman called Messer Negro da Ponte Carraro, who amongst sundry other children had a daughter named Andrevuola, young and unmarried and very fair."
 
 [[mentions]]
 place = "florence"
 cite = "Day 4, Story 7, told by Emilia"
-level = "Stories"
+day = "Day 4: those whose loves have had unhappy endings"
+teller = "Emilia"
 passage = "There was, then, no great while ago, in Florence a damsel very handsome and agreeable, according to her condition, who was the daughter of a poor father and was called Simona"
 
 [[mentions]]
 place = "sangallo"
 cite = "Day 4, Story 7, told by Emilia"
-level = "Stories"
+day = "Day 4: those whose loves have had unhappy endings"
+teller = "Emilia"
 passage = "Simona answered that she would well and accordingly on Sunday, after eating, giving her father to believe that she meant to go a-pardoning to San Gallo, she betook herself, with a friend of hers, called Lagina, to the garden appointed her of Pasquino."
 
 [[mentions]]
 place = "paris"
 cite = "Day 4, Story 8, told by Neifile"
-level = "Stories"
+day = "Day 4: those whose loves have had unhappy endings"
+teller = "Neifile"
 passage = "wherefore it would much content us that thou shouldst go sojourn awhile at Paris, where thou wilt see how great part of thy wealth is employed"
 
 [[mentions]]
 place = "florence"
 cite = "Day 4, Story 8, told by Neifile"
-level = "Stories"
+day = "Day 4: those whose loves have had unhappy endings"
+teller = "Neifile"
 passage = "The youth hearkened diligently and answered curtly that he was nowise disposed to do this, for that he believed himself able to fare as well at Florence as another."
 
 [[mentions]]
 place = "provence"
 cite = "Day 4, Story 9, told by Filostrato"
-level = "Stories"
+day = "Day 4: those whose loves have had unhappy endings"
+teller = "Filostrato"
 passage = "there were aforetime in Provence two noble knights, each of whom had castles and vassals under him, called the one Sir Guillaume de Roussillon and the other Sir Guillaume de Guardestaing"
 
 [[mentions]]
 place = "salerno"
 cite = "Day 4, Story 10, told by Dioneo"
-level = "Stories"
+day = "Day 4: those whose loves have had unhappy endings"
+teller = "Dioneo"
 passage = "there was in Salerno, no great while since, a very famous doctor in surgery, by name Master Mazzeo della Montagna, who, being already come to extreme old age, took to wife a fair and gentle damsel of his city"
 
 [[mentions]]
 place = "amalfi"
 cite = "Day 4, Story 10, told by Dioneo"
-level = "Stories"
+day = "Day 4: those whose loves have had unhappy endings"
+teller = "Dioneo"
 passage = "there came to him a messenger from certain very great friends of his at Malfi, charging him fail not for anything to repair thither incontinent"
 
 [[mentions]]
 place = "cyprus"
 cite = "Day 5, Story 1, told by Pamfilo"
-level = "Stories"
+day = "Day 5: that which hath happily betided lovers after cruel adventures"
+teller = "Pamfilo"
 passage = "in the island of Cyprus, (as we have read aforetime in the ancient histories of the Cypriots,) a very noble gentleman, by name Aristippus"
 painting = { title = "Cimon and Iphigenia", painter = "Peter Paul Rubens, Frans Snyders and Jan Wildens", year = "c. 1617", collection = "Kunsthistorisches Museum", wikidata = "Q27979754", file = "Peter Paul Rubens, Frans Snyders and Jan Wildens - Cimone and Efigenia.jpg" }
 
 [[mentions]]
 place = "rhodes"
 cite = "Day 5, Story 1, told by Pamfilo"
-level = "Stories"
+day = "Day 5: that which hath happily betided lovers after cruel adventures"
+teller = "Pamfilo"
 passage = "but Cipseus still answered that he had promised her to Pasimondas, a young nobleman of Rhodes, to whom he had no mind to fail of his word."
 
 [[mentions]]
 place = "crete"
 cite = "Day 5, Story 1, told by Pamfilo"
-level = "Stories"
+day = "Day 5: that which hath happily betided lovers after cruel adventures"
+teller = "Pamfilo"
 passage = "wherefore, of one accord, they turned the ship's head towards Crete, where well nigh every one, and especially Cimon, had kinsfolk, old and new, and friends in plenty and where they doubted not to be in safety with Iphigenia."
 
 [[mentions]]
 place = "lipari"
 cite = "Day 5, Story 2, told by Emilia"
-level = "Stories"
+day = "Day 5: that which hath happily betided lovers after cruel adventures"
+teller = "Emilia"
 passage = "You must know, then, dainty dames, that near unto Sicily is an islet called Lipari, wherein, no great while agone, was a very fair damsel called Costanza, born of a very considerable family there."
 
 [[mentions]]
 place = "tunis"
 cite = "Day 5, Story 2, told by Emilia"
-level = "Stories"
+day = "Day 5: that which hath happily betided lovers after cruel adventures"
+teller = "Emilia"
 passage = "after scuttling the vessel and sacking the greater part of the crew, carried Martuccio to Tunis, where he was put in prison and long kept in misery."
 
 [[mentions]]
 place = "sousse"
 cite = "Day 5, Story 2, told by Emilia"
-level = "Stories"
+day = "Day 5: that which hath happily betided lovers after cruel adventures"
+teller = "Emilia"
 passage = "But it befell altogether otherwise than as she conceived, for that, the wind being northerly and very light and there being well nigh no sea, the boat rode it out in safety and brought her on the morrow, about vespers, to a beach near a town called Susa, a good hundred miles beyond Tunis."
 
 [[mentions]]
 place = "rome"
 cite = "Day 5, Story 3, told by Elisa"
-level = "Stories"
+day = "Day 5: that which hath happily betided lovers after cruel adventures"
+teller = "Elisa"
 passage = "at Rome,--once the head, as it is nowadays the tail of the world,--a youth, called Pietro Boccamazza, of a very worshipful family among those of the city"
 
 [[mentions]]
 place = "anagni"
 cite = "Day 5, Story 3, told by Elisa"
-level = "Stories"
+day = "Day 5: that which hath happily betided lovers after cruel adventures"
+teller = "Elisa"
 passage = "Accordingly, having taken order for this, Pietro arose very early one morning and taking horse with the damsel, set out for Anagni, where he had certain friends in whom he trusted greatly."
 
 [[mentions]]
 place = "bertinoro"
 cite = "Day 5, Story 4, told by Filostrato"
-level = "Stories"
+day = "Day 5: that which hath happily betided lovers after cruel adventures"
+teller = "Filostrato"
 passage = "Now there was a young man of the Manardi of Brettinoro, comely and lusty of his person, by name Ricciardo, who much frequented Messer Lizio's house and conversed amain with him and of whom the latter and his lady took no more account than they would have taken of a son of theirs."
 
 [[mentions]]
 place = "fano"
 cite = "Day 5, Story 5, told by Neifile"
-level = "Stories"
+day = "Day 5: that which hath happily betided lovers after cruel adventures"
+teller = "Neifile"
 passage = "I say, then, that there dwelt once in the city of Fano two Lombards, whereof the one was called Guidotto da Cremona and the other Giacomino da Pavia, both men advanced in years, who had in their youth been well nigh always soldiers and engaged in deeds of arms."
 
 [[mentions]]
 place = "faenza"
 cite = "Day 5, Story 5, told by Neifile"
-level = "Stories"
+day = "Day 5: that which hath happily betided lovers after cruel adventures"
+teller = "Neifile"
 passage = "In those days it befell that the city of Faenza, which had been long in war and ill case, was restored to somewhat better estate and permission to sojourn there was freely conceded to all who had a mind to return thither"
 
 [[mentions]]
 place = "ischia"
 cite = "Day 5, Story 6, told by Pampinea"
-level = "Stories"
+day = "Day 5: that which hath happily betided lovers after cruel adventures"
+teller = "Pampinea"
 passage = "Ischia is an island very near Naples, and therein, among others, was once a very fair and sprightly damsel, by name Restituta"
 
 [[mentions]]
 place = "procida"
 cite = "Day 5, Story 6, told by Pampinea"
-level = "Stories"
+day = "Day 5: that which hath happily betided lovers after cruel adventures"
+teller = "Pampinea"
 passage = "who was the daughter of a gentleman of the island called Marino Bolgaro and whom a youth named Gianni, a native of a little island near Ischia, called Procida, loved more than his life, as she on like wise loved him."
 
 [[mentions]]
 place = "palermo"
 cite = "Day 5, Story 6, told by Pampinea"
-level = "Stories"
+day = "Day 5: that which hath happily betided lovers after cruel adventures"
+teller = "Pampinea"
 passage = "Accordingly, coming to Palermo, they made gift of the damsel to the king, who, seeing her to be fair, held her dear"
 
 [[mentions]]
 place = "lacuba"
 cite = "Day 5, Story 6, told by Pampinea"
-level = "Stories"
+day = "Day 5: that which hath happily betided lovers after cruel adventures"
+teller = "Pampinea"
 passage = "but, for that he was presently somewhat infirm of his person, he commanded that, against he should be stronger, she should be lodged in a very goodly pavilion, belonging to a garden of his he called La Cuba, and there tended"
 
 [[mentions]]
 place = "trapani"
 cite = "Day 5, Story 7, told by Lauretta"
-level = "Stories"
+day = "Day 5: that which hath happily betided lovers after cruel adventures"
+teller = "Lauretta"
 passage = "Fairest ladies, in the days when good King William ruled over Sicily, there was in that island a gentleman hight Messer Amerigo Abate of Trapani, who, among other worldly goods, was very well furnished with children"
 
 [[mentions]]
 place = "armenia"
 cite = "Day 5, Story 7, told by Lauretta"
-level = "Stories"
+day = "Day 5: that which hath happily betided lovers after cruel adventures"
+teller = "Lauretta"
 passage = "there coming thither from the Levant certain galleys of Genoese corsairs, who had, in their cruises off the coast of Armenia, taken many boys, he bought some of these latter, deeming them Turks"
 
 [[mentions]]
 place = "ravenna"
 cite = "Day 5, Story 8, told by Filomena"
-level = "Stories"
+day = "Day 5: that which hath happily betided lovers after cruel adventures"
+teller = "Filomena"
 passage = "In Ravenna, a very ancient city of Romagna, there were aforetime many noblemen and gentlemen, and amongst the rest a young man called Nastagio degli Onesti"
 
 [[mentions]]
 place = "chiassi"
 cite = "Day 5, Story 8, told by Filomena"
-level = "Stories"
+day = "Day 5: that which hath happily betided lovers after cruel adventures"
+teller = "Filomena"
 passage = "he rode out of Ravenna and betook himself to a place called Chiassi, some three miles from the city, where, sending for tents and pavilions"
 painting = { title = "The Story of Nastagio degli Onesti, part three", painter = "Sandro Botticelli", year = 1483, collection = "Museo del Prado", wikidata = "Q3203527", file = "Sandro Botticelli 075.jpg" }
 
 [[mentions]]
 place = "florence"
 cite = "Day 5, Story 9, told by Fiammetta"
-level = "Stories"
+day = "Day 5: that which hath happily betided lovers after cruel adventures"
+teller = "Fiammetta"
 passage = "he was used to tell that there was once in Florence a young man called Federigo, son of Messer Filippo Alberighi and renowned for deeds of arms and courtesy over every other bachelor in Tuscany"
 
 [[mentions]]
 place = "campi"
 cite = "Day 5, Story 9, told by Fiammetta"
-level = "Stories"
+day = "Day 5: that which hath happily betided lovers after cruel adventures"
+teller = "Fiammetta"
 passage = "Wherefore, being more in love than ever and himseeming he might no longer make such a figure in the city as he would fain do, he took up his abode at Campi, where his farm was, and there bore his poverty with patience, hawking whenas he might and asking of no one."
 
 [[mentions]]
 place = "perugia"
 cite = "Day 5, Story 10, told by Dioneo"
-level = "Stories"
+day = "Day 5: that which hath happily betided lovers after cruel adventures"
+teller = "Dioneo"
 passage = "in Perugia, no great while agone, a rich man called Pietro di Vinciolo, who, belike more to beguile others and to abate the general suspect in which he was had of all the Perugians"
 
 [[mentions]]
 place = "florence"
 cite = "Day 6, Story 2, told by Pampinea"
-level = "Stories"
+day = "Day 6: whoso hath with some ready reply escaped loss, peril or shame"
+teller = "Pampinea"
 passage = "having despatched to Florence certain of his gentlemen on an embassy concerning sundry important matters of his, they lighted down at the house of Messer Geri and he treating the pope's affairs in company with them"
 
 [[mentions]]
 place = "florence"
 cite = "Day 6, Story 3, told by Lauretta"
-level = "Stories"
+day = "Day 6: whoso hath with some ready reply escaped loss, peril or shame"
+teller = "Lauretta"
 passage = "being Bishop of Florence, there came thither a Catalan gentleman, called Messer Dego della Ratta, marshal for King Robert"
 
 [[mentions]]
 place = "mugello"
 cite = "Day 6, Story 5, told by Pamfilo"
-level = "Stories"
+day = "Day 6: whoso hath with some ready reply escaped loss, peril or shame"
+teller = "Pamfilo"
 passage = "I must tell you that Messer Forese and Giotto had each his country house at Mugello and the former, having gone to visit his estates"
 
 [[mentions]]
 place = "florence"
 cite = "Day 6, Story 6, told by Fiammetta"
-level = "Stories"
+day = "Day 6: whoso hath with some ready reply escaped loss, peril or shame"
+teller = "Fiammetta"
 passage = "Young ladies, the mention by Pamfilo of the cadgers of Florence, whom peradventure you know not as doth he, hath brought to my mind a story, wherein, without deviating from our appointed theme, it is demonstrated how great is their nobility"
 
 [[mentions]]
 place = "santamariamaggiore"
 cite = "Day 6, Story 6, told by Fiammetta"
-level = "Stories"
+day = "Day 6: whoso hath with some ready reply escaped loss, peril or shame"
+teller = "Fiammetta"
 passage = "and lest you should understand it of others, I speak of the Cadgers your neighbors of Santa Maria Maggiore."
 
 [[mentions]]
 place = "prato"
 cite = "Day 6, Story 7, told by Filostrato"
-level = "Stories"
+day = "Day 6: whoso hath with some ready reply escaped loss, peril or shame"
+teller = "Filostrato"
 passage = "in the city of Prato, a statute in truth no less blameworthy than cruel, which, without making any distinction, ordained that any woman found by her husband in adultery with any her lover should be burnt"
 
 [[mentions]]
 place = "orsanmichele"
 cite = "Day 6, Story 9, told by Elisa"
-level = "Stories"
+day = "Day 6: whoso hath with some ready reply escaped loss, peril or shame"
+teller = "Elisa"
 passage = "It chanced one day that Guido set out from Orto San Michele and came by way of the Corso degli Ademari, the which was oftentimes his road, to San Giovanni, round about which there were at that present divers great marble tombs (which are nowadays at Santa Reparata) and many others."
 
 [[mentions]]
 place = "baptistery"
 cite = "Day 6, Story 9, told by Elisa"
-level = "Stories"
+day = "Day 6: whoso hath with some ready reply escaped loss, peril or shame"
+teller = "Elisa"
 passage = "It chanced one day that Guido set out from Orto San Michele and came by way of the Corso degli Ademari, the which was oftentimes his road, to San Giovanni, round about which there were at that present divers great marble tombs (which are nowadays at Santa Reparata) and many others."
 
 [[mentions]]
 place = "certaldo"
 cite = "Day 6, Story 10, told by Dioneo"
-level = "Stories"
+day = "Day 6: whoso hath with some ready reply escaped loss, peril or shame"
+teller = "Dioneo"
 passage = "Certaldo, as you may have heard, is a burgh of Val d' Elsa situate in our country, which, small though it be, was once inhabited by gentlemen and men of substance"
 
 [[mentions]]
 place = "borgodeigreci"
 cite = "Day 6, Story 10, told by Dioneo"
-level = "Stories"
+day = "Day 6: whoso hath with some ready reply escaped loss, peril or shame"
+teller = "Dioneo"
 passage = "On this errand I set out from Venice and passed through Borgo de' Greci, whence, riding through the kingdom of Algarve and Baldacca, I came to Parione, and from there, not without thirst, I came after awhile into Sardinia."
 note = "Frate Cipolla names it among the far countries of his journey; it is the street of Florence of that name."
 
 [[mentions]]
 place = "parione"
 cite = "Day 6, Story 10, told by Dioneo"
-level = "Stories"
+day = "Day 6: whoso hath with some ready reply escaped loss, peril or shame"
+teller = "Dioneo"
 passage = "On this errand I set out from Venice and passed through Borgo de' Greci, whence, riding through the kingdom of Algarve and Baldacca, I came to Parione, and from there, not without thirst, I came after awhile into Sardinia."
 note = "Frate Cipolla names it among the far countries of his journey; it is the street of Florence of that name."
 
 [[mentions]]
 place = "sangiorgio"
 cite = "Day 6, Story 10, told by Dioneo"
-level = "Stories"
+day = "Day 6: whoso hath with some ready reply escaped loss, peril or shame"
+teller = "Dioneo"
 passage = "Passing the straits of San Giorgio, I came into Truffia and Buffia, countries much inhabited and with great populations"
 note = "Frate Cipolla's straits of San Giorgio, among the far countries of his journey, are the Costa San Giorgio, a street of Florence."
 
 [[mentions]]
 place = "ladiesvalley"
 cite = "Day 6, Conclusion"
-level = "Frame story"
+day = "Day 6: whoso hath with some ready reply escaped loss, peril or shame"
+teller = "The frame story"
 passage = "They answered that they were ready and calling one of their maids, set out upon their way, without letting the young men know aught thereof; nor had they gone much more than a mile, when they came to the Ladies' Valley."
 note = "The point is tentative, not an identification. A tradition places the valley in the hills near Poggio Gherardo, by the Mensola, and the point is in that area; the valley may be a literary construction (Thomas C. Stillinger, The Language of Gardens: Boccaccio's 'Valle delle Donne', Traditio 39, 1983, 301-321)."
 
 [[mentions]]
 place = "ladiesvalley"
 cite = "Day 7, Introduction"
-level = "Frame story"
+day = "Day 7: the tricks women have played their husbands"
+teller = "The frame story"
 passage = "the seneschal, arising, betook himself, with a great baggage-train, to the Ladies' Valley, there to order everything, according to commandment had of his lord"
 
 [[mentions]]
 place = "florence"
 cite = "Day 7, Story 1, told by Emilia"
-level = "Stories"
+day = "Day 7: the tricks women have played their husbands"
+teller = "Emilia"
 passage = "There was once in Florence, in the quarter of San Brancazio, a wool-comber called Gianni Lotteringhi, a man more fortunate in his craft than wise in other things"
 
 [[mentions]]
 place = "camerata"
 cite = "Day 7, Story 1, told by Emilia"
-level = "Stories"
+day = "Day 7: the tricks women have played their husbands"
+teller = "Emilia"
 passage = "a very goodly country house which her husband had at Camerata, where she sojourned all the summer and whither Gianni came whiles to sup and sleep"
 note = "Camerata was the name of the hill between the Affrico and the Mugnone, not of one point (Guido Carocci, I dintorni di Firenze, 1906). It has no Wikidata item: the point is on Via di Camerata, from a photograph of it at Wikimedia Commons."
 
 [[mentions]]
 place = "naples"
 cite = "Day 7, Story 2, told by Filostrato"
-level = "Stories"
+day = "Day 7: the tricks women have played their husbands"
+teller = "Filostrato"
 passage = "In Naples no great while agone there was a poor man who took to wife a fair and lovesome damsel called Peronella, and albeit he with his craft, which was that of a mason, and she by spinning, earned but a slender pittance, they ordered their life as best they might."
 
 [[mentions]]
 place = "siena"
 cite = "Day 7, Story 3, told by Elisa"
-level = "Stories"
+day = "Day 7: the tricks women have played their husbands"
+teller = "Elisa"
 passage = "You must know that there was once in Siena a very agreeable young man and of a worshipful family, by name Rinaldo, who was passionately enamored of a very beautiful lady"
 
 [[mentions]]
 place = "arezzo"
 cite = "Day 7, Story 4, told by Lauretta"
-level = "Stories"
+day = "Day 7: the tricks women have played their husbands"
+teller = "Lauretta"
 passage = "There was once, then, in Arezzo, a rich man called Tofano and he was given to wife a very fair lady, by name Madam Ghita, of whom, without knowing why, he quickly waxed jealous."
 
 [[mentions]]
 place = "rimini"
 cite = "Day 7, Story 5, told by Fiammetta"
-level = "Stories"
+day = "Day 7: the tricks women have played their husbands"
+teller = "Fiammetta"
 passage = "There was, then, in Arimino a merchant, very rich both in lands and monies, who, having to wife a very fair lady, became beyond measure jealous of her"
 
 [[mentions]]
 place = "florence"
 cite = "Day 7, Story 6, told by Pampinea"
-level = "Stories"
+day = "Day 7: the tricks women have played their husbands"
+teller = "Pampinea"
 passage = "Accordingly, when they had supped, he mounted him a-horseback and carrying him back to Florence, left him in his own house."
 
 [[mentions]]
 place = "paris"
 cite = "Day 7, Story 7, told by Filomena"
-level = "Stories"
+day = "Day 7: the tricks women have played their husbands"
+teller = "Filomena"
 passage = "You must know, then, that there was once in Paris a Florentine gentleman, who was for poverty turned merchant and had thriven so well in commerce that he was grown thereby very rich."
 
 [[mentions]]
 place = "bologna"
 cite = "Day 7, Story 7, told by Filomena"
-level = "Stories"
+day = "Day 7: the tricks women have played their husbands"
+teller = "Filomena"
 passage = "in all the lands he had traversed and for all the ladies he had seen, he had never beheld the like for beauty of Madam Beatrice, the wife of Messer Egano de' Gulluzzi of Bologna"
 
 [[mentions]]
 place = "florence"
 cite = "Day 7, Story 8, told by Neifile"
-level = "Stories"
+day = "Day 7: the tricks women have played their husbands"
+teller = "Neifile"
 passage = "But they must needs give thee to this fine jewel of fellow, who, whereas thou art the best girl in Florence and the modestest, is not ashamed to knock us up in the middle of the night, to tell us that thou art a strumpet, as if we knew thee not."
 
 [[mentions]]
 place = "argos"
 cite = "Day 7, Story 9, told by Pamfilo"
-level = "Stories"
+day = "Day 7: the tricks women have played their husbands"
+teller = "Pamfilo"
 passage = "In Argos, city of Achia far more famous for its kings of past time than great in itself, there was once a nobleman called Nicostratus, to whom, when already neighbouring on old age, fortune awarded a lady of great family to wife, whose name was Lydia and who was no less high-spirited than fair."
 
 [[mentions]]
 place = "siena"
 cite = "Day 7, Story 10, told by Dioneo"
-level = "Stories"
+day = "Day 7: the tricks women have played their husbands"
+teller = "Dioneo"
 passage = "There were, then, in Siena two young men of the people, whereof one was called Tingoccio Mini and the other Meuccio di Tura; they abode at Porta Salaja and consorted well nigh never save one with the other."
 
 [[mentions]]
 place = "milan"
 cite = "Day 8, Story 1, told by Neifile"
-level = "Stories"
+day = "Day 8: the tricks women play men, or men women, or men one another"
+teller = "Neifile"
 passage = "There was, then, aforetime at Milan a German, by name Gulfardo, in the pay of the state, a stout fellow of his person and very loyal to those in whose service he engaged himself, which is seldom the case with Germans"
 
 [[mentions]]
 place = "varlungo"
 cite = "Day 8, Story 2, told by Pamfilo"
-level = "Stories"
+day = "Day 8: the tricks women play men, or men women, or men one another"
+teller = "Pamfilo"
 passage = "that there was once at Varlungo,--a village very near here, as each of you ladies either knoweth or may have heard,--a worthy priest and a lusty of his person in the service of the ladies"
 
 [[mentions]]
 place = "florence"
 cite = "Day 8, Story 3, told by Elisa"
-level = "Stories"
+day = "Day 8: the tricks women play men, or men women, or men one another"
+teller = "Elisa"
 passage = "There was then also in Florence a young man of a mighty pleasant humor and marvellously adroit in all he had a mind to do"
 
 [[mentions]]
 place = "settignano"
 cite = "Day 8, Story 3, told by Elisa"
-level = "Stories"
+day = "Day 8: the tricks women play men, or men women, or men one another"
+teller = "Elisa"
 passage = "the first are the grits of Settignano and Montisci, by virtue whereof, when they are wrought into millstones, flour is made"
 
 [[mentions]]
 place = "mugnone"
 cite = "Day 8, Story 3, told by Elisa"
-level = "Stories"
+day = "Day 8: the tricks women play men, or men women, or men one another"
+teller = "Elisa"
 passage = "To which Maso replied that it was commonly found in the Mugnone."
 
 [[mentions]]
 place = "fiesole"
 cite = "Day 8, Story 4, told by Emilia"
-level = "Stories"
+day = "Day 8: the tricks women play men, or men women, or men one another"
+teller = "Emilia"
 passage = "As all of you know, Fiesole, whose hill we can see hence, was once a very great and ancient city, nor, albeit it is nowadays all undone, hath it ever ceased to be, as it is yet, the seat of a bishop."
 
 [[mentions]]
 place = "marche"
 cite = "Day 8, Story 5, told by Filostrato"
-level = "Stories"
+day = "Day 8: the tricks women play men, or men women, or men one another"
+teller = "Filostrato"
 passage = "As you may all have heard, there come oftentimes to our city governors from the Marches of Ancona, who are commonly mean-spirited folk and so paltry and sordid of life that their every fashion seemeth nought other than a lousy cadger's trick"
 
 [[mentions]]
 place = "florence"
 cite = "Day 8, Story 5, told by Filostrato"
-level = "Stories"
+day = "Day 8: the tricks women play men, or men women, or men one another"
+teller = "Filostrato"
 passage = "but they were not to be found, whereupon he began to swear by Cock's bowels that need must he know and learn if it were the wont at Florence to pull down the judges' breeches, whenas they sat on the judicial bench."
 
 [[mentions]]
 place = "florence"
 cite = "Day 8, Story 6, told by Filomena"
-level = "Stories"
+day = "Day 8: the tricks women play men, or men women, or men one another"
+teller = "Filomena"
 passage = "Who Calandrino, Bruno and Buffalmacco were I need not explain to you, for that you have already heard it well enough; wherefore, to proceed with my story, I must tell you that Calandrino owned a little farm at no great distance from Florence, that he had had to his wife's dowry."
 
 [[mentions]]
 place = "florence"
 cite = "Day 8, Story 7, told by Pampinea"
-level = "Stories"
+day = "Day 8: the tricks women play men, or men women, or men one another"
+teller = "Pampinea"
 passage = "Not many years ago there was in Florence, a young lady, by name Elena, fair of favour and haughty of humour, of very gentle lineage and endowed with sufficient abundance of the goods of fortune"
 
 [[mentions]]
 place = "paris"
 cite = "Day 8, Story 7, told by Pampinea"
-level = "Stories"
+day = "Day 8: the tricks women play men, or men women, or men one another"
+teller = "Pampinea"
 passage = "having long studied in Paris, not for the sake of after selling his knowledge by retail, as many do, but to know the nature of things and their causes"
 
 [[mentions]]
 place = "siena"
 cite = "Day 8, Story 8, told by Fiammetta"
-level = "Stories"
+day = "Day 8: the tricks women play men, or men women, or men one another"
+teller = "Fiammetta"
 passage = "You must know, then, that there were once in Siena, as I have understood aforetime, two young men in easy enough case and of good city families, whereof one was named Spinelloccio Tanena and the other Zeppa di Mino, and they were next-door neighbours in Camollia."
 
 [[mentions]]
 place = "bologna"
 cite = "Day 8, Story 9, told by Lauretta"
-level = "Stories"
+day = "Day 8: the tricks women play men, or men women, or men one another"
+teller = "Lauretta"
 passage = "Those who tricked him, I hold not to be blameworthy, but rather commendable, and he to whom it was done was a physician, who, having set out for Bologna a sheepshead, returned to Florence all covered with miniver."
 
 [[mentions]]
 place = "florence"
 cite = "Day 8, Story 9, told by Lauretta"
-level = "Stories"
+day = "Day 8: the tricks women play men, or men women, or men one another"
+teller = "Lauretta"
 passage = "Those who tricked him, I hold not to be blameworthy, but rather commendable, and he to whom it was done was a physician, who, having set out for Bologna a sheepshead, returned to Florence all covered with miniver."
 
 [[mentions]]
 place = "peretola"
 cite = "Day 8, Story 9, told by Lauretta"
-level = "Stories"
+day = "Day 8: the tricks women play men, or men women, or men one another"
+teller = "Lauretta"
 passage = "indeed, shouldst thou bid me go hence to Peretola, methinketh it would take little to make me go thither"
 
 [[mentions]]
 place = "santamarianovella"
 cite = "Day 8, Story 9, told by Lauretta"
-level = "Stories"
+day = "Day 8: the tricks women play men, or men women, or men one another"
+teller = "Lauretta"
 passage = "on one of the raised tombs which have been lately made without Santa Maria Novella, with one of your finest gowns on your back"
 
 [[mentions]]
 place = "palermo"
 cite = "Day 8, Story 10, told by Dioneo"
-level = "Stories"
+day = "Day 8: the tricks women play men, or men women, or men one another"
+teller = "Dioneo"
 passage = "was current at Palermo in Sicily, where likewise there were and are yet many women, very fair of their person, but sworn enemies to honesty"
 
 [[mentions]]
 place = "naples"
 cite = "Day 8, Story 10, told by Dioneo"
-level = "Stories"
+day = "Day 8: the tricks women play men, or men women, or men one another"
+teller = "Dioneo"
 passage = "his default should be discovered there, and accordingly, going aboard a little ship, he betook himself, not to Pisa, as he should have done, but to Naples."
 
 [[mentions]]
 place = "florence"
 cite = "Day 8, Story 10, told by Dioneo"
-level = "Stories"
+day = "Day 8: the tricks women play men, or men women, or men one another"
+teller = "Dioneo"
 passage = "and to him, as to a very discreet man, the disconsolate Florentine recounted that which he had done and the mischance that had befallen him, requiring him of aid and counsel, so he might contrive to gain his living there, and avouching his intention nevermore to return to Florence."
 
 [[mentions]]
 place = "pistoia"
 cite = "Day 9, Story 1, told by Filomena"
-level = "Stories"
+day = "Day 9: each according as it pleaseth him"
+teller = "Filomena"
 passage = "that there was once in the city of Pistoia a very fair widow lady, of whom two of our townsmen, called the one Rinuccio Palermini and the other Alessandro Chiarmontesi"
 
 [[mentions]]
 place = "lombardy"
 cite = "Day 9, Story 2, told by Elisa"
-level = "Stories"
+day = "Day 9: each according as it pleaseth him"
+teller = "Elisa"
 passage = "that there was once in Lombardy a convent, very famous for sanctity and religion, wherein, amongst the other nuns who were there"
 
 [[mentions]]
 place = "florence"
 cite = "Day 9, Story 3, told by Filostrato"
-level = "Stories"
+day = "Day 9: each according as it pleaseth him"
+teller = "Filostrato"
 passage = "whereupon he fell a-talking of wishing to buy an estate and entered into treaty with all the brokers in Florence, as if he had ten thousand gold florins to expend"
 
 [[mentions]]
 place = "siena"
 cite = "Day 9, Story 4, told by Neifile"
-level = "Stories"
+day = "Day 9: each according as it pleaseth him"
+teller = "Neifile"
 passage = "There were, then, in Siena, not many years ago, two (as far as age went) full-grown men, each of whom was called Cecco."
 
 [[mentions]]
 place = "buonconvento"
 cite = "Day 9, Story 4, told by Neifile"
-level = "Stories"
+day = "Day 9: each according as it pleaseth him"
+teller = "Neifile"
 passage = "Accordingly, they both set out one morning and went to dine at Buonconvento, where, after dinner, the heat being great, Angiolieri let make ready a bed at the inn and undressing himself, with Fortarrigo's aid, went to sleep, charging the latter call him at the stroke of none."
 
 [[mentions]]
 place = "corsignano"
 cite = "Day 9, Story 4, told by Neifile"
-level = "Stories"
+day = "Day 9: each according as it pleaseth him"
+teller = "Neifile"
 passage = "The latter was not to be found and Angiolieri, concluding him to be asleep, drunken, somewhere, as was bytimes his wont, determined to leave him be and get himself another servant at Corsignano."
 
 [[mentions]]
 place = "torrenieri"
 cite = "Day 9, Story 4, told by Neifile"
-level = "Stories"
+day = "Day 9: each according as it pleaseth him"
+teller = "Neifile"
 passage = "We shall yet reach Torrenieri betimes this evening."
 
 [[mentions]]
 place = "camerata"
 cite = "Day 9, Story 5, told by Fiammetta"
-level = "Stories"
+day = "Day 9: each according as it pleaseth him"
+teller = "Fiammetta"
 passage = "Niccolo Cornacchini was a townsman of ours and a rich man and had, among his other possessions, a fine estate at Camerata, whereon he let build a magnificent mansion and agreed with Bruno and Buffalmacco to paint it all for him"
 
 [[mentions]]
 place = "florence"
 cite = "Day 9, Story 5, told by Fiammetta"
-level = "Stories"
+day = "Day 9: each according as it pleaseth him"
+teller = "Fiammetta"
 passage = "However, after a while, to the latter's exceeding chagrin, they took their leave and as they returned to Florence, Bruno said to Calandrino, 'I can tell thee thou makest her melt like ice in the sun."
 
 [[mentions]]
 place = "mugnone"
 cite = "Day 9, Story 6, told by Pamfilo"
-level = "Stories"
+day = "Day 9: each according as it pleaseth him"
+teller = "Pamfilo"
 passage = "In the plain of Mugnone there was not long since a good man who gave wayfarers to eat and drink for their money, and although he was poor and had but a small house, he bytimes at a pinch gave, not every one, but sundry acquaintances, a night's lodging."
 
 [[mentions]]
 place = "florence"
 cite = "Day 9, Story 8, told by Lauretta"
-level = "Stories"
+day = "Day 9: each according as it pleaseth him"
+teller = "Lauretta"
 passage = "I must tell you, then, that there was once in Florence a man whom all called Ciacco, as great a glutton as ever lived."
 
 [[mentions]]
 place = "ayas"
 cite = "Day 9, Story 9, told by Emilia"
-level = "Stories"
+day = "Day 9: each according as it pleaseth him"
+teller = "Emilia"
 passage = "Amongst others who thus resorted to him was a young man, Melisso by name, a gentleman of noble birth and great wealth, who set out from the city of Lajazzo, whence he was and where he dwelt"
 
 [[mentions]]
 place = "jerusalem"
 cite = "Day 9, Story 9, told by Emilia"
-level = "Stories"
+day = "Day 9: each according as it pleaseth him"
+teller = "Emilia"
 passage = "and as he journeyed towards Jerusalem, it chanced that, coming forth of Antioch, he rode for some distance with a young man called Giosefo, who held the same course as himself."
 
 [[mentions]]
 place = "antioch"
 cite = "Day 9, Story 9, told by Emilia"
-level = "Stories"
+day = "Day 9: each according as it pleaseth him"
+teller = "Emilia"
 passage = "and as he journeyed towards Jerusalem, it chanced that, coming forth of Antioch, he rode for some distance with a young man called Giosefo, who held the same course as himself."
 
 [[mentions]]
 place = "barletta"
 cite = "Day 9, Story 10, told by Dioneo"
-level = "Stories"
+day = "Day 9: each according as it pleaseth him"
+teller = "Dioneo"
 passage = "A year or two agone there was at Barletta a priest called Dom Gianni di Barolo, who, for that he had but a poor cure, took to eking out his livelihood by hawking merchandise hither and thither about the fairs of Apulia with a mare of his and buying and selling."
 
 [[mentions]]
 place = "tresanti"
 cite = "Day 9, Story 10, told by Dioneo"
-level = "Stories"
+day = "Day 9: each according as it pleaseth him"
+teller = "Dioneo"
 passage = "In the course of his travels he contracted a strait friendship with one who styled himself Pietro da Tresanti and plied the same trade with the aid of an ass he had."
 
 [[mentions]]
 place = "spain"
 cite = "Day 10, Story 1, told by Neifile"
-level = "Stories"
+day = "Day 10: whoso hath wrought generously or magnificently"
+teller = "Neifile"
 passage = "resolved to seek service awhile with Alfonso, King of Spain, the renown of whose valiance transcended that of every other prince of his time"
 
 [[mentions]]
 place = "radicofani"
 cite = "Day 10, Story 2, told by Elisa"
-level = "Stories"
+day = "Day 10: whoso hath wrought generously or magnificently"
+teller = "Elisa"
 passage = "Ghino di Tacco, a man very famous for his cruelty and his robberies, being expelled [from] Siena and at feud with the Counts of Santa Fiore, raised Radicofani against the Church of Rome and taking up his sojourn there"
 
 [[mentions]]
 place = "siena"
 cite = "Day 10, Story 2, told by Elisa"
-level = "Stories"
+day = "Day 10: whoso hath wrought generously or magnificently"
+teller = "Elisa"
 passage = "Ghino di Tacco, a man very famous for his cruelty and his robberies, being expelled [from] Siena and at feud with the Counts of Santa Fiore, raised Radicofani against the Church of Rome and taking up his sojourn there"
 
 [[mentions]]
 place = "rome"
 cite = "Day 10, Story 2, told by Elisa"
-level = "Stories"
+day = "Day 10: whoso hath wrought generously or magnificently"
+teller = "Elisa"
 passage = "he left all the rest to Ghino and returned to Rome"
 
 [[mentions]]
 place = "cathay"
 cite = "Day 10, Story 3, told by Filostrato"
-level = "Stories"
+day = "Day 10: whoso hath wrought generously or magnificently"
+teller = "Filostrato"
 passage = "It is a very certain thing (if credit may be given to the report of divers Genoese and others who have been in those countries) that there was aforetime in the parts of Cattajo a man of noble lineage and rich beyond compare"
 note = "Cathay, the medieval name of China. Its Wikidata item has no coordinates: the point is that of China's item (Q29520), since the text names no city."
 
 [[mentions]]
 place = "bologna"
 cite = "Day 10, Story 4, told by Lauretta"
-level = "Stories"
+day = "Day 10: whoso hath wrought generously or magnificently"
+teller = "Lauretta"
 passage = "There was, then, in Bologna, a very noble city of Lombardy, a gentleman very notable for virtue and nobility of blood, called Messer Gentile Carisendi, who, being young, became enamoured of a noble lady called Madam Catalina, the wife of one Niccoluccio Caccianimico"
 
 [[mentions]]
 place = "modena"
 cite = "Day 10, Story 4, told by Lauretta"
-level = "Stories"
+day = "Day 10: whoso hath wrought generously or magnificently"
+teller = "Lauretta"
 passage = "and for that he was ill repaid of his love by the lady, being named provost of Modona, he betook himself thither, as in despair of her."
 
 [[mentions]]
 place = "udine"
 cite = "Day 10, Story 5, told by Emilia"
-level = "Stories"
+day = "Day 10: whoso hath wrought generously or magnificently"
+teller = "Emilia"
 passage = "In Friuli, a country, though cold, glad with goodly mountains and store of rivers and clear springs, is a city called Udine, wherein was aforetime a fair and noble lady called Madam Dianora, the wife of a wealthy gentleman named Gilberto, who was very debonair and easy of composition."
 
 [[mentions]]
 place = "castellammare"
 cite = "Day 10, Story 6, told by Fiammetta"
-level = "Stories"
+day = "Day 10: whoso hath wrought generously or magnificently"
+teller = "Fiammetta"
 passage = "In consequence of this a certain gentleman, called Messer Neri degli Uberti, departing the city with all his household and much monies and being minded to take refuge no otherwhere than under the hand of King Charles, betook himself to Castellamare di Stabia."
 
 [[mentions]]
 place = "naples"
 cite = "Day 10, Story 6, told by Fiammetta"
-level = "Stories"
+day = "Day 10: whoso hath wrought generously or magnificently"
+teller = "Fiammetta"
 passage = "having returned to Naples, determined, as well to deprive himself of occasion to do dishonourably as to requite the gentleman the hospitality received from him"
 
 [[mentions]]
 place = "palermo"
 cite = "Day 10, Story 7, told by Pampinea"
-level = "Stories"
+day = "Day 10: whoso hath wrought generously or magnificently"
+teller = "Pampinea"
 passage = "At the time of the expulsion of the French from Sicily, one of our Florentines was an apothecary at Palermo, a very rich man called Bernardo Puccini, who had by his wife an only daughter, a very fair damsel and already apt for marriage."
 
 [[mentions]]
 place = "rome"
 cite = "Day 10, Story 8, told by Filomena"
-level = "Stories"
+day = "Day 10: whoso hath wrought generously or magnificently"
+teller = "Filomena"
 passage = "there was in Rome a gentleman called Publius Quintius Fulvus, who, having a son of marvellous understanding, by name Titus Quintius Fulvus"
 
 [[mentions]]
 place = "athens"
 cite = "Day 10, Story 8, told by Filomena"
-level = "Stories"
+day = "Day 10: whoso hath wrought generously or magnificently"
+teller = "Filomena"
 passage = "sent him to Athens to study philosophy and commended him as most he might to a nobleman there called Chremes, his very old friend"
 
 [[mentions]]
 place = "pavia"
 cite = "Day 10, Story 9, told by Pamfilo"
-level = "Stories"
+day = "Day 10: whoso hath wrought generously or magnificently"
+teller = "Pamfilo"
 passage = "on the road from Milan to Pavia, a gentleman of the latter place, by name Messer Torello d'Istria, who was on his way, with his servants and dogs and falcons"
 
 [[mentions]]
 place = "alexandria"
 cite = "Day 10, Story 9, told by Pamfilo"
-level = "Stories"
+day = "Day 10: whoso hath wrought generously or magnificently"
+teller = "Pamfilo"
 passage = "Then, after he had, with no little fatigue, visited all the West, he took ship with his companions and returned to Alexandria, where, being now fully informed, he addressed himself to his defence."
 
 [[mentions]]
 place = "acre"
 cite = "Day 10, Story 9, told by Pamfilo"
-level = "Stories"
+day = "Day 10: whoso hath wrought generously or magnificently"
+teller = "Pamfilo"
 passage = "There he embarked on board a galleon and coming in a little while to Acre, joined himself to the other army of the Christians, wherein, well nigh out of hand, there began a sore sickness and mortality."
 
 [[mentions]]
 place = "cieldoro"
 cite = "Day 10, Story 9, told by Pamfilo"
-level = "Stories"
+day = "Day 10: whoso hath wrought generously or magnificently"
+teller = "Pamfilo"
 passage = "Accordingly, he wrote letters to this effect and instantly besought one of the ambassadors, whom he knew, to cause them come to the hands of the Abbot of San Pietro in Ciel d'Oro, who was his uncle."
 
 [[mentions]]
 place = "saluzzo"
 cite = "Day 10, Story 10, told by Dioneo"
-level = "Stories"
+day = "Day 10: whoso hath wrought generously or magnificently"
+teller = "Dioneo"
 passage = "It is now a great while agone since the chief of the house among the Marquesses of Saluzzo was a youth called Gualtieri, who, having neither wife nor children, spent his time in nought but hunting and hawking nor had any thought of taking a wife nor of having children"
 
 [[mentions]]
 place = "bologna"
 cite = "Day 10, Story 10, told by Dioneo"
-level = "Stories"
+day = "Day 10: whoso hath wrought generously or magnificently"
+teller = "Dioneo"
 passage = "The servant took the child and reported that which the lady had said to Gualtieri, who marvelled at her constancy and despatched him with the child to a kinswoman of his at Bologna, praying her to bring her up and rear her diligently, without ever saying whose daughter she was."
