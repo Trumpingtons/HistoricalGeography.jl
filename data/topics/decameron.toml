@@ -2,14 +2,17 @@
 # Giovanni Boccaccio (1886), in the text of Project Gutenberg kept at the Internet Archive. Each mention has its level:
 # the frame story, in which ten young people leave Florence in the plague of 1348, or the stories they tell. The two
 # villas of the frame are those that tradition identifies with the palaces the text describes without naming them: the
-# Villa di Poggio Gherardo, two miles from the city, and the Villa Palmieri. The text names some places with no Wikidata
-# item, which are not on the map: the Ladies' Valley of Days 6 and 7, Camerata (Days 7 and 9), Bengodi (Day 8, Story 3)
-# and the imaginary lands of Frate Cipolla (Day 6, Story 10); and Cathay (Day 10, Story 3), whose item has no
-# coordinates. Malpertugio, the street of Naples of Day 2, Story 5, has no item either, and its passage is under Naples.
-# The Alba of Day 2, Story 9 is on the map as Albisola Superiore, with which it is usually identified, and its note says
-# that the identification has been questioned. Payne's text opens Day 10, Story 8 with Fiammetta, who told Story 6; the
-# opening of Story 9 and Boccaccio's Italian give it to Filomena. Two stories have a painting, with its image at
-# Wikimedia Commons. Each place has its Wikidata item, from which its coordinates come.
+# Villa di Poggio Gherardo, two miles from the city, and the Villa Palmieri. Two places have no Wikidata item, and their
+# points have a source: Camerata (Days 7 and 9), from a photograph of Via di Camerata at Wikimedia Commons, and the
+# Ladies' Valley of Days 6 and 7, a tentative point near Poggio Gherardo, whose note says that it is not an
+# identification. Cathay (Day 10, Story 3), whose item has no coordinates, has the point of China's item. Of the far
+# countries of Frate Cipolla's journey (Day 6, Story 10), those that are streets of Florence are there; Bengodi (Day 8,
+# Story 3) and Cipolla's imaginary lands are not on the map. Malpertugio, the street of Naples of Day 2, Story 5, has no
+# item, and its passage is under Naples. The Alba of Day 2, Story 9 is on the map as Albisola Superiore, with which it
+# is usually identified, and its note says that the identification has been questioned. Payne's text opens Day 10, Story
+# 8 with Fiammetta, who told Story 6; the opening of Story 9 and Boccaccio's Italian give it to Filomena. Two stories
+# have a painting, with its image at Wikimedia Commons. Every other place has its Wikidata item, from which its
+# coordinates come.
 #
 # The text: https://archive.org/details/thedecameronofgi23700gut
 
@@ -488,6 +491,31 @@ name = "Certaldo"
 wikidata = "Q82646"
 point = [11.041111, 43.547778]
 
+[places.borgodeigreci]
+name = "Borgo de' Greci"
+wikidata = "Q3642563"
+point = [11.259217, 43.769669]
+
+[places.parione]
+name = "Parione (Via del Parione)"
+wikidata = "Q142173192"
+point = [11.249021, 43.77083]
+
+[places.sangiorgio]
+name = "San Giorgio (Costa San Giorgio)"
+wikidata = "Q632769"
+point = [11.256, 43.7645]
+
+[places.ladiesvalley]
+name = "The Ladies' Valley"
+source = "https://doi.org/10.1017/s0362152900009636"
+point = [11.33, 43.79]
+
+[places.camerata]
+name = "Camerata"
+source = "https://commons.wikimedia.org/wiki/File:Via_di_camerata_23,_villetta,_portale_01.jpg"
+point = [11.288507, 43.791277]
+
 [places.siena]
 name = "Siena"
 wikidata = "Q2751"
@@ -592,6 +620,11 @@ point = [-3.5, 40.2]
 name = "Radicofani"
 wikidata = "Q91373"
 point = [11.766667, 42.9]
+
+[places.cathay]
+name = "Cattajo (Cathay)"
+wikidata = "Q1050868"
+point = [105, 35]
 
 [places.modena]
 name = "Modona (Modena)"
@@ -1456,10 +1489,51 @@ level = "Stories"
 passage = "Certaldo, as you may have heard, is a burgh of Val d' Elsa situate in our country, which, small though it be, was once inhabited by gentlemen and men of substance"
 
 [[mentions]]
+place = "borgodeigreci"
+cite = "Day 6, Story 10, told by Dioneo"
+level = "Stories"
+passage = "On this errand I set out from Venice and passed through Borgo de' Greci, whence, riding through the kingdom of Algarve and Baldacca, I came to Parione, and from there, not without thirst, I came after awhile into Sardinia."
+note = "Frate Cipolla names it among the far countries of his journey; it is the street of Florence of that name."
+
+[[mentions]]
+place = "parione"
+cite = "Day 6, Story 10, told by Dioneo"
+level = "Stories"
+passage = "On this errand I set out from Venice and passed through Borgo de' Greci, whence, riding through the kingdom of Algarve and Baldacca, I came to Parione, and from there, not without thirst, I came after awhile into Sardinia."
+note = "Frate Cipolla names it among the far countries of his journey; it is the street of Florence of that name."
+
+[[mentions]]
+place = "sangiorgio"
+cite = "Day 6, Story 10, told by Dioneo"
+level = "Stories"
+passage = "Passing the straits of San Giorgio, I came into Truffia and Buffia, countries much inhabited and with great populations"
+note = "Frate Cipolla's straits of San Giorgio, among the far countries of his journey, are the Costa San Giorgio, a street of Florence."
+
+[[mentions]]
+place = "ladiesvalley"
+cite = "Day 6, Conclusion"
+level = "Frame story"
+passage = "They answered that they were ready and calling one of their maids, set out upon their way, without letting the young men know aught thereof; nor had they gone much more than a mile, when they came to the Ladies' Valley."
+note = "The point is tentative, not an identification. A tradition places the valley in the hills near Poggio Gherardo, by the Mensola, and the point is in that area; the valley may be a literary construction (Thomas C. Stillinger, The Language of Gardens: Boccaccio's 'Valle delle Donne', Traditio 39, 1983, 301-321)."
+
+[[mentions]]
+place = "ladiesvalley"
+cite = "Day 7, Introduction"
+level = "Frame story"
+passage = "the seneschal, arising, betook himself, with a great baggage-train, to the Ladies' Valley, there to order everything, according to commandment had of his lord"
+
+[[mentions]]
 place = "florence"
 cite = "Day 7, Story 1, told by Emilia"
 level = "Stories"
 passage = "There was once in Florence, in the quarter of San Brancazio, a wool-comber called Gianni Lotteringhi, a man more fortunate in his craft than wise in other things"
+
+[[mentions]]
+place = "camerata"
+cite = "Day 7, Story 1, told by Emilia"
+level = "Stories"
+passage = "a very goodly country house which her husband had at Camerata, where she sojourned all the summer and whither Gianni came whiles to sup and sleep"
+note = "Camerata was the name of the hill between the Affrico and the Mugnone, not of one point (Guido Carocci, I dintorni di Firenze, 1906). It has no Wikidata item: the point is on Via di Camerata, from a photograph of it at Wikimedia Commons."
 
 [[mentions]]
 place = "naples"
@@ -1678,6 +1752,12 @@ level = "Stories"
 passage = "We shall yet reach Torrenieri betimes this evening."
 
 [[mentions]]
+place = "camerata"
+cite = "Day 9, Story 5, told by Fiammetta"
+level = "Stories"
+passage = "Niccolo Cornacchini was a townsman of ours and a rich man and had, among his other possessions, a fine estate at Camerata, whereon he let build a magnificent mansion and agreed with Bruno and Buffalmacco to paint it all for him"
+
+[[mentions]]
 place = "florence"
 cite = "Day 9, Story 5, told by Fiammetta"
 level = "Stories"
@@ -1748,6 +1828,13 @@ place = "rome"
 cite = "Day 10, Story 2, told by Elisa"
 level = "Stories"
 passage = "he left all the rest to Ghino and returned to Rome"
+
+[[mentions]]
+place = "cathay"
+cite = "Day 10, Story 3, told by Filostrato"
+level = "Stories"
+passage = "It is a very certain thing (if credit may be given to the report of divers Genoese and others who have been in those countries) that there was aforetime in the parts of Cattajo a man of noble lineage and rich beyond compare"
+note = "Cathay, the medieval name of China. Its Wikidata item has no coordinates: the point is that of China's item (Q29520), since the text names no city."
 
 [[mentions]]
 place = "bologna"

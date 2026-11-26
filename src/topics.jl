@@ -211,8 +211,8 @@ end
 const TOPICS_FOLDER = joinpath(dirname(@__DIR__), "data", "topics")
 
 """
-The hand-written data `name` (`data/topics/<name>.toml`), with each of its places checked: a Wikidata id and a point
-`[lon, lat]` within the world.
+The hand-written data `name` (`data/topics/<name>.toml`), with each of its places checked: a Wikidata id, or for a
+place with no item, a `source` (the address its point comes from), and a point `[lon, lat]` within the world.
 """
 function topic_data(name::Symbol)
 	path = joinpath(TOPICS_FOLDER, "$(name).toml")
@@ -220,12 +220,16 @@ function topic_data(name::Symbol)
 	data = TOML.parsefile(path)
 	for (id, place) in get(data, "places", Dict{String, Any}())
 		point = get(place, "point", nothing)
-		ok = occursin(r"^Q[1-9][0-9]*$", get(place, "wikidata", "")) && point isa AbstractVector && length(point) == 2 &&
-			-180 <= point[1] <= 180 && -90 <= point[2] <= 90
-		ok || error("place $(id) of :$(name) needs a Wikidata id and a point [lon, lat]")
+		identified = haskey(place, "wikidata") ? occursin(r"^Q[1-9][0-9]*$", place["wikidata"]) :
+			startswith(get(place, "source", ""), "https://")
+		ok = identified && point isa AbstractVector && length(point) == 2 && -180 <= point[1] <= 180 && -90 <= point[2] <= 90
+		ok || error("place $(id) of :$(name) needs a Wikidata id or a source, and a point [lon, lat]")
 	end
 	return data
 end
+
+"""The page of a place of the hand-written data: its Wikidata item, or the source of its point for a place with none."""
+place_link(place) = haskey(place, "wikidata") ? "https://www.wikidata.org/wiki/$(place["wikidata"])" : place["source"]
 
 """The names of the hand-written topic data, as symbols."""
 topic_names() = sort!([Symbol(first(splitext(file))) for file in readdir(TOPICS_FOLDER) if endswith(file, ".toml")])
@@ -257,7 +261,7 @@ function war_events(con, war::Symbol; folder::AbstractString, table::AbstractStr
 			"properties" => Dict("name" => event["name"], "kind" => event["kind"], "starts" => year, "ends" => year,
 				"until" => upto, "place" => place["name"], "sides" => event["sides"], "reign" => get(event, "reign", nothing),
 				"passage" => event["passage"], "summary" => get(event, "summary", nothing),
-				"wikidata" => "https://www.wikidata.org/wiki/$(place["wikidata"])"))
+				"wikidata" => place_link(place)))
 	end
 	mkpath(folder)
 	path = write_features(con, features, joinpath(folder, "war-$(war).geojson"), table,
@@ -356,7 +360,7 @@ function journey(con, name::Symbol; folder::AbstractString, table::AbstractStrin
 				"day" => date === nothing || start === nothing ? nothing : Dates.value(date - start) + 1,
 				"year" => year_of(stage), "until" => upto, "cite" => stage["cite"], "passage" => stage["passage"],
 				"summary" => get(stage, "summary", nothing), "note" => get(stage, "note", nothing),
-				"identified" => get(place, "identified", nothing), "wikidata" => "https://www.wikidata.org/wiki/$(place["wikidata"])",
+				"identified" => get(place, "identified", nothing), "wikidata" => place_link(place),
 				"painting" => painting === nothing ? nothing : painting_caption(painting),
 				"image" => painting === nothing ? nothing : commons_image(painting["file"])))
 	end
@@ -474,8 +478,9 @@ text whose places are written by hand from it: `:genji` (The Tale of Genji, in t
 Wikisource, CC BY-SA 3.0), `:nights` (The Arabian Nights, in Richard F. Burton's translation), `:periplus` (The Periplus
 of the Erythraean Sea, in Wilfred H. Schoff's translation), `:meghaduta` (Kalidasa's Cloud-Messenger, in Arthur W.
 Ryder's translation) or `:decameron` (Boccaccio's Decameron, in John Payne's translation); each place then has
-the coordinates of its Wikidata item, `key` is that item and `link` its page, and the table also has `order` (the
-order in which the text first names it), `passage` and `summary`, the words of each passage joined by ` / `, `level`
+the coordinates of its Wikidata item, `key` is that item and `link` its page (for a place with no item, `key` is
+missing and `link` is the source of its coordinates), and the table also has `order` (the order in which the text
+first names it), `passage` and `summary`, the words of each passage joined by ` / `, `level`
 (for a text told within a frame story, such as the Decameron, whether the place is in the frame story, the stories or
 both), `painting` and `image` (a painting of a story set there, and the address of its image at Wikimedia Commons) and
 `note` (what is uncertain about where the place is, such as an identification that has been questioned).
@@ -532,7 +537,8 @@ end
 
 """
 The places of a text written by hand from it (`data/topics/<work>.toml`, its `[[mentions]]` in the order of the text),
-for `text_places`: one row a place, with the columns of a Perseus text, `key` its Wikidata id and `link` its item,
+for `text_places`: one row a place, with the columns of a Perseus text, `key` its Wikidata id and `link` its item (for
+a place with no item, `key` is missing and `link` is the source of its point),
 and `order` (the order in which the text first names it), `passage` (the text's words) and `summary` (an English
 summary of them), the words of each mention joined by ` / `, `level` (the levels of its mentions, such as `Frame
 story` and `Stories`, as `Frame story and stories` for a place in both), `painting` and `image` (those of the
@@ -553,8 +559,8 @@ function written_places(con, work::Symbol; folder::AbstractString, table::Abstra
 		painting = painted === nothing ? nothing : named[painted]["painting"]
 		notes = [mention["note"] for mention in named if haskey(mention, "note")]
 		Dict("type" => "Feature", "geometry" => Dict("type" => "Point", "coordinates" => place["point"]),
-			"properties" => Dict("name" => place["name"], "key" => place["wikidata"], "mentions" => length(named), "first" => first(cites),
-				"passages" => join(cites, "; "), "link" => "https://www.wikidata.org/wiki/$(place["wikidata"])", "order" => order,
+			"properties" => Dict("name" => place["name"], "key" => get(place, "wikidata", nothing), "mentions" => length(named), "first" => first(cites),
+				"passages" => join(cites, "; "), "link" => place_link(place), "order" => order,
 				"passage" => join([mention["passage"] for mention in named], " / "),
 				"summary" => join([get(mention, "summary", "") for mention in named], " / "),
 				"level" => isempty(levels) ? nothing : uppercasefirst(join(lowercase.(levels), " and ")),
