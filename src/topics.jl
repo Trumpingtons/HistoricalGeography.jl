@@ -332,8 +332,9 @@ The stages have `stage` (their number, in the order of the journey), `name` (the
 for a journey of several), `date` (as `yyyy-mm-dd`, when the source dates it), `day` (the day of the journey, from 1),
 `year`, `until` (the last year of any stage, so that a map with a year slider keeps every stage on it from its year),
 `cite` (where in the source), `passage` (the source's words), `summary` (an English summary of a passage in another
-language), `note`, `identified` (for a place of legend, where an ancient author put it, in that author's words) and
-`wikidata` (the place's item), and `geom`. The route is a line through each part, split where it
+language), `note`, `identified` (for a place of legend, where an ancient author put it, in that author's words),
+`wikidata` (the place's item), `painting` (a painting of the stage, its title, painter, year and collection, for a
+stage that has one) and `image` (the address of its image at Wikimedia Commons, 640 pixels wide), and `geom`. The route is a line through each part, split where it
 crosses the antimeridian; a journey whose source does not give the order of its stages, such as the voyages of Zheng He, has none
 (`route` is `nothing`). They are also written as GeoJSON in `folder`; returns `(; path, route, count, since, upto, box)`.
 """
@@ -348,18 +349,22 @@ function journey(con, name::Symbol; folder::AbstractString, table::AbstractStrin
 	features = map(enumerate(stages)) do (number, stage)
 		place = places[stage["place"]]
 		date = get(stage, "date", nothing)
+		painting = get(stage, "painting", nothing)
 		Dict("type" => "Feature", "geometry" => Dict("type" => "Point", "coordinates" => place["point"]),
 			"properties" => Dict("stage" => number, "name" => place["name"], "part" => get(stage, "part", nothing),
 				"date" => date === nothing ? nothing : string(date),
 				"day" => date === nothing || start === nothing ? nothing : Dates.value(date - start) + 1,
 				"year" => year_of(stage), "until" => upto, "cite" => stage["cite"], "passage" => stage["passage"],
 				"summary" => get(stage, "summary", nothing), "note" => get(stage, "note", nothing),
-				"identified" => get(place, "identified", nothing), "wikidata" => "https://www.wikidata.org/wiki/$(place["wikidata"])"))
+				"identified" => get(place, "identified", nothing), "wikidata" => "https://www.wikidata.org/wiki/$(place["wikidata"])",
+				"painting" => painting === nothing ? nothing : painting_caption(painting),
+				"image" => painting === nothing ? nothing : commons_image(painting["file"])))
 	end
 	mkpath(folder)
 	path = write_features(con, features, joinpath(folder, "journey-$(name).geojson"), table,
 		"stage::INTEGER AS stage, name, part::INTEGER AS part, date::VARCHAR AS date, day::INTEGER AS day, year::INTEGER AS year, " *
-		"until::INTEGER AS until, cite, passage, summary::VARCHAR AS summary, note::VARCHAR AS note, identified::VARCHAR AS identified, wikidata")
+		"until::INTEGER AS until, cite, passage, summary::VARCHAR AS summary, note::VARCHAR AS note, identified::VARCHAR AS identified, wikidata, " *
+		"painting::VARCHAR AS painting, image::VARCHAR AS image")
 	points = [places[stage["place"]]["point"] for stage in stages]
 	route = nothing
 	if get(data, "route", true)
@@ -375,6 +380,32 @@ function journey(con, name::Symbol; folder::AbstractString, table::AbstractStrin
 		route = write_features(con, [line], joinpath(folder, "journey-$(name)-route.geojson"), "$(table)_route", "name, stages::INTEGER AS stages")
 	end
 	return (; path, route, count = length(stages), since, upto, box = points_box(points))
+end
+
+"""
+The caption of a painting of a stage: its title, painter (when the stage's traveller is not the painter), year and
+collection, as `Irises (1889), J. Paul Getty Museum`.
+"""
+function painting_caption(painting::AbstractDict)
+	title = get(painting, "title", "")
+	isempty(title) && error("a painting of a stage needs a title")
+	painter = get(painting, "painter", nothing)
+	year = get(painting, "year", nothing)
+	collection = get(painting, "collection", nothing)
+	return string(title, year === nothing ? "" : " ($(year))", painter === nothing ? "" : ", $(painter)",
+		collection === nothing ? "" : ", $(collection)")
+end
+
+"""
+The address of the image `file` of Wikimedia Commons, 640 pixels wide, by its page Special:FilePath, which
+redirects to the image itself.
+"""
+function commons_image(file::AbstractString)
+	isempty(file) && error("a painting of a stage needs the file of its image at Wikimedia Commons")
+	name = replace(file, ' ' => '_')
+	escaped = join(c in ('_', '-', '.', '~', '(', ')', '\'', ',') || (isascii(c) && isletter(c)) || isdigit(c) ? string(c) :
+		join("%" * uppercase(string(byte; base = 16, pad = 2)) for byte in codeunits(string(c))) for c in name)
+	return "https://commons.wikimedia.org/wiki/Special:FilePath/$(escaped)?width=640"
 end
 
 # id => (work, translator, file in PerseusDL/canonical-greekLit)

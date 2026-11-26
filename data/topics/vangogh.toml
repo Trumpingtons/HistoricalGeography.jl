@@ -1,0 +1,178 @@
+# The last years of Vincent van Gogh, from his arrival in Paris in March 1886 to his death at Auvers-sur-Oise in July
+# 1890, as his letters tell them: Paris, Arles and the Provence around it, the asylum at Saint-Rémy, Paris again and
+# Auvers. Each stage is a place a letter is written from or tells of, with a passage of the letter in the language he
+# wrote it in, French or Dutch, as Jo van Gogh-Bonger printed it in Brieven aan zijn broeder (1914), with a short
+# English summary; the letters are numbered as in that edition. The stages have the date of the letter that tells them,
+# as the edition of the letters at WebExhibits dates it, or its year where that is a span of days; the date of his
+# arrival in Paris in May 1890 is Jo van Gogh-Bonger's, in her introduction to the first volume. Each stage has a
+# painting of that place and time, his own, or one a letter names, with its image at Wikimedia Commons. Each place has
+# its Wikidata item, from which its coordinates come.
+#
+# The texts: Brieven aan zijn broeder, volume 3 (Wereldbibliotheek, 1914),
+# https://archive.org/details/brievenaanzijnbr03gogh, and volume 1, https://archive.org/details/brievenaanzijnbr01gogh;
+# the dates, https://www.webexhibits.org/vangogh/.
+
+title = "The Last Years of Vincent van Gogh"
+work = "Vincent van Gogh, Brieven aan zijn broeder, edited by Jo van Gogh-Bonger (1914)"
+text = "https://archive.org/details/brievenaanzijnbr03gogh"
+licence = "Public domain (letters and paintings); CC0 1.0 (places)"
+
+[places.louvre]
+name = "Paris, the Louvre"
+wikidata = "Q1075988"
+point = [2.335886, 48.861028]
+
+[places.arles]
+name = "Arles"
+wikidata = "Q48292"
+point = [4.628611111, 43.676944444]
+
+[places.saintesmaries]
+name = "Saintes-Maries-de-la-Mer"
+wikidata = "Q330920"
+point = [4.428055555, 43.451666666]
+
+[places.montmajour]
+name = "Montmajour Abbey"
+wikidata = "Q334060"
+point = [4.663889, 43.705556]
+
+[places.lamartine]
+name = "Arles, the Yellow House on the place Lamartine"
+wikidata = "Q54156910"
+point = [4.631698, 43.681675]
+
+[places.fabre]
+name = "Montpellier, the Musée Fabre"
+wikidata = "Q1519002"
+point = [3.880191666, 43.611736111]
+
+[places.hoteldieu]
+name = "Arles, the Hôtel-Dieu"
+wikidata = "Q22986068"
+point = [4.625194, 43.676168]
+
+[places.mausole]
+name = "Saint-Rémy-de-Provence, the asylum of Saint-Paul-de-Mausole"
+wikidata = "Q334199"
+point = [4.835159, 43.776668]
+
+[places.pigalle]
+name = "Paris, the Cité Pigalle"
+wikidata = "Q2974697"
+point = [2.33388, 48.8802]
+
+[places.ravoux]
+name = "Auvers-sur-Oise, the Auberge Ravoux"
+wikidata = "Q4819026"
+point = [2.17151, 49.07069]
+
+[places.auvers]
+name = "Auvers-sur-Oise"
+wikidata = "Q212406"
+point = [2.174166666, 49.071666666]
+
+[[stages]]
+place = "louvre"
+date = 1886-03-01
+cite = "Brieven aan zijn broeder, III, letter 459, Paris, c. 1 March 1886"
+passage = "Ne m'en veux pas d'être venu tout d'un trait, j'y ai tant réfléchi et je crois que de cette manière nous gagnons du temps. Serai au Louvre à partir de midi ou plus tôt si tu veux."
+summary = "He arrives in Paris unannounced and asks Theo to meet him in the Salon Carré of the Louvre: he has thought it over, and they will gain time this way."
+painting = { title = "View of Paris", year = 1886, collection = "Van Gogh Museum", wikidata = "Q19836028", file = "Gezicht op Parijs - s0013V1962 - Van Gogh Museum.jpg" }
+
+[[stages]]
+place = "arles"
+date = 1888-02-21
+cite = "Brieven aan zijn broeder, III, letter 463, Arles, 21 February 1888"
+passage = "Durant le voyage j'ai pour le moins autant pensé à toi, qu'au nouveau pays que je voyais. / Arles ne me semble pas plus grand que Breda ou Mons."
+summary = "On the journey south he thought of Theo as much as of the new country; Arles, under snow, seems to him no bigger than Breda or Mons."
+painting = { title = "Landscape with Snow", year = 1888, collection = "Solomon R. Guggenheim Museum", wikidata = "Q6426375", file = "Van Gogh - Landschaft im Schnee.jpg" }
+
+[[stages]]
+place = "saintesmaries"
+date = 1888-06-04
+cite = "Brieven aan zijn broeder, III, letter 499, Saintes-Maries, c. 4 June 1888"
+passage = "Je t'écris de Stes. Maries au bord de la Méditerranée enfin. La Méditerranée a une couleur comme les maquereaux, c'est à dire changeante"
+summary = "At last by the Mediterranean, whose colour he finds like that of mackerel, always changing."
+painting = { title = "Fishing Boats on the Beach at Les Saintes-Maries-de-la-Mer", year = 1888, collection = "Van Gogh Museum", wikidata = "Q2884896", file = "Vincent van Gogh - Vissersboten op het strand van Les Saintes-Maries-de-la-Mer - Google Art Project.jpg" }
+
+[[stages]]
+place = "montmajour"
+date = 1888-07-09
+cite = "Brieven aan zijn broeder, III, letter 506, Arles, c. 9 July 1888"
+passage = "Je rentre d'une journée à Mont Majour, et mon ami le sous-lieutenant m'a tenu compagnie. Nous avons alors à nous deux exploré le vieux jardin, et y avons volé d'excellentes figues."
+summary = "A day at the ruined abbey of Montmajour with his friend the sub-lieutenant, exploring the old garden and stealing its figs."
+painting = { title = "Sunset at Montmajour", year = 1888, collection = "Private collection", wikidata = "Q14866847", file = "Sunset at Montmajour 1888 Van Gogh.jpg" }
+
+[[stages]]
+place = "lamartine"
+date = 1888-10-24
+cite = "Brieven aan zijn broeder, III, letter 557, Arles, 24 October 1888"
+passage = "Comme tu l'as appris par ma dépêche Gauguin est arrivé en bonne santé. Il me fait même l'effet de se porter mieux que moi."
+summary = "Gauguin has arrived at the Yellow House, in better health, it seems to him, than himself."
+painting = { title = "The Yellow House", year = 1888, collection = "Van Gogh Museum", wikidata = "Q2200610", file = "Vincent van Gogh - The yellow house ('The street').jpg" }
+
+[[stages]]
+place = "fabre"
+year = 1888
+cite = "Brieven aan zijn broeder, III, letter 564, Arles, second half of December 1888"
+passage = "Gauguin et moi avons hier été à Montpellier pour y voir le musée et surtout la salle Brias."
+summary = "With Gauguin to the museum of Montpellier, above all to the room of Alfred Bruyas, the collector painted by Delacroix, Courbet and others."
+painting = { title = "Portrait of Alfred Bruyas", painter = "Eugène Delacroix", year = 1853, collection = "Musée Fabre", wikidata = "Q115675682", file = "Delacroix - Portrait of Alfred Bruyas, 1853.jpg" }
+
+[[stages]]
+place = "hoteldieu"
+date = 1889-01-02
+cite = "Brieven aan zijn broeder, III, letter 567, Arles, 2 January 1889"
+passage = "Afin de te rassurer tout à fait sur mon compte je t'écris ces quelques mots dans le cabinet de M. l'interne Rey, que tu as vu toi-même. / Je resterai encore quelques jours ici à l'hôpital"
+summary = "From the hospital of Arles, after the crisis of Christmas, he writes from the office of the house doctor, Félix Rey, to reassure Theo: a few more days, and he hopes to go home."
+painting = { title = "Portrait of Doctor Félix Rey", year = 1889, collection = "Pushkin Museum of Fine Arts", wikidata = "Q2269788", file = "Vincent van Gogh - Portrait of Doctor Félix Rey (F500).jpg" }
+
+[[stages]]
+place = "mausole"
+year = 1889
+cite = "Brieven aan zijn broeder, III, letter 591, Saint-Rémy, c. 10-15 May 1889"
+passage = "Je voulais te dire que je crois avoir bien fait d'aller ici / J'en ai deux autres en train — des fleurs d'iris violets et un buisson de lilas, deux motifs pris dans le jardin."
+summary = "At the asylum of Saint-Rémy he believes he was right to come, and paints violet irises and a lilac bush in its garden."
+painting = { title = "Irises", year = 1889, collection = "J. Paul Getty Museum", wikidata = "Q2282256", file = "Irises-Vincent van Gogh.jpg" }
+
+[[stages]]
+place = "pigalle"
+date = 1890-05-17
+cite = "Brieven aan zijn broeder, III, letter 635, Auvers, 20 May 1890"
+passage = "Après avoir fait connaissance avec Jo, il me sera désormais difficile d'écrire à Theo seul"
+summary = "Three days with Theo, Jo and their son, named Vincent after him, in their flat in the Cité Pigalle; from now on he writes to them both."
+note = "He came to Paris from the South on 17 May 1890, as Jo van Gogh-Bonger writes in her introduction to the letters, and stayed three days."
+painting = { title = "Almond Blossom", year = 1890, collection = "Van Gogh Museum", wikidata = "Q1432536", file = "Amandelbloesem - s0176V1962 - Van Gogh Museum.jpg" }
+
+[[stages]]
+place = "ravoux"
+date = 1890-05-20
+cite = "Brieven aan zijn broeder, III, letter 635, Auvers, 20 May 1890"
+passage = "Auvers est bien beau, beaucoup de vieux chaume entre autres, ce qui devient rare."
+summary = "Auvers is very beautiful, with many old thatched roofs, which are becoming rare."
+painting = { title = "Thatched Cottages and Houses", year = 1890, collection = "Hermitage Museum", wikidata = "Q4497499", file = "Gogh, Vincent van - Cottages.jpg" }
+
+[[stages]]
+place = "pigalle"
+date = 1890-07-10
+cite = "Brieven aan zijn broeder, III, letter 649, Auvers, c. 10 July 1890"
+passage = "Je garde de ce voyage à Paris de bien bons souvenirs, il y a quelques mois j'osais peu espérer revoir encore les amis."
+summary = "A day in Paris with Theo and Jo, where he saw his friends again and, with emotion, Lautrec's portrait of a musician."
+painting = { title = "Mademoiselle Dihau at the Piano", painter = "Henri de Toulouse-Lautrec", year = 1890, collection = "Musée Toulouse-Lautrec", wikidata = "Q17505777", file = "(Albi) Mademoiselle Dihau au piano - Toulouse-Lautrec - 1890 MTL.132.jpg" }
+
+[[stages]]
+place = "auvers"
+year = 1890
+cite = "Brieven aan zijn broeder, III, letter 650, to his mother and his sister Wil, Auvers, c. 10-14 July 1890"
+passage = "Ik voor mij ben geheel geabsorbeerd in die onafzienbare vlakte met korenvelden tegen de heuvels, groot als een zee, fijn geel, fijn zacht groen, fijn paars"
+summary = "To his mother and sister: he is wholly absorbed in the endless plain of wheat fields against the hills, as large as a sea."
+painting = { title = "Wheatfield under Thunderclouds", year = 1890, collection = "Van Gogh Museum", wikidata = "Q16589468", file = "Van Gogh - Weizenfeld unter einem Gewitterhimmel.jpeg" }
+
+[[stages]]
+place = "ravoux"
+date = 1890-07-23
+cite = "Brieven aan zijn broeder, III, letter 652, Auvers, 23 July 1890, the letter he had on him on 29 July"
+passage = "Eh bien vraiment, nous ne pouvons faire parler que nos tableaux."
+summary = "In the letter found on him when he died, on 29 July 1890: truly, we can only let our paintings speak."
+painting = { title = "Tree Roots", year = 1890, collection = "Van Gogh Museum", wikidata = "Q4233325", file = "Vincent van Gogh - Tree Roots and Trunks (F816).jpg" }
