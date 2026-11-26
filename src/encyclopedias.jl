@@ -523,3 +523,85 @@ function encyclopedie_page(chosen, article, words::AbstractString)
 		$(join(("<p>" * marked(p) * "</p>" for p in split(article.text, "\n")), "\n"))</body></html>""")
 	return page
 end
+
+"""
+The articles of an encyclopedia on the Wikisource of `language`, whose pages have titles that start with `prefix`,
+that Wikisource's search finds for `words`: those of [`wikisource_search`](@ref), each with its `headword`, the
+title without the prefix, and its address on `wikisource`.
+"""
+function encyclopedia_search(language::AbstractString, prefix::AbstractString, words::AbstractString)
+	found = wikisource_search(language, "$words prefix:$prefix")
+	articles = [(rank = p.rank, headword = chopprefix(p.title, prefix), title = p.title, words = p.words, snippet = p.snippet,
+		wikisource = wikisource_link(language, p.title)) for p in found.pages if startswith(p.title, prefix)]
+	return (total = found.total, articles = articles)
+end
+
+"""
+	brockhaus_search(words)
+
+The articles of the Brockhaus and Efron Encyclopedic Dictionary (Энциклопедический словарь Брокгауза и Ефрона,
+1890–1907) on Russian Wikisource that its search finds for `words`, in Russian, the most relevant first, up to the
+10,000 it lists, 500 a request: each with its `rank`, its `headword`, its `title` on Wikisource, its number of
+`words`, the `snippet` of it that the search shows, and its address on `wikisource`. Returns `(total, articles)`.
+"""
+brockhaus_search(words::AbstractString) = encyclopedia_search("ru", "ЭСБЕ/", words)
+
+"""
+	brockhaus_text(article; folder)
+
+The text of an article of [`brockhaus_search`](@ref), from Wikisource's parse of its page, a paragraph a line, kept in
+`folder/wikisource/ru/pages` and read from there afterwards.
+"""
+brockhaus_text(article; folder::AbstractString) =
+	replace(wikisource_text("ru", article.title; folder), r"^author: Энциклопедический словарь Брокгауза и Ефрона\n+" => "")
+
+"""
+	meyers_search(words)
+
+The articles of the fourth edition of Meyers Konversations-Lexikon (1885–1890) on German Wikisource that its search
+finds for `words`, in German, the most relevant first, up to the 10,000 it lists, 500 a request: each with its
+`rank`, its `headword`, its `title` on Wikisource, its number of `words`, the `snippet` of it that the search shows,
+and its address on `wikisource`. Wikisource has about 39,000 of its articles, transcribed from the scans of their
+pages, not the whole work. Returns `(total, articles)`.
+"""
+meyers_search(words::AbstractString) = encyclopedia_search("de", "MKL1888:", words)
+
+"""
+	meyers_volumes(articles)
+
+The `articles` of [`meyers_search`](@ref), each with its `volume` (17 to 19 for the supplements) and the `page` of
+the volume where it starts, as its page on Wikisource gives them, and the address of the `scan` of that page at
+Wikimedia Commons (`missing` for a page that gives none), 50 a request.
+"""
+function meyers_volumes(articles)
+	places = Dict{String, Tuple{Int, String}}()
+	for batch in Iterators.partition(articles, 50)
+		answer = mediawiki("de.wikisource.org", ["action" => "query", "prop" => "revisions", "rvprop" => "content", "rvslots" => "main",
+			"titles" => join((a.title for a in batch), "|")])
+		for p in answer["query"]["pages"]
+			haskey(p, "revisions") || continue
+			header = match(r"\{\{MKL1888\s*\|(?<arguments>[^{}]*)\}\}", p["revisions"][1]["slots"]["main"]["content"])
+			header === nothing && continue
+			# the arguments without the links, whose | would divide them: the fifth of them without a name is the volume
+			arguments = strip.(split(replace(header[:arguments], r"\[\[[^\]]*\]\]" => ""), "|"))
+			unnamed = filter(a -> !occursin('=', a), arguments)
+			volume = length(unnamed) >= 5 ? tryparse(Int, unnamed[5]) : nothing
+			page = match(r"\|\s*Seite\s*=\s*(?<page>\d+)", "|" * header[:arguments])
+			volume === nothing || page === nothing || (places[p["title"]] = (volume, page[:page]))
+		end
+	end
+	return map(articles) do a
+		volume, page = get(places, a.title, (missing, missing))
+		merge(a, (volume = volume, page = ismissing(page) ? missing : parse(Int, page),
+			scan = ismissing(page) ? missing : "https://commons.wikimedia.org/wiki/File:Meyers_b$(volume)_s$(page).jpg"))
+	end
+end
+
+"""
+	meyers_text(article; folder)
+
+The text of an article of [`meyers_search`](@ref), from Wikisource's parse of its page, a paragraph a line, with the
+pages of the volume where they begin in brackets, as [460], kept in `folder/wikisource/de/pages` and read from there
+afterwards.
+"""
+meyers_text(article; folder::AbstractString) = replace(wikisource_text("de", article.title; folder), r"\n+Anmerkungen \(Wikisource\)$" => "")

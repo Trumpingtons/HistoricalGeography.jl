@@ -79,7 +79,8 @@ export delpher_query, delpher_count, delpher_periods, delpher_articles, delpher_
 	digi_search, digi_search_address, digi_pages, digi_text, europeana_count, europeana_periods, europeana_search_address, europeana_issues,
 	europeana_pages, americanstories_download, americanstories_articles
 export pliny_book_title, pliny_chapters, pliny_page, isidore_book_title, isidore_sections, isidore_page, yongle_search, yongle_texts,
-	yongle_page, yongle_juan_address, chambers_entries, encyclopedie_search, encyclopedie_article, encyclopedie_page
+	yongle_page, yongle_juan_address, chambers_entries, encyclopedie_search, encyclopedie_article, encyclopedie_page,
+	brockhaus_search, brockhaus_text, meyers_search, meyers_volumes, meyers_text
 
 const AGENT = "User-Agent" => "HistoricalGeography.jl (https://pollis.org)"
 

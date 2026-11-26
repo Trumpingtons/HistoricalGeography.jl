@@ -184,7 +184,8 @@ escaped_html(s::AbstractString) = replace(s, "&" => "&amp;", "<" => "&lt;", ">" 
 
 """The HTML of a text with the matches of `patterns` marked, each found on the text before it is written as HTML."""
 function marked_html(s::AbstractString, patterns)
-	spans = sort!(unique(m.offset:m.offset + ncodeunits(m.match) - 1 for p in patterns for m in eachmatch(p, s)); by = first)
+	# each match from its first character to its last, whose bytes may be more than one, as in Cyrillic or Greek
+	spans = sort!(unique(m.offset:prevind(s, m.offset + ncodeunits(m.match)) for p in patterns for m in eachmatch(p, s)); by = first)
 	out, last_end = IOBuffer(), 0
 	for r in spans
 		first(r) <= last_end && continue
