@@ -472,10 +472,12 @@ Thesaurus of Geographic Names (TGN) or in Perseus' own gazetteer. A place of TGN
 Commons Attribution License), a place of Perseus' gazetteer those its editors give in the text. `work` can also be a
 text whose places are written by hand from it: `:genji` (The Tale of Genji, in the text of Shibuya Eiichi on
 Wikisource, CC BY-SA 3.0), `:nights` (The Arabian Nights, in Richard F. Burton's translation), `:periplus` (The Periplus
-of the Erythraean Sea, in Wilfred H. Schoff's translation) or `:meghaduta` (Kalidasa's Cloud-Messenger, in Arthur W.
-Ryder's translation); each place then has
+of the Erythraean Sea, in Wilfred H. Schoff's translation), `:meghaduta` (Kalidasa's Cloud-Messenger, in Arthur W.
+Ryder's translation) or `:decameron` (Boccaccio's Decameron, in John Payne's translation); each place then has
 the coordinates of its Wikidata item, `key` is that item and `link` its page, and the table also has `order` (the
-order in which the text first names it), `passage` and `summary`, the words of each passage joined by ` / `.
+order in which the text first names it), `passage` and `summary`, the words of each passage joined by ` / `, `level`
+(for a text told within a frame story, such as the Decameron, whether the place is in the frame story, the stories or
+both) and `painting` and `image` (a painting of a story set there, and the address of its image at Wikimedia Commons).
 
 The table has `name` (the word the text uses most for it), `key` (`tgn,...` or `perseus,...`), `mentions`, `first`
 (the first passage, book.chapter), `passages`, `link` (its page at Getty, for a place of TGN) and `geom`. It is also
@@ -531,7 +533,9 @@ end
 The places of a text written by hand from it (`data/topics/<work>.toml`, its `[[mentions]]` in the order of the text),
 for `text_places`: one row a place, with the columns of a Perseus text, `key` its Wikidata id and `link` its item,
 and `order` (the order in which the text first names it), `passage` (the text's words) and `summary` (an English
-summary of them), the words of each mention joined by ` / `.
+summary of them), the words of each mention joined by ` / `, `level` (the levels of its mentions, such as `Frame
+story` and `Stories`, as `Frame story and stories` for a place in both) and `painting` and `image` (those of the
+first of its mentions that has a painting).
 """
 function written_places(con, work::Symbol; folder::AbstractString, table::AbstractString)
 	work in topic_names() || throw(ArgumentError("work is one of $(join(":" .* string.([first.(PERSEUS_TEXTS); topic_names()]), ", ")), not :$(work)"))
@@ -543,15 +547,22 @@ function written_places(con, work::Symbol; folder::AbstractString, table::Abstra
 		place = places[key]
 		named = [mention for mention in mentions if mention["place"] == key]
 		cites = unique(mention["cite"] for mention in named)
+		levels = unique(mention["level"] for mention in named if haskey(mention, "level"))
+		painted = findfirst(mention -> haskey(mention, "painting"), named)
+		painting = painted === nothing ? nothing : named[painted]["painting"]
 		Dict("type" => "Feature", "geometry" => Dict("type" => "Point", "coordinates" => place["point"]),
 			"properties" => Dict("name" => place["name"], "key" => place["wikidata"], "mentions" => length(named), "first" => first(cites),
 				"passages" => join(cites, "; "), "link" => "https://www.wikidata.org/wiki/$(place["wikidata"])", "order" => order,
 				"passage" => join([mention["passage"] for mention in named], " / "),
-				"summary" => join([get(mention, "summary", "") for mention in named], " / ")))
+				"summary" => join([get(mention, "summary", "") for mention in named], " / "),
+				"level" => isempty(levels) ? nothing : uppercasefirst(join(lowercase.(levels), " and ")),
+				"painting" => painting === nothing ? nothing : painting_caption(painting),
+				"image" => painting === nothing ? nothing : commons_image(painting["file"])))
 	end
 	mkpath(folder)
 	path = write_features(con, features, joinpath(folder, "places-$(work).geojson"), table,
-		"name, key, mentions::INTEGER AS mentions, first, passages, link, \"order\"::INTEGER AS \"order\", passage, summary")
+		"name, key, mentions::INTEGER AS mentions, first, passages, link, \"order\"::INTEGER AS \"order\", passage, summary, " *
+		"level::VARCHAR AS level, painting::VARCHAR AS painting, image::VARCHAR AS image")
 	return (; path, count = length(features), mentions = length(mentions), unlocated = String[],
 		box = points_box([places[key]["point"] for key in keys]))
 end

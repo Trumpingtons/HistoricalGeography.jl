@@ -123,7 +123,7 @@ using HistoricalGeography, Test
 	end
 
 	@testset "The topic data written by hand" begin
-		@test HistoricalGeography.topic_names() == [:amundsen, :bly, :burckhardt, :columbus, :darwin, :faxian, :genji, :humboldt, :magellan, :meghaduta, :nights,
+		@test HistoricalGeography.topic_names() == [:amundsen, :bly, :burckhardt, :columbus, :darwin, :decameron, :faxian, :genji, :humboldt, :magellan, :meghaduta, :nights,
 			:nikitin, :odysseus, :periplus, :peter, :petrie, :polo, :qin, :samudragupta, :stark, :vangogh, :xuanzang, :zhenghe]
 		# every event, stage and mention names a place of its file, and every place is named
 		for name in HistoricalGeography.topic_names()
@@ -139,8 +139,8 @@ using HistoricalGeography, Test
 			HistoricalGeography.commons_image("Vincent van Gogh - Portrait of Doctor Félix Rey (F500).jpg")) ==
 			("Irises (1889), J. Paul Getty Museum", "Portrait of Alfred Bruyas (1853), Eugène Delacroix",
 			"https://commons.wikimedia.org/wiki/Special:FilePath/Vincent_van_Gogh_-_Portrait_of_Doctor_F%C3%A9lix_Rey_(F500).jpg?width=640")
-		@test all(stage -> !haskey(stage, "painting") || (!isempty(stage["painting"]["title"]) && !isempty(stage["painting"]["file"])),
-			HistoricalGeography.topic_data(:vangogh)["stages"])
+		@test all(item -> !haskey(item, "painting") || (!isempty(item["painting"]["title"]) && !isempty(item["painting"]["file"])),
+			[HistoricalGeography.topic_data(:vangogh)["stages"]; HistoricalGeography.topic_data(:decameron)["mentions"]])
 		@test_throws ArgumentError HistoricalGeography.topic_data(:iliad)
 		@test_throws ArgumentError journey(nothing, :iliad; folder = mktempdir())
 		@test_throws ArgumentError text_places(nothing, :iliad; folder = mktempdir())
