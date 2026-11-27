@@ -126,7 +126,7 @@ path = findspots_geojson(inscriptions; name = :place, fallback = :modern_place)
 texts, glossary = oracc("rinap"; folder = "data")
 ```
 
-In Pollis, the Historical Borders panel of the Historical Geography and Archaeology Toolbox draws the borders on a map with a year slider, the Historical Populations panel the cities and the grid, the Historical Maps panel an old map beside today's map, with a line to swipe between them, the Topic Maps page the topic maps, under At War, Conquests, Places and Journeys, and the Paleography, Papyrology and Epigraphy panels the written sources, each with what it covers, its period, size, access and licence.
+In Pollis, the Historical Borders panel of the Historical Geography Toolbox draws the borders on a map with a year slider, the Historical Populations panel the cities and the grid, the Historical Maps panel an old map beside today's map, with a line to swipe between them, the Topic Maps page the topic maps, under At War, Conquests, Places and Journeys, and the Paleography, Papyrology and Epigraphy panels the written sources, each with what it covers, its period, size, access and licence.
 
 ## Sources
 
